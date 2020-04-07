@@ -15,6 +15,6 @@ class CustomerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.deviceIdentifierLabel.text = UUID().uuidString
+        self.deviceIdentifierLabel.text = UserDefaults.standard.string(forKey: "deviceToken")
     }
 }
