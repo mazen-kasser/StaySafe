@@ -44,7 +44,7 @@
 		2C5B0EF4ECAD40ECDBDEAEFA /* Pods-StaySafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.debug.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DBC603263B2EAB3CE228F6 /* Pods-StaySafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.release.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BACE53DC243B35AE00A2F6A4 /* StaySafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaySafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BACE53E3243B35AE00A2F6A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		BACE53DD243B35AE00A2F6A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACE53DC243B35AE00A2F6A4 /* StaySafe.app */,
+				BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */,
 				BACE53F2243B35AF00A2F6A4 /* StaySafeTests.xctest */,
 				BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */,
 			);
@@ -200,7 +200,7 @@
 			);
 			name = StaySafe;
 			productName = StaySafe;
-			productReference = BACE53DC243B35AE00A2F6A4 /* StaySafe.app */;
+			productReference = BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BACE53F1243B35AF00A2F6A4 /* StaySafeTests */ = {
@@ -489,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -543,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -565,8 +565,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.StaySafe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.covidalert;
+				PRODUCT_NAME = "Covid Alert";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -584,8 +584,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.StaySafe;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.covidalert;
+				PRODUCT_NAME = "Covid Alert";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
