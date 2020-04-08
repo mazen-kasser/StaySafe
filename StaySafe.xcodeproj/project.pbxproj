@@ -18,7 +18,9 @@
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
 		BACE5402243B35AF00A2F6A4 /* StaySafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */; };
-		BAE604CA243C6A04009FC142 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE604C9243C6A04009FC142 /* CustomerViewController.swift */; };
+		BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */; };
+		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
+		BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */; };
 		BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE604CB243C6A11009FC142 /* MerchantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +63,9 @@
 		BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaySafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaySafeUITests.swift; sourceTree = "<group>"; };
 		BACE5403243B35AF00A2F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAE604C9243C6A04009FC142 /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
+		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BAE604CB243C6A11009FC142 /* MerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewController.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,16 +123,17 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				BADAEAE0243DD42800C2A1C9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
 				BACE53E3243B35AE00A2F6A4 /* ViewController.swift */,
-				BAE604CD243C6A58009FC142 /* Customer */,
 				BAE604CE243C6A5E009FC142 /* Merchant */,
 				BACE53E5243B35AE00A2F6A4 /* Main.storyboard */,
 				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
 				BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */,
 				BACE53ED243B35AF00A2F6A4 /* Info.plist */,
+				BADAEADF243DD3E500C2A1C9 /* QR */,
 			);
 			path = StaySafe;
 			sourceTree = "<group>";
@@ -151,12 +156,21 @@
 			path = StaySafeUITests;
 			sourceTree = "<group>";
 		};
-		BAE604CD243C6A58009FC142 /* Customer */ = {
+		BADAEADF243DD3E500C2A1C9 /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				BAE604C9243C6A04009FC142 /* CustomerViewController.swift */,
+				BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */,
+				BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */,
 			);
-			path = Customer;
+			path = QR;
+			sourceTree = "<group>";
+		};
+		BADAEAE0243DD42800C2A1C9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		BAE604CE243C6A5E009FC142 /* Merchant */ = {
@@ -386,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE604CA243C6A04009FC142 /* CustomerViewController.swift in Sources */,
+				BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
 				BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */,
+				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
+				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

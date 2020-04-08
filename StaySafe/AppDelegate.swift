@@ -42,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // (device token is a unique ID that Apple server use to determine which device to send push notification to)
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
-        
         let defaults = UserDefaults.standard
         if defaults.string(forKey: "deviceToken") == nil {
             defaults.set(deviceToken.deviceTokenString, forKey: "deviceToken")
