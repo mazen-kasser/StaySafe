@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xDE-mG-QO0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,10 +35,12 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraFrame" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-D3-ZoG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <gestureRecognizers/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OyR-Ml-SIQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7FB-gi-B6u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sZg-D3-ZoG" secondAttribute="trailing" id="VE7-kk-drL"/>
@@ -48,17 +50,32 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OyR-Ml-SIQ" secondAttribute="bottom" id="yfi-m9-I3N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JQA-Qc-vZW" appends="YES" id="J0p-hX-iwn"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Z5x-fX-xe1"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="Z5x-fX-xe1">
+                        <barButtonItem key="rightBarButtonItem" title="Checkins" id="K6x-3j-85c">
+                            <connections>
+                                <segue destination="rol-Df-1N7" kind="show" identifier="CheckinsViewController" id="JXw-jo-VTd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="deviceTokenLabel" destination="U7x-XT-e8w" id="w1m-On-dc4"/>
                         <outlet property="scannerView" destination="8bC-Xf-vdC" id="JSM-Ya-Omr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="JQA-Qc-vZW">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="screenEdgeSwiped:" destination="BYZ-38-t0r" id="KHp-Wn-B9W"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="z5P-f2-z5y"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1170" y="477"/>
+            <point key="canvasLocation" x="1987" y="477"/>
         </scene>
         <!--Merchant-->
         <scene sceneID="Afj-GX-gkm">
@@ -116,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTn-yY-aoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3021.739130434783" y="477.45535714285711"/>
+            <point key="canvasLocation" x="3931.884057971015" y="477.45535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j3m-r9-5xC">
@@ -135,7 +152,55 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Len-5Q-GdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2111.594202898551" y="477.45535714285711"/>
+            <point key="canvasLocation" x="3021.739130434783" y="477.45535714285711"/>
+        </scene>
+        <!--Checkins-->
+        <scene sceneID="dn4-9j-8h7">
+            <objects>
+                <tableViewController storyboardIdentifier="CheckinViewController" id="rol-Df-1N7" customClass="CheckinViewController" customModule="Covid_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fo1-87-zDE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U63-tr-9Ez">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U63-tr-9Ez" id="rDU-9S-ACh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rol-Df-1N7" id="Kyj-eA-r5J"/>
+                            <outlet property="delegate" destination="rol-Df-1N7" id="B3W-j6-2Qv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checkins" id="0kM-gZ-wZ9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dfh-Gi-9qZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987" y="-236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z9N-jf-tVo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDE-mG-QO0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oBV-iA-SPO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T6v-Rr-vh2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1DA-VX-vBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5652173913045" y="476.78571428571428"/>
         </scene>
     </scenes>
     <resources>

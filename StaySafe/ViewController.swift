@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    enum SegueID {
+        static let checkins = "CheckinsViewController"
+    }
+    
+    var checkinMessage: String?
+    
     @IBOutlet weak var scannerView: QRScannerView! {
         didSet {
             scannerView.delegate = self
@@ -17,6 +23,35 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var deviceTokenLabel: UILabel!
+    
+    @IBAction func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .recognized {
+            performSegue(withIdentifier: SegueID.checkins, sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let segueID = segue.identifier else { return }
+        
+        switch segueID {
+        case SegueID.checkins:
+            let vc = segue.destination as! CheckinViewController
+            let vm = CheckinViewModel()
+            
+            if let checkinMessage = checkinMessage {
+                let checkin = Checkin(ownerDisplayName: checkinMessage,
+                                      dateOfCreation: Date().debugDescription)
+                vm.add(checkin)
+            }
+
+            vc.config(vm)
+            
+        default:
+            break
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +88,11 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningSucceededWithCode(_ str: String?) {
-        showToast(message: str ?? "Checked In" + "✅")
+        let message = str ?? "Checked In" + "✅"
+        showToast(message: message)
+        checkinMessage = message
+        
+        performSegue(withIdentifier: SegueID.checkins, sender: self)
     }
     
 }
