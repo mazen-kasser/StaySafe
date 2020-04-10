@@ -8,7 +8,6 @@
 
 import UIKit
 import CloudKit
-import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,22 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // let AppDelegate handle push notification
-        UNUserNotificationCenter.current().delegate = self
-        
-        // Ask user permission for sending push notification
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { authorized, error in
-            if authorized {
-                DispatchQueue.main.async(execute: {
-                    application.registerForRemoteNotifications()
-                })
-            }
-        })
-        
-        // When the app launch after user tap on notification (originally was not running / not in background)
-        if(launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] != nil){
-            
-        }
+        handlePushNotification(application, withOptions: launchOptions)
         
         return true
     }
@@ -41,9 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // (device token is a unique ID that Apple server use to determine which device to send push notification to)
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
-        if UserDefaults.standard.deviceToken == nil {
-            UserDefaults.standard.storeDeviceToken(deviceToken)
-        }
+        UserDefaults.standard.storeDeviceTokenIfNeeded(deviceToken)
         
         // Create a subscription to the 'Notifications' Record Type in CloudKit
         // User will receive a push notification when a new record is created in CloudKit
@@ -103,35 +85,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-extension AppDelegate: UNUserNotificationCenterDelegate{
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        let application = UIApplication.shared
-        
-        if(application.applicationState == .active){
-            print("app received notification while in foreground")
-        }
-        
-        // show the notification alert (banner), and with sound
-        completionHandler([.alert, .badge, .sound])
-    }
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        let application = UIApplication.shared
-        
-        if(application.applicationState == .active){
-            print("user tapped the notification bar when the app is in foreground")
-        }
-        
-        if(application.applicationState == .inactive)
-        {
-            print("user tapped the notification bar when the app is in background")
-        }
-        
-        // tell the app that we have finished processing the user’s action / response
-        completionHandler()
-    }
 }

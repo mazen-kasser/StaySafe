@@ -18,8 +18,16 @@ extension UserDefaults {
         return UserDefaults.standard.string(forKey: Key.deviceToken)
     }
     
-    func storeDeviceToken(_ data: Data) {
-        UserDefaults.standard.set(data.deviceTokenString, forKey: Key.deviceToken)
+    /// Send the contents of the deviceToken parameter to the server that you use to generate remote notifications. Never cache the device token locally on the user's device. Device tokens can change periodically, so caching the value risks sending an invalid token to your server. If the device token hasn't changed, registering with APNs and returning the token happens quickly.
+    func storeDeviceTokenIfNeeded(_ data: Data) {
+        if deviceToken == nil {
+            UserDefaults.standard.set(data.deviceTokenString, forKey: Key.deviceToken)
+        } else {
+            if data.deviceTokenString != deviceToken {
+                // TODO: update the device token field for all the cloud records!!!
+                UserDefaults.standard.set(data.deviceTokenString, forKey: Key.deviceToken)
+            }
+        }
     }
 }
 
