@@ -11,7 +11,12 @@ class CheckinViewModel {
     }
     
     var checkins: [Checkin] {
-        try! managedContext.fetch(Checkin.fetchRequest())
+        let fetchRequest: NSFetchRequest<Checkin> = Checkin.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "dateOfCreation", ascending: false)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        return try! managedContext.fetch(fetchRequest)
     }
     
     func add(_ qrCode: String) {
