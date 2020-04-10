@@ -41,9 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // (device token is a unique ID that Apple server use to determine which device to send push notification to)
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         
-        let defaults = UserDefaults.standard
-        if defaults.string(forKey: "deviceToken") == nil {
-            defaults.set(deviceToken.deviceTokenString, forKey: "deviceToken")
+        if UserDefaults.standard.deviceToken == nil {
+            UserDefaults.standard.storeDeviceToken(deviceToken)
         }
         
         // Create a subscription to the 'Notifications' Record Type in CloudKit
@@ -134,13 +133,5 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
         
         // tell the app that we have finished processing the user’s action / response
         completionHandler()
-    }
-}
-
-
-private extension Data {
-    var deviceTokenString: String {
-        let hexString = map { String(format: "%02.2hhx", $0) }.joined()
-        return hexString
     }
 }

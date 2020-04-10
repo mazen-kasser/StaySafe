@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deviceTokenLabel.text = UserDefaults.standard.string(forKey: "deviceToken")
+        deviceTokenLabel.text = UserDefaults.standard.deviceToken
     }
     
     override func viewWillAppear(_ animated: Bool) {
