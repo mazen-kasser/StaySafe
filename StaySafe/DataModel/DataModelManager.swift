@@ -15,9 +15,9 @@ class DataModelManager {
     
     // MARK: - Core Data stack
     
-    lazy var managedContext: NSManagedObjectContext = {
-        DataModelManager.shared.persistentContainer.viewContext
-    }()
+    var managedContext: NSManagedObjectContext {
+        persistentContainer.viewContext
+    }
 
     private lazy var persistentContainer: NSPersistentContainer = {
         /*

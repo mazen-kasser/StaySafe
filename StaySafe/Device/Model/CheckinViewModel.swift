@@ -4,6 +4,8 @@ import UIKit
 import Foundation
 import CoreData
 
+import CloudKit
+
 class CheckinViewModel {
     
     private var managedContext: NSManagedObjectContext {
@@ -25,6 +27,15 @@ class CheckinViewModel {
         checkin.dateOfCreation = Date()
         
         DataModelManager.shared.saveContext()
+        
+        // send record to CloudKit
+        let checkinRecord = CKRecord(recordType: "Checkins")
+        checkinRecord["deviceID"] = UserDefaults.standard.deviceToken! as CKRecordValue
+        checkinRecord["ownerDisplayName"] = qrCode as CKRecordValue
+        
+        CloudManager.shared.save(checkinRecord) { record, error in
+            // TODO: retry again when you have internet connection by flagging the checkin with `offline`
+        }
     }
     
     func delete(_ checkin: Checkin) {

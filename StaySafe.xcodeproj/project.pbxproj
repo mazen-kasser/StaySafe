@@ -14,6 +14,7 @@
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
 		BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+.swift */; };
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
+		BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414D24403D610095BBE7 /* CloudManager.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
 		BA570329243F06A400343016 /* CheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570325243F06A400343016 /* CheckinCell.swift */; };
@@ -65,6 +66,7 @@
 		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA33414624402F550095BBE7 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
+		BA33414D24403D610095BBE7 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
 		BA570325243F06A400343016 /* CheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		BA33414C24403D540095BBE7 /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				BA33414D24403D610095BBE7 /* CloudManager.swift */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
 		BA57031F243F06A400343016 /* Device */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BADAEAE0243DD42800C2A1C9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
@@ -484,6 +495,7 @@
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
 				BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */,
+				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
