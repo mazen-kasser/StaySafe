@@ -17,7 +17,7 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func showToast(message : String, seconds: Double = 3.0) {
+    func showToast(message : String, seconds: Double = 1.0, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.view.backgroundColor = .black
         alert.view.alpha = 0.6
@@ -26,7 +26,7 @@ extension UIViewController {
         self.present(alert, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            alert.dismiss(animated: true)
+            alert.dismiss(animated: true, completion: completion)
         }
     }
 }

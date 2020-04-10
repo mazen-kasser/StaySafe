@@ -12,7 +12,7 @@ class CheckinCell: UITableViewCell {
             guard let checkin = checkin else { return }
             
             displayNameLabel.text = checkin.ownerDisplayName
-            createDateLabel.text = checkin.dateOfCreation
+            createDateLabel.text = checkin.dateOfCreation.debugDescription
         }
     }
 }

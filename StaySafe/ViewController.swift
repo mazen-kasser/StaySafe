@@ -11,10 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     enum SegueID {
-        static let checkins = "CheckinsViewController"
+        static let showCheckins = "showCheckins"
+        static let addCheckin = "addCheckin"
     }
     
-    var checkinMessage: String?
+    var checkinMessage: String!
     
     @IBOutlet weak var scannerView: QRScannerView! {
         didSet {
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     
     @IBAction func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
-            performSegue(withIdentifier: SegueID.checkins, sender: self)
+            performSegue(withIdentifier: SegueID.showCheckins, sender: self)
         }
     }
     
@@ -36,16 +37,17 @@ class ViewController: UIViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.checkins:
+        case SegueID.showCheckins:
             let vc = segue.destination as! CheckinViewController
             let vm = CheckinViewModel()
-            
-            if let checkinMessage = checkinMessage {
-                let checkin = Checkin(ownerDisplayName: checkinMessage,
-                                      dateOfCreation: Date().debugDescription)
-                vm.add(checkin)
-            }
 
+            vc.config(vm)
+            
+        case SegueID.addCheckin:
+            let vc = segue.destination as! CheckinViewController
+            let vm = CheckinViewModel()
+            vm.add(checkinMessage)
+            
             vc.config(vm)
             
         default:
@@ -88,11 +90,10 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningSucceededWithCode(_ str: String?) {
-        let message = str ?? "Checked In" + "✅"
-        showToast(message: message)
-        checkinMessage = message
-        
-        performSegue(withIdentifier: SegueID.checkins, sender: self)
+        checkinMessage = str ?? "Checked In" + "✅"
+        showToast(message: checkinMessage) { [weak self] in
+            self?.performSegue(withIdentifier: SegueID.addCheckin, sender: self)
+        }
     }
     
 }

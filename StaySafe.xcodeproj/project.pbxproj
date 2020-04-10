@@ -10,11 +10,12 @@
 		3FA06BC131C3E9B427B1F3CC /* Pods_StaySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */; };
 		9B2BB67EC37BBD9A2CC235A8 /* Pods_StaySafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */; };
 		BA27EFB4243C876B00BAA0FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27EFB3243C876B00BAA0FE /* CloudKit.framework */; };
+		BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */; };
+		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
 		BA570329243F06A400343016 /* CheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570325243F06A400343016 /* CheckinCell.swift */; };
 		BA57032A243F06A400343016 /* CheckinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA570326243F06A400343016 /* CheckinCell.xib */; };
-		BA57032C243F077500343016 /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57032B243F077500343016 /* Checkin.swift */; };
 		BA570331243F096500343016 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57032F243F096500343016 /* UITableView+.swift */; };
 		BA570332243F096500343016 /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570330243F096500343016 /* UIStoryboard+.swift */; };
 		BA570334243F098800343016 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570333243F098800343016 /* UIViewController+.swift */; };
@@ -57,15 +58,17 @@
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Covid Alert.entitlements"; sourceTree = "<group>"; };
 		BA27EFB3243C876B00BAA0FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		BA3341432440164F0095BBE7 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
+		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
 		BA570325243F06A400343016 /* CheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinCell.swift; sourceTree = "<group>"; };
 		BA570326243F06A400343016 /* CheckinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckinCell.xib; sourceTree = "<group>"; };
-		BA57032B243F077500343016 /* Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
 		BA57032F243F096500343016 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		BA570330243F096500343016 /* UIStoryboard+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 		BA570333243F098800343016 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACE53DC243B35AE00A2F6A4 /* Covid-Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BACE53E3243B35AE00A2F6A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA33413B244006A20095BBE7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */,
+				BA3341432440164F0095BBE7 /* DataModelManager.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		BA57031F243F06A400343016 /* CheckinCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				BA570323243F06A400343016 /* CheckinViewModel.swift */,
-				BA57032B243F077500343016 /* Checkin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +176,7 @@
 		BACE53DD243B35AE00A2F6A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */,
+				BACE53DC243B35AE00A2F6A4 /* Covid-Alert.app */,
 				BACE53F2243B35AF00A2F6A4 /* StaySafeTests.xctest */,
 				BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */,
 			);
@@ -175,6 +186,7 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				BA33413B244006A20095BBE7 /* DataModel */,
 				BADAEAE0243DD42800C2A1C9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
@@ -276,7 +288,7 @@
 			);
 			name = StaySafe;
 			productName = StaySafe;
-			productReference = BACE53DC243B35AE00A2F6A4 /* Covid Alert.app */;
+			productReference = BACE53DC243B35AE00A2F6A4 /* Covid-Alert.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BACE53F1243B35AF00A2F6A4 /* StaySafeTests */ = {
@@ -461,12 +473,13 @@
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */,
-				BA57032C243F077500343016 /* Checkin.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
+				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
 				BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
+				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
@@ -654,7 +667,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.covidalert;
-				PRODUCT_NAME = "Covid Alert";
+				PRODUCT_NAME = "Covid-Alert";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,7 +689,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.iprogram.covidalert;
-				PRODUCT_NAME = "Covid Alert";
+				PRODUCT_NAME = "Covid-Alert";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -805,6 +818,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */,
+				BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BACE53D4243B35AE00A2F6A4 /* Project object */;
 }

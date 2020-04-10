@@ -57,13 +57,14 @@
                     <navigationItem key="navigationItem" id="Z5x-fX-xe1">
                         <barButtonItem key="rightBarButtonItem" title="Checkins" id="K6x-3j-85c">
                             <connections>
-                                <segue destination="rol-Df-1N7" kind="show" identifier="CheckinsViewController" id="JXw-jo-VTd"/>
+                                <segue destination="rol-Df-1N7" kind="show" identifier="showCheckins" id="JXw-jo-VTd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="deviceTokenLabel" destination="U7x-XT-e8w" id="w1m-On-dc4"/>
                         <outlet property="scannerView" destination="8bC-Xf-vdC" id="JSM-Ya-Omr"/>
+                        <segue destination="rol-Df-1N7" kind="show" identifier="addCheckin" id="nol-pY-AH4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +76,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1987" y="477"/>
+            <point key="canvasLocation" x="1978" y="462"/>
         </scene>
         <!--Merchant-->
         <scene sceneID="Afj-GX-gkm">
@@ -203,6 +204,9 @@
             <point key="canvasLocation" x="1169.5652173913045" y="476.78571428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JXw-jo-VTd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CameraFrame" width="320" height="384"/>
     </resources>
