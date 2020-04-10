@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         subscription.notificationInfo = info
         
         // Save the subscription to Public Database in Cloudkit
-        CloudManager.shared.save(subscription, completionHandler: { subscription, error in
+        CloudManager.database.save(subscription, completionHandler: { subscription, error in
             if error == nil {
                 // Subscription saved successfully
             } else {

@@ -16,7 +16,7 @@ extension Checkin {
         return NSFetchRequest<Checkin>(entityName: "Checkin")
     }
 
-    @NSManaged public var dateOfCreation: Date
-    @NSManaged public var ownerDisplayName: String
+    @NSManaged public var createdAt: Date
+    @NSManaged public var merchantName: String
 
 }

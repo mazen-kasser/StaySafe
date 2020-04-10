@@ -29,15 +29,14 @@ extension AppDelegate {
             
         }
     }
+    
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
-        let application = UIApplication.shared
-        
-        if(application.applicationState == .active){
+        if UIApplication.shared.applicationState == .active {
             print("app received notification while in foreground")
         }
         
@@ -48,12 +47,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let application = UIApplication.shared
         
-        if(application.applicationState == .active){
+        if application.applicationState == .active {
             print("user tapped the notification bar when the app is in foreground")
         }
         
-        if(application.applicationState == .inactive)
-        {
+        if application.applicationState == .inactive {
             print("user tapped the notification bar when the app is in background")
         }
         

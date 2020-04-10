@@ -11,6 +11,6 @@ import CloudKit
 
 class CloudManager {
     
-    static let shared = CKContainer.default().publicCloudDatabase
+    static let database = CKContainer.default().publicCloudDatabase
 
 }

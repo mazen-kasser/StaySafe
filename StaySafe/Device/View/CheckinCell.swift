@@ -11,8 +11,8 @@ class CheckinCell: UITableViewCell {
         didSet {
             guard let checkin = checkin else { return }
             
-            displayNameLabel.text = checkin.ownerDisplayName
-            createDateLabel.text = checkin.dateOfCreation.debugDescription
+            displayNameLabel.text = checkin.merchantName
+            createDateLabel.text = checkin.createdAt.debugDescription
         }
     }
 }
