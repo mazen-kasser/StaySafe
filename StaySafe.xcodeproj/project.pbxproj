@@ -130,14 +130,14 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		BA57031F243F06A400343016 /* CheckinCell */ = {
+		BA57031F243F06A400343016 /* Device */ = {
 			isa = PBXGroup;
 			children = (
 				BA570320243F06A400343016 /* Controller */,
 				BA570322243F06A400343016 /* Model */,
 				BA570324243F06A400343016 /* View */,
 			);
-			path = CheckinCell;
+			path = Device;
 			sourceTree = "<group>";
 		};
 		BA570320243F06A400343016 /* Controller */ = {
@@ -197,7 +197,7 @@
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
 				BACE53E3243B35AE00A2F6A4 /* ViewController.swift */,
-				BA57031F243F06A400343016 /* CheckinCell */,
+				BA57031F243F06A400343016 /* Device */,
 				BAE604CE243C6A5E009FC142 /* Merchant */,
 				BACE53E5243B35AE00A2F6A4 /* Main.storyboard */,
 				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
