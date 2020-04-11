@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>To scan QR code</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -60,5 +58,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>We need the camera so to scan COVID-Alert QR code to checkin.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please select OK to save QR code to your Photo Library.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
 </dict>
 </plist>
