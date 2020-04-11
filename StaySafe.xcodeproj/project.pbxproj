@@ -36,6 +36,7 @@
 		BADC930D2441433300FC4E63 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930C2441433300FC4E63 /* UIView+.swift */; };
 		BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */; };
 		BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */; };
+		BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93152441E34100FC4E63 /* DateFormatter+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		BADC930C2441433300FC4E63 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantQRViewController.swift; sourceTree = "<group>"; };
 		BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMerchantViewController.swift; sourceTree = "<group>"; };
+		BADC93152441E34100FC4E63 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +261,7 @@
 				BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */,
 				BA33414624402F550095BBE7 /* UserDefaults+.swift */,
 				BADC930C2441433300FC4E63 /* UIView+.swift */,
+				BADC93152441E34100FC4E63 /* DateFormatter+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
+				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */,

@@ -12,7 +12,7 @@ class CheckinCell: UITableViewCell {
             guard let checkin = checkin else { return }
             
             displayNameLabel.text = checkin.merchantName
-            createDateLabel.text = checkin.createdAt.debugDescription
+            createDateLabel.text = DateFormatter.yyyyMMdd.string(from: checkin.createdAt ?? Date())
         }
     }
 }
