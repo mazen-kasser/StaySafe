@@ -143,7 +143,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="mTq-mc-asZ" id="9N6-69-vi7"/>
                         <outlet property="qrImageView" destination="UmU-oi-HMs" id="Xp7-oG-w6Z"/>
-                        <segue destination="got-uT-NwN" kind="presentation" identifier="showPrintMerchantQR" id="Nac-aj-Eja"/>
+                        <segue destination="0RN-TU-BKt" kind="presentation" identifier="showPrintMerchantQR" id="Nac-aj-Eja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTn-yY-aoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -198,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="1171" y="461"/>
         </scene>
-        <!--MerchantQR View Controller-->
+        <!--Please print this badge-->
         <scene sceneID="y8d-Ez-EUo">
             <objects>
                 <viewController id="got-uT-NwN" customClass="MerchantQRViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,20 +206,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-JQ-Eyb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                                <items>
-                                    <navigationItem id="DSu-mh-cl4">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" id="C85-Ov-fvo">
-                                            <connections>
-                                                <action selector="dismiss:" destination="got-uT-NwN" id="lh6-uR-f3n"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-ir-HPS">
-                                <rect key="frame" x="20" y="165.5" width="374" height="511.5"/>
+                                <rect key="frame" x="20" y="190.5" width="374" height="461.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-oi-HMs">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="421"/>
@@ -230,13 +218,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uku-QY-ar7">
-                                        <rect key="frame" x="0.0" y="481.5" width="374" height="30"/>
-                                        <state key="normal" title="Print"/>
-                                        <connections>
-                                            <action selector="shareQRBadge:" destination="got-uT-NwN" eventType="touchUpInside" id="zcj-gR-P0N"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -244,15 +225,19 @@
                         <constraints>
                             <constraint firstItem="xCo-ir-HPS" firstAttribute="leading" secondItem="1St-NR-4lD" secondAttribute="leading" constant="20" id="6S7-DI-oBC"/>
                             <constraint firstItem="xCo-ir-HPS" firstAttribute="centerX" secondItem="cp3-Ns-TNa" secondAttribute="centerX" id="7p0-Pt-VtU"/>
-                            <constraint firstItem="pFj-JQ-Eyb" firstAttribute="trailing" secondItem="1St-NR-4lD" secondAttribute="trailing" id="Itr-dj-3sc"/>
-                            <constraint firstItem="pFj-JQ-Eyb" firstAttribute="top" secondItem="1St-NR-4lD" secondAttribute="top" id="Uyq-gm-KxF"/>
                             <constraint firstItem="UmU-oi-HMs" firstAttribute="height" secondItem="cp3-Ns-TNa" secondAttribute="height" multiplier="0.5" id="cT1-ft-VKh"/>
                             <constraint firstItem="xCo-ir-HPS" firstAttribute="centerY" secondItem="cp3-Ns-TNa" secondAttribute="centerY" id="dux-LO-0jt"/>
-                            <constraint firstItem="pFj-JQ-Eyb" firstAttribute="leading" secondItem="1St-NR-4lD" secondAttribute="leading" id="eZb-Nb-KSs"/>
                             <constraint firstItem="1St-NR-4lD" firstAttribute="trailing" secondItem="xCo-ir-HPS" secondAttribute="trailing" constant="20" id="ln6-Bw-7Q9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1St-NR-4lD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Please print this badge" id="GA1-9r-I62">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="nQ2-Xi-N21">
+                            <connections>
+                                <action selector="dismiss:" destination="got-uT-NwN" id="KF7-3V-9BY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="businessNameLabel" destination="xAq-5a-cJ6" id="jbJ-Xv-g7q"/>
                         <outlet property="qrImageView" destination="UmU-oi-HMs" id="1cg-y0-7dK"/>
@@ -260,7 +245,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzI-Sa-v9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3974" y="467"/>
+            <point key="canvasLocation" x="4884.057971014493" y="466.74107142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9aV-jG-JM9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0RN-TU-BKt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Adp-4C-pL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="got-uT-NwN" kind="relationship" relationship="rootViewController" id="n5E-1k-OFJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fav-wj-igm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3973.913043478261" y="466.74107142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

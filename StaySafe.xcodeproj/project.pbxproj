@@ -37,6 +37,9 @@
 		BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */; };
 		BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */; };
 		BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93152441E34100FC4E63 /* DateFormatter+.swift */; };
+		BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */; };
+		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
+		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantQRViewController.swift; sourceTree = "<group>"; };
 		BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMerchantViewController.swift; sourceTree = "<group>"; };
 		BADC93152441E34100FC4E63 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
+		BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewControllerConfig.swift; sourceTree = "<group>"; };
+		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
+		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,9 +272,20 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		BADC93172441EC7E00FC4E63 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */,
+				BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */,
+				BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		BAE604CE243C6A5E009FC142 /* Merchant */ = {
 			isa = PBXGroup;
 			children = (
+				BADC93172441EC7E00FC4E63 /* Share */,
 				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
 				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
 			);
@@ -307,6 +324,7 @@
 				BACE53D8243B35AE00A2F6A4 /* Sources */,
 				BACE53D9243B35AE00A2F6A4 /* Frameworks */,
 				BACE53DA243B35AE00A2F6A4 /* Resources */,
+				27B319BD587186750670231A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -444,6 +462,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		27B319BD587186750670231A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StaySafe/Pods-StaySafe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StaySafe/Pods-StaySafe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StaySafe/Pods-StaySafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D80108D1E10DCFBD86815F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,10 +531,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
+				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
+				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
+				BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,

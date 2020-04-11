@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MerchantQRViewController: UIViewController {
+class MerchantQRViewController: UIViewController, ShareableScreen, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var qrImageView: UIImageView!
     @IBOutlet weak var businessNameLabel: UILabel!
@@ -22,8 +22,14 @@ class MerchantQRViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        applyShareButton(for: .right, selector: #selector(shareReceipt))
+        
         qrImageView.image = QRGenerator.generateQRCode(from: businessAddress)
         businessNameLabel.text = businessAddress
+    }
+    
+    @objc func shareReceipt() {
+        displayShareOptions(popoverDelegate: self)
     }
     
     @IBAction func shareQRBadge(_ sender: Any) {

@@ -27,7 +27,8 @@ class FindMerchantViewController: UIViewController {
         
         switch segueID {
         case SegueID.showQRBadge:
-            let vc = segue.destination as! MerchantQRViewController
+            let navController = segue.destination as! UINavigationController
+            let vc = navController.viewControllers.first as! MerchantQRViewController
             vc.businessAddress = addressTextField.text ?? ""
             
         default:
