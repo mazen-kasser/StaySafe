@@ -28,6 +28,7 @@ class QRScannerView: UIView {
         super.init(coder: aDecoder)
         doInitialSetup()
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         doInitialSetup()
@@ -37,6 +38,7 @@ class QRScannerView: UIView {
     override class var layerClass: AnyClass  {
         return AVCaptureVideoPreviewLayer.self
     }
+    
     override var layer: AVCaptureVideoPreviewLayer {
         return super.layer as! AVCaptureVideoPreviewLayer
     }
@@ -94,13 +96,18 @@ extension QRScannerView {
         
         captureSession?.startRunning()
     }
+    
     func scanningDidFail() {
         delegate?.qrScanningDidFail()
         captureSession = nil
     }
     
     func found(code: String) {
-        delegate?.qrScanningSucceededWithCode(code)
+        if let decrypted = QRGenerator.decrypt(code) {
+            delegate?.qrScanningSucceededWithCode(decrypted)
+        } else {
+            delegate?.qrScanningDidFail()
+        }
     }
     
 }

@@ -209,7 +209,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-JQ-Eyb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Print your QR badge" id="DSu-mh-cl4">
+                                    <navigationItem id="DSu-mh-cl4">
                                         <barButtonItem key="leftBarButtonItem" title="Close" id="C85-Ov-fvo">
                                             <connections>
                                                 <action selector="dismiss:" destination="got-uT-NwN" id="lh6-uR-f3n"/>

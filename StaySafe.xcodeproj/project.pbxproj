@@ -30,7 +30,7 @@
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
 		BACE5402243B35AF00A2F6A4 /* StaySafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */; };
-		BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */; };
+		BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */; };
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
 		BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */; };
 		BADC930D2441433300FC4E63 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930C2441433300FC4E63 /* UIView+.swift */; };
@@ -90,7 +90,7 @@
 		BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaySafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaySafeUITests.swift; sourceTree = "<group>"; };
 		BACE5403243B35AF00A2F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
+		BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BADC930C2441433300FC4E63 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		BADAEADF243DD3E500C2A1C9 /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */,
+				BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */,
 				BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */,
 			);
 			path = QR;
@@ -497,7 +497,7 @@
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
-				BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */,
+				BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
