@@ -34,7 +34,8 @@
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
 		BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */; };
 		BADC930D2441433300FC4E63 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930C2441433300FC4E63 /* UIView+.swift */; };
-		BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE604CB243C6A11009FC142 /* MerchantViewController.swift */; };
+		BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */; };
+		BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +94,8 @@
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BADC930C2441433300FC4E63 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		BAE604CB243C6A11009FC142 /* MerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewController.swift; sourceTree = "<group>"; };
+		BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantQRViewController.swift; sourceTree = "<group>"; };
+		BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMerchantViewController.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,13 +207,13 @@
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BADAEAE0243DD42800C2A1C9 /* Util */,
+				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
 				BACE53E3243B35AE00A2F6A4 /* ViewController.swift */,
 				BA57031F243F06A400343016 /* Device */,
-				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BAE604CE243C6A5E009FC142 /* Merchant */,
 				BACE53E5243B35AE00A2F6A4 /* Main.storyboard */,
 				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
@@ -264,7 +266,8 @@
 		BAE604CE243C6A5E009FC142 /* Merchant */ = {
 			isa = PBXGroup;
 			children = (
-				BAE604CB243C6A11009FC142 /* MerchantViewController.swift */,
+				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
+				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -491,13 +494,13 @@
 			files = (
 				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
+				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
-				BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */,
 				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
@@ -505,6 +508,7 @@
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
+				BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,

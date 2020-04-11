@@ -8,22 +8,25 @@
 
 import UIKit
 
-class MerchantViewController: UIViewController {
+class MerchantQRViewController: UIViewController {
     
     @IBOutlet weak var qrImageView: UIImageView!
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var businessNameLabel: UILabel!
     
-    @IBAction func generateQRCode(_ sender: Any) {
-        qrImageView.image = QRGenerator.generateQRCode(from: addressTextField.text ?? "")
-    }
+    var businessAddress: String!
     
     @IBAction func dismiss(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        qrImageView.image = QRGenerator.generateQRCode(from: businessAddress)
+        businessNameLabel.text = businessAddress
     }
     
+    @IBAction func shareQRBadge(_ sender: Any) {
+        
+    }
 }

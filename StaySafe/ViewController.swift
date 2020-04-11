@@ -39,14 +39,12 @@ class ViewController: UIViewController {
         case SegueID.showCheckins:
             let vc = segue.destination as! CheckinViewController
             let vm = CheckinViewModel()
-
             vc.config(vm)
             
         case SegueID.addCheckin:
             let vc = segue.destination as! CheckinViewController
             let vm = CheckinViewModel()
             vm.add(checkinMessage)
-            
             vc.config(vm)
             
         default:
