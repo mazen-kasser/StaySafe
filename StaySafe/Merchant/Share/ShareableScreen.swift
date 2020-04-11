@@ -8,18 +8,19 @@
 
 import DHSmartScreenshot
 import Photos
+import UIKit
 
-public enum Side: Int {
+enum Side: Int {
     case left = 0
     case right = 1
 }
 
-public protocol ShareableScreen {
+protocol ShareableScreen {
     func displayShareOptions(popoverDelegate: UIPopoverPresentationControllerDelegate)
     func applyShareButton(for side: Side, selector: Selector)
 }
 
-public extension ShareableScreen where Self: UIViewController {
+extension ShareableScreen where Self: UIViewController {
     
     func applyShareButton(for side: Side, selector: Selector) {
         let button = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: selector)
@@ -30,7 +31,10 @@ public extension ShareableScreen where Self: UIViewController {
         }
     }
     
-    private func createImage(_ view: UIView) -> UIImage {
+    private func createImage(_ view: UIView, preserverLightMode: Bool = true) -> UIImage {
+        let color = view.backgroundColor
+        if preserverLightMode { view.backgroundColor = .white }
+        
         let image: UIImage
         if let tableView = view as? UITableView {
             image = tableView.screenshot()
@@ -39,6 +43,9 @@ public extension ShareableScreen where Self: UIViewController {
         } else {
             image = view.screenshot()
         }
+        
+        view.backgroundColor = color
+        
         return image
     }
     
@@ -48,11 +55,8 @@ public extension ShareableScreen where Self: UIViewController {
     /// it will be appended below.
     ///
     /// - parameter popoverDelegate: The popover presentation delegate
-    func displayShareOptions(popoverDelegate: UIPopoverPresentationControllerDelegate, preserverLightMode: Bool = true) {
-        let color = view.backgroundColor
-        if preserverLightMode { view.backgroundColor = .white }
+    func displayShareOptions(popoverDelegate: UIPopoverPresentationControllerDelegate) {
         let image = createImage(view)
-        view.backgroundColor = color
         
         let shareableProvider = ShareableActivityItemProvider(image: image)
         let activityVC = ShareActivityViewControllerConfig(provider: shareableProvider).viewController

@@ -63,6 +63,14 @@ class ViewController: UIViewController {
         if !scannerView.isRunning {
             scannerView.startScanning()
         }
+        
+        // check if the user coming from a deep link
+        if let address = UserDefaults.standard.checkinAddress {
+            if !scannerView.isRunning {
+                scannerView.stopScanning()
+            }
+            qrScanningSucceededWithCode(address)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -88,6 +96,10 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningSucceededWithCode(_ str: String?) {
+        if UserDefaults.standard.checkinAddress != nil {
+            UserDefaults.standard.checkinAddress = nil
+        }
+        
         checkinMessage = str ?? "Checked In" + "✅"
         showToast(message: checkinMessage) { [weak self] in
             self?.performSegue(withIdentifier: SegueID.addCheckin, sender: self)
