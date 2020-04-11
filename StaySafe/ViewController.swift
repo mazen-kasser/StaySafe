@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var deviceTokenLabel: UILabel!
-    
     @IBAction func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
             performSegue(withIdentifier: SegueID.showCheckins, sender: self)
@@ -59,7 +57,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deviceTokenLabel.text = UserDefaults.standard.deviceToken
     }
     
     override func viewWillAppear(_ animated: Bool) {

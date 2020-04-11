@@ -33,6 +33,7 @@
 		BADAEADC243DC79D00C2A1C9 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */; };
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
 		BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */; };
+		BADC930D2441433300FC4E63 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930C2441433300FC4E63 /* UIView+.swift */; };
 		BAE604CC243C6A11009FC142 /* MerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE604CB243C6A11009FC142 /* MerchantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		BADAEADB243DC79D00C2A1C9 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		BADC930C2441433300FC4E63 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		BAE604CB243C6A11009FC142 /* MerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewController.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +256,7 @@
 				BA570333243F098800343016 /* UIViewController+.swift */,
 				BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */,
 				BA33414624402F550095BBE7 /* UserDefaults+.swift */,
+				BADC930C2441433300FC4E63 /* UIView+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+.swift in Sources */,
+				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
