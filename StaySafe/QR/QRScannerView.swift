@@ -103,8 +103,8 @@ extension QRScannerView {
     }
     
     func found(code: String) {
-        if let decrypted = QRGenerator.decrypt(code) {
-            delegate?.qrScanningSucceededWithCode(decrypted)
+        if let decoded = QRGenerator.decode(code) {
+            delegate?.qrScanningSucceededWithCode(decoded)
         } else {
             delegate?.qrScanningDidFail()
         }
