@@ -23,6 +23,10 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Alert.showLoading(title: "Please print this badge using the App share feature", message: "", dismissAfter: 6) {
+            Alert.hideLoading()
+        }
+        
         applyShareButton(for: .right, selector: #selector(shareReceipt))
         
         qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)

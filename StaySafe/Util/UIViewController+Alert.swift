@@ -43,6 +43,7 @@ class Alert {
         hud.backgroundView.color = UIColor(white: 0.0, alpha: 0.4)
         hud.bezelView.color = .white
         hud.label.text = title
+        hud.label.numberOfLines = 0
         hud.detailsLabel.text = message
         hud.detailsLabel.textColor = .black
         hud.customView = UIImageView(image: #imageLiteral(resourceName: "success") )

@@ -45,7 +45,7 @@ class FindMerchantViewController: UIViewController {
 
         search.start { [weak self] response, error in
             guard let response = response else {
-                print("Error: \(error?.localizedDescription ?? "Unknown error").")
+                self?.placemarks.removeAll()
                 return
             }
 
@@ -76,6 +76,10 @@ extension FindMerchantViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getPlaces(searchString: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }
