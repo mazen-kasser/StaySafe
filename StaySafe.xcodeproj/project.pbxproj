@@ -23,6 +23,9 @@
 		BA570332243F096500343016 /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570330243F096500343016 /* UIStoryboard+.swift */; };
 		BA570334243F098800343016 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570333243F098800343016 /* UIViewController+.swift */; };
 		BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */; };
+		BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */; };
+		BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */; };
+		BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC4244322CE00775FAD /* Placemark.swift */; };
 		BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */; };
 		BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */; };
 		BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* ViewController.swift */; };
@@ -82,6 +85,9 @@
 		BA570330243F096500343016 /* UIStoryboard+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 		BA570333243F098800343016 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OpenURLScheme.swift"; sourceTree = "<group>"; };
+		BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkCell.swift; sourceTree = "<group>"; };
+		BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarkCell.xib; sourceTree = "<group>"; };
+		BA7D5EC4244322CE00775FAD /* Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemark.swift; sourceTree = "<group>"; };
 		BACE53DC243B35AE00A2F6A4 /* COVID-Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +195,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BA7D5EBE24431AC600775FAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */,
+				BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA7D5EC3244322B900775FAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA7D5EC4244322CE00775FAD /* Placemark.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA7D5EC6244322E500775FAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
+				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BACE53D3243B35AE00A2F6A4 = {
 			isa = PBXGroup;
 			children = (
@@ -217,7 +249,6 @@
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BADAEAE0243DD42800C2A1C9 /* Util */,
-				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
@@ -288,9 +319,11 @@
 		BAE604CE243C6A5E009FC142 /* Merchant */ = {
 			isa = PBXGroup;
 			children = (
+				BA7D5EC6244322E500775FAD /* Controller */,
+				BA7D5EC3244322B900775FAD /* Model */,
+				BA7D5EBE24431AC600775FAD /* View */,
+				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BADC93172441EC7E00FC4E63 /* Share */,
-				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
-				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -426,6 +459,7 @@
 			files = (
 				BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */,
 				BACE53E9243B35AF00A2F6A4 /* Assets.xcassets in Resources */,
+				BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */,
 				BACE53E7243B35AE00A2F6A4 /* Main.storyboard in Resources */,
 				BA57032A243F06A400343016 /* CheckinCell.xib in Resources */,
 			);
@@ -537,7 +571,9 @@
 				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
+				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
+				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */,

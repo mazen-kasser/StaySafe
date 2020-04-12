@@ -111,44 +111,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="751-Vy-QGQ">
-                                <rect key="frame" x="20" y="108" width="374" height="86"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="751-Vy-QGQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTq-mc-asZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <searchBar contentMode="redraw" placeholder="Find your business" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-iI-ysb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="aWa-el-s0q"/>
+                                        </constraints>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI4-Yo-Ety">
-                                        <rect key="frame" x="0.0" y="56" width="374" height="30"/>
-                                        <state key="normal" title="Find your business"/>
                                         <connections>
-                                            <action selector="generateQRCode:" destination="ZQE-gD-VuD" eventType="touchUpInside" id="ATc-9R-4R4"/>
+                                            <outlet property="delegate" destination="ZQE-gD-VuD" id="3PH-v6-QNs"/>
                                         </connections>
-                                    </button>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CsI-W3-OUx">
+                                        <rect key="frame" x="0.0" y="58" width="414" height="750"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ZQE-gD-VuD" id="SuE-Cm-k3G"/>
+                                            <outlet property="delegate" destination="ZQE-gD-VuD" id="TSt-Yf-qkp"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="751-Vy-QGQ" firstAttribute="top" secondItem="GK3-oa-vmM" secondAttribute="top" constant="20" id="IW2-L9-H1Z"/>
-                            <constraint firstItem="751-Vy-QGQ" firstAttribute="leading" secondItem="GK3-oa-vmM" secondAttribute="leading" constant="20" id="KKq-7N-1lp"/>
-                            <constraint firstItem="751-Vy-QGQ" firstAttribute="centerX" secondItem="lb4-gz-DBj" secondAttribute="centerX" id="UKW-We-7cx"/>
-                            <constraint firstItem="GK3-oa-vmM" firstAttribute="trailing" secondItem="751-Vy-QGQ" secondAttribute="trailing" constant="20" id="xWw-84-des"/>
+                            <constraint firstItem="751-Vy-QGQ" firstAttribute="top" secondItem="GK3-oa-vmM" secondAttribute="top" id="LpP-HQ-MiR"/>
+                            <constraint firstItem="751-Vy-QGQ" firstAttribute="leading" secondItem="GK3-oa-vmM" secondAttribute="leading" id="Wd2-Tw-Ard"/>
+                            <constraint firstItem="GK3-oa-vmM" firstAttribute="trailing" secondItem="751-Vy-QGQ" secondAttribute="trailing" id="ctg-LV-C89"/>
+                            <constraint firstAttribute="bottom" secondItem="751-Vy-QGQ" secondAttribute="bottom" id="gLz-DG-Hw4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GK3-oa-vmM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Merchant" id="cWu-LK-rvh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="addressTextField" destination="mTq-mc-asZ" id="9N6-69-vi7"/>
-                        <outlet property="qrImageView" destination="UmU-oi-HMs" id="Xp7-oG-w6Z"/>
+                        <outlet property="addressSearchField" destination="mJX-iI-ysb" id="6vE-9D-vl9"/>
+                        <outlet property="tableView" destination="CsI-W3-OUx" id="S5T-U4-85m"/>
                         <segue destination="0RN-TU-BKt" kind="presentation" identifier="showPrintMerchantQR" id="Nac-aj-Eja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTn-yY-aoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3087" y="467"/>
+            <point key="canvasLocation" x="3086.9565217391305" y="466.74107142857139"/>
         </scene>
         <!--Checkins-->
         <scene sceneID="dn4-9j-8h7">
@@ -207,14 +213,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-ir-HPS">
-                                <rect key="frame" x="20" y="190.5" width="374" height="461.5"/>
+                                <rect key="frame" x="20" y="171.5" width="374" height="499.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmU-oi-HMs">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="421"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAq-5a-cJ6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAq-5a-cJ6">
                                         <rect key="frame" x="0.0" y="441" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ6-TH-4qV" userLabel="Business Address">
+                                        <rect key="frame" x="0.0" y="481.5" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -239,6 +251,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="businessAddressLabel" destination="NJ6-TH-4qV" id="I6V-Lo-qeN"/>
                         <outlet property="businessNameLabel" destination="xAq-5a-cJ6" id="jbJ-Xv-g7q"/>
                         <outlet property="qrImageView" destination="UmU-oi-HMs" id="1cg-y0-7dK"/>
                     </connections>

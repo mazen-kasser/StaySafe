@@ -12,8 +12,9 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
     
     @IBOutlet weak var qrImageView: UIImageView!
     @IBOutlet weak var businessNameLabel: UILabel!
+    @IBOutlet weak var businessAddressLabel: UILabel!
     
-    var businessAddress: String!
+    var placemark: Placemark!
     
     @IBAction func dismiss(_ sender: Any) {
         dismiss(animated: true)
@@ -24,8 +25,9 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
         
         applyShareButton(for: .right, selector: #selector(shareReceipt))
         
-        qrImageView.image = QRGenerator.generateQRCode(from: businessAddress)
-        businessNameLabel.text = businessAddress
+        qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
+        businessNameLabel.text = placemark.businessName
+        businessAddressLabel.text = placemark.businessAddress
     }
     
     @objc func shareReceipt() {
