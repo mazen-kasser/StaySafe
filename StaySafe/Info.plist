@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string></string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>COVID-Alert</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -27,10 +16,31 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>COVID-Alert</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>We need the camera so to scan COVID-Alert QR code to checkin.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Required to Find your business if you are a merchant.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please select OK to save QR code to your Photo Library.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -50,6 +60,10 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -69,15 +83,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>We need the camera so to scan COVID-Alert QR code to checkin.</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please select OK to save QR code to your Photo Library.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
 </dict>
 </plist>
