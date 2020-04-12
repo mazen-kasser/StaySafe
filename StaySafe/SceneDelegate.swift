@@ -53,8 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let openUrlContext = URLContexts.first else { return }
-
-        presentCheckinAlert(openUrlContext.url.absoluteString)
+        
+        checkin(openUrlContext.url.absoluteString)
     }
 
 

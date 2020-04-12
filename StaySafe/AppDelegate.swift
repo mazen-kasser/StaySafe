@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         handlePushNotification(application, withOptions: launchOptions)
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: .openUrlScheme,
+                                               name: .openUrlSchemeNotification,
+                                               object: nil)
+        
         return true
     }
     
@@ -85,11 +90,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        presentCheckinAlert(url.absoluteString)
+        checkin(url.absoluteString)
         
         return true
     }
 
+}
 
+extension AppDelegate {
+    
+    @objc func openUrlScheme(_ notification: Notification) {
+        guard let object = notification.object as? String else { return }
+        
+        let vm = CheckinViewModel()
+        vm.add(object)
+        
+        UIApplication.shared.keyWindow?.rootViewController?.showToast(message: "CHECKED IN ✅")
+    }
+}
+
+extension Notification.Name {
+    static let openUrlSchemeNotification = Notification.Name(rawValue: "openUrlScheme")
+}
+
+private extension Selector {
+    static let openUrlScheme = #selector(AppDelegate.openUrlScheme(_:))
+}
+
+extension UIResponder {
+    
+    func checkin(_ text: String) {
+        guard let message = QRGenerator.decode(text) else { return }
+        
+        NotificationCenter.default.post(name: .openUrlSchemeNotification, object: message)
+    }
 }

@@ -13,6 +13,29 @@ class CheckinViewController: UITableViewController {
         tableView.tableFooterView = UIView()
     }
     
+    private func addApplicationNotificationObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: .willEnterForeground,
+                                               name: .willEnterForegroundNotification,
+                                               object: nil)
+    }
+    
+    private func removeApplicationNotificationObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        addApplicationNotificationObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        removeApplicationNotificationObservers()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -54,3 +77,12 @@ extension CheckinViewController {
     }
 }
 
+extension CheckinViewController {
+    @objc func reloadData() {
+        tableView.reloadData()
+    }
+}
+
+private extension Selector {
+    static let willEnterForeground = #selector(CheckinViewController.reloadData)
+}

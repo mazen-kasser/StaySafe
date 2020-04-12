@@ -21,7 +21,7 @@ class CheckinViewModel {
         return try! managedContext.fetch(fetchRequest)
     }
     
-    func add(_ qrCode: String) {
+    @objc func add(_ qrCode: String) {
         let checkin = Checkin(context: managedContext)
         checkin.merchantName = qrCode
         checkin.createdAt = Date()
@@ -50,3 +50,12 @@ class CheckinViewModel {
     }
     
 }
+
+//extension CheckinViewModel {
+//    
+//    @objc func openUrlScheme(_ notification: Notification) {
+//        guard let object = notification.object as? String else { return }
+//        
+//        add(object)
+//    }
+//}

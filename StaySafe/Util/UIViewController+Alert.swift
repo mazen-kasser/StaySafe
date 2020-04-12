@@ -17,7 +17,7 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func showToast(message : String, seconds: Double = 1.0, completion: (() -> Void)? = nil) {
+    func showToast(message : String, seconds: Double = 2.0, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.view.backgroundColor = .black
         alert.view.alpha = 0.6
