@@ -86,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        UserDefaults.standard.checkinAddress = QRGenerator.decode(url.absoluteString)
+        presentCheckinAlert(url.absoluteString)
         
         return true
     }

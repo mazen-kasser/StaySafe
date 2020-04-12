@@ -9,6 +9,12 @@
 import UIKit
 import Foundation
 
+extension Notification.Name {
+    static let openUrlSchemeNotification = Notification.Name(rawValue: "openUrlScheme")
+    static let willEnterForegroundNotification = Notification.Name(rawValue: "willEnterForegroundNotification")
+    static let willEnterBackgroundNotification = Notification.Name(rawValue: "willEnterBackgroundNotification")
+}
+
 class ViewController: UIViewController {
     
     enum SegueID {
@@ -52,33 +58,47 @@ class ViewController: UIViewController {
         }
     }
     
+    deinit {
+        removeApplicationNotificationObservers()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: .openUrlScheme,
+                                               name: .openUrlSchemeNotification,
+                                               object: nil)
+    }
+    
+    private func addApplicationNotificationObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: .willEnterForeground,
+                                               name: .willEnterForegroundNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: .willEnterBackground,
+                                               name: .willEnterBackgroundNotification,
+                                               object: nil)
+    }
+    
+    private func removeApplicationNotificationObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if !scannerView.isRunning {
-            scannerView.startScanning()
-        }
-        
-        // check if the user coming from a deep link
-        if let address = UserDefaults.standard.checkinAddress {
-            if !scannerView.isRunning {
-                scannerView.stopScanning()
-            }
-            qrScanningSucceededWithCode(address)
-        }
+        startScanning()
+        addApplicationNotificationObservers()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if !scannerView.isRunning {
-            scannerView.stopScanning()
-        }
+        removeApplicationNotificationObservers()
+        stopScanning()
     }
     
 }
@@ -96,14 +116,34 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningSucceededWithCode(_ str: String?) {
-        if UserDefaults.standard.checkinAddress != nil {
-            UserDefaults.standard.checkinAddress = nil
-        }
-        
         checkinMessage = str ?? "Checked In" + "✅"
         showToast(message: checkinMessage) { [weak self] in
             self?.performSegue(withIdentifier: SegueID.addCheckin, sender: self)
         }
     }
     
+    @objc func openUrlScheme(_ notification: Notification) {
+        guard let object = notification.object as? String else { return }
+        
+        qrScanningSucceededWithCode(object)
+    }
+    
+    @objc func startScanning() {
+        if !scannerView.isRunning {
+            scannerView.startScanning()
+        }
+    }
+    
+    @objc func stopScanning() {
+        if !scannerView.isRunning {
+            scannerView.stopScanning()
+        }
+    }
+    
+}
+
+private extension Selector {
+    static let openUrlScheme = #selector(ViewController.openUrlScheme(_:))
+    static let willEnterForeground = #selector(ViewController.startScanning)
+    static let willEnterBackground = #selector(ViewController.stopScanning)
 }

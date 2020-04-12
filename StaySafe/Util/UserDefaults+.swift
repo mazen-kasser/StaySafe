@@ -12,17 +12,6 @@ extension UserDefaults {
     
     enum Key {
         static let deviceToken = "deviceToken"
-        static let checkinAddress = "checkinAddress"
-    }
-    
-    
-    var checkinAddress: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.checkinAddress)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.checkinAddress)
-        }
     }
     
     var deviceToken: String? {
