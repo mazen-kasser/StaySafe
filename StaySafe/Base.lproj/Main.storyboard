@@ -265,6 +265,7 @@
                     <connections>
                         <outlet property="businessAddressLabel" destination="NJ6-TH-4qV" id="I6V-Lo-qeN"/>
                         <outlet property="businessNameLabel" destination="xAq-5a-cJ6" id="jbJ-Xv-g7q"/>
+                        <outlet property="noteLabel" destination="xYm-CM-a9D" id="Jvt-oM-och"/>
                         <outlet property="qrImageView" destination="UmU-oi-HMs" id="1cg-y0-7dK"/>
                     </connections>
                 </viewController>

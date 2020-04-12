@@ -11,6 +11,7 @@ import UIKit
 class MerchantQRViewController: UIViewController, ShareableScreen {
     
     @IBOutlet weak var qrImageView: UIImageView!
+    @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
@@ -27,15 +28,36 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
             Alert.hideLoading()
         }
         
-        applyShareButton(for: .right, selector: #selector(shareReceipt))
+        applyShareButton(for: .right, selector: #selector(sharePage))
         
         qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
         businessNameLabel.text = placemark.businessName
         businessAddressLabel.text = placemark.businessAddress
     }
     
-    @objc func shareReceipt() {
+    @objc func sharePage() {
+        // ugly way to revert colors when dark mode is on
+        let color1 = view.backgroundColor
+        let color2 = noteLabel.textColor
+        let color3 = businessNameLabel.textColor
+        let color4 = businessAddressLabel.textColor
+        
+        printableColors(.white, .black, .black, .black)
         displayShareOptions(popoverDelegate: self)
+        printableColors(color1, color2, color3, color4)
+
+    }
+    
+    
+    private func printableColors(_ color1: UIColor?, _ color2: UIColor?, _ color3: UIColor?, _ color4: UIColor?) {
+        if #available(iOS 12.0, *) {
+            if view.traitCollection.userInterfaceStyle == .dark {
+                view.backgroundColor = color1
+                noteLabel.textColor = color2
+                businessNameLabel.textColor = color3
+                businessAddressLabel.textColor = color4
+            }
+        }
     }
     
 }

@@ -16,6 +16,4 @@
 - security by checking if the user actually close in proximity to the QR code
 - App Store publisher name to be iProgram than my personal name
 - Search to show the list from closest to me (reigon)
-
-### Bugs
-- QR screenshot at dark mode makes it white background which needs to make the labels contrasting to black!
+- Localize
