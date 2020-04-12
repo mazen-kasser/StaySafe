@@ -40,7 +40,9 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Required to Find your business if you are a merchant.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please select OK to save QR code to your Photo Library.</string>
+	<string>Required to save the QR page if you are a merchant.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Required to save the QR page if you are a merchant.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -31,10 +31,11 @@ extension ShareableScreen where Self: UIViewController {
         }
     }
     
-    private func createImage(_ view: UIView, preserverLightMode: Bool = true) -> UIImage {
-        let color = view.backgroundColor
-        if preserverLightMode { view.backgroundColor = .white }
-        
+    private func overrideTraitCollection(_ traitCollection: UITraitCollection) {
+        UINavigationController(rootViewController: self).setOverrideTraitCollection(traitCollection, forChild: self)
+    }
+    
+    private func createImage(_ view: UIView) -> UIImage {
         let image: UIImage
         if let tableView = view as? UITableView {
             image = tableView.screenshot()
@@ -43,8 +44,6 @@ extension ShareableScreen where Self: UIViewController {
         } else {
             image = view.screenshot()
         }
-        
-        view.backgroundColor = color
         
         return image
     }
@@ -56,7 +55,22 @@ extension ShareableScreen where Self: UIViewController {
     ///
     /// - parameter popoverDelegate: The popover presentation delegate
     func displayShareOptions(popoverDelegate: UIPopoverPresentationControllerDelegate) {
+        
+        let traitCollection = view.traitCollection
+        
+        if #available(iOS 12.0, *) {
+            let lightStyle = UITraitCollection(userInterfaceStyle: .light)
+//            self.view.traitCollection.userInterfaceStyle
+            self.setOverrideTraitCollection(lightStyle, forChild: self)
+//            overrideTraitCollection(lightStyle)
+        }
+        
         let image = createImage(view)
+        
+        if #available(iOS 12.0, *) {
+//            overrideTraitCollection(traitCollection)
+            self.setOverrideTraitCollection(traitCollection, forChild: self)
+        }
         
         let shareableProvider = ShareableActivityItemProvider(image: image)
         let activityVC = ShareActivityViewControllerConfig(provider: shareableProvider).viewController

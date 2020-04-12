@@ -26,7 +26,7 @@ class Alert {
         return UIApplication.shared.keyWindow
     }
     
-    static func showLoading(title: String? = "CHECK IN", message: String? = nil, dismissAfter: TimeInterval = 3, completion: @escaping (() -> Void)) {
+    static func showLoading(title: String? = "Checked In", message: String? = nil, dismissAfter: TimeInterval = 3, completion: @escaping (() -> Void)) {
         guard
             let keyWindow = keyWindow(),
             MBProgressHUD(for: keyWindow) == nil // No existing HUD is displayed.

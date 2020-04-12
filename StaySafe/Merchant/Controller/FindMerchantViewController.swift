@@ -60,8 +60,7 @@ class FindMerchantViewController: UIViewController {
         
         switch segueID {
         case SegueID.showQRBadge:
-            let navController = segue.destination as! UINavigationController
-            let vc = navController.viewControllers.first as! MerchantQRViewController
+            let vc = segue.destination as! MerchantQRViewController
             
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             vc.placemark = placemarks[indexPath.row]

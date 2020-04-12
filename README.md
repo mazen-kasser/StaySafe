@@ -22,4 +22,4 @@
 - Search Done button is not working
 - Search x button is not clearing the result
 - Search is not showing the list from closest to me (reigon)
-
+- Search dismiss keyboard once did select item

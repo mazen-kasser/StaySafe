@@ -17,7 +17,7 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
     var placemark: Placemark!
     
     @IBAction func dismiss(_ sender: Any) {
-        dismiss(animated: true)
+        navigationController?.dismiss(animated: true)
     }
     
     override func viewDidLoad() {

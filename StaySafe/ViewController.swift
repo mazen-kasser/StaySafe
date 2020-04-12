@@ -115,7 +115,7 @@ extension ViewController: QRScannerViewDelegate {
         
         checkinMessage = message
         
-        Alert.showLoading(message: "@ \(message)") { [weak self] in
+        Alert.showLoading() { [weak self] in
             Alert.hideLoading()
             self?.performSegue(withIdentifier: SegueID.addCheckin, sender: self)
         }
