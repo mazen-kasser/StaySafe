@@ -5,20 +5,24 @@ PODS:
   - iOSSnapshotTestCase/Core (6.2.0)
   - iOSSnapshotTestCase/SwiftSupport (6.2.0):
     - iOSSnapshotTestCase/Core
+  - MBProgressHUD (1.1.0)
 
 DEPENDENCIES:
   - DHSmartScreenshot
   - iOSSnapshotTestCase
+  - MBProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DHSmartScreenshot
     - iOSSnapshotTestCase
+    - MBProgressHUD
 
 SPEC CHECKSUMS:
   DHSmartScreenshot: ee749048bd7126c4826748f98df3a4adc6ad6c78
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
 
-PODFILE CHECKSUM: 61b8470ef5d5b378f84e5b684f10b02e1da26cea
+PODFILE CHECKSUM: 3e0de3588166b9e05aeaa6017ad6a110029fa9e7
 
 COCOAPODS: 1.7.5

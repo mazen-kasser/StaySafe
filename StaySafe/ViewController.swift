@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 
 extension Notification.Name {
-//    static let openUrlSchemeNotification = Notification.Name(rawValue: "openUrlScheme")
     static let willEnterForegroundNotification = Notification.Name(rawValue: "willEnterForegroundNotification")
     static let willEnterBackgroundNotification = Notification.Name(rawValue: "willEnterBackgroundNotification")
 }
@@ -64,11 +63,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: .openUrlScheme,
-//                                               name: .openUrlSchemeNotification,
-//                                               object: nil)
+
     }
     
     private func addApplicationNotificationObservers() {
@@ -116,17 +111,15 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningSucceededWithCode(_ str: String?) {
-        checkinMessage = str ?? "Checked In" + "✅"
-        showToast(message: checkinMessage) { [weak self] in
+        guard let message = str else { return }
+        
+        checkinMessage = message
+        
+        Alert.showLoading(message: "@ \(message)") { [weak self] in
+            Alert.hideLoading()
             self?.performSegue(withIdentifier: SegueID.addCheckin, sender: self)
         }
     }
-    
-//    @objc func openUrlScheme(_ notification: Notification) {
-//        guard let object = notification.object as? String else { return }
-//        
-//        qrScanningSucceededWithCode(object)
-//    }
     
     @objc func startScanning() {
         if !scannerView.isRunning {
@@ -143,7 +136,6 @@ extension ViewController: QRScannerViewDelegate {
 }
 
 private extension Selector {
-//    static let openUrlScheme = #selector(ViewController.openUrlScheme(_:))
     static let willEnterForeground = #selector(ViewController.startScanning)
     static let willEnterBackground = #selector(ViewController.stopScanning)
 }

@@ -11,17 +11,13 @@ import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         handlePushNotification(application, withOptions: launchOptions)
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: .openUrlScheme,
-                                               name: .openUrlSchemeNotification,
-                                               object: nil)
+        handleOpenURLScheme()
         
         return true
     }
@@ -95,33 +91,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-}
-
-extension AppDelegate {
-    
-    @objc func openUrlScheme(_ notification: Notification) {
-        guard let object = notification.object as? String else { return }
-        
-        let vm = CheckinViewModel()
-        vm.add(object)
-        
-        UIApplication.shared.keyWindow?.rootViewController?.showToast(message: "CHECKED IN ✅")
-    }
-}
-
-extension Notification.Name {
-    static let openUrlSchemeNotification = Notification.Name(rawValue: "openUrlScheme")
-}
-
-private extension Selector {
-    static let openUrlScheme = #selector(AppDelegate.openUrlScheme(_:))
-}
-
-extension UIResponder {
-    
-    func checkin(_ text: String) {
-        guard let message = QRGenerator.decode(text) else { return }
-        
-        NotificationCenter.default.post(name: .openUrlSchemeNotification, object: message)
-    }
 }

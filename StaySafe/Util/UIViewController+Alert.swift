@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 extension UIViewController {
     
@@ -17,16 +18,56 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func showToast(message : String, seconds: Double = 2.0, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = .black
-        alert.view.alpha = 0.6
-        alert.view.layer.cornerRadius = 15
+}
+
+class Alert {
+    
+    private static func keyWindow() -> UIWindow? {
+        return UIApplication.shared.keyWindow
+    }
+    
+    static func showLoading(title: String? = "CHECK IN", message: String? = nil, dismissAfter: TimeInterval = 3, completion: @escaping (() -> Void)) {
+        guard
+            let keyWindow = keyWindow(),
+            MBProgressHUD(for: keyWindow) == nil // No existing HUD is displayed.
+        else {
+            return
+        }
         
-        self.present(alert, animated: true)
+        let hud = MBProgressHUD(view: keyWindow)
+        hud.removeFromSuperViewOnHide = true
+        keyWindow.addSubview(hud)
+        hud.show(animated: true)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            alert.dismiss(animated: true, completion: completion)
+        hud.backgroundView.blurEffectStyle = .regular
+        hud.backgroundView.color = UIColor(white: 0.0, alpha: 0.4)
+        hud.bezelView.color = .white
+        hud.label.text = title
+        hud.detailsLabel.text = message
+        hud.detailsLabel.textColor = .black
+        hud.customView = UIImageView(image: #imageLiteral(resourceName: "success") )
+        hud.mode = .customView
+        
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                             argument: hud.detailsLabel)
+        
+        hud.completionBlock = {
+            UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                                            argument: nil)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + dismissAfter) {
+            completion()
         }
     }
+    
+    static func hideLoading() {
+        guard let keyWindow = keyWindow() else { return }
+
+        MBProgressHUD.hide(for: keyWindow, animated: true)
+    }
 }
+
+
+
+

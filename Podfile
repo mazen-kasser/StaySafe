@@ -6,6 +6,7 @@ inhibit_all_warnings!
 target 'StaySafe' do
   
   pod 'DHSmartScreenshot'
+  pod 'MBProgressHUD'
 
   target 'StaySafeTests' do
     inherit! :search_paths
