@@ -169,25 +169,25 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-Th-yiL">
-                                    <rect key="frame" x="112" y="16" width="190.5" height="152"/>
+                                    <rect key="frame" x="118.5" y="16" width="177" height="152"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="check-ins" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ML-4IM">
-                                            <rect key="frame" x="55" y="0.0" width="80" height="80"/>
+                                            <rect key="frame" x="48.5" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="S0Q-8e-Rnh"/>
                                                 <constraint firstAttribute="width" constant="80" id="iKO-iB-fVw"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ody-7h-4IS">
-                                            <rect key="frame" x="0.0" y="104" width="190.5" height="48"/>
+                                            <rect key="frame" x="0.0" y="104" width="177" height="48"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have 0 Check-ins" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-bq-DpO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="190.5" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have 0 check-in" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0b-bq-DpO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="32"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="and mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG8-ip-MTj">
-                                                    <rect key="frame" x="36.5" y="32" width="117" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="for the past two weeks" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG8-ip-MTj">
+                                                    <rect key="frame" x="20" y="32" width="137" height="16"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.32580846549999998" green="0.32586956020000002" blue="0.32579338549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -225,6 +225,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="checkinSubtitleLabel" destination="aG8-ip-MTj" id="2mO-2o-Coh"/>
+                        <outlet property="checkinTitleLabel" destination="I0b-bq-DpO" id="IVw-N7-zBF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfh-Gi-9qZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +360,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PLL-MO-SQT">
                                     <rect key="frame" x="24" y="16" width="208" height="152"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-ET-40F">
+                                        <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-ET-40F">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="PlR-4s-YtA"/>
@@ -482,10 +486,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="JXw-jo-VTd"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.80185199873096447" green="0.64006035270524264" blue="0.0059954561351779302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.75824873096446699" green="0.60525502330543479" blue="0.0056694340267861238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="CameraFrame" width="320" height="384"/>
-        <image name="Contact" width="80" height="80"/>
-        <image name="check-ins" width="32" height="32"/>
+        <image name="Contact" width="60" height="60"/>
+        <image name="check-ins" width="48" height="48"/>
     </resources>
 </document>

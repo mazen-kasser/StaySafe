@@ -5,12 +5,15 @@ import UIKit
 class CheckinViewController: UITableViewController {
 
     private var viewModel: CheckinViewModel!
+    @IBOutlet weak var checkinTitleLabel: UILabel!
+    @IBOutlet weak var checkinSubtitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(CheckinCell.self)
         tableView.tableFooterView = UIView()
+        reloadHeaderData()
     }
     
     private func addApplicationNotificationObservers() {
@@ -80,6 +83,14 @@ extension CheckinViewController {
 extension CheckinViewController {
     @objc func reloadData() {
         tableView.reloadData()
+        reloadHeaderData()
+    }
+    
+    func reloadHeaderData() {
+        let count = viewModel.checkins.count
+        let plural = count > 1 ? "s" : ""
+        checkinTitleLabel.text = "You have \(count) check-in\(plural)"
+        checkinSubtitleLabel.isHidden = count == 0
     }
 }
 
