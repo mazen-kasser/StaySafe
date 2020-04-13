@@ -16,7 +16,7 @@ enum QRGenerator {
         let encoded = encode(string)
         
         guard let scaledQrImage = encoded.qrImage,
-            let logoImage = UIImage(named: "COVID-Alert"),
+            let logoImage = UIImage(named: "COVID-19-logo"),
             let logo = CIImage(image: logoImage),
             let mergedQrImage = scaledQrImage.combined(with: logo)
             else { return nil }
