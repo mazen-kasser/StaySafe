@@ -45,6 +45,20 @@
 		BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */; };
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
+		BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */; };
+		BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */; };
+		BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */; };
+		BAFBEA332443FFB100B5D946 /* CATextFieldUnderline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA302443FFB100B5D946 /* CATextFieldUnderline.swift */; };
+		BAFBEA35244400EA00B5D946 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA34244400EA00B5D946 /* String+.swift */; };
+		BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA36244401BF00B5D946 /* TextFieldFormatter.swift */; };
+		BAFBEA3A244401BF00B5D946 /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA37244401BF00B5D946 /* TextFieldValidator.swift */; };
+		BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */; };
+		BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA3C2444043000B5D946 /* ValidationRule.swift */; };
+		BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */; };
+		BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */; };
+		BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */; };
+		BAFBEA462444065000B5D946 /* RegularExpressionTextFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */; };
+		BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +128,20 @@
 		BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewControllerConfig.swift; sourceTree = "<group>"; };
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
+		BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextField.swift; sourceTree = "<group>"; };
+		BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldValidationLabel.swift; sourceTree = "<group>"; };
+		BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldFloatingLabel.swift; sourceTree = "<group>"; };
+		BAFBEA302443FFB100B5D946 /* CATextFieldUnderline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldUnderline.swift; sourceTree = "<group>"; };
+		BAFBEA34244400EA00B5D946 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BAFBEA36244401BF00B5D946 /* TextFieldFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldFormatter.swift; sourceTree = "<group>"; };
+		BAFBEA37244401BF00B5D946 /* TextFieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
+		BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorFormatterTextFieldDelegate.swift; sourceTree = "<group>"; };
+		BAFBEA3C2444043000B5D946 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRulesRegistry.swift; sourceTree = "<group>"; };
+		BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsValidationRule.swift; sourceTree = "<group>"; };
+		BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsValidatorFormatter.swift; sourceTree = "<group>"; };
+		BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionTextFieldFormatter.swift; sourceTree = "<group>"; };
+		BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionTextFieldValidator.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				BA570323243F06A400343016 /* CheckinViewModel.swift */,
+				BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */,
+				BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +279,7 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BADAEAE0243DD42800C2A1C9 /* Util */,
@@ -305,6 +336,7 @@
 				BA33414624402F550095BBE7 /* UserDefaults+.swift */,
 				BADC930C2441433300FC4E63 /* UIView+.swift */,
 				BADC93152441E34100FC4E63 /* DateFormatter+.swift */,
+				BAFBEA34244400EA00B5D946 /* String+.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -329,6 +361,24 @@
 				BADC93172441EC7E00FC4E63 /* Share */,
 			);
 			path = Merchant;
+			sourceTree = "<group>";
+		};
+		BAFBEA2B2443FEC900B5D946 /* CATextField */ = {
+			isa = PBXGroup;
+			children = (
+				BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */,
+				BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */,
+				BAFBEA3C2444043000B5D946 /* ValidationRule.swift */,
+				BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */,
+				BAFBEA36244401BF00B5D946 /* TextFieldFormatter.swift */,
+				BAFBEA37244401BF00B5D946 /* TextFieldValidator.swift */,
+				BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */,
+				BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */,
+				BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */,
+				BAFBEA302443FFB100B5D946 /* CATextFieldUnderline.swift */,
+				BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */,
+			);
+			path = CATextField;
 			sourceTree = "<group>";
 		};
 		CC7C553CD5E71C6143C98F9D /* Frameworks */ = {
@@ -570,32 +620,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFBEA3A244401BF00B5D946 /* TextFieldValidator.swift in Sources */,
 				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
 				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
+				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
+				BAFBEA35244400EA00B5D946 /* String+.swift in Sources */,
+				BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */,
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
+				BAFBEA332443FFB100B5D946 /* CATextFieldUnderline.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
+				BAFBEA462444065000B5D946 /* RegularExpressionTextFieldFormatter.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */,
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
 				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
+				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
+				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
+				BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */,
+				BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
+				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+.swift in Sources */,
+				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
 				BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */,
+				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
+				BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
 			);

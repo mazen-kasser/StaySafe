@@ -10,8 +10,9 @@ import UIKit
 
 class ContactUsViewController: UITableViewController {
 
-    @IBOutlet private weak var contactNameTextField: UITextField!
-    @IBOutlet private weak var mobileNumberTextField: UITextField!
+    @IBOutlet private weak var submitButton: UIBarButtonItem!
+    @IBOutlet private weak var contactNameTextField: CATextField!
+    @IBOutlet private weak var mobileNumberTextField: CATextField!
 
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard isScreenValid() else { return }
@@ -32,10 +33,20 @@ class ContactUsViewController: UITableViewController {
     }
 
     private func isScreenValid() -> Bool {
-        return true
-// TODO: add validation rules
-//        return contactNameTextField.isValid(true) &&
-//            mobileNumberTextField.isValid(true)
+        return contactNameTextField.isValid(true) &&
+            mobileNumberTextField.isValid(true)
     }
     
+}
+
+extension ContactUsViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        mobileNumberTextField.becomeFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        submitButton.isEnabled = isScreenValid()
+    }
 }
