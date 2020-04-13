@@ -4,7 +4,7 @@ import UIKit
 
 class CheckinCell: UITableViewCell {
 
-    @IBOutlet private weak var initialLetterView: InitialsView!
+    @IBOutlet private weak var initialLetterLabel: UILabel!
     @IBOutlet private weak var displayNameLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var createDateLabel: UILabel!
@@ -18,10 +18,11 @@ class CheckinCell: UITableViewCell {
                 let subtitle = array.last
                 else { return }
             
-            initialLetterView.initialsText = String(title.first!)
+            initialLetterLabel.text = String(title.first!)
             displayNameLabel.text = title
             addressLabel.text = subtitle
             createDateLabel.text = DateFormatter.yyyyMMdd.string(from: checkin.createdAt ?? Date())
         }
     }
+
 }

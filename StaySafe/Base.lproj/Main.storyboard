@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QRScannerView" customModule="COVID_Alert" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aJ-fgU">
-                                <rect key="frame" x="82" y="259" width="250" height="330"/>
+                                <rect key="frame" x="82" y="303" width="250" height="330"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraFrame" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-D3-ZoG">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -87,7 +87,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="scannerView" destination="8bC-Xf-vdC" id="JSM-Ya-Omr"/>
                         <segue destination="rol-Df-1N7" kind="show" identifier="addCheckin" id="nol-pY-AH4"/>
@@ -162,7 +161,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="CheckinViewController" id="rol-Df-1N7" customClass="CheckinViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fo1-87-zDE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="PNp-b1-RM7">
@@ -172,7 +171,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="j5h-Th-yiL">
                                     <rect key="frame" x="112" y="16" width="190.5" height="152"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="AllClearAccountsViewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ML-4IM">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="check-ins" translatesAutoresizingMaskIntoConstraints="NO" id="mka-ML-4IM">
                                             <rect key="frame" x="55" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="S0Q-8e-Rnh"/>
@@ -237,7 +236,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDE-mG-QO0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="oBV-iA-SPO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="oBV-iA-SPO">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -483,10 +482,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="JXw-jo-VTd"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.80185199873096447" green="0.64006035270524264" blue="0.0059954561351779302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="AllClearAccountsViewIcon" width="32" height="32"/>
         <image name="CameraFrame" width="320" height="384"/>
         <image name="Contact" width="80" height="80"/>
+        <image name="check-ins" width="32" height="32"/>
     </resources>
 </document>

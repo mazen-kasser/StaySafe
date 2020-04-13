@@ -19,4 +19,13 @@ extension UIView {
             layer.cornerRadius = newValue
         }
     }
+    
+    /// To load SomeView from a nib named SomeView.xib:
+    ///
+    /// let aView: SomeView = .loadFromNib()
+    class func loadFromNib<T: UIView>() -> T {
+        let bundle = Bundle(for: T.self)
+        return bundle.loadNibNamed(String(describing: T.self), owner: nil, options: nil)!.first as! T
+    }
+    
 }
