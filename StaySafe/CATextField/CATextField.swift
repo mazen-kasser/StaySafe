@@ -67,9 +67,9 @@ class CATextField: UITextField {
 
     // MARK: Other Properties
 
-//    var floatingLabelAccessibilityLabel: String? {
-//        didSet { floatingLabel?.floatingLabelAccessibilityLabel = floatingLabelAccessibilityLabel }
-//    }
+    var floatingLabelAccessibilityLabel: String? {
+        didSet { floatingLabel?.floatingLabelAccessibilityLabel = floatingLabelAccessibilityLabel }
+    }
 
     /// A Boolean value that determines whether the underline is hidden.
     @IBInspectable var underlineHidden: Bool = false {
@@ -192,7 +192,7 @@ class CATextField: UITextField {
     @IBInspectable var validationRuleKey: String? {
         didSet {
             if let ruleKey = validationRuleKey {
-                validationRule = try! ValidationRulesRegistry.ruleFromRawValue(ruleKey) // swiftlint:disable:this force_try
+                validationRule = try! ValidationRulesRegistry.ruleFromRawValue(ruleKey)
             } else {
                 validationRule = nil
             }

@@ -19,7 +19,7 @@ class CATextFieldValidationLabel: UILabel {
 
     init(textField: CATextField) {
         self.textField = textField
-        super.init(frame: CGRect.zero)
+        super.init(frame: .zero)
         setupView()
     }
 
@@ -31,6 +31,8 @@ class CATextFieldValidationLabel: UILabel {
         guard let superview = textField.superview else { return }
         superview.addSubview(self)
 
+        font = UIFont.systemFont(ofSize: 14)
+        textColor = .systemRed
         numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
         alpha = 0.0
@@ -45,7 +47,7 @@ class CATextFieldValidationLabel: UILabel {
     func showError(_ message: String) {
         text = message
         UIView.animate(withDuration: Constants.animationDuration, delay: 0, animations: {
-            self.alpha = 1.0
+            self.alpha = 0.7
         }, completion: nil)
     }
 

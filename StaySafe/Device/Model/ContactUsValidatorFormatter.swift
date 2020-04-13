@@ -16,7 +16,7 @@ enum TextValidator {
 
        enum Mobile {
            static let mandatoryValidationMessage = NSLocalizedString("Please enter a mobile number", comment: "validation message")
-           static let validationMessage = NSLocalizedString("Please enter a 11 digit mobile number starting with 02", comment: "validation message")
+           static let validationMessage = NSLocalizedString("Please enter number starting with 02", comment: "validation message")
        }
 }
 

@@ -441,19 +441,19 @@
                         <sections>
                             <tableViewSection id="Lbs-ur-Hxl">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="1v9-EI-685">
-                                        <rect key="frame" x="0.0" y="254" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="1v9-EI-685">
+                                        <rect key="frame" x="0.0" y="254" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1v9-EI-685" id="5UC-ot-2WG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-iZ-8U3" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="374" height="30"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-iZ-8U3" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="TTy-lI-Amq"/>
+                                                        <constraint firstAttribute="height" constant="40" id="TTy-lI-Amq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantName"/>
@@ -470,19 +470,19 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="HJ9-fe-Hyd">
-                                        <rect key="frame" x="0.0" y="344" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="HJ9-fe-Hyd">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HJ9-fe-Hyd" id="Wc1-xF-S3S">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4N4-AQ-6dY" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="CB3-cx-9GM"/>
+                                                        <constraint firstAttribute="height" constant="40" id="CB3-cx-9GM"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantMobile"/>

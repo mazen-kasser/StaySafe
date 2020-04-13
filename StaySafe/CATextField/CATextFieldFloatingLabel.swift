@@ -57,7 +57,7 @@ class CATextFieldFloatingLabel {
 
     private func setupPlaceholderAnimationLabel(_ superview: UIView) {
         guard let textField = textField else { return }
-
+        
         superview.addSubview(placeholderAnimationLabel)
         setupLabel(placeholderAnimationLabel)
 
@@ -181,7 +181,8 @@ class CATextFieldFloatingLabel {
     /// Whether the floating label is in the active or inactive state.
     var active: Bool = false {
         didSet {
-//            floatingLabel.textColor = active ? styleDefinition?.floatingLabelActiveTextColor : styleDefinition?.floatingLabelInactiveTextColor
+            floatingLabel.textColor = active ? .lightGray : .gray
+            placeholderAnimationLabel.textColor = .lightGray
         }
     }
 

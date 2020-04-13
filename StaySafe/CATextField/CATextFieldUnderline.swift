@@ -81,9 +81,9 @@ class CATextFieldUnderline: UIView {
 
     private func updateLineColor() {
         if !valid {
-//            backgroundColor = styleDefinition.underlineErrorColor
+            backgroundColor = .systemRed
         } else {
-//            backgroundColor = highlighted ? styleDefinition.underlineHighlightColor : styleDefinition.underlineNormalColor
+            backgroundColor = highlighted ? .systemYellow : .lightGray
         }
     }
 
