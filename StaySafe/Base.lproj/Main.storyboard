@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aJ-fgU">
-                                <rect key="frame" x="82" y="333" width="250" height="330"/>
+                                <rect key="frame" x="82" y="331" width="250" height="334"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-D3-ZoG">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-D3-ZoG">
                                         <rect key="frame" x="0.0" y="1.5" width="250" height="246.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
@@ -35,13 +35,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Am4-mq-Bbh">
-                                        <rect key="frame" x="10" y="290" width="230" height="40"/>
+                                        <rect key="frame" x="20" y="290" width="210" height="44"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DNK-c2-ISQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-vS-ew0">
-                                                    <rect key="frame" x="12.5" y="10" width="205.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-vS-ew0">
+                                                    <rect key="frame" x="49.5" y="12" width="111.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -53,26 +53,26 @@
                                             </constraints>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="4LJ-fz-NYG"/>
-                                            <constraint firstAttribute="width" constant="230" id="qKS-uU-7ks"/>
+                                            <constraint firstAttribute="height" constant="44" id="4LJ-fz-NYG"/>
+                                            <constraint firstAttribute="width" constant="210" id="qKS-uU-7ks"/>
                                         </constraints>
                                         <blurEffect style="dark"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </visualEffectView>
                                 </subviews>
                             </stackView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMZ-R6-pti">
-                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <rect key="frame" x="20" y="64" width="44" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dIT-07-AXY">
-                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsF-6q-ZuZ">
-                                            <rect key="frame" x="7.5" y="8" width="25" height="24"/>
+                                            <rect key="frame" x="9.5" y="10" width="25" height="24"/>
                                             <connections>
                                                 <segue destination="Cpd-M4-Py8" kind="presentation" id="JZ8-hn-Js9"/>
                                             </connections>
@@ -84,24 +84,24 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="7ZK-XC-CZg"/>
-                                    <constraint firstAttribute="height" constant="40" id="lxU-7s-2lh"/>
+                                    <constraint firstAttribute="width" constant="44" id="7ZK-XC-CZg"/>
+                                    <constraint firstAttribute="height" constant="44" id="lxU-7s-2lh"/>
                                 </constraints>
                                 <blurEffect style="dark"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-AW-IKo">
-                                <rect key="frame" x="294" y="44" width="100" height="40"/>
+                                <rect key="frame" x="284" y="64" width="110" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ICX-su-QHn">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X1-B0-pYW">
-                                            <rect key="frame" x="11" y="3.5" width="78" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="78" height="33"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <state key="normal" title="Check-ins"/>
                                             <connections>
@@ -115,23 +115,23 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="fhO-4p-Gbp"/>
-                                    <constraint firstAttribute="height" constant="40" id="kcP-NK-ZXJ"/>
+                                    <constraint firstAttribute="width" constant="110" id="fhO-4p-Gbp"/>
+                                    <constraint firstAttribute="height" constant="44" id="kcP-NK-ZXJ"/>
                                 </constraints>
                                 <blurEffect style="dark"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="MMZ-R6-pti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7pc-r1-R6T"/>
+                            <constraint firstItem="MMZ-R6-pti" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7pc-r1-R6T"/>
                             <constraint firstItem="Pgs-aJ-fgU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="XfK-yZ-81d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e2U-AW-IKo" secondAttribute="trailing" constant="20" id="cbD-nO-BOw"/>
-                            <constraint firstItem="e2U-AW-IKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h1w-SK-spm"/>
+                            <constraint firstItem="e2U-AW-IKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h1w-SK-spm"/>
                             <constraint firstItem="Pgs-aJ-fgU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rET-AQ-8T4"/>
                             <constraint firstItem="MMZ-R6-pti" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="suK-bL-3Kw"/>
                         </constraints>
