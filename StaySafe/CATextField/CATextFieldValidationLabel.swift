@@ -34,7 +34,7 @@ class CATextFieldValidationLabel: UILabel {
         numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
         alpha = 0.0
-//        isAccessibilityElement = false
+        isAccessibilityElement = false
 
         let widthConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: textField, attribute: .width, multiplier: 1.0, constant: 0)
         let topMarginConstraint = NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: textField, attribute: .bottom, multiplier: 1.0, constant: Constants.topMargin)
