@@ -263,7 +263,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="0kM-gZ-wZ9">
-                        <barButtonItem key="rightBarButtonItem" title="Alert" id="JSB-BF-yng">
+                        <barButtonItem key="rightBarButtonItem" title="Report" id="JSB-BF-yng">
+                            <color key="tintColor" red="0.77156690292328778" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="sVj-fD-LLp" kind="presentation" id="amB-NQ-whs"/>
                             </connections>
