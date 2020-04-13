@@ -29,7 +29,8 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
             Alert.hideLoading()
             
             self?.presentAlert(title: "Your business badge has been created",
-                               message: "Please check the details to match your business and print using the Share feature")
+                               message: "Please check the details to match your business and print using the Share feature",
+                               style: .actionSheet)
         }
         
         applyShareButton(for: .right, selector: #selector(sharePage))
