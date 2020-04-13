@@ -59,10 +59,13 @@ class CheckinViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
 
-        let archiveAction = UITableViewRowAction(style: .default, title: "Archive") { (rowAction, indexPath) in
+        let archiveAction = UITableViewRowAction(style: .default, title: "Archive") { [weak self] (rowAction, indexPath) in
+            guard let self = self else { return }
+            
             let deleteCheckin = self.viewModel.checkins[indexPath.row]
             self.viewModel.delete(deleteCheckin)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            self.reloadHeaderData()
         }
 
         return [archiveAction]
