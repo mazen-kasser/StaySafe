@@ -554,7 +554,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="JXw-jo-VTd"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.75824873096446699" green="0.60525502330543479" blue="0.0056694340267861238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.81464149746192893" green="0.65026928288390384" blue="0.0060910833566025398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Contact" width="80" height="80"/>
         <image name="check-ins" width="48" height="48"/>
