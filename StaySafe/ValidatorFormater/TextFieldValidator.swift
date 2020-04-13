@@ -17,11 +17,10 @@ protocol TextFieldValidator {
     /// Whether the text is considered valid
     func isValid(_ text: String?) -> Bool
 
-    /**
-    Whether the text is considered valid for user input.
-    This is often a partial incomplete input, which should be allowed, but would not be valid overall.
-    For example, for amounts, 0.0 is valid for user input (allowing user to type 0.01), but should still trigger a validation error.
-    */
+
+    /// Whether the text is considered valid for user input.
+    /// This is often a partial incomplete input, which should be allowed, but would not be valid overall.
+    /// For example, for amounts, 0.0 is valid for user input (allowing user to type 0.01), but should still trigger a validation error.
     func isValidUserInput(_ text: String?) -> Bool
 
     /// Performs validation, throwing the appropriate validation error (which includes the validation message) when validation fails

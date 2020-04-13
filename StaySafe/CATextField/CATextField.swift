@@ -16,16 +16,14 @@ class CATextField: UITextField {
     private var validationLabel: CATextFieldValidationLabel?
     var floatingLabel: CATextFieldFloatingLabel?
 
-    /**
-     Replace the built in validation label with another one.
-     Typically, you would do this if the normal position of the validation label is not what you want,
-     and you want to use another one you have positioned in a Storyboard/Nib.
-
-     In the scenario where there are multiple labels which overlap each other
-     (e.g. if you have textfields side-by-side)
-     it's recommended that the view controller handle the special case.
-     You can KVO on the `valid` property and set the `validationLabelHidden` accordingly.
-     */
+    /// Replace the built in validation label with another one.
+    /// Typically, you would do this if the normal position of the validation label is not what you want,
+    /// and you want to use another one you have positioned in a Storyboard/Nib.
+    ///
+    /// In the scenario where there are multiple labels which overlap each other
+    /// (e.g. if you have textfields side-by-side)
+    /// it's recommended that the view controller handle the special case.
+    /// You can KVO on the `valid` property and set the `validationLabelHidden` accordingly.
     func associateWithValidationLabel(_ validationLabel: CATextFieldValidationLabel) {
         self.validationLabel = validationLabel
         validationLabel.textField = self
@@ -51,11 +49,9 @@ class CATextField: UITextField {
     /// Stores the text of the placeholder when it's hidden, so it can be restored
     private var hiddenPlaceholder: String?
 
-    /**
-     Shows and hides the placeholder without affecting the placeholder text which was set, nor the text on the floating label.
-     Used in conjunction with the floating label, whereby the real placeholder is hidden when the floating label is shown.
-     Has no effect when reduce motion is on.
-     */
+    /// Shows and hides the placeholder without affecting the placeholder text which was set, nor the text on the floating label.
+    /// Used in conjunction with the floating label, whereby the real placeholder is hidden when the floating label is shown.
+    /// Has no effect when reduce motion is on.
     private var placeholderHidden = false {
         didSet {
             guard placeholderHidden != oldValue else { return }
@@ -102,10 +98,8 @@ class CATextField: UITextField {
         }
     }
 
-    /*
-     Whether to format the text while the user is typing.
-     When true, and `shouldChangeCharactersInRange` is true, it will replace the text with the result of the formatter's `formatTextForDisplay` method.
-     */
+    /// Whether to format the text while the user is typing.
+    /// When true, and `shouldChangeCharactersInRange` is true, it will replace the text with the result of the formatter's `formatTextForDisplay` method.
     @IBInspectable var formatTextWhileTyping: Bool = false
 
     // MARK: Lifecycle
@@ -212,9 +206,7 @@ class CATextField: UITextField {
         }
     }
 
-    /**
-     The `ValidatorFormatter` which applies the validation and formatting logic for the `ValidationRule`.
-     */
+    /// The `ValidatorFormatter` which applies the validation and formatting logic for the `ValidationRule`.
     var validatorFormatter: ValidatorFormatter? {
         didSet {
             delegate = validatorFormatter
@@ -222,11 +214,9 @@ class CATextField: UITextField {
         }
     }
 
-    /**
-     The `delegate` property of `CBATextField` is aware of the `ValidatorFormatterTextFieldDelegate`,
-     ensuring that any other `UITextFieldDelegate` which is set will be chained to the validatorFormatter,
-     regardless of the ordering of when the properties are set.
-     */
+    /// The `delegate` property of `CBATextField` is aware of the `ValidatorFormatterTextFieldDelegate`,
+    /// ensuring that any other `UITextFieldDelegate` which is set will be chained to the validatorFormatter,
+    /// regardless of the ordering of when the properties are set.
     override var delegate: UITextFieldDelegate? {
         get { return super.delegate }
         set {
@@ -254,11 +244,9 @@ class CATextField: UITextField {
         }
     }
 
-    /**
-     The text displayed by the text field. This subclass adds a property observer to keep validatorFormatter.originalText up to date,
-     and to make the underline look valid if the text is valid.
-     The floating label will be immediately shown if the text is not nil or empty.
-     */
+    /// The text displayed by the text field. This subclass adds a property observer to keep validatorFormatter.originalText up to date,
+    /// and to make the underline look valid if the text is valid.
+    /// The floating label will be immediately shown if the text is not nil or empty.
     override var text: String? {
         didSet {
             if !text.isNilOrEmpty {

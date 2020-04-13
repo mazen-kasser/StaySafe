@@ -13,12 +13,10 @@ For example:
     enum MyValidationRule: String, ValidationRule {
 
         case Amount = "MyAmount"
-        case AccountName = "MyAccountName"
 
         static var rules: [ValidationRule] {
             return [
-                MyValidationRule.Amount,
-                MyValidationRule.AccountName
+                MyValidationRule.Amount
             ]
         }
 
@@ -26,9 +24,6 @@ For example:
             switch self {
             case .Amount:
                 return ValidatorFormatterTextFieldDelegate(AmountTextFieldValidator(), AmountTextFieldFormatter())
-
-            case .AccountName:
-                return ValidatorFormatterTextFieldDelegate(MyAccountNameTextFieldValidator(), MyAccountNameTextFieldFormatter())
             }
         }
     }

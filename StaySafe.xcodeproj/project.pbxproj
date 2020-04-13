@@ -228,6 +228,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BA6DB66124443A1100AC7BD4 /* ValidatorFormater */ = {
+			isa = PBXGroup;
+			children = (
+				BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */,
+				BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */,
+				BAFBEA3C2444043000B5D946 /* ValidationRule.swift */,
+				BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */,
+				BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */,
+				BAFBEA36244401BF00B5D946 /* TextFieldFormatter.swift */,
+				BAFBEA37244401BF00B5D946 /* TextFieldValidator.swift */,
+			);
+			path = ValidatorFormater;
+			sourceTree = "<group>";
+		};
 		BA7D5EBE24431AC600775FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +293,7 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
+				BA6DB66124443A1100AC7BD4 /* ValidatorFormater */,
 				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
@@ -366,13 +381,6 @@
 		BAFBEA2B2443FEC900B5D946 /* CATextField */ = {
 			isa = PBXGroup;
 			children = (
-				BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */,
-				BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */,
-				BAFBEA3C2444043000B5D946 /* ValidationRule.swift */,
-				BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */,
-				BAFBEA36244401BF00B5D946 /* TextFieldFormatter.swift */,
-				BAFBEA37244401BF00B5D946 /* TextFieldValidator.swift */,
-				BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */,
 				BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */,
 				BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */,
 				BAFBEA302443FFB100B5D946 /* CATextFieldUnderline.swift */,

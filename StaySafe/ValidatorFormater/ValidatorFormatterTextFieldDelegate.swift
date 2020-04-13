@@ -2,11 +2,10 @@
 
 import UIKit
 
-/*
-A `UITextFieldDelegate` which is responsible for preventing invalid user input,
-for formatting the text to a display version (when editing ends),
-and restoring the text back to the original one the user typed in (when editing begins)
-*/
+
+/// A `UITextFieldDelegate` which is responsible for preventing invalid user input,
+/// for formatting the text to a display version (when editing ends),
+/// and restoring the text back to the original one the user typed in (when editing begins)
 protocol ValidatorFormatter: UITextFieldDelegate {
 
     /// The validator which provides the rules for whether a textfield is valid
@@ -15,23 +14,20 @@ protocol ValidatorFormatter: UITextFieldDelegate {
     /// The formatter which formats text for display on screen, or for binding to a model object.
     var formatter: TextFieldFormatter { get }
 
-    /**
-    `UITextFieldDelegate` which is called after this class is finished.
-    This will usually be the ViewController which conforms to `UITextFieldDelegate`
-    which wants to perform some logic for the text field besides the validation.
-    This is set automatically by `CBATextField`.
-    */
+    
+    /// `UITextFieldDelegate` which is called after this class is finished.
+    /// This will usually be the ViewController which conforms to `UITextFieldDelegate`
+    /// which wants to perform some logic for the text field besides the validation.
+    /// This is set automatically by `CBATextField`.
     var chainedDelegate: UITextFieldDelegate? { get set }
 
     /// The original text the user typed into the textfield
     var originalText: String? { get set }
 }
 
-/**
-A concrete`ValidatorFormatter` which is responsible for preventing invalid user input,
-for formatting the text to a display version (when editing ends),
-and restoring the text back to the original one the user typed in (when editing begins)
-*/
+/// A concrete`ValidatorFormatter` which is responsible for preventing invalid user input,
+/// for formatting the text to a display version (when editing ends),
+/// and restoring the text back to the original one the user typed in (when editing begins)
 class ValidatorFormatterTextFieldDelegate: NSObject, ValidatorFormatter {
 
     /// The validator which provides the rules for whether a textfield is valid
@@ -43,12 +39,10 @@ class ValidatorFormatterTextFieldDelegate: NSObject, ValidatorFormatter {
     /// The original text the user typed into the textfield
     var originalText: String?
 
-    /**
-    `UITextFieldDelegate` which is called after this class is finished.
-    This will usually be the ViewController which conforms to `UITextFieldDelegate`
-    which wants to perform some logic for the text field besides the validation.
-    This is set automatically by `CATextField`.
-    */
+    /// `UITextFieldDelegate` which is called after this class is finished.
+    /// This will usually be the ViewController which conforms to `UITextFieldDelegate`
+    /// which wants to perform some logic for the text field besides the validation.
+    /// This is set automatically by `CATextField`.
     weak var chainedDelegate: UITextFieldDelegate?
 
     // MARK: Constructors
