@@ -368,6 +368,7 @@
                         <outlet property="businessNameLabel" destination="xAq-5a-cJ6" id="jbJ-Xv-g7q"/>
                         <outlet property="noteLabel" destination="xYm-CM-a9D" id="Jvt-oM-och"/>
                         <outlet property="qrImageView" destination="UmU-oi-HMs" id="1cg-y0-7dK"/>
+                        <outlet property="titleLabel" destination="GBU-BM-sSq" id="ZyC-8U-vPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzI-Sa-v9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,7 @@ import UIKit
 class MerchantQRViewController: UIViewController, ShareableScreen {
     
     @IBOutlet weak var qrImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
@@ -44,21 +45,23 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
         let color2 = noteLabel.textColor
         let color3 = businessNameLabel.textColor
         let color4 = businessAddressLabel.textColor
+        let color5 = titleLabel.textColor
         
-        printableColors(.white, .black, .black, .black)
+        printableColors(.white, .black, .black, .black, .black)
         displayShareOptions(popoverDelegate: self)
-        printableColors(color1, color2, color3, color4)
+        printableColors(color1, color2, color3, color4, color5)
 
     }
     
     
-    private func printableColors(_ color1: UIColor?, _ color2: UIColor?, _ color3: UIColor?, _ color4: UIColor?) {
+    private func printableColors(_ color1: UIColor?, _ color2: UIColor?, _ color3: UIColor?, _ color4: UIColor?, _ color5: UIColor?) {
         if #available(iOS 12.0, *) {
             if view.traitCollection.userInterfaceStyle == .dark {
                 view.backgroundColor = color1
                 noteLabel.textColor = color2
                 businessNameLabel.textColor = color3
                 businessAddressLabel.textColor = color4
+                titleLabel.textColor = color5
             }
         }
     }
