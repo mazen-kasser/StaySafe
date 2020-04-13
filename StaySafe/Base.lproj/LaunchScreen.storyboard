@@ -17,28 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Ap-Nu-uFJ">
-                                <rect key="frame" x="107" y="349.5" width="200" height="196.5"/>
+                                <rect key="frame" x="82" y="324.5" width="250" height="246.5"/>
                                 <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8KA-Az-VbO"/>
-                                    <constraint firstAttribute="height" constant="200" id="qCC-3i-wb6"/>
+                                    <constraint firstAttribute="width" constant="250" id="8KA-Az-VbO"/>
+                                    <constraint firstAttribute="height" constant="250" id="qCC-3i-wb6"/>
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hro-cD-K2E">
-                                <rect key="frame" x="147" y="389.5" width="120" height="117"/>
+                                <rect key="frame" x="132" y="374.5" width="150" height="147"/>
                                 <color key="tintColor" red="0.99995797870000003" green="0.80003696680000003" blue="0.00019033228450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="4pt-VF-YNa"/>
-                                    <constraint firstAttribute="width" constant="120" id="5Dh-uL-zLj"/>
+                                    <constraint firstAttribute="height" constant="150" id="4pt-VF-YNa"/>
+                                    <constraint firstAttribute="width" constant="150" id="5Dh-uL-zLj"/>
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwS-rv-CVL">
+                                <rect key="frame" x="20" y="762.5" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JwS-rv-CVL" secondAttribute="trailing" constant="20" id="4EB-LA-tTf"/>
                             <constraint firstItem="Hro-cD-K2E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="O0S-fU-zeS"/>
                             <constraint firstItem="Hro-cD-K2E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OBv-Ei-kDu"/>
+                            <constraint firstItem="JwS-rv-CVL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dNU-75-Ave"/>
+                            <constraint firstAttribute="bottom" secondItem="JwS-rv-CVL" secondAttribute="bottom" constant="100" id="f1n-Zu-Ys7"/>
                             <constraint firstItem="5Ap-Nu-uFJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gEV-mf-xyw"/>
                             <constraint firstItem="5Ap-Nu-uFJ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="vtj-Wx-0Fy"/>
                         </constraints>
