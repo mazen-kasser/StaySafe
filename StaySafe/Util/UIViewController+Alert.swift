@@ -11,8 +11,8 @@ import MBProgressHUD
 
 extension UIViewController {
     
-    func presentAlert(withTitle title: String, message : String, handler: ((UIAlertAction) -> Void)? = nil) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    func presentAlert(title: String, message : String, style: UIAlertController.Style = .alert, handler: ((UIAlertAction) -> Void)? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)

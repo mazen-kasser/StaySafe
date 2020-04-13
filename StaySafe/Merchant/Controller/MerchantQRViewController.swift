@@ -24,8 +24,11 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alert.showLoading(title: "Please print this badge using the App share feature", message: "", dismissAfter: 6) {
+        Alert.showLoading(title: "", message: "") { [weak self] in
             Alert.hideLoading()
+            
+            self?.presentAlert(title: "Your business badge has been created",
+                               message: "Please check the details to match your business and print using the Share feature")
         }
         
         applyShareButton(for: .right, selector: #selector(sharePage))
