@@ -8,7 +8,6 @@ class CATextFieldFloatingLabel {
         static let marginToTextField: CGFloat = 0.0
         static let placeholderYStartingOffset: CGFloat = 1.0
         static let animationDuration: TimeInterval = 0.2
-        static let defaultTextStyle = "H2-L"
     }
 
     // MARK: Public properties
