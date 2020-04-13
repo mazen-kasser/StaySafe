@@ -13,6 +13,8 @@ class FindMerchantViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var infoPage: UIStackView!
+    
     var placemarks: [Placemark] = [] {
         didSet {
             tableView.reloadData()
@@ -25,8 +27,8 @@ class FindMerchantViewController: UIViewController {
     
     @IBOutlet weak var addressSearchField: UISearchBar!
     
-    @IBAction func generateQRCode(_ sender: Any) {
-        performSegue(withIdentifier: SegueID.showQRBadge, sender: sender)
+    @IBAction func closeGenerateQRCode(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
@@ -75,6 +77,7 @@ class FindMerchantViewController: UIViewController {
 extension FindMerchantViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        infoPage.isHidden = !searchText.isEmpty
         getPlaces(searchString: searchText)
     }
     

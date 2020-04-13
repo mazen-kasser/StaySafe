@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "success.png",
+      "filename" : "success@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
