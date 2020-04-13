@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aJ-fgU">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-aJ-fgU">
                                 <rect key="frame" x="82" y="333" width="250" height="330"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sZg-D3-ZoG">
@@ -34,14 +34,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Am4-mq-Bbh">
-                                        <rect key="frame" x="0.0" y="290" width="250" height="40"/>
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Am4-mq-Bbh">
+                                        <rect key="frame" x="10" y="290" width="230" height="40"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DNK-c2-ISQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-vS-ew0">
-                                                    <rect key="frame" x="22.5" y="10" width="205.5" height="20.5"/>
+                                                    <rect key="frame" x="12.5" y="10" width="205.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -514,21 +514,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactNameTextField" destination="FLQ-iZ-8U3" id="GQ4-UP-q5f"/>
-                        <outlet property="footerNoteLabel" destination="a6t-it-N6I" id="os4-Yy-rbL"/>
                         <outlet property="mobileNumberTextField" destination="4N4-AQ-6dY" id="vMK-Y9-RyS"/>
                         <outlet property="submitButton" destination="oTT-lj-Bmg" id="fmZ-Or-Y39"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ima-r3-Qgk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a6t-it-N6I">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <string key="text">⚠️ Submit only if you have
-tested positive to COVID-19</string>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                    <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tapGestureRecognizer id="d7d-Ee-k8I">
                     <connections>
                         <action selector="viewTapped:" destination="4dn-Ff-kSE" id="G23-BU-bb6"/>

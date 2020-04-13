@@ -11,10 +11,16 @@ import MBProgressHUD
 
 extension UIViewController {
     
-    func presentAlert(title: String, message : String, style: UIAlertController.Style = .alert, handler: ((UIAlertAction) -> Void)? = nil) {
+    func presentAlert(title: String, message : String, actionTitle: String = "OK", isCancellable: Bool = false, style: UIAlertController.Style = .alert, handler: ((UIAlertAction) -> Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
+        let okAction = UIAlertAction(title: actionTitle, style: .default, handler: handler)
         alertController.addAction(okAction)
+        
+        if isCancellable {
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alertController.addAction(cancelAction)
+        }
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
