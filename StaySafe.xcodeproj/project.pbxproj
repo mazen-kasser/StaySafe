@@ -45,6 +45,8 @@
 		BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */; };
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
+		BAFBEA292443E24E00B5D946 /* InitialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA272443E24E00B5D946 /* InitialsView.swift */; };
+		BAFBEA2A2443E24E00B5D946 /* InitialsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFBEA282443E24E00B5D946 /* InitialsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewControllerConfig.swift; sourceTree = "<group>"; };
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
+		BAFBEA272443E24E00B5D946 /* InitialsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialsView.swift; sourceTree = "<group>"; };
+		BAFBEA282443E24E00B5D946 /* InitialsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialsView.xib; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 		BA570324243F06A400343016 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BAFBEA272443E24E00B5D946 /* InitialsView.swift */,
+				BAFBEA282443E24E00B5D946 /* InitialsView.xib */,
 				BA570325243F06A400343016 /* CheckinCell.swift */,
 				BA570326243F06A400343016 /* CheckinCell.xib */,
 			);
@@ -461,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */,
+				BAFBEA2A2443E24E00B5D946 /* InitialsView.xib in Resources */,
 				BACE53E9243B35AF00A2F6A4 /* Assets.xcassets in Resources */,
 				BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */,
 				BACE53E7243B35AE00A2F6A4 /* Main.storyboard in Resources */,
@@ -578,6 +585,7 @@
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
+				BAFBEA292443E24E00B5D946 /* InitialsView.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
 				BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,

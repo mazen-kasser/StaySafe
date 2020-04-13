@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InitialsView" customModule="COVID_Alert" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiK-dy-6Qj" userLabel="Circle View">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="72"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xV-KO-CwD" customClass="CBALabel" customModule="COVID_Alert" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="28" width="75" height="17"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="style" value="H5-R"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorCode" value="50"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2xV-KO-CwD" secondAttribute="trailing" id="3kG-pT-TgF"/>
+                        <constraint firstItem="2xV-KO-CwD" firstAttribute="leading" secondItem="BiK-dy-6Qj" secondAttribute="leading" id="nk0-xQ-Eih"/>
+                        <constraint firstAttribute="centerY" secondItem="2xV-KO-CwD" secondAttribute="centerY" id="umd-9m-OgK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BiK-dy-6Qj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7O6-wc-uKn"/>
+                <constraint firstAttribute="bottom" secondItem="BiK-dy-6Qj" secondAttribute="bottom" id="EPn-62-n0i"/>
+                <constraint firstAttribute="trailing" secondItem="BiK-dy-6Qj" secondAttribute="trailing" id="aTY-GP-edV"/>
+                <constraint firstItem="BiK-dy-6Qj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mMh-Sm-9jb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="circleView" destination="BiK-dy-6Qj" id="7C9-2f-rho"/>
+                <outlet property="initialsLabel" destination="2xV-KO-CwD" id="4yU-ok-o4I"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="126"/>
+        </view>
+    </objects>
+</document>
