@@ -79,8 +79,12 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="XsF-6q-ZuZ" firstAttribute="leading" secondItem="dIT-07-AXY" secondAttribute="leading" constant="9.5" id="HZf-HI-Pam"/>
+                                        <constraint firstItem="XsF-6q-ZuZ" firstAttribute="top" secondItem="dIT-07-AXY" secondAttribute="top" constant="10" id="LpD-TJ-abN"/>
+                                        <constraint firstAttribute="trailing" secondItem="XsF-6q-ZuZ" secondAttribute="trailing" constant="9.5" id="Mfs-gV-RGG"/>
                                         <constraint firstItem="XsF-6q-ZuZ" firstAttribute="centerX" secondItem="dIT-07-AXY" secondAttribute="centerX" id="VLB-m2-FM2"/>
                                         <constraint firstItem="XsF-6q-ZuZ" firstAttribute="centerY" secondItem="dIT-07-AXY" secondAttribute="centerY" id="VgL-MC-OrD"/>
+                                        <constraint firstAttribute="bottom" secondItem="XsF-6q-ZuZ" secondAttribute="bottom" constant="10" id="WS5-U4-j25"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -112,6 +116,10 @@
                                     <constraints>
                                         <constraint firstItem="3X1-B0-pYW" firstAttribute="centerX" secondItem="ICX-su-QHn" secondAttribute="centerX" id="0fA-BN-p8O"/>
                                         <constraint firstItem="3X1-B0-pYW" firstAttribute="centerY" secondItem="ICX-su-QHn" secondAttribute="centerY" id="46e-v2-uAY"/>
+                                        <constraint firstAttribute="bottom" secondItem="3X1-B0-pYW" secondAttribute="bottom" constant="5.5" id="EHp-FP-IMG"/>
+                                        <constraint firstAttribute="trailing" secondItem="3X1-B0-pYW" secondAttribute="trailing" constant="16" id="IMi-qd-cZ2"/>
+                                        <constraint firstItem="3X1-B0-pYW" firstAttribute="leading" secondItem="ICX-su-QHn" secondAttribute="leading" constant="16" id="KVn-nJ-YiZ"/>
+                                        <constraint firstItem="3X1-B0-pYW" firstAttribute="top" secondItem="ICX-su-QHn" secondAttribute="top" constant="5.5" id="ffL-cm-8Z4"/>
                                     </constraints>
                                 </view>
                                 <constraints>
