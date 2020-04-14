@@ -83,7 +83,7 @@ class CATextFieldUnderline: UIView {
         if !valid {
             backgroundColor = .systemRed
         } else {
-            backgroundColor = highlighted ? .systemYellow : .lightGray
+            backgroundColor = highlighted ? .systemYellow : UIColor(white: 0.0, alpha: 0.2)
         }
     }
 
