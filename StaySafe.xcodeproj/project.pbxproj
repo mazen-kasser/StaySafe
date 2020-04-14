@@ -27,6 +27,9 @@
 		BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */; };
 		BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC4244322CE00775FAD /* Placemark.swift */; };
 		BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */; };
+		BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */; };
+		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
+		BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */; };
 		BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */; };
 		BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */; };
 		BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* ViewController.swift */; };
@@ -104,6 +107,9 @@
 		BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarkCell.xib; sourceTree = "<group>"; };
 		BA7D5EC4244322CE00775FAD /* Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemark.swift; sourceTree = "<group>"; };
 		BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBusinessViewController.swift; sourceTree = "<group>"; };
+		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
+		BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidatorFormatter.swift; sourceTree = "<group>"; };
 		BACE53DC243B35AE00A2F6A4 /* COVID-Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-Alert.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +260,8 @@
 		BA7D5EC3244322B900775FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */,
+				BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */,
 				BA7D5EC4244322CE00775FAD /* Placemark.swift */,
 			);
 			path = Model;
@@ -264,6 +272,7 @@
 			children = (
 				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
 				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
+				BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -633,6 +642,7 @@
 				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
+				BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
@@ -642,6 +652,7 @@
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
 				BAFBEA332443FFB100B5D946 /* CATextFieldUnderline.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
+				BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */,
 				BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */,
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BAFBEA462444065000B5D946 /* RegularExpressionTextFieldFormatter.swift in Sources */,
@@ -649,6 +660,7 @@
 				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
+				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
 				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,

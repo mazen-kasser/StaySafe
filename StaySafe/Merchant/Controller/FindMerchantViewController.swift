@@ -41,6 +41,9 @@ class FindMerchantViewController: UIViewController {
     func getPlaces(searchString: String) {
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchString
+//        if #available(iOS 13.0, *) {
+//            searchRequest.pointOfInterestFilter = .includingAll
+//        }
 //        searchRequest.region = mapView.region
         
         let search = MKLocalSearch(request: searchRequest)

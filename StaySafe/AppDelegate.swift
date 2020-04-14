@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleOpenURLScheme()
         
         try! ValidationRulesRegistry.addRulesToRegistry(ContactUsValidationRule.rules)
+        try! ValidationRulesRegistry.addRulesToRegistry(BusinessValidationRule.rules)
         
         return true
     }

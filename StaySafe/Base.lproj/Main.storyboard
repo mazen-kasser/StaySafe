@@ -179,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A2u-Y4-Jrv">
-                                <rect key="frame" x="20" y="300" width="374" height="242.5"/>
+                                <rect key="frame" x="20" y="225" width="374" height="392.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-ri-wcr">
                                         <rect key="frame" x="5" y="0.0" width="364.5" height="82.5"/>
@@ -207,6 +207,20 @@
                                         </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sT9-ch-BPd">
+                                        <rect key="frame" x="67" y="252.5" width="240" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="158-fw-ngb"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-OU-IR2">
+                                        <rect key="frame" x="100.5" y="362.5" width="173" height="30"/>
+                                        <state key="normal" title="Can't find your business?"/>
+                                        <connections>
+                                            <segue destination="0Dp-yF-Avo" kind="show" id="5iJ-Ly-me1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="751-Vy-QGQ">
@@ -483,15 +497,15 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VaR-7r-vKW">
-                                            <rect key="frame" x="0.0" y="104" width="147.5" height="41"/>
+                                            <rect key="frame" x="0.0" y="104" width="131" height="41"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in your name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVt-xn-QUn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVt-xn-QUn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-fn-AIk">
-                                                    <rect key="frame" x="0.0" y="20.5" width="147.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-fn-AIk">
+                                                    <rect key="frame" x="0.0" y="20.5" width="131" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -619,8 +633,154 @@
             </objects>
             <point key="canvasLocation" x="2940.579710144928" y="-236.38392857142856"/>
         </scene>
+        <!--Custom Business View Controller-->
+        <scene sceneID="e1K-x2-DvB">
+            <objects>
+                <tableViewController id="0Dp-yF-Avo" customClass="CustomBusinessViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nuM-4U-6RG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="0Me-Sl-OLd">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Oio-GY-Cgg">
+                                    <rect key="frame" x="20" y="34" width="374" height="145"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="LsI-ki-t7X">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="k9A-zn-OZh"/>
+                                                <constraint firstAttribute="height" constant="80" id="riz-cy-gHY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VQV-IK-vzO">
+                                            <rect key="frame" x="0.0" y="104" width="188" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your business name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p20-tH-CsC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95K-4g-NMr">
+                                                    <rect key="frame" x="0.0" y="20.5" width="77.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Oio-GY-Cgg" secondAttribute="bottom" constant="20" id="1td-hZ-cLq"/>
+                                <constraint firstItem="Oio-GY-Cgg" firstAttribute="top" secondItem="0Me-Sl-OLd" secondAttribute="top" constant="34" id="5Y7-t0-dsL"/>
+                                <constraint firstItem="Oio-GY-Cgg" firstAttribute="leading" secondItem="0Me-Sl-OLd" secondAttribute="leading" constant="20" id="soW-Ao-uWo"/>
+                                <constraint firstAttribute="trailing" secondItem="Oio-GY-Cgg" secondAttribute="trailing" constant="20" id="uPc-uX-Luq"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="2gd-4p-gpd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="3r4-9c-N09">
+                                        <rect key="frame" x="0.0" y="254" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3r4-9c-N09" id="xkz-Lw-50V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUn-GR-7m7" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Iey-4h-4ha"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="BusinessName"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0Dp-yF-Avo" id="fld-hT-pXE"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UUn-GR-7m7" firstAttribute="centerY" secondItem="xkz-Lw-50V" secondAttribute="centerY" id="2gb-ql-ieW"/>
+                                                <constraint firstAttribute="trailing" secondItem="UUn-GR-7m7" secondAttribute="trailing" constant="20" id="4K6-qY-kC6"/>
+                                                <constraint firstItem="UUn-GR-7m7" firstAttribute="leading" secondItem="xkz-Lw-50V" secondAttribute="leading" constant="20" id="mmT-I7-H0B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="8WA-ML-9nG">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8WA-ML-9nG" id="7fq-bB-C7H">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys1-cT-4OY" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="tG7-vc-PcY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="BusinessAddress"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0Dp-yF-Avo" id="qnd-di-ttU"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ys1-cT-4OY" firstAttribute="centerY" secondItem="7fq-bB-C7H" secondAttribute="centerY" id="IPR-57-52R"/>
+                                                <constraint firstItem="Ys1-cT-4OY" firstAttribute="leading" secondItem="7fq-bB-C7H" secondAttribute="leading" constant="20" id="ecg-nE-ufp"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ys1-cT-4OY" secondAttribute="trailing" constant="20" id="fvq-a0-om9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0Dp-yF-Avo" id="k5G-XV-vxh"/>
+                            <outlet property="delegate" destination="0Dp-yF-Avo" id="9un-OU-GJ5"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="0wZ-Go-ZVt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="gsn-sv-ovv">
+                            <connections>
+                                <action selector="closeButtonTapped" destination="0Dp-yF-Avo" id="naL-Qf-iBY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="AJa-oZ-P3M">
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="0Dp-yF-Avo" id="xt3-Ru-Cwc"/>
+                                <segue destination="got-uT-NwN" kind="show" identifier="showPrintCustomMerchantQR" id="kWx-JY-vkV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="Ys1-cT-4OY" id="W6b-7e-ihg"/>
+                        <outlet property="nameTextField" destination="UUn-GR-7m7" id="OYS-V1-rIS"/>
+                        <outlet property="submitButton" destination="AJa-oZ-P3M" id="GxN-gK-SZR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0M-rP-QnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iAu-UX-aeb">
+                    <connections>
+                        <action selector="viewTapped:" destination="0Dp-yF-Avo" id="pQ9-p4-afD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3851" y="1144"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="gCK-sv-dNS"/>
         <segue reference="dpX-Pq-1gX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81464149746192893" green="0.65026928288390384" blue="0.0060910833566025398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

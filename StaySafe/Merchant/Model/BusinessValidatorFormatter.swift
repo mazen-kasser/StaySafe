@@ -14,25 +14,25 @@ private enum TextValidator {
            static let validationMessage = NSLocalizedString( "Please enter a valid name", comment: "validation message")
        }
 
-       enum Mobile {
-           static let mandatoryValidationMessage = NSLocalizedString("Please enter a mobile number", comment: "validation message")
-           static let validationMessage = NSLocalizedString("Please enter number starting with 02", comment: "validation message")
+       enum Business {
+           static let mandatoryValidationMessage = NSLocalizedString("Please enter an address", comment: "validation message")
+           static let validationMessage = NSLocalizedString("Please enter a valid address starting with a number", comment: "validation message")
        }
 }
 
 // MARK: Name validation
 
-final class NameTextFieldValidator: RegularExpressionTextFieldValidator {
+final class BusinessNameTextFieldValidator: RegularExpressionTextFieldValidator {
     init() {
         super.init(mandatory: true,
                    mandatoryValidationMessage: TextValidator.Name.mandatoryValidationMessage,
                    invalidValidationMessage: TextValidator.Name.validationMessage,
-                   validationRegex: "^[a-zA-Z][- 'a-zA-Z0-9]{0,59}$",
+                   validationRegex: "^[a-zA-Z0-9][- 'a-zA-Z0-9]{0,59}$",
                    userInputValidationRegex: "^.{1,30}$")
     }
 }
 
-final class NameTextFieldFormatter: RegularExpressionTextFieldFormatter {
+final class BusinessNameTextFieldFormatter: RegularExpressionTextFieldFormatter {
     init() {
         super.init(invalidCharactersRegex: "[^- 'a-zA-Z0-9]")
     }
@@ -44,19 +44,19 @@ final class NameTextFieldFormatter: RegularExpressionTextFieldFormatter {
 
 // MARK: Mobile validation
 
-final class MobileTextFieldValidator: RegularExpressionTextFieldValidator {
+final class BusinessAddressTextFieldValidator: RegularExpressionTextFieldValidator {
     init() {
         super.init(mandatory: true,
-                   mandatoryValidationMessage: TextValidator.Mobile.mandatoryValidationMessage,
-                   invalidValidationMessage: TextValidator.Mobile.validationMessage,
-                   validationRegex: "^02[0-9]{9}$",
-                   userInputValidationRegex: "^[0-9]{1,11}$")
+                   mandatoryValidationMessage: TextValidator.Business.mandatoryValidationMessage,
+                   invalidValidationMessage: TextValidator.Business.validationMessage,
+                   validationRegex: "^[0-9][- ,'a-zA-Z0-9]{0,59}$",
+                   userInputValidationRegex: "^.{1,60}$")
     }
 }
 
-final class MobileTextFieldFormatter: RegularExpressionTextFieldFormatter {
+final class BusinessAddressTextFieldFormatter: RegularExpressionTextFieldFormatter {
     init() {
-        super.init(invalidCharactersRegex: "[^0-9]")
+        super.init(invalidCharactersRegex: "[^- ,'a-zA-Z0-9]")
     }
 
     override func formatTextForDisplay(_ text: String?) -> String {
