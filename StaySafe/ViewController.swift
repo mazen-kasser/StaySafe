@@ -108,7 +108,7 @@ extension ViewController: QRScannerViewDelegate {
     }
     
     func qrScanningDidFail() {
-        presentAlert(title: "Error", message: "Try to scan COVID-Alert QR code") { [weak self] _ in
+        presentAlert(title: "Error", message: "Try to scan COVID-19 Tracer QR code") { [weak self] _ in
             self?.scannerView.startScanning()
         }
     }
