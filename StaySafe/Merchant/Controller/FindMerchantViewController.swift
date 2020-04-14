@@ -81,6 +81,7 @@ extension FindMerchantViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         infoPage.isHidden = !searchText.isEmpty
+//        tableView.isHidden = searchText.isEmpty
         getPlaces(searchString: searchText)
     }
     
