@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum UserType: String {
+    case business
+    case person
+}
+
 extension UserDefaults {
     
     enum Key {
@@ -15,17 +20,18 @@ extension UserDefaults {
         static let userType = "userType"
     }
     
-    enum UserType: String {
-        case business
-        case person
-    }
-    
     var userType: UserType? {
         get {
-            return UserDefaults.standard.object(forKey: Key.userType) as? UserDefaults.UserType
+            guard let value = UserDefaults.standard.string(forKey: Key.userType) else { return nil }
+            switch value {
+            case "business": return .business
+            case "person": return .person
+            default:
+                return nil
+            }
         }
         set(value) {
-            UserDefaults.standard.set(value, forKey: Key.deviceToken)
+            UserDefaults.standard.set(value?.rawValue, forKey: Key.userType)
         }
     }
     

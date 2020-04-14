@@ -9,7 +9,7 @@ class PageViewController: UIPageViewController {
     lazy var pages: [UIViewController] = {
         return [
             SlideViewController.instantiate(from: .main),
-            MainViewController.instantiate(from: .main)
+            PersonaViewController.instantiate(from: .main)
         ]
     }()
     
@@ -17,7 +17,7 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
         
         dataSource = self
-        delegate   = self
+        delegate = self
         
         if let firstVC = pages.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)

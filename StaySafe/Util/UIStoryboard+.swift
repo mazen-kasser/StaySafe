@@ -11,9 +11,11 @@ import UIKit
 // TODO: use swiftgen template to automate this?
 enum Storyboard: String {
     case main = "Main"
+    case business = "Business"
+    case person = "Person"
     
     var instance: UIStoryboard {
-        return UIStoryboard(name: .main)
+        return UIStoryboard(name: self.rawValue, bundle: nil)
     }
 }
 

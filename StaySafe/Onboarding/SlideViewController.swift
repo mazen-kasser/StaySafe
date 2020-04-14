@@ -4,6 +4,5 @@ import UIKit
 
 class SlideViewController: UIViewController {
     
-    @IBOutlet private weak var titleLabel: UILabel!
     
 }
