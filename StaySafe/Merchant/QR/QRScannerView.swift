@@ -50,7 +50,9 @@ extension QRScannerView {
     }
     
     func startScanning() {
-       captureSession?.startRunning()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.captureSession?.startRunning()
+        }
     }
     
     func stopScanning() {

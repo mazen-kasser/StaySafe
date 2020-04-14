@@ -64,7 +64,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     private func addApplicationNotificationObservers() {
@@ -87,6 +86,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         startScanning()
+        
         addApplicationNotificationObservers()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
