@@ -12,6 +12,21 @@ extension UserDefaults {
     
     enum Key {
         static let deviceToken = "deviceToken"
+        static let userType = "userType"
+    }
+    
+    enum UserType: String {
+        case business
+        case person
+    }
+    
+    var userType: UserType? {
+        get {
+            return UserDefaults.standard.object(forKey: Key.userType) as? UserDefaults.UserType
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.deviceToken)
+        }
     }
     
     var deviceToken: String? {

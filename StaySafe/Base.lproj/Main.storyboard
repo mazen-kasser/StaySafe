@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xDE-mG-QO0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0LR-Yc-lP2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QRScannerView" customModule="COVID_Alert" customModuleProvider="target">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QRScannerView" customModule="Cov_19_Tracer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -188,7 +188,7 @@
         <!--Find Merchant View Controller-->
         <scene sceneID="Afj-GX-gkm">
             <objects>
-                <viewController id="ZQE-gD-VuD" customClass="FindMerchantViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZQE-gD-VuD" customClass="FindMerchantViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lb4-gz-DBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,16 +197,16 @@
                                 <rect key="frame" x="20" y="300" width="374" height="242.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-ri-wcr" userLabel="Labels Stack View">
-                                        <rect key="frame" x="5" y="0.0" width="364.5" height="82.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="82.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWI-UX-PUl">
-                                                <rect key="frame" x="84" y="0.0" width="196" height="33.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWI-UX-PUl">
+                                                <rect key="frame" x="79.5" y="0.0" width="215.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your business to create a QR code for users to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQc-Fp-Zji">
-                                                <rect key="frame" x="0.0" y="33.5" width="364.5" height="49"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your business to request a QR code for users to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQc-Fp-Zji">
+                                                <rect key="frame" x="0.0" y="33.5" width="374" height="49"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -308,10 +308,49 @@
             </objects>
             <point key="canvasLocation" x="3851" y="461"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Qfu-Z8-s0E">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0LR-Yc-lP2" customClass="PageViewController" customModule="Cov_19_Tracer" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jul-tl-3cG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="461"/>
+        </scene>
+        <!--Slide View Controller-->
+        <scene sceneID="qLw-rF-MMM">
+            <objects>
+                <viewController storyboardIdentifier="SlideViewController" id="irg-XP-cM1" customClass="SlideViewController" customModule="Cov_19_Tracer" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ktg-N3-wob">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-aa-5iH">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TEO-aa-5iH" firstAttribute="centerY" secondItem="ktg-N3-wob" secondAttribute="centerY" id="3gr-bO-bSV"/>
+                            <constraint firstItem="TEO-aa-5iH" firstAttribute="centerX" secondItem="ktg-N3-wob" secondAttribute="centerX" id="Qlp-D8-3UW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cPJ-Jf-C3B"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rlt-q9-7hn"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="TEO-aa-5iH" id="tKQ-Ty-967"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUB-Rz-q1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="1187"/>
+        </scene>
         <!--Checkin View Controller-->
         <scene sceneID="dn4-9j-8h7">
             <objects>
-                <tableViewController storyboardIdentifier="CheckinViewController" id="rol-Df-1N7" customClass="CheckinViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CheckinViewController" id="rol-Df-1N7" customClass="CheckinViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fo1-87-zDE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,7 +441,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T6v-Rr-vh2"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oug-Mn-wXb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DA-VX-vBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -412,7 +451,7 @@
         <!--MerchantQR View Controller-->
         <scene sceneID="y8d-Ez-EUo">
             <objects>
-                <viewController id="got-uT-NwN" customClass="MerchantQRViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="got-uT-NwN" customClass="MerchantQRViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cp3-Ns-TNa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +546,7 @@
         <!--Contact Us View Controller-->
         <scene sceneID="WNZ-zp-zFI">
             <objects>
-                <tableViewController id="4dn-Ff-kSE" customClass="ContactUsViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4dn-Ff-kSE" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P5i-Ek-myi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -561,7 +600,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-iZ-8U3" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLQ-iZ-8U3" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="TTy-lI-Amq"/>
@@ -590,7 +629,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4N4-AQ-6dY" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4N4-AQ-6dY" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="CB3-cx-9GM"/>
@@ -666,7 +705,7 @@
         <!--Custom Business View Controller-->
         <scene sceneID="e1K-x2-DvB">
             <objects>
-                <tableViewController id="0Dp-yF-Avo" customClass="CustomBusinessViewController" customModule="COVID_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0Dp-yF-Avo" customClass="CustomBusinessViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nuM-4U-6RG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,7 +761,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUn-GR-7m7" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUn-GR-7m7" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Iey-4h-4ha"/>
@@ -751,7 +790,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys1-cT-4OY" customClass="CATextField" customModule="COVID_Alert" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys1-cT-4OY" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="tG7-vc-PcY"/>
@@ -810,9 +849,168 @@
             </objects>
             <point key="canvasLocation" x="3850.7246376811595" y="1143.75"/>
         </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="Zc3-DK-aws">
+            <objects>
+                <tableViewController id="iIL-Sz-NzA" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z2Z-gn-EHx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="1uG-ox-qZd">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="zB5-JL-Ihp">
+                                    <rect key="frame" x="20" y="34" width="374" height="145"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="e90-2V-yRm">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="N4k-jL-yz3"/>
+                                                <constraint firstAttribute="width" constant="80" id="y8N-Wj-e67"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Uyx-Is-9gX">
+                                            <rect key="frame" x="0.0" y="104" width="131" height="41"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-5x-kNd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5U-5u-PdQ">
+                                                    <rect key="frame" x="0.0" y="20.5" width="131" height="20.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="zB5-JL-Ihp" firstAttribute="top" secondItem="1uG-ox-qZd" secondAttribute="top" constant="34" id="2Io-iv-9Fu"/>
+                                <constraint firstAttribute="trailing" secondItem="zB5-JL-Ihp" secondAttribute="trailing" constant="20" id="Xkv-nN-oFs"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zB5-JL-Ihp" secondAttribute="bottom" constant="20" id="kNC-g8-8qc"/>
+                                <constraint firstItem="zB5-JL-Ihp" firstAttribute="leading" secondItem="1uG-ox-qZd" secondAttribute="leading" constant="20" id="waJ-lJ-8tC"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="MSI-e9-Ief">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Nwj-V8-voS">
+                                        <rect key="frame" x="0.0" y="254" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nwj-V8-voS" id="tW7-fC-rdp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6k-Xg-hd1" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="jQ0-8I-uZL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantName"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="iIL-Sz-NzA" id="TtS-Fd-30X"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m6k-Xg-hd1" firstAttribute="leading" secondItem="tW7-fC-rdp" secondAttribute="leading" constant="20" id="Jlv-0N-m7w"/>
+                                                <constraint firstAttribute="trailing" secondItem="m6k-Xg-hd1" secondAttribute="trailing" constant="20" id="S1O-kA-WLW"/>
+                                                <constraint firstItem="m6k-Xg-hd1" firstAttribute="centerY" secondItem="tW7-fC-rdp" secondAttribute="centerY" id="ugv-oe-pie"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="FXD-27-ZqV">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FXD-27-ZqV" id="kSh-Hf-oY2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ex-5R-xkY" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="rvV-9b-nbv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantMobile"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4ex-5R-xkY" firstAttribute="leading" secondItem="kSh-Hf-oY2" secondAttribute="leading" constant="20" id="08b-x5-FhK"/>
+                                                <constraint firstItem="4ex-5R-xkY" firstAttribute="centerY" secondItem="kSh-Hf-oY2" secondAttribute="centerY" id="3Oq-RU-QhD"/>
+                                                <constraint firstAttribute="trailing" secondItem="4ex-5R-xkY" secondAttribute="trailing" constant="20" id="TUB-dP-rrg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="iIL-Sz-NzA" id="UEK-oN-R4w"/>
+                            <outlet property="delegate" destination="iIL-Sz-NzA" id="bfw-KC-NvC"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="g8C-Jj-kKZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pSS-1S-8KP">
+                            <connections>
+                                <action selector="closeButtonTapped" destination="iIL-Sz-NzA" id="kr7-Da-qfL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Submit" id="bTw-b0-VKU">
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="iIL-Sz-NzA" id="jmR-k0-RAW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactNameTextField" destination="m6k-Xg-hd1" id="lQc-09-Jdb"/>
+                        <outlet property="mobileNumberTextField" destination="4ex-5R-xkY" id="WIO-fc-K5V"/>
+                        <outlet property="submitButton" destination="bTw-b0-VKU" id="ITK-1y-icP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euY-LA-lV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5y4-g9-XEJ">
+                    <connections>
+                        <action selector="viewTapped:" destination="iIL-Sz-NzA" id="CaY-I6-VVd"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3850.7246376811595" y="-236.38392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tLa-s7-iSo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HXM-hv-acy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hSI-ci-Kkk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iIL-Sz-NzA" kind="relationship" relationship="rootViewController" id="bdX-FT-n1N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhS-sw-dRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940.579710144928" y="-236.38392857142856"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kWx-JY-vkV"/>
+        <segue reference="gCK-sv-dNS"/>
         <segue reference="dpX-Pq-1gX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81464149746192893" green="0.65026928288390384" blue="0.0060910833566025398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

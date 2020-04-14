@@ -14,7 +14,7 @@ extension Notification.Name {
     static let willEnterBackgroundNotification = Notification.Name(rawValue: "willEnterBackgroundNotification")
 }
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     enum SegueID {
         static let showCheckins = "showCheckins"
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: QRScannerViewDelegate {
+extension MainViewController: QRScannerViewDelegate {
     
     func qrScanningDidStop() {
         
@@ -139,6 +139,6 @@ extension ViewController: QRScannerViewDelegate {
 }
 
 private extension Selector {
-    static let willEnterForeground = #selector(ViewController.startScanning)
-    static let willEnterBackground = #selector(ViewController.stopScanning)
+    static let willEnterForeground = #selector(MainViewController.startScanning)
+    static let willEnterBackground = #selector(MainViewController.stopScanning)
 }

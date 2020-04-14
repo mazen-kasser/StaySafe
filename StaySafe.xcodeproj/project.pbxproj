@@ -30,9 +30,11 @@
 		BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */; };
 		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
 		BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */; };
+		BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */; };
+		BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AD2445D71300F6BC0C /* PageViewController.swift */; };
 		BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */; };
 		BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */; };
-		BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* ViewController.swift */; };
+		BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */; };
 		BACE53E7243B35AE00A2F6A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E5243B35AE00A2F6A4 /* Main.storyboard */; };
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
@@ -110,10 +112,12 @@
 		BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBusinessViewController.swift; sourceTree = "<group>"; };
 		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
 		BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidatorFormatter.swift; sourceTree = "<group>"; };
+		BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		BA89B2AD2445D71300F6BC0C /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BACE53DC243B35AE00A2F6A4 /* Cov-19 Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-19 Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BACE53E3243B35AE00A2F6A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BACE53E6243B35AE00A2F6A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACE53EB243B35AF00A2F6A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -277,6 +281,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BA89B2AB2445D6E000F6BC0C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BA89B2AD2445D71300F6BC0C /* PageViewController.swift */,
+				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		BACE53D3243B35AE00A2F6A4 = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +325,8 @@
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
-				BACE53E3243B35AE00A2F6A4 /* ViewController.swift */,
+				BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */,
+				BA89B2AB2445D6E000F6BC0C /* Onboarding */,
 				BA57031F243F06A400343016 /* Device */,
 				BAE604CE243C6A5E009FC142 /* Merchant */,
 				BACE53E5243B35AE00A2F6A4 /* Main.storyboard */,
@@ -657,13 +671,14 @@
 				BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */,
 				BAFBEA462444065000B5D946 /* RegularExpressionTextFieldFormatter.swift in Sources */,
 				BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */,
-				BACE53E4243B35AE00A2F6A4 /* ViewController.swift in Sources */,
+				BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
 				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
+				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
 				BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */,
 				BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
@@ -675,6 +690,7 @@
 				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
+				BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
 				BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */,
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
