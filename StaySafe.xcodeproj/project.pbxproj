@@ -12,7 +12,7 @@
 		BA27EFB4243C876B00BAA0FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27EFB3243C876B00BAA0FE /* CloudKit.framework */; };
 		BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */; };
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
-		BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+.swift */; };
+		BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */; };
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
 		BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414D24403D610095BBE7 /* CloudManager.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
@@ -98,7 +98,7 @@
 		BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BA3341432440164F0095BBE7 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
 		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
-		BA33414624402F550095BBE7 /* UserDefaults+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+.swift"; sourceTree = "<group>"; };
+		BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+StaySafe.swift"; sourceTree = "<group>"; };
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		BA33414D24403D610095BBE7 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
@@ -308,15 +308,6 @@
 			path = PermissionManager;
 			sourceTree = "<group>";
 		};
-		BAB36D9A2446FB1B00F0C3A9 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				BADAEADF243DD3E500C2A1C9 /* QR */,
-				BADC93172441EC7E00FC4E63 /* Share */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		BAB36D9B2446FB8200F0C3A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +347,8 @@
 				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
+				BADAEADF243DD3E500C2A1C9 /* QR */,
+				BADC93172441EC7E00FC4E63 /* Share */,
 				BADAEAE0243DD42800C2A1C9 /* Extensions */,
 				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
@@ -407,7 +400,7 @@
 				BA57032F243F096500343016 /* UITableView+.swift */,
 				BA570333243F098800343016 /* UIViewController+.swift */,
 				BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */,
-				BA33414624402F550095BBE7 /* UserDefaults+.swift */,
+				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
 				BADC930C2441433300FC4E63 /* UIView+.swift */,
 				BADC93152441E34100FC4E63 /* DateFormatter+.swift */,
 				BAFBEA34244400EA00B5D946 /* String+.swift */,
@@ -432,7 +425,6 @@
 				BA7D5EC6244322E500775FAD /* Controller */,
 				BA7D5EC3244322B900775FAD /* Model */,
 				BA7D5EBE24431AC600775FAD /* View */,
-				BAB36D9A2446FB1B00F0C3A9 /* Util */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -690,7 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFBEA3A244401BF00B5D946 /* TextFieldValidator.swift in Sources */,
-				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
+				BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */,
 				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindBusinessViewController.swift in Sources */,
