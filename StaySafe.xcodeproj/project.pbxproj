@@ -318,6 +318,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BAB36D9C2447200800F0C3A9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
+				BA33414C24403D540095BBE7 /* Cloud */,
+				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
+				BADC93172441EC7E00FC4E63 /* Share */,
+				BADAEADF243DD3E500C2A1C9 /* QR */,
+				BAFBEA2B2443FEC900B5D946 /* CATextField */,
+				BA6DB66124443A1100AC7BD4 /* ValidatorFormater */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		BACE53D3243B35AE00A2F6A4 = {
 			isa = PBXGroup;
 			children = (
@@ -343,14 +357,9 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
-				BA6DB66124443A1100AC7BD4 /* ValidatorFormater */,
-				BAFBEA2B2443FEC900B5D946 /* CATextField */,
-				BA33414C24403D540095BBE7 /* Cloud */,
+				BAB36D9C2447200800F0C3A9 /* Util */,
 				BA33413B244006A20095BBE7 /* DataModel */,
-				BADAEADF243DD3E500C2A1C9 /* QR */,
-				BADC93172441EC7E00FC4E63 /* Share */,
 				BADAEAE0243DD42800C2A1C9 /* Extensions */,
-				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
@@ -400,7 +409,6 @@
 				BA57032F243F096500343016 /* UITableView+.swift */,
 				BA570333243F098800343016 /* UIViewController+.swift */,
 				BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */,
-				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
 				BADC930C2441433300FC4E63 /* UIView+.swift */,
 				BADC93152441E34100FC4E63 /* DateFormatter+.swift */,
 				BAFBEA34244400EA00B5D946 /* String+.swift */,
