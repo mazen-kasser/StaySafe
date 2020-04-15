@@ -55,7 +55,6 @@ class ContactUsViewController: UITableViewController {
     func addDoneButtonOnKeyboard() {
         let doneToolbar: UIToolbar = UIToolbar(frame: .init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         doneToolbar.barStyle = .default
-        doneToolbar.tintColor = .systemYellow
 
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                         target: nil,

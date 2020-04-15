@@ -21,7 +21,6 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: actionTitle, style: .default, handler: handler)
         alertController.addAction(okAction)
-        alertController.view.tintColor = .systemYellow
         
         if isCancellable {
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
