@@ -50,7 +50,7 @@ extension QRScannerView {
     }
     
     func startScanning() {
-        self?.captureSession?.startRunning()
+        captureSession?.startRunning()
     }
     
     func stopScanning() {
