@@ -85,7 +85,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        startScanning()
+        handleCameraAccess()
         
         addApplicationNotificationObservers()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -99,6 +99,37 @@ class MainViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+}
+
+extension MainViewController {
+    
+    private func handleCameraAccess() {
+        
+        let showCameraPermission: () -> Void = {
+            self.presentAlert(title: "Error", message: "Please enable the Camera permission to be able to scan QR codes", isCancellable: true) { _ in
+                // take them to camera settings menu
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+                UIApplication.shared.open(settingsUrl)
+            }
+        }
+        
+        switch PermissionManager.cameraPermission {
+        case .authorized:
+            startScanning()
+            
+        case .denied, .restricted:
+            showCameraPermission()
+            
+        default:
+            PermissionManager.requestCameraAccess { [weak self] status in
+                if status {
+                    self?.startScanning()
+                } else {
+                    showCameraPermission()
+                }
+            }
+        }
+    }
 }
 
 extension MainViewController: QRScannerViewDelegate {

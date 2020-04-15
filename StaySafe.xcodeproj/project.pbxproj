@@ -36,6 +36,7 @@
 		BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B52445E9B600F6BC0C /* Person.storyboard */; };
 		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
 		BA89B2BA2445F67300F6BC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Main.storyboard */; };
+		BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */; };
 		BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */; };
 		BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */; };
 		BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */; };
@@ -121,6 +122,7 @@
 		BA89B2B52445E9B600F6BC0C /* Person.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
 		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		BACE53DC243B35AE00A2F6A4 /* Cov-19 Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-19 Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -297,6 +299,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		BAB36D972446F0D600F0C3A9 /* PermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */,
+			);
+			path = PermissionManager;
+			sourceTree = "<group>";
+		};
 		BACE53D3243B35AE00A2F6A4 = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +336,8 @@
 				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA33414C24403D540095BBE7 /* Cloud */,
 				BA33413B244006A20095BBE7 /* DataModel */,
-				BADAEAE0243DD42800C2A1C9 /* Util */,
+				BADAEAE0243DD42800C2A1C9 /* Extensions */,
+				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
@@ -373,7 +384,7 @@
 			path = QR;
 			sourceTree = "<group>";
 		};
-		BADAEAE0243DD42800C2A1C9 /* Util */ = {
+		BADAEAE0243DD42800C2A1C9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BA570330243F096500343016 /* UIStoryboard+.swift */,
@@ -385,7 +396,7 @@
 				BADC93152441E34100FC4E63 /* DateFormatter+.swift */,
 				BAFBEA34244400EA00B5D946 /* String+.swift */,
 			);
-			path = Util;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BADC93172441EC7E00FC4E63 /* Share */ = {
@@ -694,6 +705,7 @@
 				BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */,
 				BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
+				BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
