@@ -1,5 +1,5 @@
 //
-//  MerchantViewController.swift
+//  FindBusinessViewController.swift
 //  StaySafe
 //
 //  Created by Mazen on 7/04/20.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class FindMerchantViewController: UIViewController {
+class FindBusinessViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,7 +65,7 @@ class FindMerchantViewController: UIViewController {
         
         switch segueID {
         case SegueID.showQRBadge:
-            let vc = segue.destination as! MerchantQRViewController
+            let vc = segue.destination as! BusinessQRViewController
             
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             vc.placemark = placemarks[indexPath.row]
@@ -77,7 +77,7 @@ class FindMerchantViewController: UIViewController {
     
 }
 
-extension FindMerchantViewController: UISearchBarDelegate {
+extension FindBusinessViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         infoPage.isHidden = !searchText.isEmpty
@@ -91,7 +91,7 @@ extension FindMerchantViewController: UISearchBarDelegate {
     
 }
 
-extension FindMerchantViewController: UITableViewDelegate, UITableViewDataSource {
+extension FindBusinessViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

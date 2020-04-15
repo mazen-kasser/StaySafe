@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MerchantQRViewController: UIViewController, ShareableScreen {
+class BusinessQRViewController: UIViewController, ShareableScreen {
     
     @IBOutlet weak var qrImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -69,7 +69,7 @@ class MerchantQRViewController: UIViewController, ShareableScreen {
     
 }
 
-extension MerchantQRViewController: UIPopoverPresentationControllerDelegate {
+extension BusinessQRViewController: UIPopoverPresentationControllerDelegate {
     
     func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
         popoverPresentationController.barButtonItem = navigationItem.rightBarButtonItem

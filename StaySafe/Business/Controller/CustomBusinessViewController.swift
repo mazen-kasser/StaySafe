@@ -57,7 +57,7 @@ class CustomBusinessViewController: UITableViewController {
         
         switch segueID {
         case SegueID.showQRBadge:
-            let vc = segue.destination as! MerchantQRViewController
+            let vc = segue.destination as! BusinessQRViewController
             
             guard let name = nameTextField.text,
                 let address = addressTextField.text

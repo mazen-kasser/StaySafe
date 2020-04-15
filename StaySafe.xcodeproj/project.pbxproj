@@ -48,8 +48,8 @@
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
 		BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */; };
 		BADC930D2441433300FC4E63 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930C2441433300FC4E63 /* UIView+.swift */; };
-		BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */; };
-		BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */; };
+		BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */; };
+		BADC93112441577900FC4E63 /* FindBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC930F2441577900FC4E63 /* FindBusinessViewController.swift */; };
 		BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93152441E34100FC4E63 /* DateFormatter+.swift */; };
 		BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */; };
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
@@ -140,8 +140,8 @@
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BADC930C2441433300FC4E63 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantQRViewController.swift; sourceTree = "<group>"; };
-		BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMerchantViewController.swift; sourceTree = "<group>"; };
+		BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessQRViewController.swift; sourceTree = "<group>"; };
+		BADC930F2441577900FC4E63 /* FindBusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBusinessViewController.swift; sourceTree = "<group>"; };
 		BADC93152441E34100FC4E63 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewControllerConfig.swift; sourceTree = "<group>"; };
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
@@ -208,19 +208,21 @@
 			path = Cloud;
 			sourceTree = "<group>";
 		};
-		BA57031F243F06A400343016 /* Device */ = {
+		BA57031F243F06A400343016 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				BA89B2B52445E9B600F6BC0C /* Person.storyboard */,
 				BA570320243F06A400343016 /* Controller */,
 				BA570322243F06A400343016 /* Model */,
 				BA570324243F06A400343016 /* View */,
 			);
-			path = Device;
+			path = Person;
 			sourceTree = "<group>";
 		};
 		BA570320243F06A400343016 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */,
 				BA570321243F06A400343016 /* CheckinViewController.swift */,
 				BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */,
 			);
@@ -282,8 +284,8 @@
 		BA7D5EC6244322E500775FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BADC930F2441577900FC4E63 /* FindMerchantViewController.swift */,
-				BADC930E2441577900FC4E63 /* MerchantQRViewController.swift */,
+				BADC930F2441577900FC4E63 /* FindBusinessViewController.swift */,
+				BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */,
 				BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */,
 			);
 			path = Controller;
@@ -292,9 +294,8 @@
 		BA89B2AB2445D6E000F6BC0C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				BA89B2AD2445D71300F6BC0C /* PageViewController.swift */,
-				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
-				BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */,
+				BA89B2B92445F67300F6BC0C /* Main.storyboard */,
+				BAB36D9B2446FB8200F0C3A9 /* Controller */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -305,6 +306,25 @@
 				BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */,
 			);
 			path = PermissionManager;
+			sourceTree = "<group>";
+		};
+		BAB36D9A2446FB1B00F0C3A9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BADAEADF243DD3E500C2A1C9 /* QR */,
+				BADC93172441EC7E00FC4E63 /* Share */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		BAB36D9B2446FB8200F0C3A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA89B2AD2445D71300F6BC0C /* PageViewController.swift */,
+				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
+				BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BACE53D3243B35AE00A2F6A4 = {
@@ -343,13 +363,9 @@
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
-				BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */,
 				BA89B2AB2445D6E000F6BC0C /* Onboarding */,
-				BA57031F243F06A400343016 /* Device */,
-				BAE604CE243C6A5E009FC142 /* Merchant */,
-				BA89B2B92445F67300F6BC0C /* Main.storyboard */,
-				BA89B2B52445E9B600F6BC0C /* Person.storyboard */,
-				BA89B2B32445E88900F6BC0C /* Business.storyboard */,
+				BA57031F243F06A400343016 /* Person */,
+				BAE604CE243C6A5E009FC142 /* Business */,
 				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
 				BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */,
 				BACE53ED243B35AF00A2F6A4 /* Info.plist */,
@@ -409,16 +425,16 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
-		BAE604CE243C6A5E009FC142 /* Merchant */ = {
+		BAE604CE243C6A5E009FC142 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				BA89B2B32445E88900F6BC0C /* Business.storyboard */,
 				BA7D5EC6244322E500775FAD /* Controller */,
 				BA7D5EC3244322B900775FAD /* Model */,
 				BA7D5EBE24431AC600775FAD /* View */,
-				BADAEADF243DD3E500C2A1C9 /* QR */,
-				BADC93172441EC7E00FC4E63 /* Share */,
+				BAB36D9A2446FB1B00F0C3A9 /* Util */,
 			);
-			path = Merchant;
+			path = Business;
 			sourceTree = "<group>";
 		};
 		BAFBEA2B2443FEC900B5D946 /* CATextField */ = {
@@ -677,7 +693,7 @@
 				BA33414724402F550095BBE7 /* UserDefaults+.swift in Sources */,
 				BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */,
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
-				BADC93112441577900FC4E63 /* FindMerchantViewController.swift in Sources */,
+				BADC93112441577900FC4E63 /* FindBusinessViewController.swift in Sources */,
 				BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
@@ -716,7 +732,7 @@
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
-				BADC93102441577900FC4E63 /* MerchantQRViewController.swift in Sources */,
+				BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */,
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */,
