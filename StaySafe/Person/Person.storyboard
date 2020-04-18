@@ -252,9 +252,9 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-SJ-fSc">
-                                    <rect key="frame" x="20" y="34" width="374" height="145"/>
+                                    <rect key="frame" x="20" y="34" width="374" height="152"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="Xk0-eI-G2t">
+                                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="Xk0-eI-G2t">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="5HQ-bA-we1"/>
@@ -262,16 +262,18 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qlo-c4-5dm">
-                                            <rect key="frame" x="0.0" y="104" width="131" height="41"/>
+                                            <rect key="frame" x="0.0" y="104" width="148" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-WV-gxS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="131.5" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7j6-mi-ZBb">
-                                                    <rect key="frame" x="0.0" y="20.5" width="131" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="24" width="148" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

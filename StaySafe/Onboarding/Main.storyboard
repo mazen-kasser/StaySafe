@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
         <!--Persona View Controller-->
         <scene sceneID="SoL-2X-uw2">
             <objects>
-                <tableViewController storyboardIdentifier="PersonaViewController" id="ZFV-S4-J7W" customClass="PersonaViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PersonaViewController" clearsSelectionOnViewWillAppear="NO" id="ZFV-S4-J7W" customClass="PersonaViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQb-U5-wgm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,9 +56,9 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-HP-iHD">
-                                    <rect key="frame" x="20" y="34" width="374" height="145"/>
+                                    <rect key="frame" x="20" y="34" width="374" height="152"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-JW-3F3">
+                                        <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="x2l-JW-3F3">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="TKe-aT-fZY"/>
@@ -66,16 +66,16 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="qC8-8J-9nW">
-                                            <rect key="frame" x="0.0" y="104" width="144" height="41"/>
+                                            <rect key="frame" x="0.0" y="104" width="162.5" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a business" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuE-1c-DbR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162.5" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or a user" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhO-LZ-fp4">
-                                                    <rect key="frame" x="0.0" y="20.5" width="67" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="24" width="75" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

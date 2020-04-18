@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xT3-Qc-Yku">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,23 +13,23 @@
             <objects>
                 <viewController id="AfW-T7-n3t" customClass="FindBusinessViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Vs-mZ-wfj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pzH-x3-hZq">
-                                <rect key="frame" x="20" y="191.5" width="560" height="217.5"/>
+                                <rect key="frame" x="20" y="327" width="374" height="242.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5mV-fG-Bob" userLabel="Labels Stack View">
-                                        <rect key="frame" x="3.5" y="0.0" width="553.5" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="82.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbo-6n-81X">
-                                                <rect key="frame" x="169" y="0.0" width="215.5" height="33.5"/>
+                                                <rect key="frame" x="79.5" y="0.0" width="215.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your business to request a QR code for users to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svz-Io-tQm">
-                                                <rect key="frame" x="0.0" y="33.5" width="553.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="374" height="49"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -35,7 +37,7 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="whV-tY-jLO">
-                                        <rect key="frame" x="205" y="69" width="150" height="147"/>
+                                        <rect key="frame" x="112" y="94" width="150" height="147"/>
                                         <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="hGp-fn-FU8"/>
@@ -46,10 +48,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NPY-Gx-7uR">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="Find your business" translatesAutoresizingMaskIntoConstraints="NO" id="hZI-oY-kek">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="5OE-rw-viu"/>
                                         </constraints>
@@ -59,7 +61,7 @@
                                         </connections>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cz0-Qn-aaZ">
-                                        <rect key="frame" x="0.0" y="58" width="600" height="498"/>
+                                        <rect key="frame" x="0.0" y="58" width="414" height="750"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="AfW-T7-n3t" id="Sai-d6-mBq"/>
@@ -69,13 +71,13 @@
                                 </subviews>
                             </stackView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-IJ-l4e">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iV8-Rm-RxM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoG-wB-urA">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Can't find your business?"/>
                                             <connections>
@@ -134,38 +136,38 @@
             <objects>
                 <viewController id="ISr-a9-2RD" customClass="BusinessQRViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YYH-U8-cRJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="w2S-d0-nz8">
-                                <rect key="frame" x="20" y="88" width="560" height="424.5"/>
+                                <rect key="frame" x="20" y="184" width="374" height="528"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="COVID-19 Tracer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-eU-1m1">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="41"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Please download the COVID-19 Tracer mobile App and scan here to Check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAj-2B-MUl" userLabel="Print label">
-                                        <rect key="frame" x="0.0" y="65" width="560" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="65" width="374" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-DD-TY3">
-                                        <rect key="frame" x="0.0" y="131.5" width="560" height="210"/>
+                                        <rect key="frame" x="0.0" y="131.5" width="374" height="313.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-5o-ln0">
-                                        <rect key="frame" x="0.0" y="365.5" width="560" height="59"/>
+                                        <rect key="frame" x="0.0" y="469" width="374" height="59"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1o-9z-lBy">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="33.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="33.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6y-3O-Ral" userLabel="Business Address">
-                                                <rect key="frame" x="0.0" y="38.5" width="560" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="38.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -229,15 +231,15 @@
             <objects>
                 <tableViewController id="C0y-ja-uPs" customClass="CustomBusinessViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="igx-y2-1NT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ntf-vZ-ysX">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="226"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-qD-rmS">
-                                    <rect key="frame" x="20" y="34" width="560" height="116"/>
+                                    <rect key="frame" x="20" y="34" width="374" height="123"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" image="Address" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-pX-SB6">
                                             <rect key="frame" x="0.0" y="0.0" width="72" height="51"/>
@@ -249,16 +251,16 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-Bl-gKy">
-                                            <rect key="frame" x="0.0" y="75" width="188" height="41"/>
+                                            <rect key="frame" x="0.0" y="75" width="213" height="48"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your business name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-tm-gWU">
-                                                    <rect key="frame" x="0.0" y="20.5" width="77.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <rect key="frame" x="0.0" y="24" width="87.5" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -277,14 +279,14 @@
                             <tableViewSection id="Rgt-h3-CAN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="zCo-nU-h8V">
-                                        <rect key="frame" x="0.0" y="254" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="254" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zCo-nU-h8V" id="oju-aP-KVr">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYt-xu-xgf" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="560" height="40"/>
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="zxU-aH-yOW"/>
                                                     </constraints>
@@ -306,14 +308,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="bYo-yl-srH">
-                                        <rect key="frame" x="0.0" y="354" width="600" height="100"/>
+                                        <rect key="frame" x="0.0" y="354" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bYo-yl-srH" id="umj-df-QGy">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-YG-ylC" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="560" height="40"/>
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="vaA-fT-hhc"/>
                                                     </constraints>
