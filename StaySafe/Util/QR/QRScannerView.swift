@@ -22,16 +22,15 @@ class QRScannerView: UIView {
     weak var delegate: QRScannerViewDelegate?
     
     /// capture settion which allows us to start and stop scanning.
-    var captureSession: AVCaptureSession?
+    var session = AVCaptureSession()
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        doInitialSetup()
+    required init(frame: CGRect, rectOfInterest: CGRect) {
+        super.init(frame: frame)
+        doInitialSetup(rectOfInterest)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        doInitialSetup()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // overriding the layerClass to return `AVCaptureVideoPreviewLayer`
@@ -46,60 +45,46 @@ class QRScannerView: UIView {
 extension QRScannerView {
     
     var isRunning: Bool {
-        return captureSession?.isRunning ?? false
+        return session.isRunning
     }
     
     func startScanning() {
-        captureSession?.startRunning()
+        session.startRunning()
     }
     
     func stopScanning() {
-        captureSession?.stopRunning()
+        session.stopRunning()
         delegate?.qrScanningDidStop()
     }
     
     /// Does the initial setup for captureSession
-    private func doInitialSetup() {
+    private func doInitialSetup(_ rectOfInterest: CGRect) {
         clipsToBounds = true
-        captureSession = AVCaptureSession()
         
-        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
-        let videoInput: AVCaptureDeviceInput
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+        let input: AVCaptureDeviceInput
         do {
-            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
+            input = try AVCaptureDeviceInput(device: captureDevice)
         } catch let error {
             print(error)
             return
         }
         
-        if (captureSession?.canAddInput(videoInput) ?? false) {
-            captureSession?.addInput(videoInput)
-        } else {
-            scanningDidFail()
-            return
-        }
+        session.addInput(input)
         
-        let metadataOutput = AVCaptureMetadataOutput()
+        let output = AVCaptureMetadataOutput()
+        session.addOutput(output)
+        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        output.metadataObjectTypes = [.qr]
         
-        if (captureSession?.canAddOutput(metadataOutput) ?? false) {
-            captureSession?.addOutput(metadataOutput)
-            
-            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.qr, .ean8, .ean13, .pdf417]
-        } else {
-            scanningDidFail()
-            return
-        }
-        
-        self.layer.session = captureSession
+        self.layer.session = session
         self.layer.videoGravity = .resizeAspectFill
         
-        captureSession?.startRunning()
-    }
-    
-    func scanningDidFail() {
-        delegate?.qrScanningDidFail()
-        captureSession = nil
+        session.commitConfiguration()
+        session.startRunning()
+        
+        // set scanning rect
+        output.rectOfInterest = layer.metadataOutputRectConverted(fromLayerRect: rectOfInterest)
     }
     
     func found(code: String) {

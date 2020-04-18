@@ -23,11 +23,13 @@ class MainViewController: UIViewController {
     
     var checkinMessage: String!
     
-    @IBOutlet weak var scannerView: QRScannerView! {
+    var scannerView: QRScannerView! {
         didSet {
             scannerView.delegate = self
         }
     }
+    
+    @IBOutlet weak var qrFrame: UIImageView!
     
     @IBAction func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
@@ -64,6 +66,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        scannerView = QRScannerView(frame: view.bounds, rectOfInterest: qrFrame.frame)
+        view.insertSubview(scannerView, belowSubview: qrFrame)
     }
     
     private func addApplicationNotificationObservers() {
