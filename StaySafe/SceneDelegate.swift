@@ -26,8 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard: Storyboard
         switch UserDefaults.standard.userType {
-        case .business:
-            storyboard = Storyboard.business
         case .person:
             storyboard = Storyboard.person
         default:

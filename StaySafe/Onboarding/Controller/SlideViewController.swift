@@ -4,5 +4,4 @@ import UIKit
 
 class SlideViewController: UIViewController {
     
-    
 }
