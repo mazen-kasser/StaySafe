@@ -1,7 +1,7 @@
 //  Copyright © 2020 iProgram. All rights reserved.
 
 import UIKit
-
+/*
 class PageViewController: UIPageViewController {
     
     private var currentIndex = 0
@@ -60,3 +60,4 @@ extension PageViewController: UIPageViewControllerDataSource {
 }
 
 extension PageViewController: UIPageViewControllerDelegate { }
+*/
