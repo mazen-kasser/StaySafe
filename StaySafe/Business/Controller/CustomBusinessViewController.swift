@@ -21,7 +21,6 @@ class CustomBusinessViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reloadScreen()
     }
 
     @IBAction func viewTapped(_ sender: Any) {
