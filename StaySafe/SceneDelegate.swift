@@ -21,20 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         // Set root view controller
-        let screenFrame = UIScreen.main.bounds
-        self.window = UIWindow(frame: screenFrame)
-        
-        let storyboard: Storyboard
-        switch UserDefaults.standard.userType {
-        case .person:
-            storyboard = Storyboard.person
-        default:
-            storyboard = Storyboard.main
-        }
-        
-        window?.rootViewController = storyboard.instance.instantiateInitialViewController()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.makeKeyAndVisible()
+        window?.setInitialFlow()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

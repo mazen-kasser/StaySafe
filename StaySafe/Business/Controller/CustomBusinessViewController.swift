@@ -10,7 +10,7 @@ import UIKit
 
 class CustomBusinessViewController: UITableViewController {
 
-    @IBOutlet private weak var submitButton: UIBarButtonItem!
+    @IBOutlet private weak var submitButton: UIButton!
     @IBOutlet private weak var nameTextField: CATextField!
     @IBOutlet private weak var addressTextField: CATextField!
     
@@ -21,15 +21,7 @@ class CustomBusinessViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    @IBAction func submitButtonTapped(_ sender: Any) {
-        guard isScreenValid() else { return }
-        
-        Alert.showLoading (title: "") { [weak self] in
-            Alert.hideLoading()
-            self?.closeButtonTapped()
-        }
+        reloadScreen()
     }
     
     @IBAction func closeButtonTapped() {

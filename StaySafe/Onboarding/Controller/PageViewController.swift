@@ -8,8 +8,8 @@ class PageViewController: UIPageViewController {
     
     lazy var pages: [UIViewController] = {
         return [
-            SlideViewController.instantiate(from: .main),
-            PersonaViewController.instantiate(from: .main)
+            SlideViewController.instantiate(from: .onboarding),
+            PersonaViewController.instantiate(from: .onboarding)
         ]
     }()
     

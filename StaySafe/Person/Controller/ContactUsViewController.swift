@@ -10,7 +10,7 @@ import UIKit
 
 class ContactUsViewController: UITableViewController {
 
-    @IBOutlet private weak var submitButton: UIBarButtonItem!
+    @IBOutlet private weak var submitButton: UIButton!
     @IBOutlet private weak var contactNameTextField: CATextField!
     @IBOutlet private weak var mobileNumberTextField: CATextField!
     

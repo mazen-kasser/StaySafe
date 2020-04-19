@@ -40,7 +40,7 @@ class PersonaViewController: UITableViewController {
         
         if UserDefaults.standard.userType == nil {
             // show onboarding page
-            let vc = SlideViewController.instantiate(from: .main)
+            let vc = SlideViewController.instantiate(from: .onboarding)
             present(vc, animated: true)
         }
     }

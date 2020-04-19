@@ -236,51 +236,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ntf-vZ-ysX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-qD-rmS">
-                                    <rect key="frame" x="20" y="34" width="374" height="123"/>
+                                    <rect key="frame" x="20" y="34" width="374" height="79"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" image="Address" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-pX-SB6">
-                                            <rect key="frame" x="0.0" y="0.0" width="72" height="51"/>
-                                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="51" id="gw1-bE-TBu"/>
-                                                <constraint firstAttribute="width" constant="72" id="leQ-cP-CJx"/>
-                                            </constraints>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
-                                        </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-Bl-gKy">
-                                            <rect key="frame" x="0.0" y="75" width="213" height="48"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your business name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="213" height="24"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-tm-gWU">
-                                                    <rect key="frame" x="0.0" y="24" width="87.5" height="24"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
+                                            <rect key="frame" x="0.0" y="0.0" width="245.5" height="79"/>
+                                            <string key="text">Add your business name
+and address</string>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </stackView>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="mxk-qD-rmS" firstAttribute="top" secondItem="ntf-vZ-ysX" secondAttribute="top" constant="34" id="Hd4-e2-oOG"/>
                                 <constraint firstItem="mxk-qD-rmS" firstAttribute="leading" secondItem="ntf-vZ-ysX" secondAttribute="leading" constant="20" id="NDb-q2-4cR"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mxk-qD-rmS" secondAttribute="bottom" constant="20" id="bR6-7D-pPL"/>
+                                <constraint firstAttribute="bottom" secondItem="mxk-qD-rmS" secondAttribute="bottom" constant="20" id="bR6-7D-pPL"/>
                                 <constraint firstAttribute="trailing" secondItem="mxk-qD-rmS" secondAttribute="trailing" constant="20" id="mHU-wC-s83"/>
                             </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="CaP-h9-GlC">
+                            <rect key="frame" x="0.0" y="389" width="414" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-TU-7a3">
+                                    <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uij-Fh-oFn" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Next"/>
+                                            <connections>
+                                                <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintCustomMerchantQR" id="e8o-y2-acF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="u1K-TU-7a3" firstAttribute="top" secondItem="CaP-h9-GlC" secondAttribute="top" constant="20" id="DvB-wk-0b2"/>
+                                <constraint firstItem="u1K-TU-7a3" firstAttribute="leading" secondItem="CaP-h9-GlC" secondAttribute="leading" constant="20" id="FcD-u6-esO"/>
+                                <constraint firstAttribute="bottom" secondItem="u1K-TU-7a3" secondAttribute="bottom" constant="20" id="aIa-7E-Q1C"/>
+                                <constraint firstAttribute="trailing" secondItem="u1K-TU-7a3" secondAttribute="trailing" constant="20" id="aJ3-y4-upd"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="e2X-yo-jRj"/>
                         </view>
                         <sections>
                             <tableViewSection id="Rgt-h3-CAN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="zCo-nU-h8V">
-                                        <rect key="frame" x="0.0" y="254" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="161" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zCo-nU-h8V" id="oju-aP-KVr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -291,7 +301,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="zxU-aH-yOW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="BusinessName"/>
@@ -309,7 +319,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="bYo-yl-srH">
-                                        <rect key="frame" x="0.0" y="354" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="261" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bYo-yl-srH" id="umj-df-QGy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -320,7 +330,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="vaA-fT-hhc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="BusinessAddress"/>
@@ -352,17 +362,11 @@
                                 <action selector="closeButtonTapped" destination="C0y-ja-uPs" id="T4h-M5-x0u"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="2by-CY-rfp">
-                            <connections>
-                                <action selector="submitButtonTapped:" destination="C0y-ja-uPs" id="qyA-cl-RPP"/>
-                                <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintCustomMerchantQR" id="daA-yy-vG5"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="K6L-YG-ylC" id="k1y-15-5Ag"/>
                         <outlet property="nameTextField" destination="aYt-xu-xgf" id="6Fs-pY-MiN"/>
-                        <outlet property="submitButton" destination="2by-CY-rfp" id="Wcd-Uc-A3a"/>
+                        <outlet property="submitButton" destination="Uij-Fh-oFn" id="i1u-d0-XNz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGt-cH-pIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -372,14 +376,13 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3851" y="1179"/>
+            <point key="canvasLocation" x="3850.7246376811595" y="1178.5714285714284"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4wg-zR-vHf"/>
+        <segue reference="e8o-y2-acF"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Address" width="54" height="38"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
     </resources>
 </document>
