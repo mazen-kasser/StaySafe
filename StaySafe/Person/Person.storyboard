@@ -41,14 +41,14 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                             </imageView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bj-8Z-axV">
-                                <rect key="frame" x="292" y="64" width="102" height="44"/>
+                                <rect key="frame" x="284" y="64" width="110" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Knd-XW-McR">
-                                    <rect key="frame" x="0.0" y="0.0" width="102" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-VT-2OL">
-                                            <rect key="frame" x="10" y="5.5" width="82" height="33"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <rect key="frame" x="10" y="5.5" width="90" height="33"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                             <state key="normal" title="Check-ins"/>
                                             <connections>
                                                 <segue destination="aPT-ZQ-1Ae" kind="show" identifier="showCheckins" id="Wzx-Av-uJW"/>
@@ -151,7 +151,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-pv-SqP">
-                                    <rect key="frame" x="20" y="16" width="374" height="144"/>
+                                    <rect key="frame" x="20" y="16" width="374" height="153.5"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="check-ins" translatesAutoresizingMaskIntoConstraints="NO" id="9dY-w4-oI1">
                                             <rect key="frame" x="147" y="0.0" width="80" height="80"/>
@@ -161,15 +161,15 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-mf-TTP">
-                                            <rect key="frame" x="98.5" y="104" width="177" height="40"/>
+                                            <rect key="frame" x="64.5" y="104" width="245" height="49.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 0 check-in" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-h9-Svk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="24"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="33.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for the past two weeks" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwh-9x-Sxz">
-                                                    <rect key="frame" x="20" y="24" width="137" height="16"/>
+                                                    <rect key="frame" x="54" y="33.5" width="137" height="16"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.32580846549999998" green="0.32586956020000002" blue="0.32579338549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -413,7 +413,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-60-VrJ">
-                                    <rect key="frame" x="20" y="34" width="374" height="145"/>
+                                    <rect key="frame" x="20" y="34" width="374" height="158.5"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="y2X-KR-EgQ">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -423,16 +423,11 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rU0-51-bQJ">
-                                            <rect key="frame" x="0.0" y="104" width="131" height="41"/>
+                                            <rect key="frame" x="0.0" y="104" width="356.5" height="54.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-im-Ugg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp; mobile number" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZT-PT-hkD">
-                                                    <rect key="frame" x="0.0" y="20.5" width="131" height="20.5"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name &amp; mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-im-Ugg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="356.5" height="54.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

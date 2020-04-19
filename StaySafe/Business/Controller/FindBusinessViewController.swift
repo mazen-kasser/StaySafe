@@ -28,7 +28,6 @@ class FindBusinessViewController: UIViewController {
     @IBOutlet weak var addressSearchField: UISearchBar!
     
     @IBAction func closeGenerateQRCode(_ sender: Any) {
-        UserDefaults.standard.userType = nil
         navigationController?.dismiss(animated: true)
     }
     

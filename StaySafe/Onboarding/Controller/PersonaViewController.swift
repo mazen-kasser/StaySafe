@@ -16,10 +16,10 @@ class PersonaViewController: UITableViewController {
         let persona: UserType = tableView.indexPathForSelectedRow?.row == 0 ? .business : .person
         UserDefaults.standard.userType = persona
         
-        showNextFlow(persona, animated: true)
+        showNextFlow(persona)
     }
     
-    private func showNextFlow(_ persona: UserType?, animated: Bool) {
+    private func showNextFlow(_ persona: UserType?) {
         let storyboard: UIStoryboard
         switch persona {
         case .business:
@@ -32,7 +32,17 @@ class PersonaViewController: UITableViewController {
         
         let rootViewController = storyboard.instantiateInitialViewController()!
         rootViewController.modalPresentationStyle = .fullScreen
-        present(rootViewController, animated: animated)
+        present(rootViewController, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.userType == nil {
+            // show onboarding page
+            let vc = SlideViewController.instantiate(from: .main)
+            present(vc, animated: true)
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
