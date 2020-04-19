@@ -24,9 +24,9 @@ class CALogoView: UIView {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        alpha = 0
-        UIView.animate(withDuration: 1) { [weak self] in
-            self?.alpha = 1
-        }
+//        alpha = 0
+//        UIView.animate(withDuration: 1) { [weak self] in
+//            self?.alpha = 1
+//        }
     }
 }

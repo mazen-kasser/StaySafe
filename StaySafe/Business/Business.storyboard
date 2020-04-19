@@ -243,10 +243,10 @@
                                     <rect key="frame" x="20" y="34" width="374" height="79"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="245.5" height="79"/>
-                                            <string key="text">Add your business name
+                                            <rect key="frame" x="0.0" y="0.0" width="308.5" height="79"/>
+                                            <string key="text">Enter your business name
 and address</string>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -356,13 +356,7 @@ and address</string>
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="gUN-iH-Zmk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="50p-Ch-o1G">
-                            <connections>
-                                <action selector="closeButtonTapped" destination="C0y-ja-uPs" id="T4h-M5-x0u"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="gUN-iH-Zmk"/>
                     <connections>
                         <outlet property="addressTextField" destination="K6L-YG-ylC" id="k1y-15-5Ag"/>
                         <outlet property="nameTextField" destination="aYt-xu-xgf" id="6Fs-pY-MiN"/>

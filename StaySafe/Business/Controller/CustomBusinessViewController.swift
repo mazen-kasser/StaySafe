@@ -23,10 +23,6 @@ class CustomBusinessViewController: UITableViewController {
         
         reloadScreen()
     }
-    
-    @IBAction func closeButtonTapped() {
-        navigationController?.dismiss(animated: true)
-    }
 
     @IBAction func viewTapped(_ sender: Any) {
         tableView.endEditing(true)

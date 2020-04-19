@@ -421,8 +421,8 @@ and mobile number</string>
                                     <rect key="frame" x="20" y="34" width="374" height="91"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name &amp; mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-im-Ugg">
-                                            <rect key="frame" x="0.0" y="0.0" width="329.5" height="91"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="313.5" height="91"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
