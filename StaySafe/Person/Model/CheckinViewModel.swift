@@ -26,6 +26,9 @@ class CheckinViewModel {
         checkin.merchantName = qrCode
         checkin.createdAt = Date()
         
+        // check if already checked-in within 1min
+        guard safeToAdd(checkin) else { return }
+        
         DataModelManager.shared.saveContext()
         
         // send record to CloudKit
@@ -42,20 +45,30 @@ class CheckinViewModel {
         let fetchRequest: NSFetchRequest<Checkin> = Checkin.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "merchantName = %@ AND createdAt = %@", checkin.merchantName!, checkin.createdAt! as CVarArg)
         
-        let test = try! managedContext.fetch(fetchRequest)
-        let objectToDelete = test[0]
+        let places = try! managedContext.fetch(fetchRequest)
+        let objectToDelete = places[0]
         
         managedContext.delete(objectToDelete)
         DataModelManager.shared.saveContext()
     }
     
+    /// Safe to add a checkin if greater than the grace period i.e 5 min
+    private func safeToAdd(_ checkin: Checkin) -> Bool {
+        let fetchRequest: NSFetchRequest<Checkin> = Checkin.fetchRequest()
+        let sinceDate = Date().addingTimeInterval(-300) // 5 min ago
+        fetchRequest.predicate = NSPredicate(format: "merchantName = %@ AND createdAt > %@", checkin.merchantName!, sinceDate as CVarArg)
+        
+        let places = try! managedContext.fetch(fetchRequest)
+        
+        return places.isEmpty
+    }
+    
 }
 
-//extension CheckinViewModel {
-//    
-//    @objc func openUrlScheme(_ notification: Notification) {
-//        guard let object = notification.object as? String else { return }
-//        
-//        add(object)
-//    }
-//}
+private extension Date {
+
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+
+}
