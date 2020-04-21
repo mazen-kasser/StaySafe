@@ -72,9 +72,9 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-Rl-sJ9">
-                                <rect key="frame" x="136" y="752" width="142" height="44"/>
+                                <rect key="frame" x="136.5" y="752" width="141.5" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A9f-s3-0v4">
-                                    <rect key="frame" x="0.0" y="0.0" width="142" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-2T-Tbi">
@@ -241,12 +241,6 @@
         <!--Contact Us View Controller-->
         <scene sceneID="wbo-Ec-AC3">
             <objects>
-                <tapGestureRecognizer id="li4-49-JE8">
-                    <connections>
-                        <action selector="viewTapped:" destination="d5V-wZ-MvX" id="APB-XM-vGd"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3TD-FX-CHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="d5V-wZ-MvX" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ysz-R4-2Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -260,7 +254,7 @@
                                     <rect key="frame" x="20" y="34" width="374" height="96"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your full name and mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-WV-gxS">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="96"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -381,6 +375,7 @@
                         <outlet property="submitButton" destination="m3b-tN-3Ie" id="DqF-p7-o8T"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TD-FX-CHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4751" y="461"/>
         </scene>
