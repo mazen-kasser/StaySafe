@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4p-iI-SCW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -242,6 +241,12 @@
         <!--Contact Us View Controller-->
         <scene sceneID="wbo-Ec-AC3">
             <objects>
+                <tapGestureRecognizer id="li4-49-JE8">
+                    <connections>
+                        <action selector="viewTapped:" destination="d5V-wZ-MvX" id="APB-XM-vGd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TD-FX-CHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="d5V-wZ-MvX" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ysz-R4-2Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -254,11 +259,9 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-SJ-fSc">
                                     <rect key="frame" x="20" y="34" width="374" height="96"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-WV-gxS">
-                                            <rect key="frame" x="0.0" y="0.0" width="192.5" height="96"/>
-                                            <string key="text">Add your name
-and mobile number</string>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your full name and mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-WV-gxS">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="96"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -279,7 +282,7 @@ and mobile number</string>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aes-j9-b2G">
                                     <rect key="frame" x="20" y="20" width="374" height="50"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m3b-tN-3Ie" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m3b-tN-3Ie" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Submit"/>
@@ -313,7 +316,7 @@ and mobile number</string>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="NP1-Kq-j79"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantName"/>
@@ -342,7 +345,7 @@ and mobile number</string>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="0wE-Id-Gz7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantMobile"/>
@@ -378,14 +381,8 @@ and mobile number</string>
                         <outlet property="submitButton" destination="m3b-tN-3Ie" id="DqF-p7-o8T"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3TD-FX-CHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="li4-49-JE8">
-                    <connections>
-                        <action selector="viewTapped:" destination="d5V-wZ-MvX" id="APB-XM-vGd"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4718.840579710145" y="460.71428571428567"/>
+            <point key="canvasLocation" x="4751" y="461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ReM-rH-peH">
@@ -405,151 +402,6 @@ and mobile number</string>
             </objects>
             <point key="canvasLocation" x="3810" y="461"/>
         </scene>
-        <!--Contact Us View Controller-->
-        <scene sceneID="J7o-gb-VTe">
-            <objects>
-                <tableViewController id="At6-3X-UMX" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qWE-YB-4sl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="OZs-16-gRj">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="9H3-60-VrJ">
-                                    <rect key="frame" x="20" y="34" width="374" height="91"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name &amp; mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-im-Ugg">
-                                            <rect key="frame" x="0.0" y="0.0" width="313.5" height="91"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="9H3-60-VrJ" firstAttribute="leading" secondItem="OZs-16-gRj" secondAttribute="leading" constant="20" id="JML-sC-1RQ"/>
-                                <constraint firstAttribute="bottom" secondItem="9H3-60-VrJ" secondAttribute="bottom" constant="20" id="Q98-x0-n2x"/>
-                                <constraint firstItem="9H3-60-VrJ" firstAttribute="top" secondItem="OZs-16-gRj" secondAttribute="top" constant="34" id="YGv-02-Lrz"/>
-                                <constraint firstAttribute="trailing" secondItem="9H3-60-VrJ" secondAttribute="trailing" constant="20" id="caC-RM-Sgv"/>
-                            </constraints>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="zo5-z8-jbx">
-                            <rect key="frame" x="0.0" y="401" width="414" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CYu-XA-ZLm">
-                                    <rect key="frame" x="20" y="20" width="374" height="60"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QD7-pf-Sh4" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Submit"/>
-                                            <connections>
-                                                <action selector="submitButtonTapped:" destination="At6-3X-UMX" eventType="touchUpInside" id="ITq-2l-Wbv"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstItem="CYu-XA-ZLm" firstAttribute="leading" secondItem="zo5-z8-jbx" secondAttribute="leading" constant="20" id="Qn1-aV-nqj"/>
-                                <constraint firstAttribute="bottom" secondItem="CYu-XA-ZLm" secondAttribute="bottom" constant="20" id="xD9-Zq-Opf"/>
-                                <constraint firstItem="CYu-XA-ZLm" firstAttribute="top" secondItem="zo5-z8-jbx" secondAttribute="top" constant="20" id="xci-sU-PZM"/>
-                                <constraint firstAttribute="trailing" secondItem="CYu-XA-ZLm" secondAttribute="trailing" constant="20" id="zFp-PA-VNi"/>
-                            </constraints>
-                        </view>
-                        <sections>
-                            <tableViewSection id="NXh-pG-yOC">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="7fp-nD-G1c">
-                                        <rect key="frame" x="0.0" y="173" width="414" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7fp-nD-G1c" id="e4w-GG-G5I">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGJ-YT-LW4" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="RDX-b0-BAj"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantName"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="At6-3X-UMX" id="eNf-lf-g8w"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="AGJ-YT-LW4" firstAttribute="leading" secondItem="e4w-GG-G5I" secondAttribute="leading" constant="20" id="FLn-oT-vPV"/>
-                                                <constraint firstAttribute="trailing" secondItem="AGJ-YT-LW4" secondAttribute="trailing" constant="20" id="HIp-Mh-vjz"/>
-                                                <constraint firstItem="AGJ-YT-LW4" firstAttribute="centerY" secondItem="e4w-GG-G5I" secondAttribute="centerY" id="gTe-Hm-8sg"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="43y-UG-JpG">
-                                        <rect key="frame" x="0.0" y="273" width="414" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="43y-UG-JpG" id="fgc-6W-KN8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-AA-6UQ" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="oEX-6r-WN8"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="ParticipantMobile"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="WnU-AA-6UQ" firstAttribute="leading" secondItem="fgc-6W-KN8" secondAttribute="leading" constant="20" id="7FX-tS-QeH"/>
-                                                <constraint firstItem="WnU-AA-6UQ" firstAttribute="centerY" secondItem="fgc-6W-KN8" secondAttribute="centerY" id="OGQ-vI-UZG"/>
-                                                <constraint firstAttribute="trailing" secondItem="WnU-AA-6UQ" secondAttribute="trailing" constant="20" id="X0S-VQ-AZd"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="At6-3X-UMX" id="FQW-Qn-NTu"/>
-                            <outlet property="delegate" destination="At6-3X-UMX" id="6JL-3x-40q"/>
-                        </connections>
-                    </tableView>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="YPg-Fr-3eW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LJa-qM-fLR">
-                            <connections>
-                                <action selector="closeButtonTapped" destination="At6-3X-UMX" id="6qC-5u-5Rw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="contactNameTextField" destination="AGJ-YT-LW4" id="1XK-aZ-4d1"/>
-                        <outlet property="mobileNumberTextField" destination="WnU-AA-6UQ" id="lyc-bb-lly"/>
-                        <outlet property="submitButton" destination="QD7-pf-Sh4" id="TUL-FM-Zc3"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeY-Gu-Lg0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="5DK-Dy-oLo">
-                    <connections>
-                        <action selector="viewTapped:" destination="At6-3X-UMX" id="kgq-Kr-YOo"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="4718.840579710145" y="460.71428571428567"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xLA-5h-SYK">
             <objects>
@@ -560,9 +412,6 @@ and mobile number</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="At6-3X-UMX" kind="relationship" relationship="rootViewController" id="ION-Ym-hzl"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Iw-oq-vsQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
