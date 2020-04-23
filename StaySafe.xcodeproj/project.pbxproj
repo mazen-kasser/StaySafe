@@ -42,6 +42,8 @@
 		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
 		BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */; };
 		BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */; };
+		BAC458C724516E340079E813 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC458C624516E340079E813 /* AVFoundation.framework */; };
+		BAC458CB245170320079E813 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC458CA245170320079E813 /* Vibration.swift */; };
 		BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */; };
 		BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */; };
 		BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */; };
@@ -133,6 +135,8 @@
 		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		BAC458C624516E340079E813 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BAC458CA245170320079E813 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		BACE53DC243B35AE00A2F6A4 /* Cov-19 Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cov-19 Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			files = (
 				3FA06BC131C3E9B427B1F3CC /* Pods_StaySafe.framework in Frameworks */,
 				BA27EFB4243C876B00BAA0FE /* CloudKit.framework in Frameworks */,
+				BAC458C724516E340079E813 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +349,7 @@
 				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA6DB66124443A1100AC7BD4 /* ValidatorFormater */,
+				BAC458CA245170320079E813 /* Vibration.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 		CC7C553CD5E71C6143C98F9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC458C624516E340079E813 /* AVFoundation.framework */,
 				BA27EFB3243C876B00BAA0FE /* CloudKit.framework */,
 				B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */,
 				21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */,
@@ -712,6 +719,7 @@
 				BA570334243F098800343016 /* UIViewController+.swift in Sources */,
 				BADC93112441577900FC4E63 /* FindBusinessViewController.swift in Sources */,
 				BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */,
+				BAC458CB245170320079E813 /* Vibration.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
