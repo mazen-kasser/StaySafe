@@ -57,9 +57,9 @@ class CheckinViewController: UITableViewController {
         return true
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-
-        let archiveAction = UITableViewRowAction(style: .default, title: "Archive") { [weak self] (rowAction, indexPath) in
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let archiveAction = UIContextualAction(style: .normal, title: "Archive") { [weak self] _,_,_   in
             guard let self = self else { return }
             
             let deleteCheckin = self.viewModel.checkins[indexPath.row]
@@ -68,7 +68,7 @@ class CheckinViewController: UITableViewController {
             self.reloadHeaderData()
         }
 
-        return [archiveAction]
+        return UISwipeActionsConfiguration(actions: [archiveAction])
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
