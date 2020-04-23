@@ -22,13 +22,13 @@ class CheckinViewModel {
     }
     
     @objc func add(_ qrCode: String) {
+
+        // check if already checked-in within 1min
+        guard safeToAdd(qrCode) else { return }
+        
         let checkin = Checkin(context: managedContext)
         checkin.merchantName = qrCode
         checkin.createdAt = Date()
-        
-        // check if already checked-in within 1min
-        guard safeToAdd(checkin) else { return }
-        
         DataModelManager.shared.saveContext()
         
         // send record to CloudKit
@@ -53,10 +53,10 @@ class CheckinViewModel {
     }
     
     /// Safe to add a checkin if greater than the grace period i.e 5 min
-    private func safeToAdd(_ checkin: Checkin) -> Bool {
+    private func safeToAdd(_ merchantName: String) -> Bool {
         let fetchRequest: NSFetchRequest<Checkin> = Checkin.fetchRequest()
         let sinceDate = Date().addingTimeInterval(-300) // 5 min ago
-        fetchRequest.predicate = NSPredicate(format: "merchantName = %@ AND createdAt > %@", checkin.merchantName!, sinceDate as CVarArg)
+        fetchRequest.predicate = NSPredicate(format: "merchantName = %@ AND createdAt > %@", merchantName, sinceDate as CVarArg)
         
         let places = try! managedContext.fetch(fetchRequest)
         
