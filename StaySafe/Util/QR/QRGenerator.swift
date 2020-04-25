@@ -34,7 +34,7 @@ enum QRGenerator {
 extension QRGenerator {
     
     /// Key to encrypt/decyrpt the QR code.
-    static let key = "COVID-19Tracer://"
+    static let key = "Stay-Safe://"
     
     static func encode(_ string: String) -> String {
         return key + (string.toBase64())

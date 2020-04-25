@@ -23,8 +23,8 @@ class ContactUsViewController: UITableViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard isScreenValid() else { return }
         
-        presentAlert(title: "Submit only if you have tested positive to COVID-19",
-                     message: "A health professional person will be in touch shortly if further details are required",
+        presentAlert(title: "Submit only if you have been contacted by authorised person",
+                     message: "We will be in touch shortly if further details are required",
                      isCancellable: true,
                      style: .actionSheet) { _ in
             // TODO: API call

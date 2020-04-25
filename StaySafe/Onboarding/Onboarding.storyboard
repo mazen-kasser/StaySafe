@@ -30,7 +30,7 @@
                                         <rect key="frame" x="115.5" y="0.0" width="143" height="120"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-ld-dJG" userLabel="Labels Stack View">
-                                        <rect key="frame" x="2" y="140" width="370.5" height="188"/>
+                                        <rect key="frame" x="1.5" y="140" width="371.5" height="188"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utl-t7-dkW">
                                                 <rect key="frame" x="0.0" y="0.0" width="307" height="67.5"/>
@@ -40,8 +40,8 @@ Get faster response.</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you were in contact with a COVID-19 case, we can contact you faster to take the necessary actions to prevent its spread." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzF-qp-fmE">
-                                                <rect key="frame" x="0.0" y="87.5" width="370.5" height="64.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you were in contact with a case, we can contact you faster to take the necessary actions to prevent its spread." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzF-qp-fmE">
+                                                <rect key="frame" x="0.0" y="87.5" width="371.5" height="64.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@ Get faster response.</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-Ef-U3C" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="803" width="374" height="39"/>
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Okay">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>

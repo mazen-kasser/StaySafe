@@ -19,11 +19,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>COVID-19Tracer</string>
+				<string>Stay-Safe</string>
 			</array>
 		</dict>
 	</array>
@@ -32,7 +34,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need the camera so to scan COVID-19 Tracer QR code to checkin.</string>
+	<string>We need the camera so to scan Stay-Safe QR code to checkin.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Required to Find your business if you are a merchant.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
