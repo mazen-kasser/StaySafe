@@ -1,8 +1,4 @@
 //
-//  AppDelegate.swift
-//  StaySafe
-//
-//  Created by Mazen on 6/04/20.
 //  Copyright © 2020 iProgram. All rights reserved.
 //
 

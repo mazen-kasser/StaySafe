@@ -1,8 +1,4 @@
 //
-//  AppDelegate+Notifications.swift
-//  StaySafe
-//
-//  Created by Mazen on 10/04/20.
 //  Copyright © 2020 iProgram. All rights reserved.
 //
 

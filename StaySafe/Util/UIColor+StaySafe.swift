@@ -1,11 +1,6 @@
 //
-//  UIColor+StaySafe.swift
-//  StaySafe
-//
-//  Created by Mazen on 19/04/20.
 //  Copyright © 2020 iProgram. All rights reserved.
 //
-
 import UIKit
 
 typealias Color = UIColor

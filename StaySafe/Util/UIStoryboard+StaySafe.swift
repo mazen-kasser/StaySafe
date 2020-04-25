@@ -1,9 +1,5 @@
 //
-//  UIStoryboard+.swift
-//  Runner
-//
-//  Created by Mazen on 30/06/19.
-//  Copyright © 2019 iProgram. All rights reserved.
+//  Copyright © 2020 iProgram. All rights reserved.
 //
 
 import UIKit

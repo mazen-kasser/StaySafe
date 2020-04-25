@@ -1,4 +1,6 @@
-//  Copyright © 2019 iProgram. All rights reserved.
+//
+//  Copyright © 2020 iProgram. All rights reserved.
+//
 
 /// Formats text for display on screen, or for binding to a model object.
 protocol TextFieldFormatter {

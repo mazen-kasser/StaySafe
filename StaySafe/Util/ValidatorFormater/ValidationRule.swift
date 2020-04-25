@@ -1,4 +1,6 @@
-//  Copyright © 2019 iProgram. All rights reserved.
+//
+//  Copyright © 2020 iProgram. All rights reserved.
+//
 
 /**
 This represents a validation and formatting rule for a textfield,
