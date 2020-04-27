@@ -26,7 +26,9 @@ class CAButton: UIButton {
         let screenWidth = UIScreen.main.bounds.width
         let buttonSize = CGSize(width: screenWidth - 40, height: 50)
         let backgroundImage = UIImage(color: Color.buttonColor, size: buttonSize)
+        let disabledBackgroundImage = UIImage(color: Color.disabledButtonColor, size: buttonSize)
         setBackgroundImage(backgroundImage, for: .normal)
+        setBackgroundImage(disabledBackgroundImage, for: .disabled)
         setTitleColor(Color.buttonTitleColor, for: .normal)
         setTitleColor(Color.buttonTitleSelectedColor, for: .disabled)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .title2)

@@ -14,7 +14,8 @@ extension UIViewController {
                       style: UIAlertController.Style = .alert,
                       handler: ((UIAlertAction) -> Void)? = nil) {
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let deviceCompatibleStyle = UIDevice.current.userInterfaceIdiom == .pad ? .alert : style
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: deviceCompatibleStyle)
         let okAction = UIAlertAction(title: actionTitle, style: .default, handler: handler)
         alertController.addAction(okAction)
         

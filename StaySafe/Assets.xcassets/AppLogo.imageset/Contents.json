@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "COVID-19-logo.png",
+      "filename" : "AppLogo80.png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }
