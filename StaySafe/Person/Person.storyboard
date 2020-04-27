@@ -48,9 +48,9 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-Rl-sJ9" userLabel="Scan Visual Effect View">
-                                <rect key="frame" x="136" y="249" width="142" height="44"/>
+                                <rect key="frame" x="136.5" y="249" width="141.5" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A9f-s3-0v4">
-                                    <rect key="frame" x="0.0" y="0.0" width="142" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-2T-Tbi">
