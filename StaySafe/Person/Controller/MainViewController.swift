@@ -30,11 +30,10 @@ class MainViewController: UIViewController {
     private var isTorchOn: Bool = false
     
     @IBOutlet weak var torchBlurBackground: UIVisualEffectView!
-    @IBOutlet weak var torchButton: UIButton!
+    @IBOutlet weak var torchButton: Button!
     
     @IBAction func toggleTorch(_ sender: UIButton) {
         isTorchOn.toggle()
-        Device.Vibration.selection.vibrate()
         torchBlurBackground.effect = UIBlurEffect(style: isTorchOn ? .light : .dark)
         torchButton.isSelected = isTorchOn
         torchButton.tintColor = isTorchOn ? .systemBlue : .white
@@ -51,8 +50,6 @@ class MainViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         guard let segueID = segue.identifier else { return }
-        
-        Device.Vibration.selection.vibrate()
         
         switch segueID {
         case SegueID.showCheckins:

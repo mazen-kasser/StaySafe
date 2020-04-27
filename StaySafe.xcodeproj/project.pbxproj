@@ -32,6 +32,7 @@
 		BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */; };
 		BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC4244322CE00775FAD /* Placemark.swift */; };
 		BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */; };
+		BA8768732456F84C00B5ACF2 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8768722456F84C00B5ACF2 /* Button.swift */; };
 		BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */; };
 		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
 		BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */; };
@@ -125,6 +126,7 @@
 		BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarkCell.xib; sourceTree = "<group>"; };
 		BA7D5EC4244322CE00775FAD /* Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemark.swift; sourceTree = "<group>"; };
 		BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		BA8768722456F84C00B5ACF2 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBusinessViewController.swift; sourceTree = "<group>"; };
 		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
 		BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidatorFormatter.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
 				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
 				BA1DE5B6244C1CA200B9C36A /* CAButton.swift */,
+				BA8768722456F84C00B5ACF2 /* Button.swift */,
 				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
 				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
 				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
@@ -722,6 +725,7 @@
 				BAC458CB245170320079E813 /* Vibration.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
+				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
 				BAFBEA35244400EA00B5D946 /* String+.swift in Sources */,

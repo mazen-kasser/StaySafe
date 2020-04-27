@@ -4,9 +4,11 @@
 
 import UIKit
 
-class CAButton: UIButton {
+class CAButton: Button {
     
     override func awakeFromNib() {
+        super.awakeFromNib()
+        
         setup()
     }
     
