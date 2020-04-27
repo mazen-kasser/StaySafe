@@ -25,7 +25,21 @@ class MainViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var qrFrame: UIImageView!
+    @IBOutlet weak var qrFrame: UIView!
+    
+    private var isTorchOn: Bool = false
+    
+    @IBOutlet weak var torchBlurBackground: UIVisualEffectView!
+    @IBOutlet weak var torchButton: UIButton!
+    
+    @IBAction func toggleTorch(_ sender: UIButton) {
+        isTorchOn.toggle()
+        Device.Vibration.selection.vibrate()
+        torchBlurBackground.effect = UIBlurEffect(style: isTorchOn ? .light : .dark)
+        torchButton.isSelected = isTorchOn
+        torchButton.tintColor = isTorchOn ? .systemBlue : .white
+        Device.Torch.toggle(on: isTorchOn)
+    }
     
     @IBAction func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
         if recognizer.state == .recognized {
@@ -37,6 +51,8 @@ class MainViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         guard let segueID = segue.identifier else { return }
+        
+        Device.Vibration.selection.vibrate()
         
         switch segueID {
         case SegueID.showCheckins:
@@ -63,7 +79,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         scannerView = QRScannerView(frame: view.bounds, rectOfInterest: qrFrame.frame)
-        view.insertSubview(scannerView, belowSubview: qrFrame)
+        view.insertSubview(scannerView, at: 0)
     }
     
     private func addApplicationNotificationObservers() {

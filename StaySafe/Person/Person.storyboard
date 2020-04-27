@@ -10,36 +10,12 @@
         <!--Main View Controller-->
         <scene sceneID="BQe-2a-ubN">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="T9b-SF-hNP" customClass="MainViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="T9b-SF-hNP" customClass="MainViewController" customModule="Stay_Safe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hpY-Ym-vdg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kPJ-qu-t2w">
-                                <rect key="frame" x="82" y="324.5" width="250" height="246.5"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="2b1-1T-dBx"/>
-                                    <constraint firstAttribute="height" constant="250" id="UNU-zj-4wZ"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Oa5-64-tp0">
-                                <rect key="frame" x="132" y="374.5" width="150" height="147"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="XxM-B6-HKK"/>
-                                    <constraint firstAttribute="width" constant="150" id="js9-fG-JX7"/>
-                                </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
-                            </imageView>
-                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bj-8Z-axV">
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bj-8Z-axV" userLabel="Check-ins Visual Effect View">
                                 <rect key="frame" x="284" y="64" width="110" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Knd-XW-McR">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="44"/>
@@ -71,8 +47,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
-                            <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-Rl-sJ9">
-                                <rect key="frame" x="136.5" y="752" width="141.5" height="44"/>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-Rl-sJ9" userLabel="Scan Visual Effect View">
+                                <rect key="frame" x="136.5" y="249" width="141.5" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A9f-s3-0v4">
                                     <rect key="frame" x="0.0" y="0.0" width="141" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,18 +77,94 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xL-CE-1uf" userLabel="QR code view">
+                                <rect key="frame" x="92" y="333" width="230" height="230"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kPJ-qu-t2w">
+                                        <rect key="frame" x="0.0" y="1.5" width="230" height="226.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Oa5-64-tp0">
+                                        <rect key="frame" x="40" y="41.5" width="150" height="147"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="XxM-B6-HKK"/>
+                                            <constraint firstAttribute="width" constant="150" id="js9-fG-JX7"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kPJ-qu-t2w" secondAttribute="trailing" id="5zd-25-FCG"/>
+                                    <constraint firstAttribute="width" constant="230" id="8rw-XK-HkN"/>
+                                    <constraint firstItem="kPJ-qu-t2w" firstAttribute="leading" secondItem="1xL-CE-1uf" secondAttribute="leading" id="9ew-Y1-UYV"/>
+                                    <constraint firstItem="Oa5-64-tp0" firstAttribute="centerX" secondItem="kPJ-qu-t2w" secondAttribute="centerX" id="KNU-nF-mfS"/>
+                                    <constraint firstAttribute="bottom" secondItem="kPJ-qu-t2w" secondAttribute="bottom" id="aUf-Mj-NRm"/>
+                                    <constraint firstAttribute="height" constant="230" id="e0t-8A-yiw"/>
+                                    <constraint firstItem="kPJ-qu-t2w" firstAttribute="top" secondItem="1xL-CE-1uf" secondAttribute="top" id="i20-ml-ipx"/>
+                                    <constraint firstItem="Oa5-64-tp0" firstAttribute="centerY" secondItem="kPJ-qu-t2w" secondAttribute="centerY" id="uMr-7R-Yfn"/>
+                                </constraints>
+                            </view>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ml5-hc-h65" userLabel="Torch Visual Effect View">
+                                <rect key="frame" x="175" y="732" width="64" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Efz-6C-fmW">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-7W-PjR">
+                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="flashlight.off.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="ultraLight"/>
+                                            </state>
+                                            <state key="selected" image="flashlight.on.fill" catalog="system"/>
+                                            <state key="highlighted" image="flashlight.on.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="toggleTorch:" destination="T9b-SF-hNP" eventType="touchUpInside" id="TNQ-j0-oSz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CMc-7W-PjR" firstAttribute="leading" secondItem="Efz-6C-fmW" secondAttribute="leading" id="5yC-l5-iw3"/>
+                                        <constraint firstItem="CMc-7W-PjR" firstAttribute="top" secondItem="Efz-6C-fmW" secondAttribute="top" id="Cwl-Wy-slR"/>
+                                        <constraint firstAttribute="bottom" secondItem="CMc-7W-PjR" secondAttribute="bottom" id="bBn-AE-hkr"/>
+                                        <constraint firstAttribute="trailing" secondItem="CMc-7W-PjR" secondAttribute="trailing" id="ePO-yN-inp"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="OMw-y7-ztT"/>
+                                    <constraint firstAttribute="height" constant="64" id="aBJ-JF-p7D"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="JfM-Rl-sJ9" secondAttribute="bottom" constant="100" id="2R1-I9-dkS"/>
-                            <constraint firstItem="Oa5-64-tp0" firstAttribute="centerY" secondItem="kPJ-qu-t2w" secondAttribute="centerY" id="Aoy-Qr-yDP"/>
+                            <constraint firstItem="JfM-Rl-sJ9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UY8-tb-L3O" secondAttribute="top" constant="40" id="5nN-ap-8u3"/>
+                            <constraint firstItem="1xL-CE-1uf" firstAttribute="centerY" secondItem="hpY-Ym-vdg" secondAttribute="centerY" id="ATm-mm-AxG"/>
+                            <constraint firstItem="1xL-CE-1uf" firstAttribute="centerX" secondItem="hpY-Ym-vdg" secondAttribute="centerX" id="NEj-qs-dqX"/>
                             <constraint firstItem="UY8-tb-L3O" firstAttribute="trailing" secondItem="7Bj-8Z-axV" secondAttribute="trailing" constant="20" id="QgG-jE-XyG"/>
                             <constraint firstItem="JfM-Rl-sJ9" firstAttribute="centerX" secondItem="hpY-Ym-vdg" secondAttribute="centerX" id="XG7-b7-ajD"/>
-                            <constraint firstItem="JfM-Rl-sJ9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kPJ-qu-t2w" secondAttribute="bottom" constant="20" id="d4S-rQ-laI"/>
-                            <constraint firstItem="kPJ-qu-t2w" firstAttribute="centerX" secondItem="hpY-Ym-vdg" secondAttribute="centerX" id="gsL-ZR-mdL"/>
-                            <constraint firstItem="Oa5-64-tp0" firstAttribute="centerX" secondItem="kPJ-qu-t2w" secondAttribute="centerX" id="nCP-M1-QGf"/>
+                            <constraint firstItem="UY8-tb-L3O" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1xL-CE-1uf" secondAttribute="trailing" constant="20" id="hp6-Lt-uKX"/>
+                            <constraint firstItem="1xL-CE-1uf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UY8-tb-L3O" secondAttribute="leading" constant="20" id="if7-jn-QfY"/>
+                            <constraint firstAttribute="bottom" secondItem="ml5-hc-h65" secondAttribute="bottom" constant="100" id="m3F-F3-fmw"/>
+                            <constraint firstItem="ml5-hc-h65" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1xL-CE-1uf" secondAttribute="bottom" constant="20" id="qax-2m-KRr"/>
                             <constraint firstItem="7Bj-8Z-axV" firstAttribute="top" secondItem="UY8-tb-L3O" secondAttribute="top" constant="20" id="uux-Da-hsR"/>
-                            <constraint firstItem="kPJ-qu-t2w" firstAttribute="centerY" secondItem="hpY-Ym-vdg" secondAttribute="centerY" id="vcD-UB-SFa"/>
+                            <constraint firstItem="ml5-hc-h65" firstAttribute="centerX" secondItem="hpY-Ym-vdg" secondAttribute="centerX" id="vbn-cf-kgP"/>
+                            <constraint firstItem="1xL-CE-1uf" firstAttribute="top" secondItem="JfM-Rl-sJ9" secondAttribute="bottom" constant="40" id="we2-0U-vbG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UY8-tb-L3O"/>
                         <connections>
@@ -122,7 +174,9 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Tid-VG-wAe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="qrFrame" destination="kPJ-qu-t2w" id="Vle-vZ-iTH"/>
+                        <outlet property="qrFrame" destination="1xL-CE-1uf" id="dpV-pe-Iwz"/>
+                        <outlet property="torchBlurBackground" destination="ml5-hc-h65" id="4uR-Tk-p9G"/>
+                        <outlet property="torchButton" destination="CMc-7W-PjR" id="M5x-Kw-cCD"/>
                         <segue destination="aPT-ZQ-1Ae" kind="show" identifier="addCheckin" id="Kft-Wi-3Uq"/>
                     </connections>
                 </viewController>
@@ -140,7 +194,7 @@
         <!--Checkin View Controller-->
         <scene sceneID="9sr-Nv-e1a">
             <objects>
-                <tableViewController storyboardIdentifier="CheckinViewController" id="aPT-ZQ-1Ae" customClass="CheckinViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CheckinViewController" id="aPT-ZQ-1Ae" customClass="CheckinViewController" customModule="Stay_Safe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8LR-A1-cGr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +295,7 @@
         <!--Contact Us View Controller-->
         <scene sceneID="wbo-Ec-AC3">
             <objects>
-                <tableViewController id="d5V-wZ-MvX" customClass="ContactUsViewController" customModule="Cov_19_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="d5V-wZ-MvX" customClass="ContactUsViewController" customModule="Stay_Safe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ysz-R4-2Ri">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,7 +330,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aes-j9-b2G">
                                     <rect key="frame" x="20" y="20" width="374" height="50"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m3b-tN-3Ie" customClass="CAButton" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m3b-tN-3Ie" customClass="CAButton" customModule="Stay_Safe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Submit"/>
@@ -305,7 +359,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-xn-UeE" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-xn-UeE" customClass="CATextField" customModule="Stay_Safe" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="NP1-Kq-j79"/>
@@ -334,7 +388,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-Xg-gia" customClass="CATextField" customModule="Cov_19_Tracer" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-Xg-gia" customClass="CATextField" customModule="Stay_Safe" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="30" width="374" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="0wE-Id-Gz7"/>
@@ -418,6 +472,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="check-ins" width="48" height="48"/>
+        <image name="flashlight.off.fill" catalog="system" width="73" height="128"/>
+        <image name="flashlight.on.fill" catalog="system" width="73" height="128"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="viewfinder" catalog="system" width="128" height="114"/>
     </resources>

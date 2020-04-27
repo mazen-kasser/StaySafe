@@ -5,48 +5,72 @@
 import AVFoundation
 import UIKit
 
-// MARK: Vibration
-enum Vibration {
-    case error
-    case success
-    case warning
-    case light
-    case medium
-    case heavy
-    case selection
+enum Device {
+    
+    // MARK: Flash light
+    enum Torch {
+        
+        static func toggle(on: Bool) {
+            guard
+                let device = AVCaptureDevice.default(for: AVMediaType.video),
+                device.hasTorch
+            else { return }
 
-    func vibrate() {
+            do {
+                try device.lockForConfiguration()
+                device.torchMode = on ? .on : .off
+                device.unlockForConfiguration()
+            } catch {
+                print("Torch could not be used")
+            }
+        }
+    }
+    
+    // MARK: Vibration
+    enum Vibration {
+        case error
+        case success
+        case warning
+        case light
+        case medium
+        case heavy
+        case selection
 
-      switch self {
-      case .error:
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.error)
+        func vibrate() {
 
-      case .success:
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+          switch self {
+          case .error:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
 
-      case .warning:
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.warning)
+          case .success:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
 
-      case .light:
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+          case .warning:
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
 
-      case .medium:
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+          case .light:
+            let generator = UIImpactFeedbackGenerator(style: .light)
+            generator.impactOccurred()
 
-      case .heavy:
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
+          case .medium:
+            let generator = UIImpactFeedbackGenerator(style: .medium)
+            generator.impactOccurred()
 
-      case .selection:
-        let generator = UISelectionFeedbackGenerator()
-        generator.selectionChanged()
-      }
+          case .heavy:
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+
+          case .selection:
+            let generator = UISelectionFeedbackGenerator()
+            generator.selectionChanged()
+          }
+
+        }
 
     }
 
 }
+

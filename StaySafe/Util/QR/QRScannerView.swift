@@ -103,7 +103,7 @@ extension QRScannerView: AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             
-            Vibration.success.vibrate()
+            Device.Vibration.success.vibrate()
             found(code: stringValue)
         }
     }
