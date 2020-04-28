@@ -45,7 +45,7 @@ final class MobileTextFieldValidator: RegularExpressionTextFieldValidator {
         super.init(mandatory: true,
                    mandatoryValidationMessage: TextValidator.Mobile.mandatoryValidationMessage,
                    invalidValidationMessage: TextValidator.Mobile.validationMessage,
-                   validationRegex: "^02[0-9]{9}$",
+                   validationRegex: "^02[0-9]{7,9}$",
                    userInputValidationRegex: "^[0-9]{1,11}$")
     }
 }

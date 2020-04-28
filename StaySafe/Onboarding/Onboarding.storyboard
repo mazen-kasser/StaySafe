@@ -123,7 +123,7 @@ Your personal data is not accessed unless you share it.</string>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Zcv-wn-TJv">
-                            <rect key="frame" x="0.0" y="411" width="414" height="164"/>
+                            <rect key="frame" x="0.0" y="431" width="414" height="164"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="CAButton" customModule="Stay_Safe" customModuleProvider="target">
@@ -152,22 +152,22 @@ Your personal data is not accessed unless you share it.</string>
                         <sections>
                             <tableViewSection id="qTT-uI-W0a">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sFn-dW-QfN" detailTextLabel="uyn-Mo-zAi" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="56E-Vd-6vE">
-                                        <rect key="frame" x="20" y="193" width="374" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sFn-dW-QfN" detailTextLabel="uyn-Mo-zAi" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="56E-Vd-6vE">
+                                        <rect key="frame" x="20" y="193" width="374" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56E-Vd-6vE" id="AJG-oZ-VE1">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Check-in station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sFn-dW-QfN">
-                                                    <rect key="frame" x="20" y="16" width="157" height="26.5"/>
+                                                    <rect key="frame" x="20" y="21" width="157" height="26.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Ideal for any business or a place to generate QR code for Individuals to scan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyn-Mo-zAi">
-                                                    <rect key="frame" x="20" y="46.5" width="327" height="34"/>
+                                                    <rect key="frame" x="20" y="51.5" width="327" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <nil key="textColor"/>
@@ -176,22 +176,22 @@ Your personal data is not accessed unless you share it.</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MG5-uR-CoR" detailTextLabel="tJI-Lv-IRf" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="69w-yL-OZu">
-                                        <rect key="frame" x="20" y="293" width="374" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MG5-uR-CoR" detailTextLabel="tJI-Lv-IRf" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="69w-yL-OZu">
+                                        <rect key="frame" x="20" y="303" width="374" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="69w-yL-OZu" id="tuO-Fx-J7x">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Individual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MG5-uR-CoR">
-                                                    <rect key="frame" x="20" y="16" width="91.5" height="26.5"/>
+                                                    <rect key="frame" x="20" y="21" width="91.5" height="26.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Check-in at a any Stay-Safe station by scanning their QR code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tJI-Lv-IRf">
-                                                    <rect key="frame" x="20" y="46.5" width="325" height="34"/>
+                                                    <rect key="frame" x="20" y="51.5" width="325" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <nil key="textColor"/>

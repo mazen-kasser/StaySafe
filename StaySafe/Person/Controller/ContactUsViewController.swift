@@ -10,6 +10,8 @@ class ContactUsViewController: UITableViewController {
     @IBOutlet private weak var contactNameTextField: CATextField!
     @IBOutlet private weak var mobileNumberTextField: CATextField!
     
+    private var viewModel = ContactUsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +24,16 @@ class ContactUsViewController: UITableViewController {
         presentAlert(title: "Submit only if you have been contacted by authorised person",
                      message: "We will be in touch shortly if further details are required",
                      isCancellable: true,
-                     style: .actionSheet) { _ in
-            // TODO: API call
-            Alert.showLoading (title: "") { [weak self] in
-                Alert.hideLoading()
-                self?.closeButtonTapped()
-            }
+                     style: .actionSheet) { [weak self] _ in
+                        guard let self = self else { return }
+                        
+                        self.viewModel.submitReport(fullName: self.contactNameTextField.text,
+                                                    mobileNumber: self.mobileNumberTextField.text)
+                        
+                        Alert.showLoading (title: "") { [weak self] in
+                            Alert.hideLoading()
+                            self?.closeButtonTapped()
+                        }
         }
     }
     

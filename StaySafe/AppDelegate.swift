@@ -3,7 +3,6 @@
 //
 
 import UIKit
-import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // User will receive a push notification when a new record is created in CloudKit
         // Read more on https://developer.apple.com/library/archive/documentation/DataManagement/Conceptual/CloudKitQuickStart/SubscribingtoRecordChanges/SubscribingtoRecordChanges.html
         /*
-        //         The predicate lets you define condition of the subscription, eg: only be notified of change if the newly created notification start with "A"
+        // The predicate lets you define condition of the subscription, eg: only be notified of change if the newly created notification start with "A"
         // the TRUEPREDICATE means any new Notifications record created will be notified
         let subscription = CKQuerySubscription(recordType: "Notifications", predicate: NSPredicate(format: "TRUEPREDICATE"), options: .firesOnRecordCreation)
         
