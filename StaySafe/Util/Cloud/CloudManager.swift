@@ -7,7 +7,7 @@ import CloudKit
 
 class CloudManager {
     
-    static let database = CKContainer.default().publicCloudDatabase
+    private static let database = CKContainer.default().publicCloudDatabase
     
     static func checkin(with deviceToken: String = UserDefaults.standard.deviceToken!, merchantName: String) {
         let checkinRecord = CKRecord(recordType: "Checkins")
