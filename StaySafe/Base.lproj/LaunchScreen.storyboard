@@ -24,7 +24,7 @@
                                 </constraints>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hro-cD-K2E">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hro-cD-K2E">
                                 <rect key="frame" x="132" y="374.5" width="150" height="147"/>
                                 <color key="tintColor" red="0.99995797870000003" green="0.80003696680000003" blue="0.00019033228450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

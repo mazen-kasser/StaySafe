@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     }
     
     var checkinMessage: String!
+    private let checkinViewModel = CheckinViewModel()
     
     var scannerView: QRScannerView! {
         didSet {
@@ -26,6 +27,8 @@ class MainViewController: UIViewController {
     }
     
     @IBOutlet weak var qrFrame: UIView!
+    @IBOutlet weak var scanQRCodeLabelView: UIVisualEffectView!
+    @IBOutlet weak var qrCodeView: UIImageView!
     
     private var isTorchOn: Bool = false
     
@@ -54,14 +57,12 @@ class MainViewController: UIViewController {
         switch segueID {
         case SegueID.showCheckins:
             let vc = segue.destination as! CheckinViewController
-            let vm = CheckinViewModel()
-            vc.config(vm)
+            vc.config(checkinViewModel)
             
         case SegueID.addCheckin:
             let vc = segue.destination as! CheckinViewController
-            let vm = CheckinViewModel()
-            vm.add(checkinMessage)
-            vc.config(vm)
+            checkinViewModel.add(checkinMessage)
+            vc.config(checkinViewModel)
             
         default:
             break
@@ -102,6 +103,10 @@ class MainViewController: UIViewController {
         
         addApplicationNotificationObservers()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        let userHasCheckedin = checkinViewModel.checkins.count > 0
+        scanQRCodeLabelView.isHidden = userHasCheckedin
+        qrCodeView.isHidden = userHasCheckedin
     }
     
     override func viewWillDisappear(_ animated: Bool) {

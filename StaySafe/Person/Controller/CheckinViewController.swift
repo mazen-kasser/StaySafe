@@ -8,14 +8,14 @@ class CheckinViewController: UITableViewController {
 
     private var viewModel: CheckinViewModel!
     @IBOutlet weak var checkinTitleLabel: UILabel!
-    @IBOutlet weak var checkinSubtitleLabel: UILabel!
+    @IBOutlet weak var checkinHeader: UIView!
+    @IBOutlet weak var checkinFooter: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(CheckinCell.self)
-        tableView.tableFooterView = UIView()
-        reloadHeaderData()
+        reloadHeaderFooterData()
     }
     
     private func addApplicationNotificationObservers() {
@@ -67,7 +67,7 @@ class CheckinViewController: UITableViewController {
             let deleteCheckin = self.viewModel.checkins[indexPath.row]
             self.viewModel.delete(deleteCheckin)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            self.reloadHeaderData()
+            self.reloadHeaderFooterData()
         }
 
         return UISwipeActionsConfiguration(actions: [archiveAction])
@@ -87,15 +87,20 @@ extension CheckinViewController {
 
 extension CheckinViewController {
     @objc func reloadData() {
+        reloadHeaderFooterData()
         tableView.reloadData()
-        reloadHeaderData()
     }
     
-    func reloadHeaderData() {
+    func reloadHeaderFooterData() {
         let count = viewModel.checkins.count
         let plural = count > 1 ? "s" : ""
+        let showHeader = count > 0
+        let showFooter = !showHeader
+        
         checkinTitleLabel.text = "You have \(count) check-in\(plural)"
-        checkinSubtitleLabel.isHidden = count == 0
+        checkinHeader.frame.size.height = showHeader ? 230 : 0
+        checkinHeader.isHidden = showFooter
+        checkinFooter.isHidden = showHeader
     }
 }
 
