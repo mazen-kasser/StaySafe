@@ -20,6 +20,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.setInitialFlow()
+        
+        // when app not in memory
+        if let openUrl = connectionOptions.urlContexts.first?.url {
+            checkin(openUrl.absoluteString)
+        }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        // when app not in memory
+        if let url = URLContexts.first?.url {
+            checkin(url.absoluteString)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -51,13 +63,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
         NotificationCenter.default.post(Notification(name: .willEnterBackgroundNotification))
     }
-    
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let openUrlContext = URLContexts.first else { return }
-        
-        checkin(openUrlContext.url.absoluteString)
-    }
-
 
 }
 

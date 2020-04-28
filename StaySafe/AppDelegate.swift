@@ -10,13 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        handlePushNotification(application, withOptions: launchOptions)
         
+        handleValidationRules()
         handleOpenURLScheme()
-        
-        try! ValidationRulesRegistry.addRulesToRegistry(ContactUsValidationRule.rules)
-        try! ValidationRulesRegistry.addRulesToRegistry(BusinessValidationRule.rules)
+        handlePushNotification(application, withOptions: launchOptions)
         
         if #available(iOS 13.0, *) {
             // View setup in the scene delegate.

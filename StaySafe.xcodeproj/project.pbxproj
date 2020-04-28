@@ -20,6 +20,7 @@
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
 		BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414D24403D610095BBE7 /* CloudManager.swift */; };
 		BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */; };
+		BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */; };
 		BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
@@ -115,6 +116,7 @@
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		BA33414D24403D610095BBE7 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
+		BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ValidationRules.swift"; sourceTree = "<group>"; };
 		BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+StaySafe.swift"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				BADAEAE0243DD42800C2A1C9 /* Extensions */,
 				BA27EFB2243C876000BAA0FE /* Covid Alert.entitlements */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
+				BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
@@ -763,6 +766,7 @@
 				BA570332243F096500343016 /* UIStoryboard+StaySafe.swift in Sources */,
 				BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */,
 				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
+				BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */,
@@ -942,7 +946,7 @@
 				CODE_SIGN_ENTITLEMENTS = "StaySafe/Covid Alert.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.11;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -966,7 +970,7 @@
 				CODE_SIGN_ENTITLEMENTS = "StaySafe/Covid Alert.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.11;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
