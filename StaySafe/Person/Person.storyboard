@@ -48,9 +48,9 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-Rl-sJ9" userLabel="Scan Visual Effect View">
-                                <rect key="frame" x="136" y="249" width="142" height="44"/>
+                                <rect key="frame" x="136.5" y="249" width="141.5" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A9f-s3-0v4">
-                                    <rect key="frame" x="0.0" y="0.0" width="142" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-2T-Tbi">
@@ -350,14 +350,14 @@ at any check-in station</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="tmM-f3-xgH">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-SJ-fSc">
-                                    <rect key="frame" x="20" y="34" width="374" height="96"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-SJ-fSc">
+                                    <rect key="frame" x="20" y="34" width="374" height="106"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your full name and mobile number for verification" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-WV-gxS">
-                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="356.5" height="106"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -373,7 +373,7 @@ at any check-in station</string>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="fdk-j1-V9A">
-                            <rect key="frame" x="0.0" y="406" width="414" height="90"/>
+                            <rect key="frame" x="0.0" y="416" width="414" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aes-j9-b2G">
@@ -402,7 +402,7 @@ at any check-in station</string>
                             <tableViewSection id="cQQ-s2-ESR">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="boN-uz-hGV">
-                                        <rect key="frame" x="0.0" y="178" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="188" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="boN-uz-hGV" id="hsP-ca-UFf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -431,7 +431,7 @@ at any check-in station</string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Xko-ES-yxO">
-                                        <rect key="frame" x="0.0" y="278" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="288" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xko-ES-yxO" id="Mad-Ee-C1u">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>

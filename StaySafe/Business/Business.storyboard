@@ -257,14 +257,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ntf-vZ-ysX">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-qD-rmS">
-                                    <rect key="frame" x="20" y="34" width="374" height="79"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mxk-qD-rmS">
+                                    <rect key="frame" x="20" y="34" width="374" height="106"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your place name and address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="273" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="106"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -279,7 +279,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="CaP-h9-GlC">
-                            <rect key="frame" x="0.0" y="389" width="414" height="90"/>
+                            <rect key="frame" x="0.0" y="416" width="414" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-TU-7a3">
@@ -309,7 +309,7 @@
                             <tableViewSection id="Rgt-h3-CAN">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="zCo-nU-h8V">
-                                        <rect key="frame" x="0.0" y="161" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="188" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zCo-nU-h8V" id="oju-aP-KVr">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -338,7 +338,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="bYo-yl-srH">
-                                        <rect key="frame" x="0.0" y="261" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="288" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bYo-yl-srH" id="umj-df-QGy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -389,11 +389,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3850.7246376811595" y="1178.5714285714284"/>
+            <point key="canvasLocation" x="3851" y="1191"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4wg-zR-vHf"/>
+        <segue reference="e8o-y2-acF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="qrcode" catalog="system" width="128" height="114"/>
