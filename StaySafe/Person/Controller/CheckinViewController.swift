@@ -99,6 +99,7 @@ extension CheckinViewController {
         
         checkinTitleLabel.text = "You have \(count) check-in\(plural)"
         checkinHeader.frame.size.height = showHeader ? 230 : 0
+        checkinFooter.frame.size.height = showFooter ? 320 : 0
         checkinHeader.isHidden = showFooter
         checkinFooter.isHidden = showHeader
     }
