@@ -66,7 +66,7 @@ class CheckinViewController: UITableViewController {
             
             let deleteCheckin = self.viewModel.checkins[indexPath.row]
             self.viewModel.delete(deleteCheckin)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)
             self.reloadHeaderFooterData()
         }
 

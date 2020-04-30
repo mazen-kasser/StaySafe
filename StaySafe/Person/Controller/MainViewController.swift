@@ -76,7 +76,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        scannerView = QRScannerView(frame: view.bounds, rectOfInterest: qrFrame.frame)
+        let midScreenWidth = view.bounds.width / 2 - qrFrame.bounds.width / 2
+        let midScreenHeight = view.bounds.height / 2 - qrFrame.bounds.height / 2
+        let margin: CGFloat = 8
+        let scanningRect = CGRect(x: midScreenWidth, y: midScreenHeight, width: qrFrame.bounds.width - margin, height: qrFrame.bounds.height - margin)
+        scannerView = QRScannerView(frame: view.bounds, rectOfInterest: scanningRect)
         view.insertSubview(scannerView, at: 0)
     }
     
