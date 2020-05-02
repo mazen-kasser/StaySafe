@@ -63,7 +63,7 @@ Your personal data is not accessed unless you share it.</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-Ef-U3C" customClass="CAButton" customModule="Stay_Safe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-Ef-U3C" customClass="PrimaryButton" customModule="Stay_Safe" customModuleProvider="target">
                                 <rect key="frame" x="20" y="803" width="374" height="39"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <state key="normal" title="Okay">
@@ -126,7 +126,7 @@ Your personal data is not accessed unless you share it.</string>
                             <rect key="frame" x="0.0" y="431" width="414" height="164"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="CAButton" customModule="Stay_Safe" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="PrimaryButton" customModule="Stay_Safe" customModuleProvider="target">
                                     <rect key="frame" x="20" y="94" width="374" height="50"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <state key="normal" title="Start">

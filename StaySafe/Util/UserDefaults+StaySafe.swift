@@ -14,6 +14,26 @@ extension UserDefaults {
     enum Key {
         static let deviceToken = "deviceToken"
         static let userType = "userType"
+        static let fullName = "fullName"
+        static let mobileNumber = "mobileNumber"
+    }
+    
+    var fullName: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.fullName)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.fullName)
+        }
+    }
+    
+    var mobileNumber: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.mobileNumber)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.mobileNumber)
+        }
     }
     
     var userType: UserType? {

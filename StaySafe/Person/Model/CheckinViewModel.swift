@@ -21,6 +21,16 @@ class CheckinViewModel {
         return try! managedContext.fetch(fetchRequest)
     }
     
+    func submitReport() {
+        guard let name = UserDefaults.standard.fullName,
+            let mobile = UserDefaults.standard.mobileNumber else {
+                assertionFailure()
+                return
+        }
+        
+        CloudManager.report(fullName: name, mobileNumber: mobile)
+    }
+    
     @objc func add(_ qrCode: String) {
 
         // check if already checked-in within 1min

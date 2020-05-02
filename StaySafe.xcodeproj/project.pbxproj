@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3FA06BC131C3E9B427B1F3CC /* Pods_StaySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */; };
 		9B2BB67EC37BBD9A2CC235A8 /* Pods_StaySafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */; };
-		BA1DE5B7244C1CA200B9C36A /* CAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* CAButton.swift */; };
+		BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */; };
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
 		BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */; };
 		BA1DE5BD244C21A200B9C36A /* UIColor+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */; };
@@ -45,6 +45,8 @@
 		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
 		BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */; };
 		BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */; };
+		BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6433245D7F6E000B7888 /* MainViewModel.swift */; };
+		BAAE6438245D902B000B7888 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6437245D902B000B7888 /* SecondaryButton.swift */; };
 		BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */; };
 		BAC458C724516E340079E813 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC458C624516E340079E813 /* AVFoundation.framework */; };
 		BAC458CB245170320079E813 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC458CA245170320079E813 /* Vibration.swift */; };
@@ -104,7 +106,7 @@
 		2C5B0EF4ECAD40ECDBDEAEFA /* Pods-StaySafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.debug.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DBC603263B2EAB3CE228F6 /* Pods-StaySafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.release.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA1DE5B6244C1CA200B9C36A /* CAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAButton.swift; sourceTree = "<group>"; };
+		BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
 		BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALogoView.xib; sourceTree = "<group>"; };
 		BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+StaySafe.swift"; sourceTree = "<group>"; };
@@ -142,6 +144,8 @@
 		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Notifications.swift"; sourceTree = "<group>"; };
+		BAAE6433245D7F6E000B7888 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		BAAE6437245D902B000B7888 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		BAC458C624516E340079E813 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAC458CA245170320079E813 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 		BA570322243F06A400343016 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAAE6433245D7F6E000B7888 /* MainViewModel.swift */,
 				BA570323243F06A400343016 /* CheckinViewModel.swift */,
 				BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */,
 				BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */,
@@ -347,8 +352,9 @@
 			children = (
 				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
 				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
-				BA1DE5B6244C1CA200B9C36A /* CAButton.swift */,
 				BA8768722456F84C00B5ACF2 /* Button.swift */,
+				BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */,
+				BAAE6437245D902B000B7888 /* SecondaryButton.swift */,
 				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
 				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
 				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
@@ -724,6 +730,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAE6438245D902B000B7888 /* SecondaryButton.swift in Sources */,
 				BAFBEA3A244401BF00B5D946 /* TextFieldValidator.swift in Sources */,
 				BA1DE5BD244C21A200B9C36A /* UIColor+StaySafe.swift in Sources */,
 				BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */,
@@ -759,6 +766,7 @@
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
 				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
+				BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */,
 				BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */,
 				BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */,
 				BA570331243F096500343016 /* UITableView+.swift in Sources */,
@@ -781,7 +789,7 @@
 				BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
-				BA1DE5B7244C1CA200B9C36A /* CAButton.swift in Sources */,
+				BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

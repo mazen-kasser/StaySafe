@@ -29,6 +29,23 @@ class CheckinViewController: UITableViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        
+        presentAlert(title: "Send My Data",
+                     message: "Submit only if you have been contacted by authorised person",
+                     actionTitle: "Proceed",
+                     isCancellable: true,
+                     style: .actionSheet) { [weak self] _ in
+                        guard let self = self else { return }
+                        
+                        self.viewModel.submitReport()
+                        
+                        Alert.showLoading (title: "We will be in touch shortly if further details are required") {
+                            Alert.hideLoading()
+                        }
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

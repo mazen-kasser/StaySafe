@@ -6,13 +6,12 @@ import Foundation
 
 class ContactUsViewModel {
     
-    func submitReport(fullName: String?, mobileNumber: String?) {
-        guard let name = fullName,
-            let mobile = mobileNumber else {
-            assertionFailure()
-            return
-        }
-        
-        CloudManager.report(fullName: name, mobileNumber: mobile)
+    func save(fullName: String?, mobileNumber: String?) {
+        UserDefaults.standard.fullName = fullName
+        UserDefaults.standard.mobileNumber = mobileNumber
+    }
+    
+    func resetUserType() {
+        UserDefaults.standard.userType = nil
     }
 }

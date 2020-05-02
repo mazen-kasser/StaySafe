@@ -79,7 +79,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                            <state key="normal" title="Can't find your station?"/>
+                                            <state key="normal" title="Can't find your place?"/>
                                             <connections>
                                                 <segue destination="C0y-ja-uPs" kind="show" id="xib-5C-k7m"/>
                                             </connections>
@@ -285,10 +285,10 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u1K-TU-7a3">
                                     <rect key="frame" x="20" y="20" width="374" height="50"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uij-Fh-oFn" customClass="CAButton" customModule="Stay_Safe" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uij-Fh-oFn" customClass="PrimaryButton" customModule="Stay_Safe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Next"/>
+                                            <state key="normal" title="Proceed"/>
                                             <connections>
                                                 <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintCustomMerchantQR" id="e8o-y2-acF"/>
                                             </connections>

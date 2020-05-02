@@ -21,28 +21,27 @@ class ContactUsViewController: UITableViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard isScreenValid() else { return }
         
-        presentAlert(title: "Submit only if you have been contacted by authorised person",
-                     message: "We will be in touch shortly if further details are required",
+        presentAlert(title: "Please make sure the details provided are correct",
+                     message: "As we may need to contact you in case of protecting your safety",
+                     actionTitle: "Proceed",
                      isCancellable: true,
                      style: .actionSheet) { [weak self] _ in
                         guard let self = self else { return }
                         
-                        self.viewModel.submitReport(fullName: self.contactNameTextField.text,
-                                                    mobileNumber: self.mobileNumberTextField.text)
+                        self.viewModel.save(fullName: self.contactNameTextField.text,
+                                            mobileNumber: self.mobileNumberTextField.text)
                         
                         Alert.showLoading (title: "") { [weak self] in
                             Alert.hideLoading()
-                            self?.closeButtonTapped()
+                            self?.dismiss(animated: true)
                         }
         }
     }
     
     @IBAction func closeButtonTapped() {
-        navigationController?.dismiss(animated: true)
-    }
-
-    @IBAction func viewTapped(_ sender: Any) {
-        tableView.endEditing(true)
+        viewModel.resetUserType()
+        
+        UIApplication.shared.keyWindow?.setInitialFlow()
     }
 
     private func isScreenValid() -> Bool {

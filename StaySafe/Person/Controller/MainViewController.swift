@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
     var checkinMessage: String!
     private let checkinViewModel = CheckinViewModel()
     
+    private let viewModel = MainViewModel()
+    
     var scannerView: QRScannerView! {
         didSet {
             scannerView.delegate = self
@@ -81,6 +83,14 @@ class MainViewController: UIViewController {
         let scanningRect = CGRect(x: midScreenWidth, y: midScreenHeight, width: qrFrame.bounds.width - margin, height: qrFrame.bounds.height - margin)
         scannerView = QRScannerView(frame: view.bounds, rectOfInterest: scanningRect)
         view.insertSubview(scannerView, at: 0)
+        
+        // Check if contact details is not registered yet
+        if viewModel.userIsNotRegistered {
+            let contactUsVC = ContactUsViewController.instantiate(from: .person)
+            contactUsVC.modalPresentationStyle = .fullScreen
+            present(contactUsVC, animated: true)
+        }
+        
     }
     
     private func addApplicationNotificationObservers() {
