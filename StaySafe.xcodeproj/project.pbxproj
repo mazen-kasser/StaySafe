@@ -44,6 +44,7 @@
 		BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B52445E9B600F6BC0C /* Person.storyboard */; };
 		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
 		BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */; };
+		BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */; };
 		BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */; };
 		BAC458C724516E340079E813 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC458C624516E340079E813 /* AVFoundation.framework */; };
 		BAC458CB245170320079E813 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC458CA245170320079E813 /* Vibration.swift */; };
@@ -140,6 +141,7 @@
 		BA89B2B52445E9B600F6BC0C /* Person.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
 		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		BAC458C624516E340079E813 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAC458CA245170320079E813 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
+				BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */,
 				BA89B2AB2445D6E000F6BC0C /* Onboarding */,
 				BA57031F243F06A400343016 /* Person */,
 				BAE604CE243C6A5E009FC142 /* Business */,
@@ -733,6 +736,7 @@
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
+				BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */,
 				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
 				BAFBEA35244400EA00B5D946 /* String+.swift in Sources */,
 				BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */,

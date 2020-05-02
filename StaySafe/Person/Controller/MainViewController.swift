@@ -28,7 +28,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var qrFrame: UIView!
     @IBOutlet weak var scanQRCodeLabelView: UIVisualEffectView!
-    @IBOutlet weak var qrCodeView: UIImageView!
     
     private var isTorchOn: Bool = false
     
@@ -110,7 +109,6 @@ class MainViewController: UIViewController {
         
         let userHasCheckedin = checkinViewModel.checkins.count > 0
         scanQRCodeLabelView.isHidden = userHasCheckedin
-        qrCodeView.isHidden = userHasCheckedin
     }
     
     override func viewWillDisappear(_ animated: Bool) {

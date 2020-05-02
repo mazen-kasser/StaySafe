@@ -159,10 +159,10 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-iB-e2y" customClass="Button" customModule="Stay_Safe" customModuleProvider="target">
-                                <rect key="frame" x="103" y="844" width="208" height="32"/>
+                                <rect key="frame" x="108" y="844" width="198" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                <state key="normal" title="How to generate a QR code?"/>
+                                <state key="normal" title="How to request a QR code?"/>
                                 <connections>
                                     <segue destination="9jK-Xh-wbX" kind="presentation" id="trm-fA-Mil"/>
                                 </connections>
@@ -193,7 +193,6 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Tid-VG-wAe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="qrCodeView" destination="Oa5-64-tp0" id="1q3-Qw-b0l"/>
                         <outlet property="qrFrame" destination="1xL-CE-1uf" id="2mh-bl-xFO"/>
                         <outlet property="scanQRCodeLabelView" destination="JfM-Rl-sJ9" id="8cT-f6-LOJ"/>
                         <outlet property="torchBlurBackground" destination="ml5-hc-h65" id="4uR-Tk-p9G"/>
