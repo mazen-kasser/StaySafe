@@ -52,7 +52,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX7-ic-5Lv">
                                                 <rect key="frame" x="0.0" y="138" width="374" height="70"/>
                                                 <string key="text">We only store anonyomized information about your device token, business address, and timestamp.
-Your personal data (name and email address) is not accessed unless you share it.</string>
+Your personal data (name and email address) is not accessed unless requested by health authority.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

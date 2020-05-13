@@ -22,13 +22,7 @@ class CheckinViewModel {
     }
     
     func submitReport() {
-        guard let name = UserDefaults.standard.fullName,
-            let mobile = UserDefaults.standard.mobileNumber else {
-                assertionFailure()
-                return
-        }
-        
-        CloudManager.report(fullName: name, mobileNumber: mobile)
+        CloudManager.report()
     }
     
     @objc func add(_ qrCode: String) {
