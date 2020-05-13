@@ -16,7 +16,6 @@ extension UIWindow {
         }
         
         rootViewController = storyboard.instance.instantiateInitialViewController()
-        makeKeyAndVisible()
     }
     
 }

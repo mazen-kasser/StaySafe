@@ -12,7 +12,7 @@ private enum TextValidator {
 
        enum Mobile {
            static let mandatoryValidationMessage = NSLocalizedString("Please enter a mobile number", comment: "validation message")
-           static let validationMessage = NSLocalizedString("Please enter number starting with 02", comment: "validation message")
+           static let validationMessage = NSLocalizedString("Please enter a valid mobile number", comment: "validation message")
        }
 }
 
@@ -45,7 +45,7 @@ final class MobileTextFieldValidator: RegularExpressionTextFieldValidator {
         super.init(mandatory: true,
                    mandatoryValidationMessage: TextValidator.Mobile.mandatoryValidationMessage,
                    invalidValidationMessage: TextValidator.Mobile.validationMessage,
-                   validationRegex: "^02[0-9]{7,9}$",
+                   validationRegex: "^[0-9]{7,11}$",
                    userInputValidationRegex: "^[0-9]{1,11}$")
     }
 }

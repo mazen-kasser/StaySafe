@@ -25,7 +25,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>Stay-Safe</string>
+				<string>QRTracer</string>
 			</array>
 		</dict>
 	</array>
@@ -34,7 +34,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need the camera so to scan Stay-Safe QR code to checkin.</string>
+	<string>We need the camera so to scan QR Tracer code to check you in.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Required to Find your business if you are a merchant.</string>
 	<key>NSLocationAlwaysUsageDescription</key>

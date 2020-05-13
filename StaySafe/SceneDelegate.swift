@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Set root view controller
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
+        window?.makeKeyAndVisible()
         window?.setInitialFlow()
         
         // when app not in memory
