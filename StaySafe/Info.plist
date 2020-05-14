@@ -34,17 +34,17 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need the camera so to scan QR Tracer code to check you in.</string>
+	<string>We need the camera so to scan QR Tracer code to check-in.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
+	<string>Required to find your business / place.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
+	<string>Required to find your business / place.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Required to Find your business if you are a merchant.</string>
+	<string>Required to find your business / place.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Required to save the QR page if you are a merchant.</string>
+	<string>Required to save the QR Check-in Station.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Required to save the QR page if you are a merchant.</string>
+	<string>Required to save the QR Check-in Station.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -24,8 +24,8 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
         Alert.showLoading(title: "", message: "") { [weak self] in
             Alert.hideLoading()
             
-            self?.presentAlert(title: "Your business badge has been created",
-                               message: "Please check the details to match your business and print using the Share feature",
+            self?.presentAlert(title: "Your badge has been created",
+                               message: "Please check the details to match your place and print using the Share feature",
                                style: .actionSheet)
         }
         
