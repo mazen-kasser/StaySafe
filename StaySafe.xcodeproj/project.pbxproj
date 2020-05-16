@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3FA06BC131C3E9B427B1F3CC /* Pods_StaySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */; };
 		9B2BB67EC37BBD9A2CC235A8 /* Pods_StaySafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */; };
+		BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */; };
+		BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */; };
 		BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */; };
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
 		BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */; };
@@ -106,6 +108,8 @@
 		2C5B0EF4ECAD40ECDBDEAEFA /* Pods-StaySafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.debug.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DBC603263B2EAB3CE228F6 /* Pods-StaySafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.release.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewController.swift; sourceTree = "<group>"; };
+		BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewModel.swift; sourceTree = "<group>"; };
 		BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
 		BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALogoView.xib; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 		BA7D5EC3244322B900775FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */,
 				BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */,
 				BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */,
 				BA7D5EC4244322CE00775FAD /* Placemark.swift */,
@@ -313,6 +318,7 @@
 		BA7D5EC6244322E500775FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */,
 				BADC930F2441577900FC4E63 /* FindBusinessViewController.swift */,
 				BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */,
 				BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */,
@@ -775,6 +781,7 @@
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
+				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+StaySafe.swift in Sources */,
 				BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */,
 				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
@@ -783,6 +790,7 @@
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
+				BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */,
 				BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */,
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
