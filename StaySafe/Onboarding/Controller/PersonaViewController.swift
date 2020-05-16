@@ -9,7 +9,7 @@ class PersonaViewController: UITableViewController {
     @IBOutlet private weak var nextButton: UIButton!
     
     @IBAction func nextButtonSelected(_ sender: Any) {
-        let persona: UserType = tableView.indexPathForSelectedRow?.row == 0 ? .business : .person
+        let persona: UserType = tableView.indexPathForSelectedRow?.section == 0 ? .business : .person
         UserDefaults.standard.userType = persona
         
         showNextFlow(persona)
