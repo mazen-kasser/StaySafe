@@ -35,6 +35,23 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var torchBlurBackground: UIVisualEffectView!
     @IBOutlet weak var torchButton: Button!
+    @IBOutlet weak var showMyQrCodeButton: Button!
+    
+    @IBAction func showMyQrCode(_ sender: Any) {
+        let storyboard = Storyboard.business
+        switch UserDefaults.standard.isBusinessRegistered {
+        case true:
+            let vc = BusinessQRViewController.instantiate(from: storyboard)
+            let nc = UINavigationController(rootViewController: vc)
+            nc.modalPresentationStyle = .fullScreen
+            present(nc, animated: true)
+            
+        case false:
+            let vc = storyboard.instance.instantiateInitialViewController()!
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+    }
     
     @IBAction func toggleTorch(_ sender: UIButton) {
         isTorchOn.toggle()
@@ -84,13 +101,7 @@ class MainViewController: UIViewController {
         scannerView = QRScannerView(frame: view.bounds, rectOfInterest: scanningRect)
         view.insertSubview(scannerView, at: 0)
         
-        // Check if contact details is not registered yet
-        if viewModel.userIsNotRegistered {
-            let contactUsVC = ContactUsViewController.instantiate(from: .person)
-            contactUsVC.modalPresentationStyle = .fullScreen
-            present(contactUsVC, animated: true)
-        }
-        
+        showMyQrCodeButton.setTitle(viewModel.createQRCodeText, for: .normal)
     }
     
     private func addApplicationNotificationObservers() {

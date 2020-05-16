@@ -23,10 +23,6 @@ class FindBusinessViewController: UIViewController {
     
     @IBOutlet weak var addressSearchField: UISearchBar!
     
-    @IBAction func closeGenerateQRCode(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,9 +33,7 @@ class FindBusinessViewController: UIViewController {
     func getPlaces(searchString: String) {
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchString
-//        if #available(iOS 13.0, *) {
-//            searchRequest.pointOfInterestFilter = .includingAll
-//        }
+        searchRequest.pointOfInterestFilter = .includingAll
 //        searchRequest.region = mapView.region
         
         let search = MKLocalSearch(request: searchRequest)

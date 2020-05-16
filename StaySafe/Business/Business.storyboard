@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xT3-Qc-Yku">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k7e-Xi-hbQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -112,29 +112,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O4a-pu-3OU"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="jS7-aa-96H">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="4fX-XJ-7pq">
-                            <connections>
-                                <action selector="closeGenerateQRCode:" destination="AfW-T7-n3t" id="K2f-qm-GHs"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="jS7-aa-96H"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addressSearchField" destination="hZI-oY-kek" id="Qfk-SN-fQh"/>
                         <outlet property="infoPage" destination="pzH-x3-hZq" id="YsK-uO-WkE"/>
                         <outlet property="tableView" destination="Cz0-Qn-aaZ" id="yak-5d-QW2"/>
-                        <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintMerchantQR" id="4wg-zR-vHf"/>
+                        <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintMerchantQR" id="p9n-Az-bCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftb-E4-ulc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3851" y="461"/>
+            <point key="canvasLocation" x="6481.1594202898559" y="1190.625"/>
         </scene>
         <!--BusinessQR View Controller-->
         <scene sceneID="N2v-qT-s8n">
             <objects>
-                <viewController id="ISr-a9-2RD" customClass="BusinessQRViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BusinessQRViewController" id="ISr-a9-2RD" customClass="BusinessQRViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YYH-U8-cRJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +136,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="w2S-d0-nz8">
                                 <rect key="frame" x="40" y="184" width="334" height="528"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Check-in Station" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-eU-1m1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Check-in Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-eU-1m1">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
@@ -212,16 +206,23 @@
                         <viewLayoutGuide key="safeArea" id="VIb-3G-v22"/>
                     </view>
                     <navigationItem key="navigationItem" id="iMA-D8-ySF">
-                        <barButtonItem key="leftBarButtonItem" title="Done" id="IBf-Vq-wlS">
+                        <barButtonItem key="leftBarButtonItem" title="Scan" id="Xu7-ch-6av">
                             <connections>
-                                <action selector="dismiss:" destination="ISr-a9-2RD" id="ehV-lx-eoC"/>
+                                <action selector="showScanQR:" destination="ISr-a9-2RD" id="Dkg-yX-T29"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Activity" id="wMS-Aw-NS0">
-                            <connections>
-                                <segue destination="3BF-Fq-fxX" kind="show" id="dhK-Kp-JLQ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Activity" id="wMS-Aw-NS0">
+                                <connections>
+                                    <segue destination="3BF-Fq-fxX" kind="show" identifier="showBusinessCheckinViewController" id="dhK-Kp-JLQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Print" image="printer" catalog="system" id="F9K-bz-hVN">
+                                <connections>
+                                    <action selector="sharePage:" destination="ISr-a9-2RD" id="rpS-zX-g4O"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="businessAddressLabel" destination="u6y-3O-Ral" id="jG1-Nj-pQQ"/>
@@ -233,49 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCS-SM-yV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4739" y="445"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LPd-pE-mc9">
-            <objects>
-                <viewController id="9vl-Xc-w9g" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wn7-MD-gwP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB0-5K-DMK">
-                                <rect key="frame" x="175" y="116" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="zu2-Ns-qHg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ABp-vX-q6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2172" y="461"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qMd-fr-d40">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xT3-Qc-Yku" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d7M-Zh-oZk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="AfW-T7-n3t" kind="relationship" relationship="rootViewController" id="3wI-s5-46D"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iam-bX-Vpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2941" y="461"/>
+            <point key="canvasLocation" x="6557.971014492754" y="444.64285714285711"/>
         </scene>
         <!--Custom Business View Controller-->
         <scene sceneID="j6y-K7-r1o">
@@ -293,8 +252,17 @@
                                     <rect key="frame" x="20" y="34" width="374" height="106"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your place name and address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLI-xh-tGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="273" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="86"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will use this details for users to check-in." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-t8-id7">
+                                            <rect key="frame" x="0.0" y="86" width="270" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="8Hj-AP-YLr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.32580846549999998" green="0.32586956020000002" blue="0.32579338549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -319,7 +287,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Proceed"/>
                                             <connections>
-                                                <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintCustomMerchantQR" id="e8o-y2-acF"/>
+                                                <segue destination="ISr-a9-2RD" kind="show" identifier="showPrintCustomMerchantQR" id="5dM-1r-2Mn"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -418,12 +386,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3851" y="1191"/>
+            <point key="canvasLocation" x="7343" y="1209"/>
         </scene>
         <!--Business Checkin View Controller-->
         <scene sceneID="IJ5-6a-yJs">
             <objects>
-                <tableViewController storyboardIdentifier="CheckinViewController" id="3BF-Fq-fxX" customClass="BusinessCheckinViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BusinessCheckinViewController" id="3BF-Fq-fxX" customClass="BusinessCheckinViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xgC-vC-tZ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,8 +498,14 @@ as a check-in station</string>
                             <outlet property="delegate" destination="3BF-Fq-fxX" id="58Q-Sc-iGO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="395-mP-mXn"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="395-mP-mXn">
+                        <barButtonItem key="rightBarButtonItem" title="Sign out" id="rHM-Q9-bVF">
+                            <color key="tintColor" red="0.74352751939999995" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="checkinFooter" destination="VSh-BJ-SlW" id="RW8-7w-9D3"/>
                         <outlet property="checkinHeader" destination="Ren-QH-zq4" id="smd-8c-cBd"/>
@@ -540,14 +514,378 @@ as a check-in station</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQF-OS-bVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5578" y="445"/>
+            <point key="canvasLocation" x="7397.1014492753629" y="444.64285714285711"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="QV2-ab-sQF">
+            <objects>
+                <tableViewController storyboardIdentifier="LoginViewController" id="0vh-ME-mq0" customClass="LoginViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wkb-l2-2l1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="MEd-QY-0nG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-Xc-gjo">
+                                    <rect key="frame" x="20" y="24" width="374" height="166"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFA-Sa-pfl" customClass="CALogoView" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="62" y="0.0" width="250" height="120"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="oVp-dw-7NG"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ideal for any business or a place to generate QR code for Individuals to scan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFi-Mc-g3q">
+                                            <rect key="frame" x="13.5" y="130" width="347.5" height="36"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.32580846549999998" green="0.32586956020000002" blue="0.32579338549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="EjB-Xc-gjo" firstAttribute="leading" secondItem="MEd-QY-0nG" secondAttribute="leading" constant="20" id="DOq-cm-xkc"/>
+                                <constraint firstAttribute="bottom" secondItem="EjB-Xc-gjo" secondAttribute="bottom" constant="10" id="Dhw-PF-MhO"/>
+                                <constraint firstItem="EjB-Xc-gjo" firstAttribute="top" secondItem="MEd-QY-0nG" secondAttribute="top" constant="24" id="JpA-zY-ktx"/>
+                                <constraint firstAttribute="trailing" secondItem="EjB-Xc-gjo" secondAttribute="trailing" constant="20" id="U9T-yz-A1M"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="LoT-FW-fFg">
+                            <rect key="frame" x="0.0" y="456" width="414" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rDi-2B-6Bp">
+                                    <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nmk-sC-EuM" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Login"/>
+                                            <connections>
+                                                <segue destination="ISr-a9-2RD" kind="show" identifier="showBusinessQRViewController" id="Geh-WL-GRh"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="rDi-2B-6Bp" firstAttribute="top" secondItem="LoT-FW-fFg" secondAttribute="top" constant="20" id="R1c-fd-L1u"/>
+                                <constraint firstAttribute="bottom" secondItem="rDi-2B-6Bp" secondAttribute="bottom" constant="20" id="Y12-yU-cZ7"/>
+                                <constraint firstAttribute="trailing" secondItem="rDi-2B-6Bp" secondAttribute="trailing" constant="20" id="eln-YD-OUw"/>
+                                <constraint firstItem="rDi-2B-6Bp" firstAttribute="leading" secondItem="LoT-FW-fFg" secondAttribute="leading" constant="20" id="pL5-fd-yzx"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="OGk-07-J7T"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="M6R-o7-ZRW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="g46-dE-8uS">
+                                        <rect key="frame" x="0.0" y="228" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g46-dE-8uS" id="bFO-OH-p7u">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5F-CO-ssr" customClass="CATextField" customModule="QR_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="d5F-c6-Ew8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="Email"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0vh-ME-mq0" id="hiq-W2-5Ho"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="C5F-CO-ssr" firstAttribute="leading" secondItem="bFO-OH-p7u" secondAttribute="leading" constant="20" id="8ye-77-z2K"/>
+                                                <constraint firstAttribute="trailing" secondItem="C5F-CO-ssr" secondAttribute="trailing" constant="20" id="Aac-c3-wMu"/>
+                                                <constraint firstItem="C5F-CO-ssr" firstAttribute="centerY" secondItem="bFO-OH-p7u" secondAttribute="centerY" id="CZd-57-ZqL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="2hB-2o-sO4">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hB-2o-sO4" id="t2i-QX-GIo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q96-y5-NqP" customClass="CATextField" customModule="QR_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ZKo-76-oGT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0vh-ME-mq0" id="g1U-a2-uG1"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Q96-y5-NqP" firstAttribute="centerY" secondItem="t2i-QX-GIo" secondAttribute="centerY" id="BS6-YZ-top"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q96-y5-NqP" secondAttribute="trailing" constant="20" id="nZx-6m-nyX"/>
+                                                <constraint firstItem="Q96-y5-NqP" firstAttribute="leading" secondItem="t2i-QX-GIo" secondAttribute="leading" constant="20" id="nyt-e2-xQb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0vh-ME-mq0" id="kUG-1i-2Do"/>
+                            <outlet property="delegate" destination="0vh-ME-mq0" id="tOo-Gi-j2Z"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="IYU-1G-4gH">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="boD-l8-cGj">
+                            <connections>
+                                <action selector="closeLoginFlow:" destination="0vh-ME-mq0" id="fTw-4O-C98"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sign up" id="qXs-b1-Ys5">
+                            <connections>
+                                <segue destination="tOy-xD-HeV" kind="show" id="dk2-k3-pmB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="C5F-CO-ssr" id="bRU-I7-wYs"/>
+                        <outlet property="passwordTextField" destination="Q96-y5-NqP" id="az9-hk-Oq7"/>
+                        <outlet property="submitButton" destination="nmk-sC-EuM" id="itj-Gi-wre"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CpR-Oa-FuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KyC-io-P79">
+                    <connections>
+                        <action selector="viewTapped:" destination="0vh-ME-mq0" id="DEZ-xS-Xr5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4913.04347826087" y="1190.625"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="zVA-2H-A8j">
+            <objects>
+                <tableViewController id="tOy-xD-HeV" customClass="SignUpViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tYg-Ow-wA2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="13K-AH-Nh1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9C7-ml-Mt0">
+                                    <rect key="frame" x="20" y="34" width="374" height="106"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill in your details to create an account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulg-15-ejy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320.5" height="86"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will use this details to create an business account." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkz-IN-OWB">
+                                            <rect key="frame" x="0.0" y="86" width="326" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="mZR-4h-zo3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.32580846549999998" green="0.32586956020000002" blue="0.32579338549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="9C7-ml-Mt0" firstAttribute="top" secondItem="13K-AH-Nh1" secondAttribute="top" constant="34" id="86R-77-Szo"/>
+                                <constraint firstItem="9C7-ml-Mt0" firstAttribute="leading" secondItem="13K-AH-Nh1" secondAttribute="leading" constant="20" id="KgV-wL-cXp"/>
+                                <constraint firstAttribute="bottom" secondItem="9C7-ml-Mt0" secondAttribute="bottom" constant="20" id="Le5-Hu-LjG"/>
+                                <constraint firstAttribute="trailing" secondItem="9C7-ml-Mt0" secondAttribute="trailing" constant="20" id="Peb-at-wzj"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="rwA-oh-XCm">
+                            <rect key="frame" x="0.0" y="516" width="414" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RSI-kn-9ru">
+                                    <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jwb-T1-lwb" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Next"/>
+                                            <connections>
+                                                <segue destination="AfW-T7-n3t" kind="show" id="wnB-TI-k3H"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="RSI-kn-9ru" secondAttribute="bottom" constant="20" id="4qq-Nx-OhJ"/>
+                                <constraint firstAttribute="trailing" secondItem="RSI-kn-9ru" secondAttribute="trailing" constant="20" id="eHA-fh-acy"/>
+                                <constraint firstItem="RSI-kn-9ru" firstAttribute="leading" secondItem="rwA-oh-XCm" secondAttribute="leading" constant="20" id="pGL-Zx-9ZU"/>
+                                <constraint firstItem="RSI-kn-9ru" firstAttribute="top" secondItem="rwA-oh-XCm" secondAttribute="top" constant="20" id="vP2-fi-MtX"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="ebm-HL-JMW"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="STl-mu-ujk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="0ek-cJ-joB">
+                                        <rect key="frame" x="0.0" y="188" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0ek-cJ-joB" id="e5Y-bl-L2k">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YjR-2e-TsZ" customClass="CATextField" customModule="QR_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="klM-AG-p3Z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="Email"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="tOy-xD-HeV" id="GYW-kj-gsB"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YjR-2e-TsZ" secondAttribute="trailing" constant="20" id="8RN-eC-wCX"/>
+                                                <constraint firstItem="YjR-2e-TsZ" firstAttribute="centerY" secondItem="e5Y-bl-L2k" secondAttribute="centerY" id="98R-De-xML"/>
+                                                <constraint firstItem="YjR-2e-TsZ" firstAttribute="leading" secondItem="e5Y-bl-L2k" secondAttribute="leading" constant="20" id="DcJ-5u-P4d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="gO8-oa-dFC">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gO8-oa-dFC" id="KSc-qk-YkF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMI-5v-ya8" customClass="CATextField" customModule="QR_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Anx-dB-xnu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="tOy-xD-HeV" id="drH-RH-f5R"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EMI-5v-ya8" firstAttribute="leading" secondItem="KSc-qk-YkF" secondAttribute="leading" constant="20" id="6CA-5e-PyJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="EMI-5v-ya8" secondAttribute="trailing" constant="20" id="LMx-7R-FbU"/>
+                                                <constraint firstItem="EMI-5v-ya8" firstAttribute="centerY" secondItem="KSc-qk-YkF" secondAttribute="centerY" id="bgp-CJ-dyq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="qvU-4I-uyu">
+                                        <rect key="frame" x="0.0" y="388" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qvU-4I-uyu" id="YKN-gQ-Qg4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-oG-szf" customClass="CATextField" customModule="QR_Tracer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="30" width="374" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="P5R-Jo-Y9P"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="validationRuleKey" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="tOy-xD-HeV" id="yF3-Cq-uMX"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v1h-oG-szf" firstAttribute="leading" secondItem="YKN-gQ-Qg4" secondAttribute="leading" constant="20" id="D3J-Pe-79O"/>
+                                                <constraint firstItem="v1h-oG-szf" firstAttribute="centerY" secondItem="YKN-gQ-Qg4" secondAttribute="centerY" id="cP8-18-eSb"/>
+                                                <constraint firstAttribute="trailing" secondItem="v1h-oG-szf" secondAttribute="trailing" constant="20" id="wHs-nQ-csh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tOy-xD-HeV" id="vix-8J-ocl"/>
+                            <outlet property="delegate" destination="tOy-xD-HeV" id="EtY-uj-ilu"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="ZgW-fK-JGf"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="v1h-oG-szf" id="oM3-Mr-TSG"/>
+                        <outlet property="emailTextField" destination="YjR-2e-TsZ" id="YLl-7t-Cft"/>
+                        <outlet property="passwordTextField" destination="EMI-5v-ya8" id="u0e-rG-Tr7"/>
+                        <outlet property="submitButton" destination="jwb-T1-lwb" id="e9L-4W-mfl"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AE-Kf-8Vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lvF-15-CCm">
+                    <connections>
+                        <action selector="viewTapped:" destination="tOy-xD-HeV" id="KRz-DB-tqT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5715.9420289855079" y="1190.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EOd-yu-t4B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7e-Xi-hbQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mNF-YE-reP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0vh-ME-mq0" kind="relationship" relationship="rootViewController" id="Olt-Yq-KKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFq-T2-vOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4002.898550724638" y="1190.625"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4wg-zR-vHf"/>
+        <segue reference="Geh-WL-GRh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="check-ins" width="48" height="48"/>
+        <image name="printer" catalog="system" width="128" height="111"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
     </resources>
 </document>

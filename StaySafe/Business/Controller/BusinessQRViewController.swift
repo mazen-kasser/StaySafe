@@ -12,31 +12,38 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
-    var placemark: Placemark!
-    
-    @IBAction func dismiss(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
-    }
+    var placemark: Placemark! = {
+        return Placemark(businessName: UserDefaults.standard.businessName ?? "",
+                         businessAddress: UserDefaults.standard.businessAddress ?? "")
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alert.showLoading(title: "", message: "") { [weak self] in
-            Alert.hideLoading()
-            
-            self?.presentAlert(title: "Your badge has been created",
-                               message: "Please check the details to match your place and print using the Share feature",
-                               style: .actionSheet)
+        if !UserDefaults.standard.isBusinessRegistered {
+            Alert.showLoading(title: "", message: "") { [weak self] in
+                Alert.hideLoading()
+                
+                self?.presentAlert(title: "Your badge has been created",
+                                   message: "Please check the details to match your place and print using the Share feature",
+                                   style: .actionSheet)
+            }
         }
         
-        applyShareButton(for: .right, selector: #selector(sharePage))
+        // store business info
+        UserDefaults.standard.businessName = placemark.businessName
+        UserDefaults.standard.businessAddress = placemark.businessAddress
         
         qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
         businessNameLabel.text = placemark.businessName
         businessAddressLabel.text = placemark.businessAddress
     }
     
-    @objc func sharePage() {
+    @IBAction func showScanQR(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
+    @IBAction func sharePage(_ sender: Any) {
         // ugly way to revert colors when dark mode is on
         let color1 = view.backgroundColor
         let color2 = noteLabel.textColor
@@ -47,7 +54,6 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
         printableColors(.white, .black, .black, .black, .black)
         displayShareOptions(popoverDelegate: self)
         printableColors(color1, color2, color3, color4, color5)
-
     }
     
     

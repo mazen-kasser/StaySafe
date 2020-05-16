@@ -16,6 +16,57 @@ extension UserDefaults {
         static let userType = "userType"
         static let fullName = "fullName"
         static let mobileNumber = "mobileNumber"
+        static let emailAddress = "emailAddress"
+        static let password = "password"
+        static let isRegistered = "isRegistered"
+        static let businessName = "businessName"
+        static let businessAddress = "businessAddress"
+    }
+    
+    var isUserRegistered: Bool {
+        return UserDefaults.standard.fullName != nil &&
+            UserDefaults.standard.mobileNumber != nil
+    }
+    
+    var isBusinessRegistered: Bool {
+        return UserDefaults.standard.businessName != nil &&
+            UserDefaults.standard.businessAddress != nil
+    }
+    
+    var businessName: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.businessName)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.businessName)
+        }
+    }
+    
+    var businessAddress: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.businessAddress)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.businessAddress)
+        }
+    }
+    
+    var emailAddress: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.emailAddress)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.emailAddress)
+        }
+    }
+    
+    var password: String? {
+        get {
+            return UserDefaults.standard.string(forKey: Key.password)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: Key.password)
+        }
     }
     
     var fullName: String? {

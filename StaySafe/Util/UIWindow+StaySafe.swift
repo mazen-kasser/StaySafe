@@ -8,8 +8,9 @@ extension UIWindow {
     
     func setInitialFlow() {
         let storyboard: Storyboard
-        switch UserDefaults.standard.userType {
-        case .person:
+        
+        switch UserDefaults.standard.isUserRegistered {
+        case true:
             storyboard = Storyboard.person
         default:
             storyboard = Storyboard.onboarding

@@ -6,8 +6,7 @@ import Foundation
 
 class MainViewModel {
     
-    var userIsNotRegistered: Bool {
-        return UserDefaults.standard.fullName == nil ||
-            UserDefaults.standard.mobileNumber == nil
+    var createQRCodeText: String {
+        return UserDefaults.standard.isBusinessRegistered ? "My code" : "How to request a QR code?"
     }
 }

@@ -43,9 +43,7 @@ class CATextField: UITextField {
     }
 
     private func applyPlaceholderStyling() {
-        guard let placeholder = placeholder else { return }
-//        let attr: [String: AnyObject] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: styleDefinition.placeholderTextColor]
-//        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attr)
+
     }
 
     /// Stores the text of the placeholder when it's hidden, so it can be restored
@@ -119,7 +117,6 @@ class CATextField: UITextField {
     private func commonInit() {
         setupNotifications()
         contentVerticalAlignment = .center
-//        styleDefinition = CATextField.textFieldStyles[CATextField.defaultStyle]
         applyPlaceholderStyling()
     }
 
@@ -325,7 +322,6 @@ class CATextField: UITextField {
         valid = false
     }
 
-    // TODO: Foundations - the worst name ever
     /// Returns whether the textfield is valid as a Bool. This is just a wrapper around `validate:`.
     func isValid(_ showError: Bool = false) -> Bool {
         do {

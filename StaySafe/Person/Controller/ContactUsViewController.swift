@@ -17,13 +17,21 @@ class ContactUsViewController: UITableViewController {
         
         addDoneButtonOnKeyboard()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // show onboarding page
+        let vc = SlideViewController.instantiate(from: .onboarding)
+        present(vc, animated: true)
+    }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard isScreenValid() else { return }
         
         presentAlert(title: "Please make sure the details provided are correct",
                      message: "As we may need to contact you in case of protecting your safety",
-                     actionTitle: "Proceed",
+                     actionTitle: "Done",
                      isCancellable: true,
                      style: .actionSheet) { [weak self] _ in
                         guard let self = self else { return }
@@ -33,15 +41,26 @@ class ContactUsViewController: UITableViewController {
                         
                         Alert.showLoading (title: "") { [weak self] in
                             Alert.hideLoading()
-                            self?.dismiss(animated: true)
+                            
+                            self?.showNextFlow(.person)
                         }
         }
     }
     
-    @IBAction func closeButtonTapped() {
-        viewModel.resetUserType()
+    private func showNextFlow(_ persona: UserType?) {
+        let storyboard: UIStoryboard
+        switch persona {
+        case .business:
+            storyboard = Storyboard.business.instance
+        case .person:
+            storyboard = Storyboard.person.instance
+        default:
+            return
+        }
         
-        UIApplication.shared.keyWindow?.setInitialFlow()
+        let rootViewController = storyboard.instantiateInitialViewController()!
+        rootViewController.modalPresentationStyle = .fullScreen
+        present(rootViewController, animated: true)
     }
 
     private func isScreenValid() -> Bool {

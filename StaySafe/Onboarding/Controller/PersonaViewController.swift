@@ -6,6 +6,11 @@ import UIKit
 
 class PersonaViewController: UITableViewController {
     
+    enum SegueID {
+        static let login = "showLoginViewController"
+        static let contactUs = "showContactUsViewController"
+    }
+    
     @IBOutlet private weak var nextButton: UIButton!
     
     @IBAction func nextButtonSelected(_ sender: Any) {
@@ -16,29 +21,26 @@ class PersonaViewController: UITableViewController {
     }
     
     private func showNextFlow(_ persona: UserType?) {
-        let storyboard: UIStoryboard
         switch persona {
         case .business:
-            storyboard = Storyboard.business.instance
+            performSegue(withIdentifier: SegueID.login, sender: self)
         case .person:
-            storyboard = Storyboard.person.instance
+            performSegue(withIdentifier: SegueID.contactUs, sender: self)
         default:
             return
         }
-        
-        let rootViewController = storyboard.instantiateInitialViewController()!
-        rootViewController.modalPresentationStyle = .fullScreen
-        present(rootViewController, animated: true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        if UserDefaults.standard.userType == nil {
-            // show onboarding page
-            let vc = SlideViewController.instantiate(from: .onboarding)
-            present(vc, animated: true)
-        }
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

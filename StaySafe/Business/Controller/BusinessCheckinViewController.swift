@@ -6,7 +6,7 @@ import UIKit
 
 class BusinessCheckinViewController: UITableViewController {
 
-    private var viewModel: BusinessCheckinViewModel!
+    private var viewModel = BusinessCheckinViewModel()
     @IBOutlet weak var checkinTitleLabel: UILabel!
     @IBOutlet weak var checkinHeader: UIView!
     @IBOutlet weak var checkinFooter: UIView!
@@ -55,13 +55,6 @@ class BusinessCheckinViewController: UITableViewController {
         return cell
     }
 
-}
-
-extension BusinessCheckinViewController {
-    
-    func config(_ viewModel: BusinessCheckinViewModel) {
-        self.viewModel = viewModel
-    }
 }
 
 extension BusinessCheckinViewController {
