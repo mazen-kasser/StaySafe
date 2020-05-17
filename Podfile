@@ -8,14 +8,9 @@ target 'StaySafe' do
   pod 'DHSmartScreenshot'
   pod 'MBProgressHUD'
   
-  pod 'Firebase'
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
-#  pod 'Firebase/Messaging'
-#  pod 'Firebase/InAppMessaging'
 
 
   target 'StaySafeTests' do

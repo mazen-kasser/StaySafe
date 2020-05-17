@@ -15,10 +15,6 @@ class BusinessCheckinViewController: UITableViewController {
     var items: [BusinessCheckin] = []
     
     @IBAction func signoutPressed(_ sender: Any) {
-        // wipeout business details
-        UserDefaults.standard.businessName = nil
-        UserDefaults.standard.businessAddress = nil
-        
         try? Auth.auth().signOut()
         
         navigationController?.dismiss(animated: true)

@@ -18,7 +18,6 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     }
     
     var alreadyRegistered: Bool = false
-    
     var placemark: Placemark! = {
         return Placemark(businessName: UserDefaults.standard.businessName ?? "",
                          businessAddress: UserDefaults.standard.businessAddress ?? "")

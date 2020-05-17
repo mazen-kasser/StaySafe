@@ -39,18 +39,9 @@ class MainViewController: UIViewController {
     
     @IBAction func showMyQrCode(_ sender: Any) {
         let storyboard = Storyboard.business
-//        switch UserDefaults.standard.isBusinessRegistered {
-//        case true:
-//            let vc = BusinessQRViewController.instantiate(from: storyboard)
-//            let nc = UINavigationController(rootViewController: vc)
-//            nc.modalPresentationStyle = .fullScreen
-//            present(nc, animated: true)
-//
-//        case false:
-            let vc = storyboard.instance.instantiateInitialViewController()!
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
-//        }
+        let vc = storyboard.instance.instantiateInitialViewController()!
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     @IBAction func toggleTorch(_ sender: UIButton) {
