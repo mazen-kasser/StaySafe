@@ -25,6 +25,8 @@
 		BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */; };
 		BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */; };
 		BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */; };
+		BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */; };
+		BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */; };
 		BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
@@ -128,6 +130,8 @@
 		BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
 		BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ValidationRules.swift"; sourceTree = "<group>"; };
 		BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckin.swift; sourceTree = "<group>"; };
+		BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinCell.swift; sourceTree = "<group>"; };
+		BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCheckinCell.xib; sourceTree = "<group>"; };
 		BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+StaySafe.swift"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 		BA7D5EBE24431AC600775FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */,
+				BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */,
 				BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */,
 				BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */,
 			);
@@ -642,6 +648,7 @@
 				BA0808D2246FA98A00C6A01C /* GoogleService-Info.plist in Resources */,
 				BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */,
 				BA57032A243F06A400343016 /* CheckinCell.xib in Resources */,
+				BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */,
 				BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */,
 				BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */,
 				BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */,
@@ -804,6 +811,7 @@
 				BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
+				BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
 				BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */,
 				BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */,

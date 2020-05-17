@@ -28,16 +28,5 @@ class CheckinCell: UITableViewCell {
             createDateLabel.text = checkin.createdAt?.formatted ?? Date().formatted
         }
     }
-    
-    var businessCheckin: BusinessCheckin? {
-        didSet {
-            guard let businessCheckin = businessCheckin else { return }
-            
-            initialLetterLabel.text = String(businessCheckin.userFullName.first!)
-            displayNameLabel.text = businessCheckin.userFullName
-            addressLabel.text = businessCheckin.userMobileNumber
-            createDateLabel.text = Date().formatted
-        }
-    }
 
 }

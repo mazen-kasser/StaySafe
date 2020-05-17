@@ -23,7 +23,7 @@ class BusinessCheckinViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(CheckinCell.self)
+        tableView.register(BusinessCheckinCell.self)
         reloadHeaderFooterData()
         
         let businessEmail = Auth.auth().currentUser?.email ?? ""
@@ -84,7 +84,7 @@ class BusinessCheckinViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(CheckinCell.self)
+        let cell = tableView.dequeue(BusinessCheckinCell.self)
         cell.businessCheckin = items[indexPath.row]
         return cell
     }
