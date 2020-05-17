@@ -16,7 +16,7 @@ class BusinessCheckinCell: UITableViewCell {
             
             displayNameLabel.text = businessCheckin.userFullName
             mobileNumberTextView.text = businessCheckin.userMobileNumber
-            createDateLabel.text = Date().formatted
+            createDateLabel.text = businessCheckin.createdAt
         }
     }
 

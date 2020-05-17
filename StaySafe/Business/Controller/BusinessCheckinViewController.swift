@@ -38,12 +38,14 @@ class BusinessCheckinViewController: UITableViewController {
                     guard
                         let userMobileNumber = data["userMobileNumber"] as? String,
                         let userFullName = data["userFullName"] as? String,
-                        let deviceToken = data["deviceToken"] as? String
+                        let deviceToken = data["deviceToken"] as? String,
+                        let createdAt = data["createdAt"] as? String
                         else { continue }
                     
                     let checkin = BusinessCheckin(deviceToken: deviceToken,
                                                   userFullName: userFullName,
-                                                  userMobileNumber: userMobileNumber)
+                                                  userMobileNumber: userMobileNumber,
+                                                  createdAt: createdAt)
                     
                     self.items.append(checkin)
                 }

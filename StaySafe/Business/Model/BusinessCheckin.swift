@@ -9,4 +9,5 @@ struct BusinessCheckin {
     let deviceToken: String
     let userFullName: String
     let userMobileNumber: String
+    let createdAt: String
 }
