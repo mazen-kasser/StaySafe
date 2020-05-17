@@ -29,6 +29,31 @@ class BusinessCheckinViewController: UITableViewController {
         
         tableView.register(CheckinCell.self)
         reloadHeaderFooterData()
+        
+        let businessEmail = Auth.auth().currentUser?.email ?? ""
+        
+        Firestore.firestore().collection("businessAccounts/\(businessEmail)/checkins").getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let data = document.data()
+                    guard
+                        let userMobileNumber = data["userMobileNumber"] as? String,
+                        let userFullName = data["userFullName"] as? String,
+                        let deviceToken = data["deviceToken"] as? String
+                        else { continue }
+                    
+                    let checkin = BusinessCheckin(deviceToken: deviceToken,
+                                                  userFullName: userFullName,
+                                                  userMobileNumber: userMobileNumber)
+                    
+                    self.items.append(checkin)
+                }
+                self.reloadData()
+            }
+        }
     }
     
     private func addApplicationNotificationObservers() {

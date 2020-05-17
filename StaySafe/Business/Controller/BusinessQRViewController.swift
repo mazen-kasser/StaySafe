@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BusinessQRViewController: UIViewController, ShareableScreen {
     
@@ -40,7 +41,9 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
             UserDefaults.standard.businessAddress = placemark.businessAddress
         }
         
-        qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
+        let emailAddress = Auth.auth().currentUser?.email ?? ""
+        let qrInfo = placemark.description + "\n" + emailAddress
+        qrImageView.image = QRGenerator.generateQRCode(from: qrInfo)
         businessNameLabel.text = placemark.businessName
         businessAddressLabel.text = placemark.businessAddress
     }

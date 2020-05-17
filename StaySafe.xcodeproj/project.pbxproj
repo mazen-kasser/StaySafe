@@ -982,14 +982,14 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
 				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1006,14 +1006,14 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
 				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";
