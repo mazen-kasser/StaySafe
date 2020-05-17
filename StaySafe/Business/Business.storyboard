@@ -502,6 +502,9 @@ as a check-in station</string>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="395-mP-mXn">
                         <barButtonItem key="rightBarButtonItem" title="Sign out" id="rHM-Q9-bVF">
                             <color key="tintColor" red="0.74352751939999995" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="signoutPressed:" destination="3BF-Fq-fxX" id="7ar-sv-YEJ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

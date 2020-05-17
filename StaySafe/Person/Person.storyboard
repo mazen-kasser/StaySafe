@@ -315,14 +315,7 @@ at any check-in station</string>
                             <outlet property="delegate" destination="aPT-ZQ-1Ae" id="jPg-fn-Ma2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="DeC-q0-rPh">
-                        <barButtonItem key="rightBarButtonItem" title="Upload" id="6vF-Ia-J3l">
-                            <color key="tintColor" red="0.74352751939999995" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="submitButtonTapped:" destination="aPT-ZQ-1Ae" id="Byi-nx-ktF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="DeC-q0-rPh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="checkinFooter" destination="Rmg-mI-e31" id="sVg-ad-YQe"/>

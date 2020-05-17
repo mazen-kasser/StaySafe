@@ -11,6 +11,14 @@ class BusinessCheckinViewController: UITableViewController {
     @IBOutlet weak var checkinHeader: UIView!
     @IBOutlet weak var checkinFooter: UIView!
     
+    @IBAction func signoutPressed(_ sender: Any) {
+        // wipeout business details
+        UserDefaults.standard.businessName = nil
+        UserDefaults.standard.businessAddress = nil
+        
+        navigationController?.dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
