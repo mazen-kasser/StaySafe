@@ -26,5 +26,15 @@ class CheckinCell: UITableViewCell {
             createDateLabel.text = DateFormatter.yyyyMMdd.string(from: checkin.createdAt ?? Date())
         }
     }
+    
+    var checkinItem: CheckinItem? {
+        didSet {
+            guard let checkinItem = checkinItem else { return }
+            
+            displayNameLabel.text = checkinItem.name
+            addressLabel.text = checkinItem.addedByUser
+            createDateLabel.text = DateFormatter.yyyyMMdd.string(from: Date())
+        }
+    }
 
 }

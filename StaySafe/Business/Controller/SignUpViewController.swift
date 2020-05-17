@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UITableViewController {
 
@@ -12,7 +13,7 @@ class SignUpViewController: UITableViewController {
     @IBOutlet private weak var confirmPasswordTextField: CATextField!
     
     enum SegueID {
-        static let showQRBadge = "showBusinessQRViewController"
+        static let showFindBusiness = "showFindBusinessViewController"
     }
     
     override func viewDidLoad() {
@@ -26,6 +27,25 @@ class SignUpViewController: UITableViewController {
     
     @IBAction func closeLoginFlow(_ sender: Any) {
         navigationController?.dismiss(animated: true)
+    }
+    
+    @IBAction func signUpDidTouch(_ sender: AnyObject) {
+        
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text
+            else { return }
+        
+        self.submitButton.isEnabled = false
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if error == nil {
+                self.performSegue(withIdentifier: SegueID.showFindBusiness, sender: nil)
+            } else if let error = error {
+                self.presentAlert(title: "Error", message: error.localizedDescription)
+            }
+                
+            self.submitButton.isEnabled = true
+        }
     }
     
     private func isScreenValid() -> Bool {
@@ -51,7 +71,7 @@ class SignUpViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.showQRBadge:
+        case SegueID.showFindBusiness:
             
             guard let email = emailTextField.text,
                 let password = passwordTextField.text

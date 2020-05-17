@@ -558,18 +558,30 @@ as a check-in station</string>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="LoT-FW-fFg">
-                            <rect key="frame" x="0.0" y="456" width="414" height="90"/>
+                            <rect key="frame" x="0.0" y="456" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rDi-2B-6Bp">
-                                    <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rDi-2B-6Bp">
+                                    <rect key="frame" x="20" y="20" width="374" height="70"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nmk-sC-EuM" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Login"/>
                                             <connections>
-                                                <segue destination="ISr-a9-2RD" kind="show" identifier="showBusinessQRViewController" id="Geh-WL-GRh"/>
+                                                <action selector="loginDidTouch:" destination="0vh-ME-mq0" eventType="touchUpInside" id="wOa-dT-OaS"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-Lq-0xE" customClass="Button" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="38" width="374" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="m0g-lu-uTs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                            <state key="normal" title="reset password?"/>
+                                            <connections>
+                                                <action selector="resetPasswordDidTouch:" destination="0vh-ME-mq0" eventType="touchUpInside" id="JXP-wF-1XT"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -578,7 +590,7 @@ as a check-in station</string>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="rDi-2B-6Bp" firstAttribute="top" secondItem="LoT-FW-fFg" secondAttribute="top" constant="20" id="R1c-fd-L1u"/>
-                                <constraint firstAttribute="bottom" secondItem="rDi-2B-6Bp" secondAttribute="bottom" constant="20" id="Y12-yU-cZ7"/>
+                                <constraint firstAttribute="bottom" secondItem="rDi-2B-6Bp" secondAttribute="bottom" constant="10" id="Y12-yU-cZ7"/>
                                 <constraint firstAttribute="trailing" secondItem="rDi-2B-6Bp" secondAttribute="trailing" constant="20" id="eln-YD-OUw"/>
                                 <constraint firstItem="rDi-2B-6Bp" firstAttribute="leading" secondItem="LoT-FW-fFg" secondAttribute="leading" constant="20" id="pL5-fd-yzx"/>
                             </constraints>
@@ -671,6 +683,7 @@ as a check-in station</string>
                         <outlet property="emailTextField" destination="C5F-CO-ssr" id="bRU-I7-wYs"/>
                         <outlet property="passwordTextField" destination="Q96-y5-NqP" id="az9-hk-Oq7"/>
                         <outlet property="submitButton" destination="nmk-sC-EuM" id="itj-Gi-wre"/>
+                        <segue destination="ISr-a9-2RD" kind="show" identifier="showBusinessQRViewController" id="yBW-nT-nwu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpR-Oa-FuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -731,9 +744,9 @@ as a check-in station</string>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jwb-T1-lwb" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Next"/>
+                                            <state key="normal" title="Sign Up"/>
                                             <connections>
-                                                <segue destination="AfW-T7-n3t" kind="show" id="wnB-TI-k3H"/>
+                                                <action selector="signUpDidTouch:" destination="tOy-xD-HeV" eventType="touchUpInside" id="agh-f5-H33"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -853,6 +866,7 @@ as a check-in station</string>
                         <outlet property="emailTextField" destination="YjR-2e-TsZ" id="YLl-7t-Cft"/>
                         <outlet property="passwordTextField" destination="EMI-5v-ya8" id="u0e-rG-Tr7"/>
                         <outlet property="submitButton" destination="jwb-T1-lwb" id="e9L-4W-mfl"/>
+                        <segue destination="AfW-T7-n3t" kind="show" identifier="showFindBusinessViewController" id="PIu-Fz-ZUE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AE-Kf-8Vt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -884,7 +898,7 @@ as a check-in station</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5dM-1r-2Mn"/>
+        <segue reference="yBW-nT-nwu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="check-ins" width="48" height="48"/>

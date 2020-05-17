@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BusinessCheckinViewController: UITableViewController {
 
@@ -11,10 +12,16 @@ class BusinessCheckinViewController: UITableViewController {
     @IBOutlet weak var checkinHeader: UIView!
     @IBOutlet weak var checkinFooter: UIView!
     
+    var items: [CheckinItem] = []
+    var user: User!
+    let checkinItemsReference = Database.database().reference(withPath: "checkin-items")
+    
     @IBAction func signoutPressed(_ sender: Any) {
         // wipeout business details
         UserDefaults.standard.businessName = nil
         UserDefaults.standard.businessAddress = nil
+        
+        try? Auth.auth().signOut()
         
         navigationController?.dismiss(animated: true)
     }
@@ -24,6 +31,18 @@ class BusinessCheckinViewController: UITableViewController {
         
         tableView.register(CheckinCell.self)
         reloadHeaderFooterData()
+        
+        user = User(uid: "FakeId", email: "hungry@person.food")
+        
+        checkinItemsReference.observe(.value, with: { snapshot in
+            var newItems: [CheckinItem] = []
+            for item in snapshot.children {
+                let groceryItem = CheckinItem(snapshot: item as! DataSnapshot)
+                newItems.append(groceryItem)
+            }
+            self.items = newItems
+            self.reloadData()
+        })
     }
     
     private func addApplicationNotificationObservers() {
@@ -54,12 +73,12 @@ class BusinessCheckinViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.checkins.count
+        return items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(CheckinCell.self)
-        cell.checkin = viewModel.checkins[indexPath.row]
+        cell.checkinItem = items[indexPath.row]
         return cell
     }
 
@@ -72,7 +91,7 @@ extension BusinessCheckinViewController {
     }
     
     func reloadHeaderFooterData() {
-        let count = viewModel.checkins.count
+        let count = items.count
         let plural = count > 1 ? "s" : ""
         let showHeader = count > 0
         let showFooter = !showHeader

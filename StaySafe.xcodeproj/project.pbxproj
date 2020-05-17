@@ -72,6 +72,8 @@
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
 		BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77912470B4BB0042E141 /* SignUpViewController.swift */; };
+		BAEE77962470DA7A0042E141 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77952470DA7A0042E141 /* User.swift */; };
+		BAEE77982470DAE40042E141 /* CheckinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77972470DAE40042E141 /* CheckinItem.swift */; };
 		BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */; };
 		BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */; };
 		BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */; };
@@ -182,6 +184,8 @@
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
 		BAEE77912470B4BB0042E141 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BAEE77952470DA7A0042E141 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BAEE77972470DAE40042E141 /* CheckinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinItem.swift; sourceTree = "<group>"; };
 		BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextField.swift; sourceTree = "<group>"; };
 		BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldValidationLabel.swift; sourceTree = "<group>"; };
 		BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldFloatingLabel.swift; sourceTree = "<group>"; };
@@ -364,16 +368,8 @@
 		BAB36D9C2447200800F0C3A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
-				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
-				BA8768722456F84C00B5ACF2 /* Button.swift */,
-				BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */,
-				BAAE6437245D902B000B7888 /* SecondaryButton.swift */,
-				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
-				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
-				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
-				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
-				BA33414C24403D540095BBE7 /* Cloud */,
+				BAEE77932470D8C70042E141 /* Components */,
+				BADAEAE0243DD42800C2A1C9 /* Extensions */,
 				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
 				BADC93172441EC7E00FC4E63 /* Share */,
 				BADAEADF243DD3E500C2A1C9 /* QR */,
@@ -409,10 +405,14 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
-				BAB36D9C2447200800F0C3A9 /* Util */,
+				BAEE77942470D90D0042E141 /* DatabaseManager */,
 				BA33413B244006A20095BBE7 /* DataModel */,
-				BADAEAE0243DD42800C2A1C9 /* Extensions */,
+				BA33414C24403D540095BBE7 /* Cloud */,
+				BAB36D9C2447200800F0C3A9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
+				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
+				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
+				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
@@ -489,6 +489,28 @@
 				BA7D5EBE24431AC600775FAD /* View */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		BAEE77932470D8C70042E141 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
+				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
+				BA8768722456F84C00B5ACF2 /* Button.swift */,
+				BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */,
+				BAAE6437245D902B000B7888 /* SecondaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BAEE77942470D90D0042E141 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
+				BAEE77952470DA7A0042E141 /* User.swift */,
+				BAEE77972470DAE40042E141 /* CheckinItem.swift */,
+			);
+			path = DatabaseManager;
 			sourceTree = "<group>";
 		};
 		BAFBEA2B2443FEC900B5D946 /* CATextField */ = {
@@ -759,6 +781,7 @@
 				BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
+				BAEE77962470DA7A0042E141 /* User.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */,
@@ -792,6 +815,7 @@
 				BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
+				BAEE77982470DAE40042E141 /* CheckinItem.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,

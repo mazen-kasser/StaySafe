@@ -12,6 +12,8 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
+    var alreadyRegistered: Bool = false
+    
     var placemark: Placemark! = {
         return Placemark(businessName: UserDefaults.standard.businessName ?? "",
                          businessAddress: UserDefaults.standard.businessAddress ?? "")
@@ -20,7 +22,7 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !UserDefaults.standard.isBusinessRegistered {
+        if !alreadyRegistered {
             Alert.showLoading(title: "", message: "") { [weak self] in
                 Alert.hideLoading()
                 

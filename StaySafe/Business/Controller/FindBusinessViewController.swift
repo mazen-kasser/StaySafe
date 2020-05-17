@@ -4,6 +4,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class FindBusinessViewController: UIViewController {
     
@@ -28,6 +29,16 @@ class FindBusinessViewController: UIViewController {
         
         tableView.register(PlacemarkCell.self)
         tableView.tableFooterView = UIView()
+        
+        let rootRef = Database.database().reference()
+        let childRef = Database.database().reference(withPath: "check-ins")
+        let itemsRef = rootRef.child("check-ins")
+        let milkRef = itemsRef.child("milk")
+        
+        print(rootRef.key)
+        print(childRef.key)
+        print(itemsRef.key)
+        print(milkRef.key)
     }
     
     func getPlaces(searchString: String) {
