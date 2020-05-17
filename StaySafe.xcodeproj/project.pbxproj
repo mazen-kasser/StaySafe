@@ -13,7 +13,6 @@
 		BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */; };
 		BA0808D2246FA98A00C6A01C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0808D1246FA98A00C6A01C /* GoogleService-Info.plist */; };
 		BA0808D4246FAE6500C6A01C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808D3246FAE6500C6A01C /* LoginViewController.swift */; };
-		BA0808D6246FAF2D00C6A01C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808D5246FAF2D00C6A01C /* Login.swift */; };
 		BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */; };
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
 		BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */; };
@@ -23,9 +22,9 @@
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
 		BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */; };
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
-		BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414D24403D610095BBE7 /* CloudManager.swift */; };
 		BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */; };
 		BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */; };
+		BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */; };
 		BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
@@ -72,8 +71,6 @@
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
 		BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77912470B4BB0042E141 /* SignUpViewController.swift */; };
-		BAEE77962470DA7A0042E141 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77952470DA7A0042E141 /* User.swift */; };
-		BAEE77982470DAE40042E141 /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77972470DAE40042E141 /* Firestore.swift */; };
 		BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */; };
 		BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */; };
 		BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */; };
@@ -117,7 +114,6 @@
 		BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewModel.swift; sourceTree = "<group>"; };
 		BA0808D1246FA98A00C6A01C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA0808D3246FAE6500C6A01C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BA0808D5246FAF2D00C6A01C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
 		BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALogoView.xib; sourceTree = "<group>"; };
@@ -129,9 +125,9 @@
 		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+StaySafe.swift"; sourceTree = "<group>"; };
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
-		BA33414D24403D610095BBE7 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
 		BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ValidationRules.swift"; sourceTree = "<group>"; };
+		BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckin.swift; sourceTree = "<group>"; };
 		BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+StaySafe.swift"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
@@ -184,8 +180,6 @@
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
 		BAEE77912470B4BB0042E141 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		BAEE77952470DA7A0042E141 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BAEE77972470DAE40042E141 /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextField.swift; sourceTree = "<group>"; };
 		BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldValidationLabel.swift; sourceTree = "<group>"; };
 		BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldFloatingLabel.swift; sourceTree = "<group>"; };
@@ -239,14 +233,6 @@
 				BA3341432440164F0095BBE7 /* DataModelManager.swift */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		BA33414C24403D540095BBE7 /* Cloud */ = {
-			isa = PBXGroup;
-			children = (
-				BA33414D24403D610095BBE7 /* CloudManager.swift */,
-			);
-			path = Cloud;
 			sourceTree = "<group>";
 		};
 		BA57031F243F06A400343016 /* Person */ = {
@@ -321,7 +307,7 @@
 				BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */,
 				BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */,
 				BA7D5EC4244322CE00775FAD /* Placemark.swift */,
-				BA0808D5246FAF2D00C6A01C /* Login.swift */,
+				BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -407,7 +393,6 @@
 			children = (
 				BAEE77942470D90D0042E141 /* DatabaseManager */,
 				BA33413B244006A20095BBE7 /* DataModel */,
-				BA33414C24403D540095BBE7 /* Cloud */,
 				BAB36D9C2447200800F0C3A9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
 				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
@@ -507,8 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
-				BAEE77952470DA7A0042E141 /* User.swift */,
-				BAEE77972470DAE40042E141 /* Firestore.swift */,
 			);
 			path = DatabaseManager;
 			sourceTree = "<group>";
@@ -781,7 +764,6 @@
 				BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
-				BAEE77962470DA7A0042E141 /* User.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */,
@@ -801,10 +783,8 @@
 				BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
-				BA0808D6246FAF2D00C6A01C /* Login.swift in Sources */,
 				BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
-				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
 				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
@@ -815,7 +795,6 @@
 				BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
-				BAEE77982470DAE40042E141 /* Firestore.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,
@@ -831,6 +810,7 @@
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */,
+				BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
 				BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */,

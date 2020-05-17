@@ -15,25 +15,28 @@ class CheckinCell: UITableViewCell {
         didSet {
             guard let checkin = checkin else { return }
             
-            guard let array = checkin.merchantName?.split(separator: "\n").map({ String($0) }),
-                let title = array.first,
-                let subtitle = array.last
-                else { return }
+            guard let array = checkin.merchantName?.qrComponents,
+                array.count > 2
+            else { return }
+            
+            let title = array[0]
+            let subtitle = array[1]
             
             initialLetterLabel.text = String(title.first!)
             displayNameLabel.text = title
             addressLabel.text = subtitle
-            createDateLabel.text = DateFormatter.yyyyMMdd.string(from: checkin.createdAt ?? Date())
+            createDateLabel.text = checkin.createdAt?.formatted ?? Date().formatted
         }
     }
     
-    var checkinItem: CheckinItem? {
+    var businessCheckin: BusinessCheckin? {
         didSet {
-            guard let checkinItem = checkinItem else { return }
+            guard let businessCheckin = businessCheckin else { return }
             
-            displayNameLabel.text = checkinItem.userMobileNumber
-            addressLabel.text = checkinItem.userFullName
-            createDateLabel.text = DateFormatter.yyyyMMdd.string(from: Date())
+            initialLetterLabel.text = String(businessCheckin.userFullName.first!)
+            displayNameLabel.text = businessCheckin.userFullName
+            addressLabel.text = businessCheckin.userMobileNumber
+            createDateLabel.text = Date().formatted
         }
     }
 

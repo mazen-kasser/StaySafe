@@ -34,22 +34,13 @@ class ContactUsViewController: UITableViewController {
                         Alert.showLoading (title: "") { [weak self] in
                             Alert.hideLoading()
                             
-                            self?.showNextFlow(.person)
+                            self?.showNextFlow()
                         }
         }
     }
     
-    private func showNextFlow(_ persona: UserType?) {
-        let storyboard: UIStoryboard
-        switch persona {
-        case .business:
-            storyboard = Storyboard.business.instance
-        case .person:
-            storyboard = Storyboard.person.instance
-        default:
-            return
-        }
-        
+    private func showNextFlow() {
+        let storyboard = Storyboard.person.instance
         let rootViewController = storyboard.instantiateInitialViewController()!
         rootViewController.modalPresentationStyle = .fullScreen
         present(rootViewController, animated: true)

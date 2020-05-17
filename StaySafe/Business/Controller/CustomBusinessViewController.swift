@@ -3,6 +3,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class CustomBusinessViewController: UITableViewController {
 
@@ -33,8 +35,30 @@ class CustomBusinessViewController: UITableViewController {
     }
     
     @IBAction func submitDidTouch(_ sender: Any) {
-        // TODO: MK - add business info
-        performSegue(withIdentifier: SegueID.showQRBadge, sender: sender)
+        
+        let deviceToken = UserDefaults.standard.deviceToken ?? ""
+        let fullName = UserDefaults.standard.fullName ?? ""
+        let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
+        let emailAddress = Auth.auth().currentUser?.email ?? ""
+        
+        guard let businessName = nameTextField.text,
+            let businessAddress = addressTextField.text
+            else { return }
+        
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).setData([
+            "ownerFullName": fullName,
+            "ownerMobileNumber": mobileNumber,
+            "deviceToken": deviceToken,
+            "businessAddress": businessAddress,
+            "businessName": businessName,
+            "createdAt": Date().formatted
+        ]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.performSegue(withIdentifier: SegueID.showQRBadge, sender: sender)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

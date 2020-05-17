@@ -5,6 +5,7 @@
 import UIKit
 import Foundation
 import CoreData
+import FirebaseFirestore
 
 class CheckinViewModel {
     
@@ -22,7 +23,7 @@ class CheckinViewModel {
     }
     
     func submitReport() {
-        CloudManager.report()
+        // TODO: report this user to backend
     }
     
     @objc func add(_ qrCode: String) {
@@ -35,8 +36,24 @@ class CheckinViewModel {
         checkin.createdAt = Date()
         DataModelManager.shared.saveContext()
         
-        // send record to CloudKit
-        CloudManager.checkin(merchantName: qrCode)
+        // Add a new document with a generated id.
+        let deviceToken = UserDefaults.standard.deviceToken ?? ""
+        let fullName = UserDefaults.standard.fullName ?? ""
+        let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
+        let businessEmail = qrCode.qrComponents.count == 3 ? qrCode.qrComponents.last! : "test2@test.com"
+        
+        _ = Firestore.firestore().collection("businessAccounts/\(businessEmail)/checkins").addDocument(data: [
+            "userFullName": fullName,
+            "userMobileNumber": mobileNumber,
+            "deviceToken": deviceToken,
+            "createdAt": Date().formatted
+        ]) { err in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                
+            }
+        }
     }
     
     func delete(_ checkin: Checkin) {
@@ -61,6 +78,13 @@ class CheckinViewModel {
         return places.isEmpty
     }
     
+}
+
+extension String {
+    
+    var qrComponents: [String] {
+        return split(separator: "\n").map { String($0) }
+    }
 }
 
 private extension Date {

@@ -4,20 +4,12 @@
 
 import Foundation
 
-enum UserType: String {
-    case business
-    case person
-}
-
 extension UserDefaults {
     
     enum Key {
         static let deviceToken = "deviceToken"
-        static let userType = "userType"
         static let fullName = "fullName"
         static let mobileNumber = "mobileNumber"
-        static let emailAddress = "emailAddress"
-        static let password = "password"
         static let isRegistered = "isRegistered"
         static let businessName = "businessName"
         static let businessAddress = "businessAddress"
@@ -51,24 +43,6 @@ extension UserDefaults {
         }
     }
     
-    var emailAddress: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.emailAddress)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.emailAddress)
-        }
-    }
-    
-    var password: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.password)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.password)
-        }
-    }
-    
     var fullName: String? {
         get {
             return UserDefaults.standard.string(forKey: Key.fullName)
@@ -84,21 +58,6 @@ extension UserDefaults {
         }
         set(value) {
             UserDefaults.standard.set(value, forKey: Key.mobileNumber)
-        }
-    }
-    
-    var userType: UserType? {
-        get {
-            guard let value = UserDefaults.standard.string(forKey: Key.userType) else { return nil }
-            switch value {
-            case "business": return .business
-            case "person": return .person
-            default:
-                return nil
-            }
-        }
-        set(value) {
-            UserDefaults.standard.set(value?.rawValue, forKey: Key.userType)
         }
     }
     

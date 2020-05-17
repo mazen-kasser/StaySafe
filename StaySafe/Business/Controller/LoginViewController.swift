@@ -94,13 +94,6 @@ class LoginViewController: UITableViewController {
             guard let destination = segue.destination as? BusinessQRViewController else { return }
             destination.alreadyRegistered = true
             
-            guard let email = emailTextField.text,
-                let password = passwordTextField.text
-                else { return }
-            
-            UserDefaults.standard.emailAddress = email
-            UserDefaults.standard.password = password
-            
         default:
             break
         }

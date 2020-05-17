@@ -66,15 +66,6 @@ class SignUpViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.showFindMyBusiness:
-            
-            guard let email = emailTextField.text,
-                let password = passwordTextField.text
-                else { return }
-            
-            UserDefaults.standard.emailAddress = email
-            UserDefaults.standard.password = password
-            
         default:
             break
         }

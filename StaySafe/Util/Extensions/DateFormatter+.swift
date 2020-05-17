@@ -4,6 +4,13 @@
 
 import Foundation
 
+extension Date {
+    
+    var formatted: String {
+        return DateFormatter.yyyyMMdd.string(from: self)
+    }
+}
+
 extension DateFormatter {
     
     static let yyyyMMdd: DateFormatter = {

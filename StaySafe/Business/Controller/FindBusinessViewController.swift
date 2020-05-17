@@ -5,6 +5,7 @@
 import UIKit
 import MapKit
 import Firebase
+import FirebaseFirestore
 
 class FindBusinessViewController: UIViewController {
     
@@ -101,7 +102,26 @@ extension FindBusinessViewController: UITableViewDelegate, UITableViewDataSource
         
         let placemark = placemarks[indexPath.row]
         
-        self.performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
+        let deviceToken = UserDefaults.standard.deviceToken ?? ""
+        let fullName = UserDefaults.standard.fullName ?? ""
+        let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
+        let emailAddress = Auth.auth().currentUser?.email ?? ""
+        
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).setData([
+            "ownerFullName": fullName,
+            "ownerMobileNumber": mobileNumber,
+            "deviceToken": deviceToken,
+            "businessAddress": placemark.businessAddress,
+            "businessName": placemark.businessName,
+            "createdAt": Date().formatted
+        ]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
+            }
+        }
+        
     }
     
 }

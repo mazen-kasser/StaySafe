@@ -12,7 +12,7 @@ class BusinessCheckinViewController: UITableViewController {
     @IBOutlet weak var checkinHeader: UIView!
     @IBOutlet weak var checkinFooter: UIView!
     
-    var items: [CheckinItem] = []
+    var items: [BusinessCheckin] = []
     
     @IBAction func signoutPressed(_ sender: Any) {
         // wipeout business details
@@ -64,7 +64,7 @@ class BusinessCheckinViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(CheckinCell.self)
-        cell.checkinItem = items[indexPath.row]
+        cell.businessCheckin = items[indexPath.row]
         return cell
     }
 

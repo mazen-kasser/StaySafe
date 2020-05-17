@@ -12,8 +12,6 @@ class CheckinViewController: UITableViewController {
     @IBOutlet weak var checkinHeader: UIView!
     @IBOutlet weak var checkinFooter: UIView!
     
-    var items: [CheckinItem] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,12 +64,12 @@ class CheckinViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return viewModel.checkins.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(CheckinCell.self)
-        cell.checkinItem = items[indexPath.row]
+        cell.checkin = viewModel.checkins[indexPath.row]
         return cell
     }
     
