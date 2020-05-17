@@ -17,14 +17,6 @@ class ContactUsViewController: UITableViewController {
         
         addDoneButtonOnKeyboard()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // show onboarding page
-        let vc = SlideViewController.instantiate(from: .onboarding)
-        present(vc, animated: true)
-    }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
         guard isScreenValid() else { return }

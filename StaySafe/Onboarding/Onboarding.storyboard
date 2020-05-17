@@ -1,121 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WYA-on-NSj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7gW-kx-d8G">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Slide View Controller-->
-        <scene sceneID="E1L-vp-fyq">
-            <objects>
-                <viewController storyboardIdentifier="SlideViewController" id="I6W-A6-WnZ" customClass="SlideViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Vm-kT-YbF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lYt-HX-qk4">
-                                <rect key="frame" x="20" y="84" width="374" height="428"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctg-oo-tGC" customClass="CALogoView" customModule="QR_Tracer" customModuleProvider="target">
-                                        <rect key="frame" x="87" y="0.0" width="200" height="200"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Bx3-c0-eaX"/>
-                                            <constraint firstAttribute="height" constant="200" id="drs-Qw-eQa"/>
-                                        </constraints>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jmx-ld-dJG" userLabel="Labels Stack View">
-                                        <rect key="frame" x="0.0" y="220" width="374" height="208"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-in faster." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utl-t7-dkW">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="33.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can checked-in seemlessly with a business or a place without filling in your information every time." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzF-qp-fmE">
-                                                <rect key="frame" x="0.0" y="53.5" width="366.5" height="64.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX7-ic-5Lv">
-                                                <rect key="frame" x="0.0" y="138" width="374" height="70"/>
-                                                <string key="text">We only store anonyomized information about your device token, business / place address, and timestamp.
-Your personal data (name and email address) is not accessed unless requested by health authority.</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-Ef-U3C" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="803" width="374" height="39"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <state key="normal" title="Okay">
-                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="okayButtonSelected:" destination="I6W-A6-WnZ" eventType="touchUpInside" id="ipr-Ja-Y35"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Vy6-94-fnW" firstAttribute="bottom" secondItem="UDc-Ef-U3C" secondAttribute="bottom" constant="20" id="3lu-v0-B4n"/>
-                            <constraint firstItem="Vy6-94-fnW" firstAttribute="trailing" secondItem="lYt-HX-qk4" secondAttribute="trailing" constant="20" id="6QG-cg-xKe"/>
-                            <constraint firstItem="Vy6-94-fnW" firstAttribute="trailing" secondItem="UDc-Ef-U3C" secondAttribute="trailing" constant="20" id="AeZ-Kn-6fl"/>
-                            <constraint firstItem="lYt-HX-qk4" firstAttribute="top" secondItem="Vy6-94-fnW" secondAttribute="top" constant="40" id="Gn6-vl-Vfz"/>
-                            <constraint firstItem="UDc-Ef-U3C" firstAttribute="leading" secondItem="Vy6-94-fnW" secondAttribute="leading" constant="20" id="VKK-RQ-yPe"/>
-                            <constraint firstItem="UDc-Ef-U3C" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lYt-HX-qk4" secondAttribute="bottom" constant="20" id="le3-Je-cDW"/>
-                            <constraint firstItem="lYt-HX-qk4" firstAttribute="leading" secondItem="Vy6-94-fnW" secondAttribute="leading" constant="20" id="mxR-Ug-XPN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vy6-94-fnW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Z8w-Ga-hHH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R2T-2C-WjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2046" y="443"/>
-        </scene>
         <!--Persona View Controller-->
         <scene sceneID="SoL-2X-uw2">
             <objects>
                 <tableViewController storyboardIdentifier="PersonaViewController" clearsSelectionOnViewWillAppear="NO" id="ZFV-S4-J7W" customClass="PersonaViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="10" id="hQb-U5-wgm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="hQb-U5-wgm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="QgS-Db-FuJ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-HP-iHD">
-                                    <rect key="frame" x="20" y="20" width="374" height="135"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-HP-iHD">
+                                    <rect key="frame" x="20" y="10" width="374" height="180"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuE-1c-DbR">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="135"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <color key="highlightedColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-7a-RGH" customClass="CALogoView" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
                                     </subviews>
                                 </stackView>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="4Em-HP-iHD" secondAttribute="trailing" constant="20" id="T5W-O5-RRl"/>
-                                <constraint firstItem="4Em-HP-iHD" firstAttribute="top" secondItem="QgS-Db-FuJ" secondAttribute="top" constant="20" id="bLy-xh-S5w"/>
-                                <constraint firstAttribute="bottom" secondItem="4Em-HP-iHD" secondAttribute="bottom" constant="20" id="hfc-ZD-r39"/>
+                                <constraint firstItem="4Em-HP-iHD" firstAttribute="top" secondItem="QgS-Db-FuJ" secondAttribute="top" constant="10" id="bLy-xh-S5w"/>
+                                <constraint firstAttribute="bottom" secondItem="4Em-HP-iHD" secondAttribute="bottom" constant="10" id="hfc-ZD-r39"/>
                                 <constraint firstItem="4Em-HP-iHD" firstAttribute="leading" secondItem="QgS-Db-FuJ" secondAttribute="leading" constant="20" id="n2i-eU-7bj"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="Zcv-wn-TJv">
-                            <rect key="frame" x="0.0" y="435" width="414" height="164"/>
+                            <rect key="frame" x="0.0" y="476.5" width="414" height="164"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
                                     <rect key="frame" x="20" y="94" width="374" height="50"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <state key="normal" title="Next">
@@ -127,7 +51,7 @@ Your personal data (name and email address) is not accessed unless requested by 
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="nextButtonSelected:" destination="ZFV-S4-J7W" eventType="touchUpInside" id="9FA-fK-J0g"/>
+                                        <segue destination="WYA-on-NSj" kind="show" id="svu-EW-VMg"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -139,24 +63,24 @@ Your personal data (name and email address) is not accessed unless requested by 
                             </constraints>
                         </view>
                         <sections>
-                            <tableViewSection id="qTT-uI-W0a">
+                            <tableViewSection headerTitle="How to use QR Tracer app?" id="qTT-uI-W0a">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sFn-dW-QfN" detailTextLabel="uyn-Mo-zAi" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="56E-Vd-6vE">
-                                        <rect key="frame" x="20" y="185" width="374" height="110"/>
+                                        <rect key="frame" x="20" y="255.5" width="374" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56E-Vd-6vE" id="AJG-oZ-VE1">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sFn-dW-QfN">
-                                                    <rect key="frame" x="20" y="21" width="86" height="26.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Create QR code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sFn-dW-QfN">
+                                                    <rect key="frame" x="20" y="21" width="150.5" height="26.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Ideal for any business or a place to generate QR code for Individuals to scan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyn-Mo-zAi">
-                                                    <rect key="frame" x="20" y="51.5" width="327" height="34"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="For business or place to generate QR code for Individuals to scan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyn-Mo-zAi">
+                                                    <rect key="frame" x="20" y="51.5" width="282.5" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,26 +89,22 @@ Your personal data (name and email address) is not accessed unless requested by 
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="E71-pJ-qDW">
-                                <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="e0V-vY-mmO" detailTextLabel="cXG-ad-y9s" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="Gcc-a7-kAq">
-                                        <rect key="frame" x="20" y="315" width="374" height="110"/>
+                                        <rect key="frame" x="20" y="365.5" width="374" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gcc-a7-kAq" id="ZDq-2d-mAn">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Individual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0V-vY-mmO">
-                                                    <rect key="frame" x="20" y="21" width="91.5" height="26.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Scan QR code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0V-vY-mmO">
+                                                    <rect key="frame" x="20" y="21" width="135.5" height="26.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Check-in at a any QR Tracer station by scanning their QR code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cXG-ad-y9s">
-                                                    <rect key="frame" x="20" y="51.5" width="326" height="34"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="For individuals to check-in at a any QR Tracer place by scanning their QR code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cXG-ad-y9s">
+                                                    <rect key="frame" x="20" y="51.5" width="333" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,21 +125,18 @@ Your personal data (name and email address) is not accessed unless requested by 
                     <navigationItem key="navigationItem" id="xog-mK-aM2"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="nextButton" destination="0ot-aV-2g8" id="b8p-cL-y8G"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1g-mc-Hz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Lde-oV-4V5"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="443"/>
+            <point key="canvasLocation" x="2062" y="443"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="ZSJ-Rb-fE8">
             <objects>
                 <tableViewController storyboardIdentifier="ContactUsViewController" id="WYA-on-NSj" customClass="ContactUsViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7y2-Xn-k6q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="qlF-CL-rY3">
@@ -235,7 +152,7 @@ Your personal data (name and email address) is not accessed unless requested by 
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will use this details when you check-in." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeS-kx-f0g">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will use this details when you check-in" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeS-kx-f0g">
                                             <rect key="frame" x="0.0" y="106" width="374" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="NfU-4N-BuA"/>
@@ -356,7 +273,7 @@ Your personal data (name and email address) is not accessed unless requested by 
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dva-9f-mtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761" y="443"/>
+            <point key="canvasLocation" x="2801" y="443"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N2a-Im-KZw">
@@ -375,7 +292,132 @@ Your personal data (name and email address) is not accessed unless requested by 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlw-eu-KgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="443"/>
+            <point key="canvasLocation" x="1204" y="443"/>
+        </scene>
+        <!--Slide View Controller-->
+        <scene sceneID="J64-sT-sMw">
+            <objects>
+                <tableViewController storyboardIdentifier="SlideViewController" clearsSelectionOnViewWillAppear="NO" id="dmO-N9-TQv" customClass="SlideViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="EHA-pz-IWS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="JSX-tg-g7I">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="01s-ab-4dy">
+                                    <rect key="frame" x="20" y="20" width="374" height="180"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-kg-AL9" customClass="CALogoView" customModule="QR_Tracer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="01s-ab-4dy" firstAttribute="top" secondItem="JSX-tg-g7I" secondAttribute="top" constant="20" id="1XX-ax-hPj"/>
+                                <constraint firstItem="01s-ab-4dy" firstAttribute="leading" secondItem="JSX-tg-g7I" secondAttribute="leading" constant="20" id="1iU-ZO-F2j"/>
+                                <constraint firstAttribute="trailing" secondItem="01s-ab-4dy" secondAttribute="trailing" constant="20" id="F70-Y0-jOu"/>
+                                <constraint firstAttribute="bottom" secondItem="01s-ab-4dy" secondAttribute="bottom" id="jsh-yz-Gb3"/>
+                            </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="tCe-bd-nat">
+                            <rect key="frame" x="0.0" y="533.5" width="414" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXz-Aa-ATY" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="30" width="374" height="50"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <state key="normal" title="Okay">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="okayButtonSelected:" destination="dmO-N9-TQv" eventType="touchUpInside" id="Fft-M9-TXI"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lXz-Aa-ATY" secondAttribute="trailing" constant="20" id="HQr-fR-Rgi"/>
+                                <constraint firstItem="lXz-Aa-ATY" firstAttribute="leading" secondItem="tCe-bd-nat" secondAttribute="leading" constant="20" id="mIH-ZY-p2x"/>
+                                <constraint firstItem="lXz-Aa-ATY" firstAttribute="top" secondItem="tCe-bd-nat" secondAttribute="top" constant="30" id="qK2-h4-CXf"/>
+                                <constraint firstAttribute="bottom" secondItem="lXz-Aa-ATY" secondAttribute="bottom" constant="20" id="z2f-07-efx"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Why would I use QR Tracer app?" id="cCm-k0-05v">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="mgg-79-Hoh" detailTextLabel="QEh-IK-lKm" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="FFq-An-512">
+                                        <rect key="frame" x="20" y="255.5" width="374" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FFq-An-512" id="hRn-9P-kQt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Check-in faster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mgg-79-Hoh">
+                                                    <rect key="frame" x="20" y="16" width="146.5" height="26.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="You can checked-in seemlessly with a business or a place without filling in your information every time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QEh-IK-lKm">
+                                                    <rect key="frame" x="20" y="46.5" width="317" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Terms and conditions" id="nyF-kL-MbS">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="EBv-93-UEe" rowHeight="138" style="IBUITableViewCellStyleDefault" id="kUc-nt-2wZ">
+                                        <rect key="frame" x="20" y="394.5" width="374" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUc-nt-2wZ" id="KPa-3R-KXG">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EBv-93-UEe">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="138"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">We only store anonyomized information about your device token, business / place address, and timestamp.
+
+Your personal data (name and email address) has end-to-end encryption for high security and confidentiality.</string>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dmO-N9-TQv" id="Fo6-Wr-cC5"/>
+                            <outlet property="delegate" destination="dmO-N9-TQv" id="NJm-gR-ePt"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lnV-m1-3YH"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuX-2f-PnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2Qc-16-rZ8"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="1114"/>
         </scene>
     </scenes>
 </document>

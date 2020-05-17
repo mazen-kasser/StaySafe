@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SlideViewController: UIViewController {
+class SlideViewController: UITableViewController {
     
     @IBAction func okayButtonSelected(_ sender: Any) {
         dismiss(animated: true)

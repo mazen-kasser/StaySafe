@@ -25,14 +25,14 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
                 Alert.hideLoading()
                 
                 self?.presentAlert(title: "Your badge has been created",
-                                   message: "Please check the details to match your place and print using the Share feature",
+                                   message: "Please check the details to match your place and print",
                                    style: .actionSheet)
             }
+            
+            // store business info
+            UserDefaults.standard.businessName = placemark.businessName
+            UserDefaults.standard.businessAddress = placemark.businessAddress
         }
-        
-        // store business info
-        UserDefaults.standard.businessName = placemark.businessName
-        UserDefaults.standard.businessAddress = placemark.businessAddress
         
         qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
         businessNameLabel.text = placemark.businessName
