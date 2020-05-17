@@ -4,6 +4,7 @@
 
 import Foundation
 import CloudKit
+import Firebase
 
 class CloudManager {
     
@@ -23,7 +24,7 @@ class CloudManager {
     }
     
     private static func save(_ record: CKRecord) {
-        // TODO: save offline only at this stage
+        
         guard let deviceToken = UserDefaults.standard.deviceToken,
             let fullName = UserDefaults.standard.fullName,
             let mobileNumber = UserDefaults.standard.mobileNumber else {
@@ -36,7 +37,6 @@ class CloudManager {
         record["mobileNumber"] = mobileNumber as CKRecordValue
         
         database.save(record) { record, error in
-            // TODO: retry again when you have internet connection by flagging the checkin with `offline`
             // or return pass or error status to notify the user accordingly
         }
     }

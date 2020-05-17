@@ -13,26 +13,12 @@ class CheckinViewController: UITableViewController {
     @IBOutlet weak var checkinFooter: UIView!
     
     var items: [CheckinItem] = []
-    var user: User!
-    let checkinItemsReference = Database.database().reference(withPath: "checkin-items")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(CheckinCell.self)
         reloadHeaderFooterData()
-        
-        user = User(uid: "FakeId", email: "hungry@person.food")
-        
-        checkinItemsReference.observe(.value, with: { snapshot in
-            var newItems: [CheckinItem] = []
-            for item in snapshot.children {
-                let groceryItem = CheckinItem(snapshot: item as! DataSnapshot)
-                newItems.append(groceryItem)
-            }
-            self.items = newItems
-            self.reloadData()
-        })
     }
     
     private func addApplicationNotificationObservers() {
@@ -89,26 +75,26 @@ class CheckinViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-//
-//    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
-//        let archiveAction = UIContextualAction(style: .normal, title: "Archive") { [weak self] _,_,_   in
-//            guard let self = self else { return }
-//
-//            let deleteCheckin = self.viewModel.checkins[indexPath.row]
-//            self.viewModel.delete(deleteCheckin)
-//            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)
-//            self.reloadHeaderFooterData()
-//        }
-//
-//        return UISwipeActionsConfiguration(actions: [archiveAction])
-//    }
-//
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let archiveAction = UIContextualAction(style: .normal, title: "Archive") { [weak self] _,_,_   in
+            guard let self = self else { return }
+
+            let deleteCheckin = self.viewModel.checkins[indexPath.row]
+            self.viewModel.delete(deleteCheckin)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)
+            self.reloadHeaderFooterData()
+        }
+
+        return UISwipeActionsConfiguration(actions: [archiveAction])
+    }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    }
 
 }
 

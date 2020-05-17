@@ -13,20 +13,11 @@ class SignUpViewController: UITableViewController {
     @IBOutlet private weak var confirmPasswordTextField: CATextField!
     
     enum SegueID {
-        static let showBusinessQR = "showBusinessQRViewController"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        static let showFindMyBusiness = "showFindBusinessViewController"
     }
 
     @IBAction func viewTapped(_ sender: Any) {
         tableView.endEditing(true)
-    }
-    
-    @IBAction func closeLoginFlow(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
     }
     
     @IBAction func submitDidTouch(_ sender: Any) {
@@ -39,13 +30,17 @@ class SignUpViewController: UITableViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error == nil {
-                self.performSegue(withIdentifier: SegueID.showBusinessQR, sender: nil)
+                self.startSignedInFlow()
             } else if let error = error {
                 self.presentAlert(title: "Error", message: error.localizedDescription)
             }
                 
             self.submitButton.isEnabled = true
         }
+    }
+    
+    private func startSignedInFlow() {
+        performSegue(withIdentifier: SegueID.showFindMyBusiness, sender: nil)
     }
     
     private func isScreenValid() -> Bool {
@@ -71,7 +66,7 @@ class SignUpViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.showBusinessQR:
+        case SegueID.showFindMyBusiness:
             
             guard let email = emailTextField.text,
                 let password = passwordTextField.text

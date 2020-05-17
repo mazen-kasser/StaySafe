@@ -73,7 +73,7 @@
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
 		BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77912470B4BB0042E141 /* SignUpViewController.swift */; };
 		BAEE77962470DA7A0042E141 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77952470DA7A0042E141 /* User.swift */; };
-		BAEE77982470DAE40042E141 /* CheckinItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77972470DAE40042E141 /* CheckinItem.swift */; };
+		BAEE77982470DAE40042E141 /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77972470DAE40042E141 /* Firestore.swift */; };
 		BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */; };
 		BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */; };
 		BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */; };
@@ -185,7 +185,7 @@
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
 		BAEE77912470B4BB0042E141 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BAEE77952470DA7A0042E141 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BAEE77972470DAE40042E141 /* CheckinItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinItem.swift; sourceTree = "<group>"; };
+		BAEE77972470DAE40042E141 /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextField.swift; sourceTree = "<group>"; };
 		BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldValidationLabel.swift; sourceTree = "<group>"; };
 		BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldFloatingLabel.swift; sourceTree = "<group>"; };
@@ -508,7 +508,7 @@
 			children = (
 				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
 				BAEE77952470DA7A0042E141 /* User.swift */,
-				BAEE77972470DAE40042E141 /* CheckinItem.swift */,
+				BAEE77972470DAE40042E141 /* Firestore.swift */,
 			);
 			path = DatabaseManager;
 			sourceTree = "<group>";
@@ -815,7 +815,7 @@
 				BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */,
 				BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */,
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
-				BAEE77982470DAE40042E141 /* CheckinItem.swift in Sources */,
+				BAEE77982470DAE40042E141 /* Firestore.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,

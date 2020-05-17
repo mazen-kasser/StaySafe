@@ -18,20 +18,10 @@ class LoginViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rootRef = Database.database().reference()
-        let childRef = Database.database().reference(withPath: "checkin-items")
-        let itemsRef = rootRef.child("checkin-items")
-        let milkRef = itemsRef.child("milk")
-        
-        print(rootRef.key)
-        print(childRef.key)
-        print(itemsRef.key)
-        print(milkRef.key)
-        
         let listener = Auth.auth().addStateDidChangeListener {
           auth, user in
             if user != nil {
-              self.performSegue(withIdentifier: SegueID.showQRBadge, sender: nil)
+              self.startSignedInFlow()
             }
           }
         Auth.auth().removeStateDidChangeListener(listener)
@@ -46,7 +36,7 @@ class LoginViewController: UITableViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error == nil {
-                self.performSegue(withIdentifier: SegueID.showQRBadge, sender: nil)
+                self.startSignedInFlow()
             } else if let error = error {
                 self.presentAlert(title: "Error", message: error.localizedDescription)
             }
@@ -54,6 +44,10 @@ class LoginViewController: UITableViewController {
             self.submitButton.isEnabled = true
         }
         
+    }
+    
+    private func startSignedInFlow() {
+        performSegue(withIdentifier: SegueID.showQRBadge, sender: nil)
     }
     
     @IBAction func resetPasswordDidTouch(_ sender: Any) {

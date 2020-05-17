@@ -13,8 +13,6 @@ class BusinessCheckinViewController: UITableViewController {
     @IBOutlet weak var checkinFooter: UIView!
     
     var items: [CheckinItem] = []
-    var user: User!
-    let checkinItemsReference = Database.database().reference(withPath: "checkin-items")
     
     @IBAction func signoutPressed(_ sender: Any) {
         // wipeout business details
@@ -31,18 +29,6 @@ class BusinessCheckinViewController: UITableViewController {
         
         tableView.register(CheckinCell.self)
         reloadHeaderFooterData()
-        
-        user = User(uid: "FakeId", email: "hungry@person.food")
-        
-        checkinItemsReference.observe(.value, with: { snapshot in
-            var newItems: [CheckinItem] = []
-            for item in snapshot.children {
-                let groceryItem = CheckinItem(snapshot: item as! DataSnapshot)
-                newItems.append(groceryItem)
-            }
-            self.items = newItems
-            self.reloadData()
-        })
     }
     
     private func addApplicationNotificationObservers() {

@@ -10,6 +10,10 @@ class CustomBusinessViewController: UITableViewController {
     @IBOutlet private weak var nameTextField: CATextField!
     @IBOutlet private weak var addressTextField: CATextField!
     
+    enum SegueID {
+        static let showQRBadge = "showBusinessQRViewController"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,28 +34,28 @@ class CustomBusinessViewController: UITableViewController {
     
     @IBAction func submitDidTouch(_ sender: Any) {
         // TODO: MK - add business info
-        navigationController?.dismiss(animated: true)
+        performSegue(withIdentifier: SegueID.showQRBadge, sender: sender)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//
-//        guard let segueID = segue.identifier else { return }
-//
-//        switch segueID {
-//        case SegueID.showQRBadge:
-//            let vc = segue.destination as! BusinessQRViewController
-//
-//            guard let name = nameTextField.text,
-//                let address = addressTextField.text
-//                else { return }
-//
-//            vc.placemark = Placemark(businessName: name, businessAddress: address)
-//
-//        default:
-//            break
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        guard let segueID = segue.identifier else { return }
+
+        switch segueID {
+        case SegueID.showQRBadge:
+            let vc = segue.destination as! BusinessQRViewController
+
+            guard let name = nameTextField.text,
+                let address = addressTextField.text
+                else { return }
+
+            vc.placemark = Placemark(businessName: name, businessAddress: address)
+
+        default:
+            break
+        }
+    }
 
 }
 

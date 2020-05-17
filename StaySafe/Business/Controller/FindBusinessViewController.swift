@@ -12,6 +12,10 @@ class FindBusinessViewController: UIViewController {
     
     @IBOutlet weak var infoPage: UIStackView!
     
+    enum SegueID {
+        static let showQRBadge = "showBusinessQRViewController"
+    }
+    
     var placemarks: [Placemark] = [] {
         didSet {
             tableView.reloadData()
@@ -24,6 +28,7 @@ class FindBusinessViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.register(PlacemarkCell.self)
+        tableView.tableFooterView = UIView()
     }
     
     func getPlaces(searchString: String) {
@@ -44,22 +49,22 @@ class FindBusinessViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//
-//        guard let segueID = segue.identifier else { return }
-//
-//        switch segueID {
-//        case SegueID.showQRBadge:
-//            let vc = segue.destination as! BusinessQRViewController
-//
-//            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-//            vc.placemark = placemarks[indexPath.row]
-//
-//        default:
-//            break
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        guard let segueID = segue.identifier else { return }
+
+        switch segueID {
+        case SegueID.showQRBadge:
+            let vc = segue.destination as! BusinessQRViewController
+
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            vc.placemark = placemarks[indexPath.row]
+
+        default:
+            break
+        }
+    }
     
 }
 
@@ -93,8 +98,10 @@ extension FindBusinessViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: MK - add business info
-        navigationController?.dismiss(animated: true)
+        
+        let placemark = placemarks[indexPath.row]
+        
+        self.performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
     }
     
 }
