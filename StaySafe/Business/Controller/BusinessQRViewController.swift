@@ -12,6 +12,10 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
+    enum SegueID {
+        static let findBusinessInfo = "showFindBusinessViewController"
+    }
+    
     var alreadyRegistered: Bool = false
     
     var placemark: Placemark! = {

@@ -13,7 +13,7 @@ class SignUpViewController: UITableViewController {
     @IBOutlet private weak var confirmPasswordTextField: CATextField!
     
     enum SegueID {
-        static let showFindBusiness = "showFindBusinessViewController"
+        static let showBusinessQR = "showBusinessQRViewController"
     }
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class SignUpViewController: UITableViewController {
         navigationController?.dismiss(animated: true)
     }
     
-    @IBAction func signUpDidTouch(_ sender: AnyObject) {
+    @IBAction func submitDidTouch(_ sender: Any) {
         
         guard let email = emailTextField.text,
             let password = passwordTextField.text
@@ -39,7 +39,7 @@ class SignUpViewController: UITableViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error == nil {
-                self.performSegue(withIdentifier: SegueID.showFindBusiness, sender: nil)
+                self.performSegue(withIdentifier: SegueID.showBusinessQR, sender: nil)
             } else if let error = error {
                 self.presentAlert(title: "Error", message: error.localizedDescription)
             }
@@ -71,7 +71,7 @@ class SignUpViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.showFindBusiness:
+        case SegueID.showBusinessQR:
             
             guard let email = emailTextField.text,
                 let password = passwordTextField.text

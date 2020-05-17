@@ -18,27 +18,12 @@ class FindBusinessViewController: UIViewController {
         }
     }
     
-    enum SegueID {
-        static let showQRBadge = "showPrintMerchantQR"
-    }
-    
     @IBOutlet weak var addressSearchField: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(PlacemarkCell.self)
-        tableView.tableFooterView = UIView()
-        
-        let rootRef = Database.database().reference()
-        let childRef = Database.database().reference(withPath: "check-ins")
-        let itemsRef = rootRef.child("check-ins")
-        let milkRef = itemsRef.child("milk")
-        
-        print(rootRef.key)
-        print(childRef.key)
-        print(itemsRef.key)
-        print(milkRef.key)
     }
     
     func getPlaces(searchString: String) {
@@ -59,22 +44,22 @@ class FindBusinessViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        guard let segueID = segue.identifier else { return }
-        
-        switch segueID {
-        case SegueID.showQRBadge:
-            let vc = segue.destination as! BusinessQRViewController
-            
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            vc.placemark = placemarks[indexPath.row]
-            
-        default:
-            break
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//
+//        guard let segueID = segue.identifier else { return }
+//
+//        switch segueID {
+//        case SegueID.showQRBadge:
+//            let vc = segue.destination as! BusinessQRViewController
+//
+//            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//            vc.placemark = placemarks[indexPath.row]
+//
+//        default:
+//            break
+//        }
+//    }
     
 }
 
@@ -108,7 +93,8 @@ extension FindBusinessViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
+        // TODO: MK - add business info
+        navigationController?.dismiss(animated: true)
     }
     
 }
