@@ -67,15 +67,6 @@ class CustomBusinessViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
 
         switch segueID {
-        case SegueID.showQRBadge:
-            let vc = segue.destination as! BusinessQRViewController
-
-            guard let name = nameTextField.text,
-                let address = addressTextField.text
-                else { return }
-
-            vc.placemark = Placemark(businessName: name, businessAddress: address)
-
         default:
             break
         }

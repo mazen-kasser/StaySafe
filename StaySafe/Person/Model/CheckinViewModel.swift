@@ -40,7 +40,7 @@ class CheckinViewModel {
         let deviceToken = UserDefaults.standard.deviceToken ?? ""
         let fullName = UserDefaults.standard.fullName ?? ""
         let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
-        let businessEmail = qrCode.qrComponents.count == 3 ? qrCode.qrComponents.last! : ""
+        let businessEmail = qrCode.qrComponents.count >= 3 ? qrCode.qrComponents[2] : ""
         
         _ = Firestore.firestore().collection("businessAccounts/\(businessEmail)/checkins").addDocument(data: [
             "userFullName": fullName,

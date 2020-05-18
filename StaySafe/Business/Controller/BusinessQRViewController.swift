@@ -14,32 +14,14 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
-    enum SegueID {
-        static let findBusinessInfo = "showFindBusinessViewController"
-    }
-    
-    var placemark: Placemark!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if !UserDefaults.standard.isBusinessRegistered {
-            Alert.showLoading(title: "", message: "") { [weak self] in
-                Alert.hideLoading()
-                
-                self?.presentAlert(title: "Your badge has been created",
-                                   message: "Please check the details to match your place and print",
-                                   style: .actionSheet)
-            }
-        }
         
         let emailAddress = Auth.auth().currentUser?.email ?? ""
         Firestore.firestore().collection("businessAccounts").document(emailAddress).getDocument { (documentSnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                UserDefaults.standard.isBusinessRegistered = true
-                
                 guard let data = documentSnapshot!.data(),
                     let businessAddress = data["businessAddress"] as? String,
                     let businessName = data["businessName"] as? String
@@ -49,6 +31,17 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
                 self.qrImageView.image = QRGenerator.generateQRCode(from: qrInfo)
                 self.businessNameLabel.text = businessName
                 self.businessAddressLabel.text = businessAddress
+                
+                if !UserDefaults.standard.isBusinessRegistered {
+                    UserDefaults.standard.isBusinessRegistered = true
+                    Alert.showLoading(title: "", message: "") { [weak self] in
+                        Alert.hideLoading()
+                        
+                        self?.presentAlert(title: "Your badge has been created",
+                                           message: "Please check the details to match your place and print",
+                                           style: .actionSheet)
+                    }
+                }
             }
             
         }

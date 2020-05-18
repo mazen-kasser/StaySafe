@@ -56,12 +56,6 @@ class FindBusinessViewController: UIViewController {
         guard let segueID = segue.identifier else { return }
 
         switch segueID {
-        case SegueID.showQRBadge:
-            let vc = segue.destination as! BusinessQRViewController
-
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            vc.placemark = placemarks[indexPath.row]
-
         default:
             break
         }

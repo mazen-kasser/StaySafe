@@ -160,7 +160,7 @@
 		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		BAC458C624516E340079E813 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAC458CA245170320079E813 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
-		BACE53DC243B35AE00A2F6A4 /* QrScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QrScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACE53DC243B35AE00A2F6A4 /* QR Tracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR Tracer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 		BACE53DD243B35AE00A2F6A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACE53DC243B35AE00A2F6A4 /* QrScan.app */,
+				BACE53DC243B35AE00A2F6A4 /* QR Tracer.app */,
 				BACE53F2243B35AF00A2F6A4 /* StaySafeTests.xctest */,
 				BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */,
 			);
@@ -554,7 +554,7 @@
 			);
 			name = StaySafe;
 			productName = StaySafe;
-			productReference = BACE53DC243B35AE00A2F6A4 /* QrScan.app */;
+			productReference = BACE53DC243B35AE00A2F6A4 /* QR Tracer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BACE53F1243B35AF00A2F6A4 /* StaySafeTests */ = {
@@ -990,7 +990,7 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -999,7 +999,7 @@
 				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
-				PRODUCT_NAME = QrScan;
+				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1014,7 +1014,7 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1023,7 +1023,7 @@
 				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
-				PRODUCT_NAME = QrScan;
+				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
