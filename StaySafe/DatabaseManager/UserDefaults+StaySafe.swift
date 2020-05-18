@@ -11,8 +11,6 @@ extension UserDefaults {
         static let fullName = "fullName"
         static let mobileNumber = "mobileNumber"
         static let isRegistered = "isRegistered"
-        static let businessName = "businessName"
-        static let businessAddress = "businessAddress"
     }
     
     var isUserRegistered: Bool {
@@ -21,25 +19,11 @@ extension UserDefaults {
     }
     
     var isBusinessRegistered: Bool {
-        return UserDefaults.standard.businessName != nil &&
-            UserDefaults.standard.businessAddress != nil
-    }
-    
-    var businessName: String? {
         get {
-            return UserDefaults.standard.string(forKey: Key.businessName)
+            return UserDefaults.standard.bool(forKey: Key.isRegistered)
         }
         set(value) {
-            UserDefaults.standard.set(value, forKey: Key.businessName)
-        }
-    }
-    
-    var businessAddress: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.businessAddress)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.businessAddress)
+            UserDefaults.standard.set(value, forKey: Key.isRegistered)
         }
     }
     

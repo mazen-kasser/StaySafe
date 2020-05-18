@@ -90,10 +90,6 @@ class LoginViewController: UITableViewController {
         guard let segueID = segue.identifier else { return }
         
         switch segueID {
-        case SegueID.showQRBadge:
-            guard let destination = segue.destination as? BusinessQRViewController else { return }
-            destination.alreadyRegistered = true
-            
         default:
             break
         }

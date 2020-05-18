@@ -4,6 +4,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class BusinessQRViewController: UIViewController, ShareableScreen {
     
@@ -17,16 +18,12 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
         static let findBusinessInfo = "showFindBusinessViewController"
     }
     
-    var alreadyRegistered: Bool = false
-    var placemark: Placemark! = {
-        return Placemark(businessName: UserDefaults.standard.businessName ?? "",
-                         businessAddress: UserDefaults.standard.businessAddress ?? "")
-    }()
+    var placemark: Placemark!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !alreadyRegistered {
+        if !UserDefaults.standard.isBusinessRegistered {
             Alert.showLoading(title: "", message: "") { [weak self] in
                 Alert.hideLoading()
                 
@@ -34,17 +31,27 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
                                    message: "Please check the details to match your place and print",
                                    style: .actionSheet)
             }
-            
-            // store business info
-            UserDefaults.standard.businessName = placemark.businessName
-            UserDefaults.standard.businessAddress = placemark.businessAddress
         }
         
         let emailAddress = Auth.auth().currentUser?.email ?? ""
-        let qrInfo = placemark.description + "\n" + emailAddress
-        qrImageView.image = QRGenerator.generateQRCode(from: qrInfo)
-        businessNameLabel.text = placemark.businessName
-        businessAddressLabel.text = placemark.businessAddress
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).getDocument { (documentSnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                UserDefaults.standard.isBusinessRegistered = true
+                
+                guard let data = documentSnapshot!.data(),
+                    let businessAddress = data["businessAddress"] as? String,
+                    let businessName = data["businessName"] as? String
+                    else { assertionFailure(); return }
+                
+                let qrInfo = businessName + "\n" + businessAddress + "\n" + emailAddress
+                self.qrImageView.image = QRGenerator.generateQRCode(from: qrInfo)
+                self.businessNameLabel.text = businessName
+                self.businessAddressLabel.text = businessAddress
+            }
+            
+        }
     }
     
     @IBAction func showScanQR(_ sender: Any) {
