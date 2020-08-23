@@ -47,7 +47,6 @@
 		BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */; };
 		BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B32445E88900F6BC0C /* Business.storyboard */; };
 		BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B52445E9B600F6BC0C /* Person.storyboard */; };
-		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
 		BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */; };
 		BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */; };
 		BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6433245D7F6E000B7888 /* MainViewModel.swift */; };
@@ -153,7 +152,6 @@
 		BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		BA89B2B32445E88900F6BC0C /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		BA89B2B52445E9B600F6BC0C /* Person.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
-		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		BAAE6433245D7F6E000B7888 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -232,6 +230,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA20593324F21E42006E7E3B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
+				BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */,
+				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
+				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
+				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
+				BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BA20593424F21E58006E7E3B /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				BAC458CA245170320079E813 /* Vibration.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		BA20593524F21E83006E7E3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
+				BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */,
+				BACE53ED243B35AF00A2F6A4 /* Info.plist */,
+				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
+				BA20593124F21962006E7E3B /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BA33413B244006A20095BBE7 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
-				BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -363,6 +393,9 @@
 		BAB36D9C2447200800F0C3A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
+				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
+				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
 				BAEE77932470D8C70042E141 /* Components */,
 				BADAEAE0243DD42800C2A1C9 /* Extensions */,
 				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
@@ -370,7 +403,7 @@
 				BADAEADF243DD3E500C2A1C9 /* QR */,
 				BAFBEA2B2443FEC900B5D946 /* CATextField */,
 				BA6DB66124443A1100AC7BD4 /* ValidatorFormater */,
-				BAC458CA245170320079E813 /* Vibration.swift */,
+				BA20593424F21E58006E7E3B /* Device */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -403,23 +436,11 @@
 				BAEE77942470D90D0042E141 /* DatabaseManager */,
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BAB36D9C2447200800F0C3A9 /* Util */,
-				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
-				BA20593124F21962006E7E3B /* GoogleService-Info.plist */,
-				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
-				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
-				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
-				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
-				BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */,
-				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
-				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
-				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
-				BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */,
+				BA20593324F21E42006E7E3B /* AppDelegate */,
 				BA89B2AB2445D6E000F6BC0C /* Onboarding */,
 				BA57031F243F06A400343016 /* Person */,
 				BAE604CE243C6A5E009FC142 /* Business */,
-				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
-				BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */,
-				BACE53ED243B35AF00A2F6A4 /* Info.plist */,
+				BA20593524F21E83006E7E3B /* Resources */,
 			);
 			path = StaySafe;
 			sourceTree = "<group>";
@@ -781,7 +802,6 @@
 				BAFBEA35244400EA00B5D946 /* String+.swift in Sources */,
 				BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */,
 				BADC93162441E34100FC4E63 /* DateFormatter+.swift in Sources */,
-				BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */,
 				BAFBEA332443FFB100B5D946 /* CATextFieldUnderline.swift in Sources */,
 				BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */,
 				BA570329243F06A400343016 /* CheckinCell.swift in Sources */,
@@ -991,12 +1011,12 @@
 			baseConfigurationReference = 035059FAFE58791F3639BE91 /* Pods-StaySafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "StaySafe/Resources//QRTracer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
-				INFOPLIST_FILE = StaySafe/Info.plist;
+				INFOPLIST_FILE = StaySafe/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1015,12 +1035,12 @@
 			baseConfigurationReference = E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "StaySafe/Resources//QRTracer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
-				INFOPLIST_FILE = StaySafe/Info.plist;
+				INFOPLIST_FILE = StaySafe/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

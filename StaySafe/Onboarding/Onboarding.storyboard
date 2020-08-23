@@ -1,142 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7gW-kx-d8G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7gW-kx-d8G">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Persona View Controller-->
-        <scene sceneID="SoL-2X-uw2">
-            <objects>
-                <tableViewController storyboardIdentifier="PersonaViewController" clearsSelectionOnViewWillAppear="NO" id="ZFV-S4-J7W" customClass="PersonaViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="hQb-U5-wgm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="QgS-Db-FuJ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-HP-iHD">
-                                    <rect key="frame" x="20" y="10" width="374" height="180"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-7a-RGH" customClass="CALogoView" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </view>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="4Em-HP-iHD" secondAttribute="trailing" constant="20" id="T5W-O5-RRl"/>
-                                <constraint firstItem="4Em-HP-iHD" firstAttribute="top" secondItem="QgS-Db-FuJ" secondAttribute="top" constant="10" id="bLy-xh-S5w"/>
-                                <constraint firstAttribute="bottom" secondItem="4Em-HP-iHD" secondAttribute="bottom" constant="10" id="hfc-ZD-r39"/>
-                                <constraint firstItem="4Em-HP-iHD" firstAttribute="leading" secondItem="QgS-Db-FuJ" secondAttribute="leading" constant="20" id="n2i-eU-7bj"/>
-                            </constraints>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="Zcv-wn-TJv">
-                            <rect key="frame" x="0.0" y="476.5" width="414" height="164"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-aV-2g8" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="94" width="374" height="50"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                    <state key="normal" title="Next">
-                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornderRadius">
-                                            <real key="value" value="12"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <segue destination="WYA-on-NSj" kind="show" id="svu-EW-VMg"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="0ot-aV-2g8" secondAttribute="trailing" constant="20" id="0Dx-NT-4hq"/>
-                                <constraint firstAttribute="bottom" secondItem="0ot-aV-2g8" secondAttribute="bottom" constant="20" id="CgN-yt-PmP"/>
-                                <constraint firstItem="0ot-aV-2g8" firstAttribute="leading" secondItem="Zcv-wn-TJv" secondAttribute="leading" constant="20" id="e4V-o8-0gI"/>
-                                <constraint firstItem="0ot-aV-2g8" firstAttribute="top" secondItem="Zcv-wn-TJv" secondAttribute="top" constant="94" id="fii-2W-LQy"/>
-                            </constraints>
-                        </view>
-                        <sections>
-                            <tableViewSection headerTitle="How to use QR Tracer app?" id="qTT-uI-W0a">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sFn-dW-QfN" detailTextLabel="uyn-Mo-zAi" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="56E-Vd-6vE">
-                                        <rect key="frame" x="20" y="255.5" width="374" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56E-Vd-6vE" id="AJG-oZ-VE1">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Create QR code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sFn-dW-QfN">
-                                                    <rect key="frame" x="20" y="21" width="150.5" height="26.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="For business or place to generate QR code for Individuals to scan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyn-Mo-zAi">
-                                                    <rect key="frame" x="20" y="51.5" width="282.5" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="e0V-vY-mmO" detailTextLabel="cXG-ad-y9s" rowHeight="110" style="IBUITableViewCellStyleSubtitle" id="Gcc-a7-kAq">
-                                        <rect key="frame" x="20" y="365.5" width="374" height="110"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gcc-a7-kAq" id="ZDq-2d-mAn">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="110"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Scan QR code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0V-vY-mmO">
-                                                    <rect key="frame" x="20" y="21" width="135.5" height="26.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="For individuals to check-in at a any QR Tracer place by scanning their QR code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cXG-ad-y9s">
-                                                    <rect key="frame" x="20" y="51.5" width="333" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="ZFV-S4-J7W" id="dL4-NF-kRr"/>
-                            <outlet property="delegate" destination="ZFV-S4-J7W" id="iXt-oJ-gOb"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="xog-mK-aM2"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d1g-mc-Hz4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Lde-oV-4V5"/>
-            </objects>
-            <point key="canvasLocation" x="2062" y="443"/>
-        </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="ZSJ-Rb-fE8">
             <objects>
                 <tableViewController storyboardIdentifier="ContactUsViewController" id="WYA-on-NSj" customClass="ContactUsViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7y2-Xn-k6q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="qlF-CL-rY3">
@@ -287,7 +162,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZFV-S4-J7W" kind="relationship" relationship="rootViewController" id="gvP-4S-Ts6"/>
+                        <segue destination="WYA-on-NSj" kind="show" id="PJC-GB-2H8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlw-eu-KgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -410,7 +285,7 @@ Your personal data (name and mobile number) shared with the business you check-i
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuX-2f-PnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="2Qc-16-rZ8"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="1114"/>
+            <point key="canvasLocation" x="2043" y="856"/>
         </scene>
     </scenes>
 </document>
