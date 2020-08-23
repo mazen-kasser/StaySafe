@@ -12,7 +12,6 @@ target 'StaySafe' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
 
-
   target 'StaySafeTests' do
     inherit! :search_paths
 

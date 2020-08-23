@@ -16,6 +16,7 @@
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
 		BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */; };
 		BA1DE5BD244C21A200B9C36A /* UIColor+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */; };
+		BA20593224F21962006E7E3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA20593124F21962006E7E3B /* GoogleService-Info.plist */; };
 		BA27EFB4243C876B00BAA0FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27EFB3243C876B00BAA0FE /* CloudKit.framework */; };
 		BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */; };
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
@@ -119,6 +120,7 @@
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
 		BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALogoView.xib; sourceTree = "<group>"; };
 		BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+StaySafe.swift"; sourceTree = "<group>"; };
+		BA20593124F21962006E7E3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRTracer.entitlements; sourceTree = "<group>"; };
 		BA27EFB3243C876B00BAA0FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				BA33413B244006A20095BBE7 /* DataModel */,
 				BAB36D9C2447200800F0C3A9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
+				BA20593124F21962006E7E3B /* GoogleService-Info.plist */,
 				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
 				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
 				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
@@ -650,6 +653,7 @@
 				BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */,
 				BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */,
 				BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */,
+				BA20593224F21962006E7E3B /* GoogleService-Info.plist in Resources */,
 				BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */,
 				BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */,
 			);
