@@ -10,8 +10,4 @@ class ContactUsViewModel {
         UserDefaults.standard.fullName = fullName
         UserDefaults.standard.mobileNumber = mobileNumber
     }
-    
-    func resetUserType() {
-        UserDefaults.standard.userType = nil
-    }
 }

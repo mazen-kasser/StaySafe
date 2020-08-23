@@ -4,6 +4,8 @@
 
 import UIKit
 import MapKit
+import Firebase
+import FirebaseFirestore
 
 class FindBusinessViewController: UIViewController {
     
@@ -11,21 +13,17 @@ class FindBusinessViewController: UIViewController {
     
     @IBOutlet weak var infoPage: UIStackView!
     
+    enum SegueID {
+        static let showQRBadge = "showBusinessQRViewController"
+    }
+    
     var placemarks: [Placemark] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
-    enum SegueID {
-        static let showQRBadge = "showPrintMerchantQR"
-    }
-    
     @IBOutlet weak var addressSearchField: UISearchBar!
-    
-    @IBAction func closeGenerateQRCode(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +35,7 @@ class FindBusinessViewController: UIViewController {
     func getPlaces(searchString: String) {
         let searchRequest = MKLocalSearch.Request()
         searchRequest.naturalLanguageQuery = searchString
-//        if #available(iOS 13.0, *) {
-//            searchRequest.pointOfInterestFilter = .includingAll
-//        }
+        searchRequest.pointOfInterestFilter = .includingAll
 //        searchRequest.region = mapView.region
         
         let search = MKLocalSearch(request: searchRequest)
@@ -56,16 +52,10 @@ class FindBusinessViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
+
         guard let segueID = segue.identifier else { return }
-        
+
         switch segueID {
-        case SegueID.showQRBadge:
-            let vc = segue.destination as! BusinessQRViewController
-            
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            vc.placemark = placemarks[indexPath.row]
-            
         default:
             break
         }
@@ -103,7 +93,29 @@ extension FindBusinessViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
+        
+        let placemark = placemarks[indexPath.row]
+        
+        let deviceToken = UserDefaults.standard.deviceToken ?? ""
+        let fullName = UserDefaults.standard.fullName ?? ""
+        let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
+        let emailAddress = Auth.auth().currentUser?.email ?? ""
+        
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).setData([
+            "ownerFullName": fullName,
+            "ownerMobileNumber": mobileNumber,
+            "deviceToken": deviceToken,
+            "businessAddress": placemark.businessAddress,
+            "businessName": placemark.businessName,
+            "createdAt": Date().formatted
+        ]) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.performSegue(withIdentifier: SegueID.showQRBadge, sender: self)
+            }
+        }
+        
     }
     
 }

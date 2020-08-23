@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		3FA06BC131C3E9B427B1F3CC /* Pods_StaySafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */; };
 		9B2BB67EC37BBD9A2CC235A8 /* Pods_StaySafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */; };
+		BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */; };
+		BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */; };
+		BA0808D4246FAE6500C6A01C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808D3246FAE6500C6A01C /* LoginViewController.swift */; };
 		BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */; };
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
 		BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */; };
 		BA1DE5BD244C21A200B9C36A /* UIColor+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */; };
+		BA20593224F21962006E7E3B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA20593124F21962006E7E3B /* GoogleService-Info.plist */; };
 		BA27EFB4243C876B00BAA0FE /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27EFB3243C876B00BAA0FE /* CloudKit.framework */; };
 		BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */; };
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
 		BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */; };
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
-		BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414D24403D610095BBE7 /* CloudManager.swift */; };
 		BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */; };
 		BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */; };
+		BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */; };
+		BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */; };
+		BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */; };
 		BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
@@ -39,7 +45,6 @@
 		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
 		BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */; };
 		BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */; };
-		BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AD2445D71300F6BC0C /* PageViewController.swift */; };
 		BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B32445E88900F6BC0C /* Business.storyboard */; };
 		BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B52445E9B600F6BC0C /* Person.storyboard */; };
 		BA89B2B82445ED3100F6BC0C /* PersonaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */; };
@@ -56,6 +61,7 @@
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
 		BACE5402243B35AF00A2F6A4 /* StaySafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */; };
+		BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1AE4024CE343500BD26B4 /* Test.swift */; };
 		BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */; };
 		BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */; };
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
@@ -67,6 +73,7 @@
 		BADC931B2441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */; };
 		BADC931C2441EC7E00FC4E63 /* ShareableActivityItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */; };
 		BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */; };
+		BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEE77912470B4BB0042E141 /* SignUpViewController.swift */; };
 		BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */; };
 		BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */; };
 		BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */; };
@@ -106,10 +113,14 @@
 		2C5B0EF4ECAD40ECDBDEAEFA /* Pods-StaySafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.debug.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DBC603263B2EAB3CE228F6 /* Pods-StaySafeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafeTests.release.xcconfig"; path = "Target Support Files/Pods-StaySafeTests/Pods-StaySafeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewController.swift; sourceTree = "<group>"; };
+		BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewModel.swift; sourceTree = "<group>"; };
+		BA0808D3246FAE6500C6A01C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
 		BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALogoView.xib; sourceTree = "<group>"; };
 		BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+StaySafe.swift"; sourceTree = "<group>"; };
+		BA20593124F21962006E7E3B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QRTracer.entitlements; sourceTree = "<group>"; };
 		BA27EFB3243C876B00BAA0FE /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BA33413D244006BD0095BBE7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -117,9 +128,11 @@
 		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+StaySafe.swift"; sourceTree = "<group>"; };
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
-		BA33414D24403D610095BBE7 /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
 		BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
 		BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ValidationRules.swift"; sourceTree = "<group>"; };
+		BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckin.swift; sourceTree = "<group>"; };
+		BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinCell.swift; sourceTree = "<group>"; };
+		BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCheckinCell.xib; sourceTree = "<group>"; };
 		BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+StaySafe.swift"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
@@ -138,7 +151,6 @@
 		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
 		BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidatorFormatter.swift; sourceTree = "<group>"; };
 		BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
-		BA89B2AD2445D71300F6BC0C /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BA89B2B32445E88900F6BC0C /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		BA89B2B52445E9B600F6BC0C /* Person.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
 		BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +174,7 @@
 		BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaySafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaySafeUITests.swift; sourceTree = "<group>"; };
 		BACE5403243B35AF00A2F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD1AE4024CE343500BD26B4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -172,6 +185,7 @@
 		BADC93182441EC7E00FC4E63 /* ShareActivityViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareActivityViewControllerConfig.swift; sourceTree = "<group>"; };
 		BADC93192441EC7E00FC4E63 /* ShareableActivityItemProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableActivityItemProvider.swift; sourceTree = "<group>"; };
 		BADC931A2441EC7E00FC4E63 /* ShareableScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareableScreen.swift; sourceTree = "<group>"; };
+		BAEE77912470B4BB0042E141 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BAFBEA2C2443FEDE00B5D946 /* CATextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextField.swift; sourceTree = "<group>"; };
 		BAFBEA2E2443FFB100B5D946 /* CATextFieldValidationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldValidationLabel.swift; sourceTree = "<group>"; };
 		BAFBEA2F2443FFB100B5D946 /* CATextFieldFloatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATextFieldFloatingLabel.swift; sourceTree = "<group>"; };
@@ -222,17 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */,
+				BAD1AE4024CE343500BD26B4 /* Test.swift */,
 				BA3341432440164F0095BBE7 /* DataModelManager.swift */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		BA33414C24403D540095BBE7 /* Cloud */ = {
-			isa = PBXGroup;
-			children = (
-				BA33414D24403D610095BBE7 /* CloudManager.swift */,
-			);
-			path = Cloud;
 			sourceTree = "<group>";
 		};
 		BA57031F243F06A400343016 /* Person */ = {
@@ -294,6 +301,8 @@
 		BA7D5EBE24431AC600775FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */,
+				BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */,
 				BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */,
 				BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */,
 			);
@@ -303,9 +312,11 @@
 		BA7D5EC3244322B900775FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */,
 				BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */,
 				BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */,
 				BA7D5EC4244322CE00775FAD /* Placemark.swift */,
+				BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,9 +324,12 @@
 		BA7D5EC6244322E500775FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA0808D3246FAE6500C6A01C /* LoginViewController.swift */,
+				BAEE77912470B4BB0042E141 /* SignUpViewController.swift */,
 				BADC930F2441577900FC4E63 /* FindBusinessViewController.swift */,
-				BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */,
 				BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */,
+				BADC930E2441577900FC4E63 /* BusinessQRViewController.swift */,
+				BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,7 +354,6 @@
 		BAB36D9B2446FB8200F0C3A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA89B2AD2445D71300F6BC0C /* PageViewController.swift */,
 				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
 				BA89B2B72445ED3100F6BC0C /* PersonaViewController.swift */,
 			);
@@ -350,16 +363,8 @@
 		BAB36D9C2447200800F0C3A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
-				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
-				BA8768722456F84C00B5ACF2 /* Button.swift */,
-				BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */,
-				BAAE6437245D902B000B7888 /* SecondaryButton.swift */,
-				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
-				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
-				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
-				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
-				BA33414C24403D540095BBE7 /* Cloud */,
+				BAEE77932470D8C70042E141 /* Components */,
+				BADAEAE0243DD42800C2A1C9 /* Extensions */,
 				BAB36D972446F0D600F0C3A9 /* PermissionManager */,
 				BADC93172441EC7E00FC4E63 /* Share */,
 				BADAEADF243DD3E500C2A1C9 /* QR */,
@@ -395,10 +400,14 @@
 		BACE53DE243B35AE00A2F6A4 /* StaySafe */ = {
 			isa = PBXGroup;
 			children = (
-				BAB36D9C2447200800F0C3A9 /* Util */,
+				BAEE77942470D90D0042E141 /* DatabaseManager */,
 				BA33413B244006A20095BBE7 /* DataModel */,
-				BADAEAE0243DD42800C2A1C9 /* Extensions */,
+				BAB36D9C2447200800F0C3A9 /* Util */,
 				BA27EFB2243C876000BAA0FE /* QRTracer.entitlements */,
+				BA20593124F21962006E7E3B /* GoogleService-Info.plist */,
+				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
+				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
+				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
 				BACE53DF243B35AE00A2F6A4 /* AppDelegate.swift */,
 				BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */,
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
@@ -474,6 +483,26 @@
 				BA7D5EBE24431AC600775FAD /* View */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		BAEE77932470D8C70042E141 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */,
+				BA1DE5BA244C1CEE00B9C36A /* CALogoView.xib */,
+				BA8768722456F84C00B5ACF2 /* Button.swift */,
+				BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */,
+				BAAE6437245D902B000B7888 /* SecondaryButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BAEE77942470D90D0042E141 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */,
+			);
+			path = DatabaseManager;
 			sourceTree = "<group>";
 		};
 		BAFBEA2B2443FEC900B5D946 /* CATextField */ = {
@@ -621,8 +650,10 @@
 				BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */,
 				BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */,
 				BA57032A243F06A400343016 /* CheckinCell.xib in Resources */,
+				BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */,
 				BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */,
 				BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */,
+				BA20593224F21962006E7E3B /* GoogleService-Info.plist in Resources */,
 				BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */,
 				BA1DE5BB244C1CEE00B9C36A /* CALogoView.xib in Resources */,
 			);
@@ -730,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0808D4246FAE6500C6A01C /* LoginViewController.swift in Sources */,
 				BAAE6438245D902B000B7888 /* SecondaryButton.swift in Sources */,
 				BAFBEA3A244401BF00B5D946 /* TextFieldValidator.swift in Sources */,
 				BA1DE5BD244C21A200B9C36A /* UIColor+StaySafe.swift in Sources */,
@@ -739,6 +771,7 @@
 				BADC93112441577900FC4E63 /* FindBusinessViewController.swift in Sources */,
 				BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */,
 				BAC458CB245170320079E813 /* Vibration.swift in Sources */,
+				BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
@@ -760,9 +793,9 @@
 				BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
+				BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */,
 				BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
-				BA33414E24403D610095BBE7 /* CloudManager.swift in Sources */,
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
 				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
@@ -775,18 +808,21 @@
 				BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */,
 				BAFBEA39244401BF00B5D946 /* TextFieldFormatter.swift in Sources */,
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
+				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+StaySafe.swift in Sources */,
 				BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */,
 				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
 				BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
-				BA89B2AF2445D71300F6BC0C /* PageViewController.swift in Sources */,
+				BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */,
 				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
+				BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */,
 				BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */,
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
 				BACE53E0243B35AE00A2F6A4 /* AppDelegate.swift in Sources */,
 				BAFBEA2D2443FEDE00B5D946 /* CATextField.swift in Sources */,
+				BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */,
 				BACE53E2243B35AE00A2F6A4 /* SceneDelegate.swift in Sources */,
 				BADAEAE2243DD45800C2A1C9 /* UIViewController+Alert.swift in Sources */,
 				BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */,
@@ -958,14 +994,14 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
 				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -982,14 +1018,14 @@
 				CODE_SIGN_ENTITLEMENTS = StaySafe/QRTracer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 473EN4MVVH;
 				INFOPLIST_FILE = StaySafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nz.iprogram.qrtracer;
 				PRODUCT_NAME = "QR Tracer";
 				PROVISIONING_PROFILE_SPECIFIER = "";

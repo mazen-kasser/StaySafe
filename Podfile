@@ -7,6 +7,10 @@ target 'StaySafe' do
   
   pod 'DHSmartScreenshot'
   pod 'MBProgressHUD'
+  
+  pod 'Firebase/Auth'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
 
   target 'StaySafeTests' do
     inherit! :search_paths

@@ -15,14 +15,6 @@ class CATextFieldUnderline: UIView {
         static let animationDuration: TimeInterval = 0.3
     }
 
-    // MARK: Styling
-
-//    var styleDefinition: CBATextFieldStyleDefinition {
-//        didSet {
-//            updateLineColor()
-//        }
-//    }
-
     // MARK: Private properties
 
     private weak var textField: CATextField!
@@ -32,7 +24,6 @@ class CATextFieldUnderline: UIView {
 
     init(textField: CATextField) {
         self.textField = textField
-//        styleDefinition = textField.styleDefinition
         super.init(frame: .zero)
         setupView()
     }
@@ -85,7 +76,7 @@ class CATextFieldUnderline: UIView {
         if !valid {
             backgroundColor = .systemRed
         } else {
-            backgroundColor = highlighted ? .systemYellow : UIColor(white: 0.0, alpha: 0.1)
+            backgroundColor = highlighted ? UIColor(white: 0.0, alpha: 0.1) : UIColor(white: 0.0, alpha: 0.1)
         }
     }
 

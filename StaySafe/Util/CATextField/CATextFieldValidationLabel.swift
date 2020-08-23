@@ -11,11 +11,7 @@ class CATextFieldValidationLabel: UILabel {
         static let animationDuration: TimeInterval = 0.3
     }
 
-    weak var textField: CATextField! {
-        didSet {
-//            styleDefinition = textField.styleDefinition
-        }
-    }
+    weak var textField: CATextField!
 
     // MARK: Init and setup
 

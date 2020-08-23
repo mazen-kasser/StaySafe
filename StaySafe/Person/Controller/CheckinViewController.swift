@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CheckinViewController: UITableViewController {
 
@@ -75,12 +76,12 @@ class CheckinViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
+
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+
         let archiveAction = UIContextualAction(style: .normal, title: "Archive") { [weak self] _,_,_   in
             guard let self = self else { return }
-            
+
             let deleteCheckin = self.viewModel.checkins[indexPath.row]
             self.viewModel.delete(deleteCheckin)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.bottom)

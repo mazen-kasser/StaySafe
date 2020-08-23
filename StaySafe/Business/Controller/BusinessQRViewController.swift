@@ -3,6 +3,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class BusinessQRViewController: UIViewController, ShareableScreen {
     
@@ -12,31 +14,44 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
     @IBOutlet weak var businessNameLabel: UILabel!
     @IBOutlet weak var businessAddressLabel: UILabel!
     
-    var placemark: Placemark!
-    
-    @IBAction func dismiss(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alert.showLoading(title: "", message: "") { [weak self] in
-            Alert.hideLoading()
+        let emailAddress = Auth.auth().currentUser?.email ?? ""
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).getDocument { (documentSnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let data = documentSnapshot!.data(),
+                    let businessAddress = data["businessAddress"] as? String,
+                    let businessName = data["businessName"] as? String
+                    else { assertionFailure(); return }
+                
+                let qrInfo = businessName + "\n" + businessAddress + "\n" + emailAddress
+                self.qrImageView.image = QRGenerator.generateQRCode(from: qrInfo)
+                self.businessNameLabel.text = businessName
+                self.businessAddressLabel.text = businessAddress
+                
+                if !UserDefaults.standard.isBusinessRegistered {
+                    UserDefaults.standard.isBusinessRegistered = true
+                    Alert.showLoading(title: "", message: "") { [weak self] in
+                        Alert.hideLoading()
+                        
+                        self?.presentAlert(title: "Your badge has been created",
+                                           message: "Please check the details to match your place and print",
+                                           style: .actionSheet)
+                    }
+                }
+            }
             
-            self?.presentAlert(title: "Your badge has been created",
-                               message: "Please check the details to match your place and print using the Share feature",
-                               style: .actionSheet)
         }
-        
-        applyShareButton(for: .right, selector: #selector(sharePage))
-        
-        qrImageView.image = QRGenerator.generateQRCode(from: placemark.description)
-        businessNameLabel.text = placemark.businessName
-        businessAddressLabel.text = placemark.businessAddress
     }
     
-    @objc func sharePage() {
+    @IBAction func showScanQR(_ sender: Any) {
+        navigationController?.dismiss(animated: true)
+    }
+    
+    @IBAction func sharePage(_ sender: Any) {
         // ugly way to revert colors when dark mode is on
         let color1 = view.backgroundColor
         let color2 = noteLabel.textColor
@@ -47,7 +62,6 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
         printableColors(.white, .black, .black, .black, .black)
         displayShareOptions(popoverDelegate: self)
         printableColors(color1, color2, color3, color4, color5)
-
     }
     
     

@@ -14,16 +14,18 @@ class CheckinCell: UITableViewCell {
     var checkin: Checkin? {
         didSet {
             guard let checkin = checkin else { return }
-            // TODO: add field to Checkin object to support name and address
-            guard let array = checkin.merchantName?.split(separator: "\n").map({ String($0) }),
-                let title = array.first,
-                let subtitle = array.last
-                else { return }
+            
+            guard let array = checkin.merchantName?.qrComponents,
+                array.count > 2
+            else { return }
+            
+            let title = array[0]
+            let subtitle = array[1]
             
             initialLetterLabel.text = String(title.first!)
             displayNameLabel.text = title
             addressLabel.text = subtitle
-            createDateLabel.text = DateFormatter.yyyyMMdd.string(from: checkin.createdAt ?? Date())
+            createDateLabel.text = checkin.createdAt?.formatted ?? Date().formatted
         }
     }
 

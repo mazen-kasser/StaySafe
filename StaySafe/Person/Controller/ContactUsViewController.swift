@@ -23,7 +23,7 @@ class ContactUsViewController: UITableViewController {
         
         presentAlert(title: "Please make sure the details provided are correct",
                      message: "As we may need to contact you in case of protecting your safety",
-                     actionTitle: "Proceed",
+                     actionTitle: "Done",
                      isCancellable: true,
                      style: .actionSheet) { [weak self] _ in
                         guard let self = self else { return }
@@ -33,15 +33,17 @@ class ContactUsViewController: UITableViewController {
                         
                         Alert.showLoading (title: "") { [weak self] in
                             Alert.hideLoading()
-                            self?.dismiss(animated: true)
+                            
+                            self?.showNextFlow()
                         }
         }
     }
     
-    @IBAction func closeButtonTapped() {
-        viewModel.resetUserType()
-        
-        UIApplication.shared.keyWindow?.setInitialFlow()
+    private func showNextFlow() {
+        let storyboard = Storyboard.person.instance
+        let rootViewController = storyboard.instantiateInitialViewController()!
+        rootViewController.modalPresentationStyle = .fullScreen
+        present(rootViewController, animated: true)
     }
 
     private func isScreenValid() -> Bool {
