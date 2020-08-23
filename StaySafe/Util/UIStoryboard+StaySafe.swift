@@ -4,7 +4,6 @@
 
 import UIKit
 
-// TODO: use swiftgen template to automate this?
 enum Storyboard: String {
     case onboarding = "Onboarding"
     case business = "Business"

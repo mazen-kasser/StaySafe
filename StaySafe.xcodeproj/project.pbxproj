@@ -22,12 +22,10 @@
 		BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3341432440164F0095BBE7 /* DataModelManager.swift */; };
 		BA33414724402F550095BBE7 /* UserDefaults+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */; };
 		BA334149244030F40095BBE7 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */; };
-		BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */; };
 		BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */; };
 		BA52AA12247154FF00967AA2 /* BusinessCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */; };
 		BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */; };
 		BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */; };
-		BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */; };
 		BA570327243F06A400343016 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570321243F06A400343016 /* CheckinViewController.swift */; };
 		BA570328243F06A400343016 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570323243F06A400343016 /* CheckinViewModel.swift */; };
 		BA570329243F06A400343016 /* CheckinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA570325243F06A400343016 /* CheckinCell.swift */; };
@@ -39,7 +37,6 @@
 		BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */; };
 		BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */; };
 		BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC4244322CE00775FAD /* Placemark.swift */; };
-		BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */; };
 		BA8768732456F84C00B5ACF2 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8768722456F84C00B5ACF2 /* Button.swift */; };
 		BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */; };
 		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
@@ -83,8 +80,6 @@
 		BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */; };
 		BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA3C2444043000B5D946 /* ValidationRule.swift */; };
 		BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */; };
-		BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */; };
-		BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */; };
 		BAFBEA462444065000B5D946 /* RegularExpressionTextFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */; };
 		BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */; };
 /* End PBXBuildFile section */
@@ -127,12 +122,10 @@
 		BA33414524401CAA0095BBE7 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		BA33414624402F550095BBE7 /* UserDefaults+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+StaySafe.swift"; sourceTree = "<group>"; };
 		BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
-		BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewModel.swift; sourceTree = "<group>"; };
 		BA3756B224584DC4001D616F /* AppDelegate+ValidationRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ValidationRules.swift"; sourceTree = "<group>"; };
 		BA52AA11247154FF00967AA2 /* BusinessCheckin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckin.swift; sourceTree = "<group>"; };
 		BA52AA13247164D700967AA2 /* BusinessCheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinCell.swift; sourceTree = "<group>"; };
 		BA52AA14247164D700967AA2 /* BusinessCheckinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessCheckinCell.xib; sourceTree = "<group>"; };
-		BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+StaySafe.swift"; sourceTree = "<group>"; };
 		BA570321243F06A400343016 /* CheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		BA570323243F06A400343016 /* CheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
 		BA570325243F06A400343016 /* CheckinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckinCell.swift; sourceTree = "<group>"; };
@@ -144,7 +137,6 @@
 		BA7D5EBF24431AC600775FAD /* PlacemarkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacemarkCell.swift; sourceTree = "<group>"; };
 		BA7D5EC024431AC600775FAD /* PlacemarkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacemarkCell.xib; sourceTree = "<group>"; };
 		BA7D5EC4244322CE00775FAD /* Placemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placemark.swift; sourceTree = "<group>"; };
-		BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		BA8768722456F84C00B5ACF2 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBusinessViewController.swift; sourceTree = "<group>"; };
 		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
@@ -194,8 +186,6 @@
 		BAFBEA38244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorFormatterTextFieldDelegate.swift; sourceTree = "<group>"; };
 		BAFBEA3C2444043000B5D946 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		BAFBEA3E2444047A00B5D946 /* ValidationRulesRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRulesRegistry.swift; sourceTree = "<group>"; };
-		BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsValidationRule.swift; sourceTree = "<group>"; };
-		BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsValidatorFormatter.swift; sourceTree = "<group>"; };
 		BAFBEA442444065000B5D946 /* RegularExpressionTextFieldFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionTextFieldFormatter.swift; sourceTree = "<group>"; };
 		BAFBEA452444065000B5D946 /* RegularExpressionTextFieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularExpressionTextFieldValidator.swift; sourceTree = "<group>"; };
 		E4D9E30547E7EAD8702C8BFC /* Pods-StaySafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaySafe.release.xcconfig"; path = "Target Support Files/Pods-StaySafe/Pods-StaySafe.release.xcconfig"; sourceTree = "<group>"; };
@@ -289,7 +279,6 @@
 			children = (
 				BACE53E3243B35AE00A2F6A4 /* MainViewController.swift */,
 				BA570321243F06A400343016 /* CheckinViewController.swift */,
-				BA7D5EC724435E0600775FAD /* ContactUsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,9 +288,6 @@
 			children = (
 				BAAE6433245D7F6E000B7888 /* MainViewModel.swift */,
 				BA570323243F06A400343016 /* CheckinViewModel.swift */,
-				BA3756B02457E8BF001D616F /* ContactUsViewModel.swift */,
-				BAFBEA402444054A00B5D946 /* ContactUsValidationRule.swift */,
-				BAFBEA42244405A600B5D946 /* ContactUsValidatorFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				BA1DE5BC244C21A200B9C36A /* UIColor+StaySafe.swift */,
-				BA533C0C244C36C10040EABF /* UIWindow+StaySafe.swift */,
 				BA570330243F096500343016 /* UIStoryboard+StaySafe.swift */,
 				BAEE77932470D8C70042E141 /* Components */,
 				BADAEAE0243DD42800C2A1C9 /* Extensions */,
@@ -794,7 +779,6 @@
 				BAC458CB245170320079E813 /* Vibration.swift in Sources */,
 				BAEE77922470B4BB0042E141 /* SignUpViewController.swift in Sources */,
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
-				BAFBEA43244405A600B5D946 /* ContactUsValidatorFormatter.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
 				BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */,
@@ -814,9 +798,7 @@
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
 				BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */,
-				BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
-				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
 				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
 				BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */,
@@ -830,13 +812,11 @@
 				BA3341442440164F0095BBE7 /* DataModelManager.swift in Sources */,
 				BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */,
 				BA570332243F096500343016 /* UIStoryboard+StaySafe.swift in Sources */,
-				BA3756B12457E8BF001D616F /* ContactUsViewModel.swift in Sources */,
 				BAFBEA3B244401BF00B5D946 /* ValidatorFormatterTextFieldDelegate.swift in Sources */,
 				BA3756B324584DC4001D616F /* AppDelegate+ValidationRules.swift in Sources */,
 				BA7D5EBB2442F78400775FAD /* AppDelegate+OpenURLScheme.swift in Sources */,
 				BADC930D2441433300FC4E63 /* UIView+.swift in Sources */,
 				BA52AA15247164D700967AA2 /* BusinessCheckinCell.swift in Sources */,
-				BA7D5EC824435E0600775FAD /* ContactUsViewController.swift in Sources */,
 				BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */,
 				BADC93102441577900FC4E63 /* BusinessQRViewController.swift in Sources */,
 				BAFBEA322443FFB100B5D946 /* CATextFieldFloatingLabel.swift in Sources */,
