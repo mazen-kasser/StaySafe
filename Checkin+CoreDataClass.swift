@@ -1,5 +1,9 @@
 //
-//  Copyright © 2020 iProgram. All rights reserved.
+//  Checkin+CoreDataClass.swift
+//  
+//
+//  Created by Mazen on 27/07/20.
+//
 //
 
 import Foundation

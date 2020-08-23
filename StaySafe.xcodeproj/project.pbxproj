@@ -11,7 +11,6 @@
 		9B2BB67EC37BBD9A2CC235A8 /* Pods_StaySafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B4A667F7E850C167DEE6C0 /* Pods_StaySafeTests.framework */; };
 		BA0808CE246F840400C6A01C /* BusinessCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */; };
 		BA0808D0246F841A00C6A01C /* BusinessCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */; };
-		BA0808D2246FA98A00C6A01C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0808D1246FA98A00C6A01C /* GoogleService-Info.plist */; };
 		BA0808D4246FAE6500C6A01C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0808D3246FAE6500C6A01C /* LoginViewController.swift */; };
 		BA1DE5B7244C1CA200B9C36A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */; };
 		BA1DE5B9244C1CAF00B9C36A /* CALogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */; };
@@ -61,6 +60,7 @@
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
 		BACE5402243B35AF00A2F6A4 /* StaySafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */; };
+		BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1AE4024CE343500BD26B4 /* Test.swift */; };
 		BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */; };
 		BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */; };
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
@@ -114,7 +114,6 @@
 		B8BC1A2AF7112B28FA585EE7 /* Pods_StaySafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaySafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0808CD246F840400C6A01C /* BusinessCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewController.swift; sourceTree = "<group>"; };
 		BA0808CF246F841A00C6A01C /* BusinessCheckinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCheckinViewModel.swift; sourceTree = "<group>"; };
-		BA0808D1246FA98A00C6A01C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA0808D3246FAE6500C6A01C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA1DE5B6244C1CA200B9C36A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		BA1DE5B8244C1CAF00B9C36A /* CALogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALogoView.swift; sourceTree = "<group>"; };
@@ -173,6 +172,7 @@
 		BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaySafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaySafeUITests.swift; sourceTree = "<group>"; };
 		BACE5403243B35AF00A2F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD1AE4024CE343500BD26B4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -234,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */,
+				BAD1AE4024CE343500BD26B4 /* Test.swift */,
 				BA3341432440164F0095BBE7 /* DataModelManager.swift */,
 			);
 			path = DataModel;
@@ -415,7 +416,6 @@
 				BAE604CE243C6A5E009FC142 /* Business */,
 				BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */,
 				BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */,
-				BA0808D1246FA98A00C6A01C /* GoogleService-Info.plist */,
 				BACE53ED243B35AF00A2F6A4 /* Info.plist */,
 			);
 			path = StaySafe;
@@ -645,7 +645,6 @@
 			files = (
 				BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */,
 				BA7D5EC224431AC600775FAD /* PlacemarkCell.xib in Resources */,
-				BA0808D2246FA98A00C6A01C /* GoogleService-Info.plist in Resources */,
 				BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */,
 				BA57032A243F06A400343016 /* CheckinCell.xib in Resources */,
 				BA52AA16247164D700967AA2 /* BusinessCheckinCell.xib in Resources */,
@@ -790,6 +789,7 @@
 				BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
+				BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */,
 				BA533C0D244C36C10040EABF /* UIWindow+StaySafe.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
 				BAFBEA412444054A00B5D946 /* ContactUsValidationRule.swift in Sources */,

@@ -1,5 +1,9 @@
 //
-//  Copyright © 2020 iProgram. All rights reserved.
+//  Checkin+CoreDataProperties.swift
+//  
+//
+//  Created by Mazen on 27/07/20.
+//
 //
 
 import Foundation
@@ -12,7 +16,7 @@ extension Checkin {
         return NSFetchRequest<Checkin>(entityName: "Checkin")
     }
 
-    @NSManaged public var createdAt: Date
-    @NSManaged public var merchantName: String
+    @NSManaged public var createdAt: Date?
+    @NSManaged public var merchantName: String?
 
 }

@@ -12,15 +12,6 @@ class CATextFieldFloatingLabel {
         static let animationDuration: TimeInterval = 0.2
     }
 
-    // MARK: Public properties
-
-//    var textStyle: String? {
-//        didSet {
-//            guard let textStyleToUse = textStyle ?? styleDefinition?.textStyle else { return }
-//            placeholderAnimationLabel.style = textStyleToUse
-//        }
-//    }
-
     // MARK: Private properties
 
     private weak var textField: CATextField?
@@ -43,7 +34,6 @@ class CATextFieldFloatingLabel {
 
         setupFloatingLabel(superview)
         setupPlaceholderAnimationLabel(superview)
-//        applyStyles(textField)
     }
 
     private func setupFloatingLabel(_ superview: UIView) {
@@ -78,11 +68,6 @@ class CATextFieldFloatingLabel {
         label.alpha = 0.0
         label.isAccessibilityElement = false
     }
-
-//    private func applyStyles(_ textField: CATextField) {
-//        styleDefinition = textField.styleDefinition
-//        textStyle = textField.textStyle
-//    }
 
     // MARK: Public API
 
