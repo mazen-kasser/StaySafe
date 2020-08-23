@@ -49,13 +49,17 @@ class Alert {
         hud.show(animated: true)
         
         hud.backgroundView.blurEffectStyle = .regular
-        hud.backgroundView.color = UIColor(white: 0.0, alpha: 0.4)
-        hud.bezelView.color = .white
         hud.label.text = title
         hud.label.numberOfLines = 0
         hud.detailsLabel.text = message
         hud.detailsLabel.textColor = .black
-        hud.customView = UIImageView(image: #imageLiteral(resourceName: "success") )
+        
+        let imageView = UIImageView(image:#imageLiteral(resourceName: "loading-spinner-1"))
+        imageView.animationImages = [#imageLiteral(resourceName: "loading-spinner-1.png"), #imageLiteral(resourceName: "loading-spinner-2.png"), #imageLiteral(resourceName: "loading-spinner-3.png"), #imageLiteral(resourceName: "loading-spinner-4.png")]
+        imageView.animationDuration = 2
+        imageView.startAnimating()
+
+        hud.customView = imageView
         hud.mode = .customView
         
         UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,

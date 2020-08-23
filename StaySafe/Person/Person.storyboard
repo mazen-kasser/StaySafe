@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4p-iI-SCW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8PV-ZJ-y4O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Item-->
         <scene sceneID="BQe-2a-ubN">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="T9b-SF-hNP" customClass="MainViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bj-8Z-axV" userLabel="Check-ins Visual Effect View">
-                                <rect key="frame" x="309" y="64" width="85" height="44"/>
+                                <rect key="frame" x="311" y="64" width="83" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Knd-XW-McR">
-                                    <rect key="frame" x="0.0" y="0.0" width="85" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="83" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-VT-2OL" customClass="Button" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="10" y="5.5" width="65" height="33"/>
+                                            <rect key="frame" x="10" y="5.5" width="63" height="33"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                            <state key="normal" title="Activity"/>
+                                            <state key="normal" title="History"/>
                                             <connections>
                                                 <segue destination="aPT-ZQ-1Ae" kind="show" identifier="showCheckins" id="Wzx-Av-uJW"/>
                                             </connections>
@@ -183,6 +183,7 @@
                             <outletCollection property="gestureRecognizers" destination="ug5-FZ-9s7" appends="YES" id="oIO-6J-liS"/>
                         </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="vpU-Y3-ago"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Tid-VG-wAe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -203,7 +204,53 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1976.8115942028987" y="461.38392857142856"/>
+            <point key="canvasLocation" x="2768" y="1059"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0f-XA-n64">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LV-YW-s3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Us-y4-aIY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="qrcode" catalog="system" largeContentSizeImage="My QR Code" id="8vX-VU-YP0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eSq-6X-tmh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Zm-eQ-ODB" kind="relationship" relationship="rootViewController" id="dpd-t2-0rJ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1961" y="1807"/>
+        </scene>
+        <!--Business-->
+        <scene sceneID="pkq-o6-tYj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Business" id="1Zm-eQ-ODB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hpq-oM-6Ob"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkZ-iY-Wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767" y="1807"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gMR-DY-asG">
+            <objects>
+                <tabBarController id="8PV-ZJ-y4O" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BoI-Ek-DlA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="C4p-iI-SCW" kind="relationship" relationship="viewControllers" id="2b4-f4-C65"/>
+                        <segue destination="6Us-y4-aIY" kind="relationship" relationship="viewControllers" id="70y-6s-QoH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biO-6N-NSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="1405"/>
         </scene>
         <!--Checkin View Controller-->
         <scene sceneID="9sr-Nv-e1a">
@@ -262,16 +309,16 @@
                                     <rect key="frame" x="20" y="20" width="374" height="280"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dVK-Jv-2JO" userLabel="Labels Stack View">
-                                            <rect key="frame" x="64.5" y="0.0" width="245" height="120"/>
+                                            <rect key="frame" x="58" y="0.0" width="258" height="120"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="You have 0 check-in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ksm-RY-a8a">
-                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="71"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="You have 0 check-ins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ksm-RY-a8a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="71"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBS-am-fl5">
-                                                    <rect key="frame" x="24" y="71" width="197" height="49"/>
+                                                    <rect key="frame" x="30.5" y="71" width="197" height="49"/>
                                                     <string key="text">Find QR code to scan
 at any check-in station</string>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -325,12 +372,13 @@ at any check-in station</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwu-xj-m8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.521739130435" y="460.71428571428567"/>
+            <point key="canvasLocation" x="3648" y="1058"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V3O-f8-FAo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C4p-iI-SCW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="viewfinder" catalog="system" largeContentSizeImage="Scan QR Code" id="aDh-EZ-KA9"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="LVw-OM-Lh7">
@@ -344,13 +392,15 @@ at any check-in station</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCl-tS-RB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="461"/>
+            <point key="canvasLocation" x="1961" y="1058"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kft-Wi-3Uq"/>
+        <segue reference="Wzx-Av-uJW"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="My QR Code" width="128" height="128"/>
+        <image name="Scan QR Code" width="128" height="128"/>
         <image name="check-ins" width="48" height="48"/>
         <image name="flashlight.off.fill" catalog="system" width="73" height="128"/>
         <image name="flashlight.on.fill" catalog="system" width="73" height="128"/>

@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class LoginViewController: UITableViewController {
 
@@ -15,8 +15,8 @@ class LoginViewController: UITableViewController {
         static let showQRBadge = "showBusinessQRViewController"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let listener = Auth.auth().addStateDidChangeListener {
           auth, user in
@@ -68,10 +68,6 @@ class LoginViewController: UITableViewController {
     
     @IBAction func viewTapped(_ sender: Any) {
         tableView.endEditing(true)
-    }
-    
-    @IBAction func closeLoginFlow(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
     }
     
     private func isScreenValid() -> Bool {

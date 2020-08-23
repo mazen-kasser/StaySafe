@@ -3,7 +3,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 import FirebaseFirestore
 
 class BusinessQRViewController: UIViewController, ShareableScreen {
@@ -18,9 +18,14 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
         super.viewDidLoad()
         
         let emailAddress = Auth.auth().currentUser?.email ?? ""
-        Firestore.firestore().collection("businessAccounts").document(emailAddress).getDocument { (documentSnapshot, err) in
+        Firestore.firestore().collection("businessAccounts").document(emailAddress).getDocument { [weak self] (documentSnapshot, err) in
+            guard let self = self else { return }
+            
             if let err = err {
                 print("Error getting documents: \(err)")
+                self.presentAlert(title: "Error",
+                                  message: "Sorry, we failed to retrieve your badge",
+                                  style: .alert)
             } else {
                 guard let data = documentSnapshot!.data(),
                     let businessAddress = data["businessAddress"] as? String,
@@ -45,10 +50,6 @@ class BusinessQRViewController: UIViewController, ShareableScreen {
             }
             
         }
-    }
-    
-    @IBAction func showScanQR(_ sender: Any) {
-        navigationController?.dismiss(animated: true)
     }
     
     @IBAction func sharePage(_ sender: Any) {

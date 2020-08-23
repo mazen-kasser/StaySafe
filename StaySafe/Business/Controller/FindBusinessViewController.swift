@@ -4,7 +4,7 @@
 
 import UIKit
 import MapKit
-import Firebase
+import FirebaseAuth
 import FirebaseFirestore
 
 class FindBusinessViewController: UIViewController {

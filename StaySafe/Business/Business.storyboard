@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k7e-Xi-hbQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0vh-ME-mq0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -62,6 +62,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cz0-Qn-aaZ">
                                         <rect key="frame" x="0.0" y="58" width="414" height="750"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="44"/>
                                         <connections>
                                             <outlet property="dataSource" destination="AfW-T7-n3t" id="Sai-d6-mBq"/>
                                             <outlet property="delegate" destination="AfW-T7-n3t" id="Uhz-Hf-2TS"/>
@@ -70,13 +71,13 @@
                                 </subviews>
                             </stackView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-IJ-l4e">
-                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iV8-Rm-RxM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoG-wB-urA" customClass="Button" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="32"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                             <state key="normal" title="Can't find your place?"/>
@@ -86,13 +87,14 @@
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="IoG-wB-urA" secondAttribute="bottom" id="Aud-VY-Gac"/>
                                         <constraint firstItem="IoG-wB-urA" firstAttribute="top" secondItem="iV8-Rm-RxM" secondAttribute="top" id="DRx-Rm-tqO"/>
                                         <constraint firstAttribute="trailing" secondItem="IoG-wB-urA" secondAttribute="trailing" id="YXk-U7-AJf"/>
                                         <constraint firstItem="IoG-wB-urA" firstAttribute="leading" secondItem="iV8-Rm-RxM" secondAttribute="leading" id="wqY-Qb-jBK"/>
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Caf-9C-H3Y"/>
+                                    <constraint firstAttribute="height" constant="44" id="Caf-9C-H3Y"/>
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
@@ -112,10 +114,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O4a-pu-3OU"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="jS7-aa-96H">
                         <barButtonItem key="leftBarButtonItem" id="JcV-97-mPK"/>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addressSearchField" destination="hZI-oY-kek" id="Qfk-SN-fQh"/>
                         <outlet property="infoPage" destination="pzH-x3-hZq" id="YsK-uO-WkE"/>
@@ -207,25 +210,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VIb-3G-v22"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="iMA-D8-ySF">
-                        <barButtonItem key="leftBarButtonItem" title="Scan" id="Xu7-ch-6av">
+                        <barButtonItem key="leftBarButtonItem" title="Print" image="printer" catalog="system" id="F9K-bz-hVN">
                             <connections>
-                                <action selector="showScanQR:" destination="ISr-a9-2RD" id="Dkg-yX-T29"/>
+                                <action selector="sharePage:" destination="ISr-a9-2RD" id="rpS-zX-g4O"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Activity" id="wMS-Aw-NS0">
-                                <connections>
-                                    <segue destination="3BF-Fq-fxX" kind="show" identifier="showBusinessCheckinViewController" id="dhK-Kp-JLQ"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Print" image="printer" catalog="system" id="F9K-bz-hVN">
-                                <connections>
-                                    <action selector="sharePage:" destination="ISr-a9-2RD" id="rpS-zX-g4O"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Activity" id="wMS-Aw-NS0">
+                            <connections>
+                                <segue destination="3BF-Fq-fxX" kind="show" identifier="showBusinessCheckinViewController" id="dhK-Kp-JLQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="businessAddressLabel" destination="u6y-3O-Ral" id="jG1-Nj-pQQ"/>
                         <outlet property="businessNameLabel" destination="R1o-9z-lBy" id="MTd-2u-1Lb"/>
@@ -236,14 +234,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCS-SM-yV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6777" y="1191"/>
+            <point key="canvasLocation" x="7723.188405797102" y="1190.625"/>
         </scene>
         <!--Custom Business View Controller-->
         <scene sceneID="j6y-K7-r1o">
             <objects>
                 <tableViewController id="C0y-ja-uPs" customClass="CustomBusinessViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="igx-y2-1NT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ntf-vZ-ysX">
@@ -374,6 +372,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gUN-iH-Zmk"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="K6L-YG-ylC" id="k1y-15-5Ag"/>
                         <outlet property="nameTextField" destination="aYt-xu-xgf" id="6Fs-pY-MiN"/>
@@ -500,6 +499,7 @@ as a check-in station</string>
                             <outlet property="delegate" destination="3BF-Fq-fxX" id="58Q-Sc-iGO"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="395-mP-mXn">
                         <barButtonItem key="rightBarButtonItem" title="Sign out" id="rHM-Q9-bVF">
@@ -509,8 +509,7 @@ as a check-in station</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="checkinFooter" destination="VSh-BJ-SlW" id="RW8-7w-9D3"/>
                         <outlet property="checkinHeader" destination="Ren-QH-zq4" id="smd-8c-cBd"/>
@@ -519,7 +518,7 @@ as a check-in station</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQF-OS-bVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7616" y="1191"/>
+            <point key="canvasLocation" x="8526.0869565217399" y="1190.625"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="QV2-ab-sQF">
@@ -567,7 +566,7 @@ as a check-in station</string>
                                     <rect key="frame" x="20" y="20" width="374" height="80"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nmk-sC-EuM" customClass="PrimaryButton" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Login"/>
                                             <connections>
@@ -575,7 +574,7 @@ as a check-in station</string>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cU-Lq-0xE" customClass="Button" customModule="QR_Tracer" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="38" width="374" height="42"/>
+                                            <rect key="frame" x="0.0" y="48" width="374" height="32"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="m0g-lu-uTs"/>
@@ -667,18 +666,15 @@ as a check-in station</string>
                             <outlet property="delegate" destination="0vh-ME-mq0" id="tOo-Gi-j2Z"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="IYU-1G-4gH">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="boD-l8-cGj">
-                            <connections>
-                                <action selector="closeLoginFlow:" destination="0vh-ME-mq0" id="fTw-4O-C98"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Sign up" id="qXs-b1-Ys5">
                             <connections>
                                 <segue destination="tOy-xD-HeV" kind="show" id="dk2-k3-pmB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="emailTextField" destination="C5F-CO-ssr" id="bRU-I7-wYs"/>
                         <outlet property="passwordTextField" destination="Q96-y5-NqP" id="az9-hk-Oq7"/>
@@ -693,14 +689,14 @@ as a check-in station</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4913.04347826087" y="1190.625"/>
+            <point key="canvasLocation" x="5818.840579710145" y="1190.625"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="zVA-2H-A8j">
             <objects>
                 <tableViewController id="tOy-xD-HeV" customClass="SignUpViewController" customModule="QR_Tracer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tYg-Ow-wA2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="13K-AH-Nh1">
@@ -859,7 +855,9 @@ as a check-in station</string>
                             <outlet property="delegate" destination="tOy-xD-HeV" id="EtY-uj-ilu"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="ZgW-fK-JGf"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="v1h-oG-szf" id="oM3-Mr-TSG"/>
                         <outlet property="emailTextField" destination="YjR-2e-TsZ" id="YLl-7t-Cft"/>
@@ -875,30 +873,30 @@ as a check-in station</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5726" y="1191"/>
+            <point key="canvasLocation" x="6634.7826086956529" y="1190.625"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="EOd-yu-t4B">
+        <scene sceneID="vZ5-Qd-e5L">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7e-Xi-hbQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fNq-Vv-Agp" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="mNF-YE-reP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M6Y-So-O7v">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0vh-ME-mq0" kind="relationship" relationship="rootViewController" id="Olt-Yq-KKc"/>
+                        <segue destination="0vh-ME-mq0" kind="relationship" relationship="rootViewController" id="g7e-Qx-rgQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BFq-T2-vOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhr-j8-2i0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4002.898550724638" y="1190.625"/>
+            <point key="canvasLocation" x="4943" y="1184"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YPE-Ho-nlL"/>
+        <segue reference="yBW-nT-nwu"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="check-ins" width="48" height="48"/>

@@ -3,7 +3,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class BusinessCheckinViewController: UITableViewController {
 
@@ -17,7 +18,7 @@ class BusinessCheckinViewController: UITableViewController {
     @IBAction func signoutPressed(_ sender: Any) {
         try? Auth.auth().signOut()
         
-        navigationController?.dismiss(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     override func viewDidLoad() {

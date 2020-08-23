@@ -41,11 +41,10 @@
 		BA89B2A6244525B600F6BC0C /* CustomBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */; };
 		BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */; };
 		BA89B2AA244536AF00F6BC0C /* BusinessValidatorFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */; };
-		BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */; };
+		BA89B2AE2445D71300F6BC0C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA89B2AC2445D71300F6BC0C /* OnboardingViewController.swift */; };
 		BA89B2B42445E88900F6BC0C /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B32445E88900F6BC0C /* Business.storyboard */; };
 		BA89B2B62445E9B600F6BC0C /* Person.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B52445E9B600F6BC0C /* Person.storyboard */; };
 		BA89B2BA2445F67300F6BC0C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */; };
-		BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */; };
 		BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6433245D7F6E000B7888 /* MainViewModel.swift */; };
 		BAAE6438245D902B000B7888 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAE6437245D902B000B7888 /* SecondaryButton.swift */; };
 		BAB36D992446F0F200F0C3A9 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */; };
@@ -57,7 +56,6 @@
 		BACE53EC243B35AF00A2F6A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACE53EA243B35AF00A2F6A4 /* LaunchScreen.storyboard */; };
 		BACE53F7243B35AF00A2F6A4 /* StaySafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE53F6243B35AF00A2F6A4 /* StaySafeTests.swift */; };
 		BACE5402243B35AF00A2F6A4 /* StaySafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */; };
-		BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1AE4024CE343500BD26B4 /* Test.swift */; };
 		BAD32C85244499CC00E8BEBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACE53E8243B35AF00A2F6A4 /* Assets.xcassets */; };
 		BADAEADC243DC79D00C2A1C9 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */; };
 		BADAEADE243DC82000C2A1C9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */; };
@@ -141,11 +139,10 @@
 		BA89B2A5244525B600F6BC0C /* CustomBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBusinessViewController.swift; sourceTree = "<group>"; };
 		BA89B2A7244536AF00F6BC0C /* BusinessValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidationRule.swift; sourceTree = "<group>"; };
 		BA89B2A8244536AF00F6BC0C /* BusinessValidatorFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessValidatorFormatter.swift; sourceTree = "<group>"; };
-		BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		BA89B2AC2445D71300F6BC0C /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BA89B2B32445E88900F6BC0C /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
 		BA89B2B52445E9B600F6BC0C /* Person.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Person.storyboard; sourceTree = "<group>"; };
 		BA89B2B92445F67300F6BC0C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		BAAE6433245D7F6E000B7888 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BAAE6437245D902B000B7888 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		BAB36D982446F0F200F0C3A9 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
@@ -164,7 +161,6 @@
 		BACE53FD243B35AF00A2F6A4 /* StaySafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaySafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACE5401243B35AF00A2F6A4 /* StaySafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaySafeUITests.swift; sourceTree = "<group>"; };
 		BACE5403243B35AF00A2F6A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAD1AE4024CE343500BD26B4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BADAEADB243DC79D00C2A1C9 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
 		BADAEADD243DC82000C2A1C9 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		BADAEAE1243DD45800C2A1C9 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -228,7 +224,6 @@
 				BA334148244030F40095BBE7 /* AppDelegate+Notifications.swift */,
 				BA7D5EBA2442F78400775FAD /* AppDelegate+OpenURLScheme.swift */,
 				BACE53E1243B35AE00A2F6A4 /* SceneDelegate.swift */,
-				BAAE6425245D43CE000B7888 /* SceneDelegate+Notifications.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -257,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				BA33413C244006BD0095BBE7 /* DataModel.xcdatamodeld */,
-				BAD1AE4024CE343500BD26B4 /* Test.swift */,
 				BA3341432440164F0095BBE7 /* DataModelManager.swift */,
 			);
 			path = DataModel;
@@ -371,7 +365,7 @@
 		BAB36D9B2446FB8200F0C3A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA89B2AC2445D71300F6BC0C /* SlideViewController.swift */,
+				BA89B2AC2445D71300F6BC0C /* OnboardingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -781,7 +775,6 @@
 				BA7D5EC5244322CE00775FAD /* Placemark.swift in Sources */,
 				BA8768732456F84C00B5ACF2 /* Button.swift in Sources */,
 				BADC931D2441EC7E00FC4E63 /* ShareableScreen.swift in Sources */,
-				BAAE6426245D43CE000B7888 /* SceneDelegate+Notifications.swift in Sources */,
 				BA7D5EC124431AC600775FAD /* PlacemarkCell.swift in Sources */,
 				BAFBEA35244400EA00B5D946 /* String+.swift in Sources */,
 				BAFBEA3F2444047A00B5D946 /* ValidationRulesRegistry.swift in Sources */,
@@ -797,10 +790,9 @@
 				BACE53E4243B35AE00A2F6A4 /* MainViewController.swift in Sources */,
 				BA33413E244006BD0095BBE7 /* DataModel.xcdatamodeld in Sources */,
 				BA570327243F06A400343016 /* CheckinViewController.swift in Sources */,
-				BAD1AE4124CE343500BD26B4 /* Test.swift in Sources */,
 				BA89B2A9244536AF00F6BC0C /* BusinessValidationRule.swift in Sources */,
 				BAFBEA472444065000B5D946 /* RegularExpressionTextFieldValidator.swift in Sources */,
-				BA89B2AE2445D71300F6BC0C /* SlideViewController.swift in Sources */,
+				BA89B2AE2445D71300F6BC0C /* OnboardingViewController.swift in Sources */,
 				BAAE6434245D7F6E000B7888 /* MainViewModel.swift in Sources */,
 				BAFBEA3D2444043000B5D946 /* ValidationRule.swift in Sources */,
 				BAFBEA312443FFB100B5D946 /* CATextFieldValidationLabel.swift in Sources */,
