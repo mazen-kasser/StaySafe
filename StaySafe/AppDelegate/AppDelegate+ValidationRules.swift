@@ -11,7 +11,6 @@ import Foundation
 extension AppDelegate {
     
     func handleValidationRules() {
-        try! ValidationRulesRegistry.addRulesToRegistry(ContactUsValidationRule.rules)
         try! ValidationRulesRegistry.addRulesToRegistry(BusinessValidationRule.rules)
     }
 }

@@ -37,8 +37,6 @@ class CustomBusinessViewController: UITableViewController {
     @IBAction func submitDidTouch(_ sender: Any) {
         
         let deviceToken = UserDefaults.standard.deviceToken ?? ""
-        let fullName = UserDefaults.standard.fullName ?? ""
-        let mobileNumber = UserDefaults.standard.mobileNumber ?? ""
         let emailAddress = Auth.auth().currentUser?.email ?? ""
         
         guard let businessName = nameTextField.text,
@@ -46,8 +44,6 @@ class CustomBusinessViewController: UITableViewController {
             else { return }
         
         Firestore.firestore().collection("businessAccounts").document(emailAddress).setData([
-            "ownerFullName": fullName,
-            "ownerMobileNumber": mobileNumber,
             "deviceToken": deviceToken,
             "businessAddress": businessAddress,
             "businessName": businessName,

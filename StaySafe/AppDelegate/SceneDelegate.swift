@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        window?.setInitialFlow()
+        window?.rootViewController = Storyboard.person.instance.instantiateInitialViewController()
         
         // when app not in memory
         if let openUrl = connectionOptions.urlContexts.first?.url {
@@ -66,4 +66,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 }
-

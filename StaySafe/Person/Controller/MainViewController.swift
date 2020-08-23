@@ -91,6 +91,8 @@ class MainViewController: UIViewController {
         let scanningRect = CGRect(x: midScreenWidth, y: midScreenHeight, width: qrFrame.bounds.width - margin, height: qrFrame.bounds.height - margin)
         scannerView = QRScannerView(frame: view.bounds, rectOfInterest: scanningRect)
         view.insertSubview(scannerView, at: 0)
+        
+        showOnboardingIfRequired()
     }
     
     private func addApplicationNotificationObservers() {
@@ -199,6 +201,16 @@ extension MainViewController: QRScannerViewDelegate {
         }
     }
     
+}
+
+extension MainViewController {
+    
+    func showOnboardingIfRequired() {
+        guard !UserDefaults.standard.isDeviceRegistered else { return }
+        
+        let vc = Storyboard.onboarding.instance.instantiateInitialViewController()!
+        present(vc, animated: true)
+    }
 }
 
 private extension Selector {

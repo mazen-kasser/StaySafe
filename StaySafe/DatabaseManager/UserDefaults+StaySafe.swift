@@ -8,14 +8,18 @@ extension UserDefaults {
     
     enum Key {
         static let deviceToken = "deviceToken"
-        static let fullName = "fullName"
-        static let mobileNumber = "mobileNumber"
         static let isRegistered = "isRegistered"
     }
     
-    var isUserRegistered: Bool {
-        return UserDefaults.standard.fullName != nil &&
-            UserDefaults.standard.mobileNumber != nil
+    var isDeviceRegistered: Bool {
+        guard UserDefaults.standard.deviceToken != nil else {
+            #if targetEnvironment(simulator)
+            UserDefaults.standard.set("simulator_token", forKey: Key.deviceToken)
+            #endif
+            
+            return false
+        }
+        return true
     }
     
     var isBusinessRegistered: Bool {
@@ -24,24 +28,6 @@ extension UserDefaults {
         }
         set(value) {
             UserDefaults.standard.set(value, forKey: Key.isRegistered)
-        }
-    }
-    
-    var fullName: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.fullName)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.fullName)
-        }
-    }
-    
-    var mobileNumber: String? {
-        get {
-            return UserDefaults.standard.string(forKey: Key.mobileNumber)
-        }
-        set(value) {
-            UserDefaults.standard.set(value, forKey: Key.mobileNumber)
         }
     }
     
