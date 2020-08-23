@@ -11,8 +11,15 @@ extension UserDefaults {
         static let isRegistered = "isRegistered"
     }
     
-    var isUserRegistered: Bool {
-        return UserDefaults.standard.deviceToken != nil
+    var isDeviceRegistered: Bool {
+        guard UserDefaults.standard.deviceToken != nil else {
+            #if targetEnvironment(simulator)
+            UserDefaults.standard.set("simulator_token", forKey: Key.deviceToken)
+            #endif
+            
+            return false
+        }
+        return true
     }
     
     var isBusinessRegistered: Bool {

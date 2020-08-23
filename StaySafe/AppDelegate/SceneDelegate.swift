@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        window?.setInitialFlow()
+        window?.rootViewController = Storyboard.person.instance.instantiateInitialViewController()
         
         // when app not in memory
         if let openUrl = connectionOptions.urlContexts.first?.url {
@@ -63,22 +63,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
         NotificationCenter.default.post(Notification(name: .willEnterBackgroundNotification))
-    }
-
-}
-
-private extension UIWindow {
-    func setInitialFlow() {
-        let storyboard: Storyboard
-        
-        switch UserDefaults.standard.isUserRegistered {
-        case true:
-            storyboard = Storyboard.person
-        default:
-            storyboard = Storyboard.onboarding
-        }
-        
-        rootViewController = storyboard.instance.instantiateInitialViewController()
     }
 
 }
